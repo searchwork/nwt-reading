@@ -1,0 +1,6 @@
+{
+  "appTitle": "nwt_reading",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
