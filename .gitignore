@@ -1,4 +1,5 @@
 # Miscellaneous
+.Notes.md
 *.class
 *.log
 *.pyc

@@ -1,4 +1,4 @@
-package com.example.nwt_reading
+package org.searchwork.nwtReading
 
 import io.flutter.embedding.android.FlutterActivity
 

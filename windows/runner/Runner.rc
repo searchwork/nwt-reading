@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "nwt_reading" "\0"
+            VALUE "CompanyName", "Searchwork.org" "\0"
+            VALUE "FileDescription", "NWT Reading" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "nwt_reading" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "nwt_reading.exe" "\0"
-            VALUE "ProductName", "nwt_reading" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 Searchwork.org. All rights reserved." "\0"
+            VALUE "OriginalFilename", "NWT Reading.exe" "\0"
+            VALUE "ProductName", "NWT Reading" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,11 +1,11 @@
 {
-    "name": "nwt_reading",
-    "short_name": "nwt_reading",
+    "name": "NWT Reading",
+    "short_name": "NWT Reading",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#hexcode",
+    "theme_color": "#hexcode",
+    "description": "Bible reading schedule of the New World Translation for Jehovah's Witnesses.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

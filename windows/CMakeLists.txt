@@ -4,7 +4,7 @@ project(nwt_reading LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "nwt_reading")
+set(BINARY_NAME "NWT Reading″")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.

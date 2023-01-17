@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nwt_reading">
+    package="org.searchwork.nwtReading">
    <application
-        android:label="nwt_reading"
+        android:label="nwtReading"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
