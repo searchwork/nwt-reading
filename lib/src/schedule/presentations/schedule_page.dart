@@ -19,9 +19,12 @@ class SchedulePage extends ConsumerWidget {
     final plan = planProvider?.plan;
     final progress = planProvider?.progress;
     final schedule = planProvider?.schedule;
-    if (schedule == null) Navigator.pop(context);
     final scheduleGrid =
         schedule == null ? [] : _buildScheduleGrid(planId, schedule);
+    if (schedule == null) {
+      WidgetsBinding.instance
+          .addPostFrameCallback((_) => Navigator.pop(context));
+    }
 
     return Scaffold(
         appBar: AppBar(
@@ -29,17 +32,13 @@ class SchedulePage extends ConsumerWidget {
           actions: [
             IconButton(
               icon: const Icon(Icons.delete),
-              onPressed: () {
-                ref.read(plansProvider.notifier).removePlan(planId);
-                Navigator.pop(context, PlansPage.routeName);
-              },
+              onPressed: () =>
+                  ref.read(plansProvider.notifier).removePlan(planId),
             ),
           ],
         ),
         body: schedule == null
-            ? const Center(
-                child: Text('No schedule'),
-              )
+            ? null
             : Column(
                 children: [
                   if (progress != null)
