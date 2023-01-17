@@ -28,6 +28,3 @@ flutter:
 
   # Enable generation of localized Strings from arb files.
   generate: true
-
-  assets:
-    - assets/images/
