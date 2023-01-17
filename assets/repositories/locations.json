@@ -1,0 +1,2712 @@
+{
+    "Zorah": {
+        "name": "Zorah",
+        "refs": "15 E8; 19 C10"
+    },
+    "Zoan": {
+        "name": "Zoan",
+        "refs": "9 B3; 23 B4"
+    },
+    "Ziph": {
+        "name": "Ziph",
+        "refs": "17 E11; 19 D12"
+    },
+    "Zion": {
+        "name": "Zion",
+        "refs": "21"
+    },
+    "Zin": {
+        "name": "Zin",
+        "refs": "9 G3"
+    },
+    "Ziklag": {
+        "name": "Ziklag",
+        "refs": "15 D9; 17 C11; 19 B12"
+    },
+    "Zereth-shahar": {
+        "name": "Zereth-shahar",
+        "refs": "19 F11"
+    },
+    "Zeredah": {
+        "name": "Zeredah",
+        "refs": "17 E8; 19 D8"
+    },
+    "Zered": {
+        "name": "Zered",
+        "refs": "9 I3; 11 G11; 15 G11"
+    },
+    "Zebulun": {
+        "name": "Zebulun",
+        "refs": "15 F4"
+    },
+    "Zarethan": {
+        "name": "Zarethan",
+        "refs": "17 F8; 19 E8"
+    },
+    "Zarephath": {
+        "name": "Zarephath",
+        "refs": "18 D1"
+    },
+    "Zaphon": {
+        "name": "Zaphon",
+        "refs": "19 F7"
+    },
+    "Zanoah": {
+        "name": "Zanoah",
+        "refs": "19 C10"
+    },
+    "Zalmonah": {
+        "name": "Zalmonah",
+        "refs": "9 H3"
+    },
+    "Zagros": {
+        "name": "Zagros",
+        "refs": "24 E4"
+    },
+    "Yiron": {
+        "name": "Yiron",
+        "refs": "18 E3"
+    },
+    "Yarmuk": {
+        "name": "Yarmuk",
+        "refs": "18 G5"
+    },
+    "Yarkon": {
+        "name": "Yarkon",
+        "refs": "19 B8"
+    },
+    "Via Maris": {
+        "name": "Via Maris",
+        "refs": "7; 15 B10; 17 C10"
+    },
+    "Ur": {
+        "name": "Ur",
+        "refs": "5 G4; 7 H4; 23 F4"
+    },
+    "Tyropoeon Valley": {
+        "name": "Tyropoeon Valley",
+        "refs": "21; 31"
+    },
+    "Tyre": {
+        "name": "Tyre",
+        "refs": "5 E4; 11 E2; 15 E2; 17, 17 E2; 18 D2; 23 C3; 24 C3; 26 C3; 29 D2; 33 H4"
+    },
+    "Troy": {
+        "name": "Troy",
+        "refs": "26 B2"
+    },
+    "Troas": {
+        "name": "Troas",
+        "refs": "33 E2"
+    },
+    "Trachonitis": {
+        "name": "Trachonitis",
+        "refs": "29 H3"
+    },
+    "Tochen (Ether)": {
+        "name": "Tochen",
+        "note": "(Ether)",
+        "refs": "15 D8"
+    },
+    "Tirzah": {
+        "name": "Tirzah",
+        "refs": "17 F7; 19 E7"
+    },
+    "Tiphsah": {
+        "name": "Tiphsah",
+        "refs": "17"
+    },
+    "Timnath-serah": {
+        "name": "Timnath-serah",
+        "refs": "15 E7; 19 D9"
+    },
+    "Timnah [Judah/Dan]": {
+        "name": "Timnah",
+        "note": "[Judah/Dan]",
+        "refs": "19 C10"
+    },
+    "Timnah [Judah]": {
+        "name": "Timnah",
+        "note": "[Judah]",
+        "refs": "19 C10"
+    },
+    "Tigris": {
+        "name": "Tigris",
+        "refs": "3; 5 G3; 7 G2; 23 F3; 24 D3; 26 D3"
+    },
+    "Tiberias": {
+        "name": "Tiberias",
+        "refs": "18 F4; 29 E5"
+    },
+    "Thyatira": {
+        "name": "Thyatira",
+        "refs": "33 E2"
+    },
+    "Thrace": {
+        "name": "Thrace",
+        "refs": "24 A2; 26 A2"
+    },
+    "Thessalonica": {
+        "name": "Thessalonica",
+        "refs": "33 D1"
+    },
+    "Thebez": {
+        "name": "Thebez",
+        "refs": "18 E7"
+    },
+    "Thebes (No-amon)": {
+        "name": "Thebes",
+        "note": "(No-amon)",
+        "refs": "24 B5; 26 B4"
+    },
+    "Tema": {
+        "name": "Tema",
+        "refs": "23 D5; 24 C4"
+    },
+    "Tekoa": {
+        "name": "Tekoa",
+        "refs": "17 E10; 19 D11"
+    },
+    "Taxila": {
+        "name": "Taxila",
+        "refs": "26 H3"
+    },
+    "Tarsus": {
+        "name": "Tarsus",
+        "refs": "5 E3; 24 C3; 26 C3; 33 H3"
+    },
+    "Tarshish (Spain)": {
+        "name": "Tarshish",
+        "note": "(Spain)",
+        "refs": "2; 27 A3"
+    },
+    "Tappuah": {
+        "name": "Tappuah",
+        "refs": "15 F6; 19 D8"
+    },
+    "Tamar": {
+        "name": "Tamar",
+        "refs": "17"
+    },
+    "Tahpanhes": {
+        "name": "Tahpanhes",
+        "refs": "9 B3"
+    },
+    "Tadmor (Palmyra)": {
+        "name": "Tadmor",
+        "note": "(Palmyra)",
+        "refs": "7 D2; 17; 24 C3; 26 C3"
+    },
+    "Tabor": {
+        "name": "Tabor",
+        "refs": "15 F4; 18 E5"
+    },
+    "Taanath-shiloh": {
+        "name": "Taanath-shiloh",
+        "refs": "19 E8"
+    },
+    "Taanach": {
+        "name": "Taanach",
+        "refs": "11 E5; 15 E5; 17 E6; 18 D6"
+    },
+    "Syria": {
+        "name": "Syria",
+        "refs": "5 F3; 11 H1; 17 H1; 23 D3; 24 C3; 32 E2; 33 H3"
+    },
+    "Syracuse": {
+        "name": "Syracuse",
+        "refs": "33 A3"
+    },
+    "Syene": {
+        "name": "Syene",
+        "refs": "24 B5; 26 C5"
+    },
+    "Sychar": {
+        "name": "Sychar",
+        "refs": "19 E7; 29 D7"
+    },
+    "Susa (Shushan)": {
+        "name": "Susa",
+        "note": "(Shushan)",
+        "refs": "5 G4; 23 G3; 24 E4; 26 E3"
+    },
+    "Succoth [Gad]": {
+        "name": "Succoth",
+        "note": "[Gad]",
+        "refs": "7; 15 G6; 17 G7; 19 F8"
+    },
+    "Succoth [Egypt]": {
+        "name": "Succoth",
+        "note": "[Egypt]",
+        "refs": "9 B5"
+    },
+    "Spain (Tarshish)": {
+        "name": "Spain",
+        "note": "(Tarshish)",
+        "refs": "2; 27 A3"
+    },
+    "Sorek": {
+        "name": "Sorek",
+        "refs": "19 B10"
+    },
+    "Sogdiana": {
+        "name": "Sogdiana",
+        "refs": "24 G3; 26 G2"
+    },
+    "Sodom": {
+        "name": "Sodom",
+        "refs": "7; 19 E13"
+    },
+    "Socoh [Manasseh]": {
+        "name": "Socoh",
+        "note": "[Manasseh]",
+        "refs": "18 C7"
+    },
+    "Socoh [Judah]": {
+        "name": "Socoh",
+        "note": "[Judah]",
+        "refs": "17 D10; 19 C10"
+    },
+    "Soco [Judah]": {
+        "name": "Soco",
+        "note": "[Judah]",
+        "refs": "17 D10; 19 C10"
+    },
+    "Smyrna": {
+        "name": "Smyrna",
+        "refs": "33 E2"
+    },
+    "Siwa, Oasis of": {
+        "name": "Siwa, Oasis of",
+        "refs": "26 A4"
+    },
+    "Sinai (Horeb)": {
+        "name": "Sinai",
+        "note": "(Horeb)",
+        "refs": "5 E5; 9 F8"
+    },
+    "Sin": {
+        "name": "Sin",
+        "refs": "9 E6"
+    },
+    "Siloam": {
+        "name": "Siloam",
+        "refs": "31"
+    },
+    "Sidon": {
+        "name": "Sidon",
+        "refs": "5 E4; 11 F1; 15 F1; 17; 23 C3; 24 C3; 29 D1; 33 H4"
+    },
+    "Sicily": {
+        "name": "Sicily",
+        "refs": "5 A3; 33 A3"
+    },
+    "Shushan": {
+        "name": "Shushan",
+        "refs": "5 G4; 23 G3; 24 E4; 26 E3"
+    },
+    "Shur": {
+        "name": "Shur",
+        "refs": "7 B4; 9 D3"
+    },
+    "Shunem": {
+        "name": "Shunem",
+        "refs": "17 F5; 18 E5"
+    },
+    "Shittim": {
+        "name": "Shittim",
+        "refs": "11 G7; 19 F10"
+    },
+    "Shimron": {
+        "name": "Shimron",
+        "refs": "18 D5"
+    },
+    "Shiloh": {
+        "name": "Shiloh",
+        "refs": "15 F6; 17 F8; 19 E8"
+    },
+    "Shilhim (Sharuhen)": {
+        "name": "Shilhim",
+        "note": "(Sharuhen)",
+        "refs": "15 C9; 19 A13"
+    },
+    "Shephelah": {
+        "name": "Shephelah",
+        "refs": "13"
+    },
+    "Shechem": {
+        "name": "Shechem",
+        "refs": "7, 7 C4; 11 F6; 15 F6; 17 F7; 19 E7"
+    },
+    "Sheba [kingdom]": {
+        "name": "Sheba",
+        "note": "[kingdom]",
+        "refs": "3"
+    },
+    "Sheba (Jeshua)": {
+        "name": "Sheba",
+        "note": "(Jeshua)",
+        "refs": "15 E9; 19 C13"
+    },
+    "Sharuhen": {
+        "name": "Sharuhen",
+        "refs": "15 C9; 19 A13"
+    },
+    "Sharon": {
+        "name": "Sharon",
+        "refs": "13"
+    },
+    "Shaphir": {
+        "name": "Shaphir",
+        "refs": "19 C11"
+    },
+    "Shamir (Samaria [city])": {
+        "name": "Shamir",
+        "note": "(Samaria [city])",
+        "refs": "15 E6; 19 D7; 23 C3; 29 D7"
+    },
+    "Shaaraim (Sharuhen)": {
+        "name": "Shaaraim",
+        "note": "(Sharuhen)",
+        "refs": "15 C9; 19 A13"
+    },
+    "Shaalbim": {
+        "name": "Shaalbim",
+        "refs": "17 D9; 19 C9"
+    },
+    "Sepphoris": {
+        "name": "Sepphoris",
+        "refs": "29 D5"
+    },
+    "Seleucia": {
+        "name": "Seleucia",
+        "refs": "33 H3"
+    },
+    "Seir [Judah]": {
+        "name": "Seir",
+        "note": "[Judah]",
+        "refs": "19 D10"
+    },
+    "Seir": {
+        "name": "Seir",
+        "refs": "7 C4; 9 H4; 11 F11"
+    },
+    "Secacah": {
+        "name": "Secacah",
+        "refs": "19 E10"
+    },
+    "Scythopolis (Beth-shean)": {
+        "name": "Scythopolis",
+        "note": "(Beth-shean)",
+        "refs": "15 F5; 17 F6; 18 F6; 29 E6"
+    },
+    "Scythia": {
+        "name": "Scythia",
+        "refs": "24 C1"
+    },
+    "Sarid": {
+        "name": "Sarid",
+        "refs": "18 D5"
+    },
+    "Sardis": {
+        "name": "Sardis",
+        "refs": "24 B3; 26 B2; 33 E2"
+    },
+    "Sansannah (Hazar-susah)": {
+        "name": "Sansannah",
+        "note": "(Hazar-susah)",
+        "refs": "15 D9; 19 C12"
+    },
+    "Samothrace": {
+        "name": "Samothrace",
+        "refs": "33 E1"
+    },
+    "Samos": {
+        "name": "Samos",
+        "refs": "33 E2"
+    },
+    "Samarkand (Maracanda)": {
+        "name": "Samarkand",
+        "note": "(Maracanda)",
+        "refs": "24 G2; 26 G2"
+    },
+    "Samaria [city]": {
+        "name": "Samaria",
+        "note": "[city]",
+        "refs": "15 E6; 19 D7; 23 C3; 29 D7"
+    },
+    "Samaria": {
+        "name": "Samaria",
+        "refs": "13; 29 C8; 32 E3"
+    },
+    "City of Salt": {
+        "name": "City of Salt",
+        "refs": "19 E10"
+    },
+    "Salim": {
+        "name": "Salim",
+        "refs": "18 F6; 29 E6"
+    },
+    "Salem (Jerusalem)": {
+        "name": "Salem",
+        "note": "(Jerusalem)",
+        "refs": "5 E4; 7; 9 H1; 11 F8; 13; 15 F8; 17, 17 E9; 18; 19 D10; 21; 23 C4; 24 C4; 26 C3; 27 D3; 29 D9; 31; 32 E3; 33 H5"
+    },
+    "Salamis [Greece]": {
+        "name": "Salamis",
+        "note": "[Greece]",
+        "refs": "24 A3"
+    },
+    "Salamis [Cyprus]": {
+        "name": "Salamis",
+        "note": "[Cyprus]",
+        "refs": "33 G3"
+    },
+    "Rumah": {
+        "name": "Rumah",
+        "refs": "18 E4"
+    },
+    "Rome": {
+        "name": "Rome",
+        "refs": "5 A2; 27 B2; 32 B1; 33 A1"
+    },
+    "Rogelim": {
+        "name": "Rogelim",
+        "refs": "17 G5; 18 G6"
+    },
+    "Rissah": {
+        "name": "Rissah",
+        "refs": "9 G5"
+    },
+    "Rimmon-perez": {
+        "name": "Rimmon-perez",
+        "refs": "9 G6"
+    },
+    "Rimmon (Ain [Simeon])": {
+        "name": "Rimmon",
+        "note": "(Ain [Simeon])",
+        "refs": "15 D9; 19 C12"
+    },
+    "Riblah": {
+        "name": "Riblah",
+        "refs": "23 D3"
+    },
+    "Rhodes": {
+        "name": "Rhodes",
+        "refs": "5 D3; 33 E3"
+    },
+    "Rhegium": {
+        "name": "Rhegium",
+        "refs": "33 B2"
+    },
+    "Rhagae": {
+        "name": "Rhagae",
+        "refs": "26 E3"
+    },
+    "Reuben": {
+        "name": "Reuben",
+        "refs": "15 H8"
+    },
+    "Rephidim": {
+        "name": "Rephidim",
+        "refs": "9 F8"
+    },
+    "Rehoboth": {
+        "name": "Rehoboth",
+        "refs": "7"
+    },
+    "Rehob": {
+        "name": "Rehob",
+        "refs": "18 D4"
+    },
+    "Raphana": {
+        "name": "Raphana",
+        "refs": "29 H4"
+    },
+    "Ramoth-gilead": {
+        "name": "Ramoth-gilead",
+        "refs": "15 H5; 17 H6; 18 H6"
+    },
+    "Ramoth (Jarmuth)": {
+        "name": "Ramoth",
+        "note": "(Jarmuth)",
+        "refs": "18 F5"
+    },
+    "Rameses": {
+        "name": "Rameses",
+        "refs": "9 A5"
+    },
+    "Ramah [Naphtali]": {
+        "name": "Ramah",
+        "note": "[Naphtali]",
+        "refs": "18 E3"
+    },
+    "Ramah [Benjamin]": {
+        "name": "Ramah",
+        "note": "[Benjamin]",
+        "refs": "18; 19 D9"
+    },
+    "Ramah (Baal) (Baalath-beer) [Simeon]": {
+        "name": "Ramah",
+        "note": "(Baal) (Baalath-beer) [Simeon]",
+        "refs": "15 E10; 19 D13"
+    },
+    "Ramah (Arimathea) [Ephraim]": {
+        "name": "Ramah",
+        "note": "(Arimathea) [Ephraim]",
+        "refs": "17 D8; 19 C8; 29 C8"
+    },
+    "Rakkath": {
+        "name": "Rakkath",
+        "refs": "18 F4"
+    },
+    "Rabbah (Philadelphia)": {
+        "name": "Rabbah",
+        "note": "(Philadelphia)",
+        "refs": "11 H7; 15 H7; 17 H8; 19 H9; 26 C3; 29 G9"
+    },
+    "Puteoli": {
+        "name": "Puteoli",
+        "refs": "33 A1"
+    },
+    "Pura": {
+        "name": "Pura",
+        "refs": "26 F4"
+    },
+    "Punon": {
+        "name": "Punon",
+        "refs": "9 I3"
+    },
+    "Ptolemais": {
+        "name": "Ptolemais",
+        "refs": "18 D4; 29 C4; 33 H4"
+    },
+    "Promised Land": {
+        "name": "Promised Land",
+        "refs": "3; 5 E4"
+    },
+    "Pontus": {
+        "name": "Pontus",
+        "refs": "32 E1; 33 H1"
+    },
+    "Pisidia": {
+        "name": "Pisidia",
+        "refs": "33 F3"
+    },
+    "Pisgah (Nebo)": {
+        "name": "Pisgah",
+        "note": "(Nebo)",
+        "refs": "9 I1; 11 G8; 19 G10"
+    },
+    "Pirathon": {
+        "name": "Pirathon",
+        "refs": "15 E6; 17 E7; 19 D8"
+    },
+    "Pihahiroth": {
+        "name": "Pihahiroth",
+        "refs": "9 C5"
+    },
+    "Phrygia": {
+        "name": "Phrygia",
+        "refs": "32 D2; 33 F2"
+    },
+    "Phoenicia": {
+        "name": "Phoenicia",
+        "refs": "11 F2; 29 D3"
+    },
+    "Philistia": {
+        "name": "Philistia",
+        "refs": "9 G1; 11 D8; 13"
+    },
+    "Philippi": {
+        "name": "Philippi",
+        "refs": "5 C2; 33 D1"
+    },
+    "Philadelphia [Asia Minor]": {
+        "name": "Philadelphia",
+        "note": "[Asia Minor]",
+        "refs": "33 F2"
+    },
+    "Philadelphia (Rabbah)": {
+        "name": "Philadelphia",
+        "note": "(Rabbah)",
+        "refs": "11 H7; 15 H7; 17 H8; 19 H9; 26 C3; 29 G9"
+    },
+    "Phasis": {
+        "name": "Phasis",
+        "refs": "24 D2"
+    },
+    "Persia": {
+        "name": "Persia",
+        "refs": "3; 24 E4; 26 E4"
+    },
+    "Persepolis": {
+        "name": "Persepolis",
+        "refs": "24 E4; 26 E4"
+    },
+    "Perizzites": {
+        "name": "Perizzites",
+        "refs": "11 F7"
+    },
+    "Pergamum": {
+        "name": "Pergamum",
+        "refs": "33 E2"
+    },
+    "Perga": {
+        "name": "Perga",
+        "refs": "33 F3"
+    },
+    "Perea": {
+        "name": "Perea",
+        "refs": "29 F7"
+    },
+    "Penuel": {
+        "name": "Penuel",
+        "refs": "7; 15 G6; 19 F8"
+    },
+    "Pella [Macedonia]": {
+        "name": "Pella",
+        "note": "[Macedonia]",
+        "refs": "26 A2"
+    },
+    "Pella [Decapolis]": {
+        "name": "Pella",
+        "note": "[Decapolis]",
+        "refs": "18 F6; 29 E6; 33 H4"
+    },
+    "Patmos": {
+        "name": "Patmos",
+        "refs": "5 D3; 33 E3"
+    },
+    "Patara": {
+        "name": "Patara",
+        "refs": "33 F3"
+    },
+    "Pasargadae": {
+        "name": "Pasargadae",
+        "refs": "24 E4; 26 E4"
+    },
+    "Parthia": {
+        "name": "Parthia",
+        "refs": "24 F3; 26 F3; 32 G2"
+    },
+    "Paran": {
+        "name": "Paran",
+        "refs": "7 B5; 9 F5; 13; 17 C12"
+    },
+    "Parah": {
+        "name": "Parah",
+        "refs": "19 E10"
+    },
+    "Paphos": {
+        "name": "Paphos",
+        "refs": "33 G4"
+    },
+    "Pamphylia": {
+        "name": "Pamphylia",
+        "refs": "32 D2; 33 G3"
+    },
+    "Palmyra (Tadmor)": {
+        "name": "Palmyra",
+        "note": "(Tadmor)",
+        "refs": "7 D2; 17; 24 C3; 26 C3"
+    },
+    "Paddan-aram": {
+        "name": "Paddan-aram",
+        "refs": "7 E1"
+    },
+    "Ophrah [in Issachar]": {
+        "name": "Ophrah",
+        "note": "[in Issachar]",
+        "refs": "18 E5"
+    },
+    "Ophrah (Ephraim)": {
+        "name": "Ophrah",
+        "note": "(Ephraim)",
+        "refs": "17 F8; 19 E9; 29 D9"
+    },
+    "Ophni": {
+        "name": "Ophni",
+        "refs": "19 D9"
+    },
+    "Ophel": {
+        "name": "Ophel",
+        "refs": "21"
+    },
+    "Ono": {
+        "name": "Ono",
+        "refs": "19 C8"
+    },
+    "On": {
+        "name": "On",
+        "refs": "9 A4"
+    },
+    "Mount of Olives": {
+        "name": "Mount of Olives",
+        "refs": "31"
+    },
+    "Noph (Memphis)": {
+        "name": "Noph",
+        "note": "(Memphis)",
+        "refs": "5 D4; 9 A5; 23 B4; 24 B4; 26 B4"
+    },
+    "Nob": {
+        "name": "Nob",
+        "refs": "17 E9; 18"
+    },
+    "No-amon (Thebes)": {
+        "name": "No-amon",
+        "note": "(Thebes)",
+        "refs": "24 B5; 26 B4"
+    },
+    "Nisibis": {
+        "name": "Nisibis",
+        "refs": "26 D3"
+    },
+    "Nineveh": {
+        "name": "Nineveh",
+        "refs": "5 G3; 7 G1; 23 F2; 24 D3"
+    },
+    "Nile": {
+        "name": "Nile",
+        "refs": "3; 5 D5; 9 A6; 23 B5; 24 B4; 26 B4"
+    },
+    "Nibshan": {
+        "name": "Nibshan",
+        "refs": "19 E10"
+    },
+    "Netophah": {
+        "name": "Netophah",
+        "refs": "19 D10"
+    },
+    "Nephtoah": {
+        "name": "Nephtoah",
+        "refs": "18"
+    },
+    "Neiel": {
+        "name": "Neiel",
+        "refs": "18 D4"
+    },
+    "Negeb": {
+        "name": "Negeb",
+        "refs": "7; 9 G3; 11 D11; 13"
+    },
+    "Nebo [city]": {
+        "name": "Nebo",
+        "note": "[city]",
+        "refs": "19 G10"
+    },
+    "Nebo (Pisgah)": {
+        "name": "Nebo",
+        "note": "(Pisgah)",
+        "refs": "9 I1; 11 G8; 19 G10"
+    },
+    "Neballat": {
+        "name": "Neballat",
+        "refs": "19 C9"
+    },
+    "Neapolis": {
+        "name": "Neapolis",
+        "refs": "33 D1"
+    },
+    "Nazareth": {
+        "name": "Nazareth",
+        "refs": "18 E5; 29 D5"
+    },
+    "Naphtali": {
+        "name": "Naphtali",
+        "refs": "15 F3"
+    },
+    "Nain": {
+        "name": "Nain",
+        "refs": "18 E5; 29 D5"
+    },
+    "Naarah": {
+        "name": "Naarah",
+        "refs": "19 E9"
+    },
+    "Mysia": {
+        "name": "Mysia",
+        "refs": "33 E2"
+    },
+    "Myra": {
+        "name": "Myra",
+        "refs": "33 F3"
+    },
+    "Mozah": {
+        "name": "Mozah",
+        "refs": "18"
+    },
+    "Moriah": {
+        "name": "Moriah",
+        "refs": "7, 7 C4; 21"
+    },
+    "Moresheth": {
+        "name": "Moresheth",
+        "refs": "19 C11"
+    },
+    "Moreh": {
+        "name": "Moreh",
+        "refs": "15 F4; 18 E5"
+    },
+    "Moab": {
+        "name": "Moab",
+        "refs": "5 E4; 9 I2; 11 H10; 13; 17 H12"
+    },
+    "Mizpah (Mizpeh) [Gad]": {
+        "name": "Mizpah",
+        "note": "(Mizpeh) [Gad]",
+        "refs": "15 G6; 19 G8"
+    },
+    "Mizpah (Mizpeh) [Benjamin]": {
+        "name": "Mizpah",
+        "note": "(Mizpeh) [Benjamin]",
+        "refs": "19 D9"
+    },
+    "Mitylene": {
+        "name": "Mitylene",
+        "refs": "33 E2"
+    },
+    "Misrephoth-maim": {
+        "name": "Misrephoth-maim",
+        "refs": "18 D3"
+    },
+    "Minnith": {
+        "name": "Minnith",
+        "refs": "15 H7"
+    },
+    "Minni": {
+        "name": "Minni",
+        "refs": "23 F2"
+    },
+    "Miletus": {
+        "name": "Miletus",
+        "refs": "33 E3"
+    },
+    "Migron": {
+        "name": "Migron",
+        "refs": "19 D9"
+    },
+    "Migdol": {
+        "name": "Migdol",
+        "refs": "9 C5"
+    },
+    "Migdal-el": {
+        "name": "Migdal-el",
+        "refs": "18 E2"
+    },
+    "Midian": {
+        "name": "Midian",
+        "refs": "9 I7"
+    },
+    "Michmethath": {
+        "name": "Michmethath",
+        "refs": "19 E8"
+    },
+    "Michmash": {
+        "name": "Michmash",
+        "refs": "19 E9"
+    },
+    "Michmas": {
+        "name": "Michmas",
+        "refs": "19 E9"
+    },
+    "Mesopotamia": {
+        "name": "Mesopotamia",
+        "refs": "7 F2; 23 E2; 32 E2"
+    },
+    "Meroz": {
+        "name": "Meroz",
+        "refs": "18 F3"
+    },
+    "Merom": {
+        "name": "Merom",
+        "refs": "18 E3"
+    },
+    "Mephaath": {
+        "name": "Mephaath",
+        "refs": "19 H9"
+    },
+    "Memphis (Noph)": {
+        "name": "Memphis",
+        "note": "(Noph)",
+        "refs": "5 D4; 9 A5; 23 B4; 24 B4; 26 B4"
+    },
+    "Megiddo": {
+        "name": "Megiddo",
+        "refs": "7; 11 E5; 13; 15 E5; 17 E5; 18 D5; 23 C3"
+    },
+    "Media": {
+        "name": "Media",
+        "refs": "3; 5 H3; 23 G2; 24 E3; 26 E3; 32 F2"
+    },
+    "Medeba": {
+        "name": "Medeba",
+        "refs": "17 H9; 19 G10"
+    },
+    "Masada": {
+        "name": "Masada",
+        "refs": "29 D12"
+    },
+    "Mareshah": {
+        "name": "Mareshah",
+        "refs": "19 C11"
+    },
+    "Maresha": {
+        "name": "Maresha",
+        "refs": "19 C11"
+    },
+    "Marathon": {
+        "name": "Marathon",
+        "refs": "24 A3"
+    },
+    "Marah": {
+        "name": "Marah",
+        "refs": "9 D6"
+    },
+    "Maracanda (Samarkand)": {
+        "name": "Maracanda",
+        "note": "(Samarkand)",
+        "refs": "24 G2; 26 G2"
+    },
+    "Maon": {
+        "name": "Maon",
+        "refs": "17 E11; 19 D12"
+    },
+    "Manasseh": {
+        "name": "Manasseh",
+        "refs": "15 E5, H3"
+    },
+    "Manahath": {
+        "name": "Manahath",
+        "refs": "18"
+    },
+    "Mamre": {
+        "name": "Mamre",
+        "refs": "7; 19 D11"
+    },
+    "Malta": {
+        "name": "Malta",
+        "refs": "5 A3; 33 A3"
+    },
+    "Makkedah": {
+        "name": "Makkedah",
+        "refs": "19 C10"
+    },
+    "Makaz": {
+        "name": "Makaz",
+        "refs": "17 D9"
+    },
+    "Mahanaim": {
+        "name": "Mahanaim",
+        "refs": "7; 17 G7; 19 F8"
+    },
+    "Magadan": {
+        "name": "Magadan",
+        "refs": "18 F4; 29 E4"
+    },
+    "Madon": {
+        "name": "Madon",
+        "refs": "18 E4"
+    },
+    "Madmannah (Beth-marcaboth)": {
+        "name": "Madmannah",
+        "note": "(Beth-marcaboth)",
+        "refs": "15 E9; 19 C12"
+    },
+    "Machpelah (also Hebron)": {
+        "name": "Machpelah",
+        "note": "(also Hebron)",
+        "refs": "7; 19 D11"
+    },
+    "Macedonia": {
+        "name": "Macedonia",
+        "refs": "5 C2; 24 A2; 26 A2; 32 C1; 33 C1"
+    },
+    "Maacah": {
+        "name": "Maacah",
+        "refs": "17 G3"
+    },
+    "Lystra": {
+        "name": "Lystra",
+        "refs": "33 G2"
+    },
+    "Lydia": {
+        "name": "Lydia",
+        "refs": "24 B2"
+    },
+    "Lydda (Lod)": {
+        "name": "Lydda",
+        "note": "(Lod)",
+        "refs": "19 C9; 29 B9; 33 G5"
+    },
+    "Lycia": {
+        "name": "Lycia",
+        "refs": "33 F3"
+    },
+    "Lycaonia": {
+        "name": "Lycaonia",
+        "refs": "33 G2"
+    },
+    "Luz (Bethel)": {
+        "name": "Luz",
+        "note": "(Bethel)",
+        "refs": "7, 7 C4; 15 F7; 17 E8; 19 D9"
+    },
+    "Lod (Lydda)": {
+        "name": "Lod",
+        "note": "(Lydda)",
+        "refs": "19 C9; 29 B9; 33 G5"
+    },
+    "Lo-debar (Debir)": {
+        "name": "Lo-debar",
+        "note": "(Debir)",
+        "refs": "17 G5; 18 F5"
+    },
+    "Libya": {
+        "name": "Libya",
+        "refs": "5 C4; 24 A4; 26 A3; 32 C3"
+    },
+    "Libnah": {
+        "name": "Libnah",
+        "refs": "19 C11"
+    },
+    "Lehi": {
+        "name": "Lehi",
+        "refs": "15 E8; 19 C10"
+    },
+    "Lebonah": {
+        "name": "Lebonah",
+        "refs": "17 E8; 19 D8"
+    },
+    "Lebanon": {
+        "name": "Lebanon",
+        "refs": "13"
+    },
+    "Lassharon": {
+        "name": "Lassharon",
+        "refs": "18 E5"
+    },
+    "Laodicea": {
+        "name": "Laodicea",
+        "refs": "33 F2"
+    },
+    "Laish (Dan [city])": {
+        "name": "Laish",
+        "note": "(Dan [city])",
+        "refs": "7 C3; 11 G2; 12; 15 G2; 17, 17 G2; 18 F2"
+    },
+    "Lachish": {
+        "name": "Lachish",
+        "refs": "11 D8; 17 D10; 19 C11; 23 C4"
+    },
+    "Kittim (Cyprus)": {
+        "name": "Kittim",
+        "note": "(Cyprus)",
+        "refs": "5 E3; 23 C2; 26 B3; 32 D2; 33 G4"
+    },
+    "Kishon": {
+        "name": "Kishon",
+        "refs": "18 D4"
+    },
+    "Kishion (Kedesh [Issachar])": {
+        "name": "Kishion",
+        "note": "(Kedesh [Issachar])",
+        "refs": "15 E5; 18 D6"
+    },
+    "Kiriathaim": {
+        "name": "Kiriathaim",
+        "refs": "19 F11"
+    },
+    "Kiriath-jearim": {
+        "name": "Kiriath-jearim",
+        "refs": "17 E9; 18; 19 D10"
+    },
+    "Kiriath-arba (Hebron)": {
+        "name": "Kiriath-arba",
+        "note": "(Hebron)",
+        "refs": "7, 7 C4; 9 H1; 11 E8; 15 E8; 17 E10; 19 D11; 29 C11"
+    },
+    "Kir of Moab (Kir-hareseth)": {
+        "name": "Kir of Moab",
+        "note": "(Kir-hareseth)",
+        "refs": "19 G13"
+    },
+    "King’s Road": {
+        "name": "King’s Road",
+        "refs": "7; 9 I4; 15 G10; 17 H6"
+    },
+    "Kidron": {
+        "name": "Kidron",
+        "refs": "21; 31"
+    },
+    "Kibroth-hattaavah": {
+        "name": "Kibroth-hattaavah",
+        "refs": "9 F7"
+    },
+    "Khorsabad": {
+        "name": "Khorsabad",
+        "refs": "23 F2"
+    },
+    "Kenites": {
+        "name": "Kenites",
+        "refs": "11 E10"
+    },
+    "Keilah": {
+        "name": "Keilah",
+        "refs": "17 D10; 19 C11"
+    },
+    "Kedesh [Naphtali]": {
+        "name": "Kedesh",
+        "note": "[Naphtali]",
+        "refs": "15 F3; 18 F2"
+    },
+    "Kedesh [Issachar]": {
+        "name": "Kedesh",
+        "note": "[Issachar]",
+        "refs": "15 E5; 18 D6"
+    },
+    "Kedemoth": {
+        "name": "Kedemoth",
+        "refs": "19 G11"
+    },
+    "Kanah": {
+        "name": "Kanah",
+        "refs": "18 E2"
+    },
+    "Kain": {
+        "name": "Kain",
+        "refs": "19 D11"
+    },
+    "Kadesh (Kadesh-barnea)": {
+        "name": "Kadesh",
+        "note": "(Kadesh-barnea)",
+        "refs": "5 E4; 7, 7 C4; 9 G3; 11 C12; 15 C12"
+    },
+    "Kabul": {
+        "name": "Kabul",
+        "refs": "26 H3"
+    },
+    "Juttah": {
+        "name": "Juttah",
+        "refs": "19 D12"
+    },
+    "Judah [tribe]": {
+        "name": "Judah",
+        "note": "[tribe]",
+        "refs": "15 D9"
+    },
+    "Judah (Judea)": {
+        "name": "Judah",
+        "note": "(Judea)",
+        "refs": "13; 29 C10, D10; 32 E3"
+    },
+    "Jotbathah": {
+        "name": "Jotbathah",
+        "refs": "9 H5"
+    },
+    "Jotbah": {
+        "name": "Jotbah",
+        "refs": "18 D4"
+    },
+    "Jordan": {
+        "name": "Jordan",
+        "refs": "7; 11 F6; 13; 15 F6; 19 F8; 29 E7"
+    },
+    "Joppa": {
+        "name": "Joppa",
+        "refs": "15 D7; 17 C8; 19 B8; 29 B8; 33 G5"
+    },
+    "Jokneam (Jokmeam)": {
+        "name": "Jokneam",
+        "note": "(Jokmeam)",
+        "refs": "17 E5; 18 D5"
+    },
+    "Jogbehah": {
+        "name": "Jogbehah",
+        "refs": "15 G7; 19 G8"
+    },
+    "Jezreel": {
+        "name": "Jezreel",
+        "refs": "13; 17 F5; 18 E6"
+    },
+    "Jeshua (Sheba)": {
+        "name": "Jeshua",
+        "note": "(Sheba)",
+        "refs": "15 E9; 19 C13"
+    },
+    "Jeshanah": {
+        "name": "Jeshanah",
+        "refs": "19 D9"
+    },
+    "Jerusalem": {
+        "name": "Jerusalem",
+        "refs": "5 E4; 7; 9 H1; 11 F8; 13; 15 F8; 17, 17 E9; 18; 19 D10; 21; 23 C4; 24 C4; 26 C3; 27 D3; 29 D9; 31; 32 E3; 33 H5"
+    },
+    "Jericho": {
+        "name": "Jericho",
+        "refs": "9 H1; 11 F7; 17 F9; 19 E9; 29 E9"
+    },
+    "Jehud": {
+        "name": "Jehud",
+        "refs": "19 C8"
+    },
+    "Jebusites": {
+        "name": "Jebusites",
+        "refs": "11 E7"
+    },
+    "Jattir": {
+        "name": "Jattir",
+        "refs": "17 D11; 19 C12"
+    },
+    "Jarmuth [Judah]": {
+        "name": "Jarmuth",
+        "note": "[Judah]",
+        "refs": "19 C10"
+    },
+    "Jarmuth (Ramoth) [Issachar]": {
+        "name": "Jarmuth",
+        "note": "(Ramoth) [Issachar]",
+        "refs": "18 F5"
+    },
+    "Jarash (Gerasa)": {
+        "name": "Jarash",
+        "note": "(Gerasa)",
+        "refs": "19 G7; 26 C3; 27 D3; 29 F7"
+    },
+    "Janoah": {
+        "name": "Janoah",
+        "refs": "18 F2"
+    },
+    "Jagur": {
+        "name": "Jagur",
+        "refs": "19 C13"
+    },
+    "Jacob’s Fountain": {
+        "name": "Jacob’s Fountain",
+        "refs": "29 D7"
+    },
+    "Jabneel [Naphtali]": {
+        "name": "Jabneel",
+        "note": "[Naphtali]",
+        "refs": "18 F5"
+    },
+    "Jabneel [Judah]": {
+        "name": "Jabneel",
+        "note": "[Judah]",
+        "refs": "15 D7; 19 B9"
+    },
+    "Jabesh-gilead": {
+        "name": "Jabesh-gilead",
+        "refs": "18 F6"
+    },
+    "Jabbok": {
+        "name": "Jabbok",
+        "refs": "7; 11 G6; 15 G6; 19 G8"
+    },
+    "Iye-abarim": {
+        "name": "Iye-abarim",
+        "refs": "9 I3"
+    },
+    "Ituraea": {
+        "name": "Ituraea",
+        "refs": "29 G3"
+    },
+    "Italy": {
+        "name": "Italy",
+        "refs": "2; 5 A1; 27 B2; 32 B1; 33 A1"
+    },
+    "Issus": {
+        "name": "Issus",
+        "refs": "24 C3; 26 C3"
+    },
+    "Issachar": {
+        "name": "Issachar",
+        "refs": "15 F5"
+    },
+    "Indus": {
+        "name": "Indus",
+        "refs": "24 H4; 26 G4"
+    },
+    "India": {
+        "name": "India",
+        "refs": "24 H5; 26 H5"
+    },
+    "Illyricum": {
+        "name": "Illyricum",
+        "refs": "27 C2; 32 B1"
+    },
+    "Ijon": {
+        "name": "Ijon",
+        "refs": "18 F1"
+    },
+    "Idumea": {
+        "name": "Idumea",
+        "refs": "29 C12"
+    },
+    "Iconium": {
+        "name": "Iconium",
+        "refs": "33 G2"
+    },
+    "Ibleam (Gath-rimmon)": {
+        "name": "Ibleam",
+        "note": "(Gath-rimmon)",
+        "refs": "15 F5; 18 E6"
+    },
+    "Hyrcania": {
+        "name": "Hyrcania",
+        "refs": "24 E3"
+    },
+    "Hula": {
+        "name": "Hula",
+        "refs": "13; 18 F3"
+    },
+    "Horesh": {
+        "name": "Horesh",
+        "refs": "17 E11; 19 D12"
+    },
+    "Horeb (Sinai)": {
+        "name": "Horeb",
+        "note": "(Sinai)",
+        "refs": "5 E5; 9 F8"
+    },
+    "Hor-haggidgad": {
+        "name": "Hor-haggidgad",
+        "refs": "9 G5"
+    },
+    "Hor": {
+        "name": "Hor",
+        "refs": "9 H3; 11 E11"
+    },
+    "Holon": {
+        "name": "Holon",
+        "refs": "19 C11"
+    },
+    "Hobah": {
+        "name": "Hobah",
+        "refs": "7 D3"
+    },
+    "Hivites": {
+        "name": "Hivites",
+        "refs": "11 E6, G2"
+    },
+    "Hittites": {
+        "name": "Hittites",
+        "refs": "11 E9"
+    },
+    "Hippos": {
+        "name": "Hippos",
+        "refs": "29 E5"
+    },
+    "Hippo": {
+        "name": "Hippo",
+        "refs": "29 E5"
+    },
+    "Hinnom": {
+        "name": "Hinnom",
+        "refs": "21; 31"
+    },
+    "Heshbon": {
+        "name": "Heshbon",
+        "refs": "11 G7; 15 G7; 19 G10"
+    },
+    "Herodium": {
+        "name": "Herodium",
+        "refs": "29 D10"
+    },
+    "Hermon": {
+        "name": "Hermon",
+        "refs": "11 G1; 12; 18 G1; 29 F2"
+    },
+    "Hepher": {
+        "name": "Hepher",
+        "refs": "17 D6; 18 C7"
+    },
+    "Helkath": {
+        "name": "Helkath",
+        "refs": "18 D5"
+    },
+    "Helbah": {
+        "name": "Helbah",
+        "refs": "18 D1"
+    },
+    "Helam": {
+        "name": "Helam",
+        "refs": "17 I4"
+    },
+    "Hecatompylos": {
+        "name": "Hecatompylos",
+        "refs": "26 E3"
+    },
+    "Hebron (Kiriath-arba)": {
+        "name": "Hebron",
+        "note": "(Kiriath-arba)",
+        "refs": "7, 7 C4; 9 H1; 11 E8; 15 E8; 17 E10; 19 D11; 29 C11"
+    },
+    "Hazor [Naphtali]": {
+        "name": "Hazor",
+        "note": "[Naphtali]",
+        "refs": "11 G3; 15 G3; 17 G3; 18 F3"
+    },
+    "Hazor [Benjamin]": {
+        "name": "Hazor",
+        "note": "[Benjamin]",
+        "refs": "18"
+    },
+    "Hazor (Bethuel)": {
+        "name": "Hazor",
+        "note": "(Bethuel)",
+        "refs": "15 E9; 19 D12"
+    },
+    "Hazeroth": {
+        "name": "Hazeroth",
+        "refs": "9 G7"
+    },
+    "Hazar-susim (Sansannah)": {
+        "name": "Hazar-susim",
+        "note": "(Sansannah)",
+        "refs": "15 D9; 19 C12"
+    },
+    "Hazar-susah (Sansannah)": {
+        "name": "Hazar-susah",
+        "note": "(Sansannah)",
+        "refs": "15 D9; 19 C12"
+    },
+    "Hazar-shual": {
+        "name": "Hazar-shual",
+        "refs": "15 D10; 19 C13"
+    },
+    "Hazar-addar (Addar)": {
+        "name": "Hazar-addar",
+        "note": "(Addar)",
+        "refs": "11 C12"
+    },
+    "Harosheth": {
+        "name": "Harosheth",
+        "refs": "15 E4; 18 D5"
+    },
+    "Harod": {
+        "name": "Harod",
+        "refs": "18 E6"
+    },
+    "Haran": {
+        "name": "Haran",
+        "refs": "5 F3; 7 E1; 23 D2"
+    },
+    "Hammoth-dor (Hammath)": {
+        "name": "Hammoth-dor",
+        "note": "(Hammath)",
+        "refs": "18 F4"
+    },
+    "Hammon": {
+        "name": "Hammon",
+        "refs": "18 D2"
+    },
+    "Hammath (Hammoth-dor)": {
+        "name": "Hammath",
+        "note": "(Hammoth-dor)",
+        "refs": "18 F4"
+    },
+    "Hamath": {
+        "name": "Hamath",
+        "refs": "17; 23 D2"
+    },
+    "Ham": {
+        "name": "Ham",
+        "refs": "18 G6"
+    },
+    "Hali": {
+        "name": "Hali",
+        "refs": "18 D4"
+    },
+    "Hadid": {
+        "name": "Hadid",
+        "refs": "19 C9"
+    },
+    "Hadadrimmon": {
+        "name": "Hadadrimmon",
+        "refs": "18 D6"
+    },
+    "Greece": {
+        "name": "Greece",
+        "refs": "2; 5 C2; 24 A2; 26 A2; 27 C3; 32 C2; 33 C2"
+    },
+    "Gozan": {
+        "name": "Gozan",
+        "refs": "23 E2"
+    },
+    "Goshen [Judah]": {
+        "name": "Goshen",
+        "note": "[Judah]",
+        "refs": "19 C12"
+    },
+    "Goshen [Egypt]": {
+        "name": "Goshen",
+        "note": "[Egypt]",
+        "refs": "7 A4; 9 A3"
+    },
+    "Gordium": {
+        "name": "Gordium",
+        "refs": "26 B2"
+    },
+    "Golgotha": {
+        "name": "Golgotha",
+        "refs": "31"
+    },
+    "Golan": {
+        "name": "Golan",
+        "refs": "15 H4; 18 H4"
+    },
+    "Girgashites": {
+        "name": "Girgashites",
+        "refs": "11 F4"
+    },
+    "Gimzo": {
+        "name": "Gimzo",
+        "refs": "19 C9"
+    },
+    "Giloh": {
+        "name": "Giloh",
+        "refs": "19 D11"
+    },
+    "Gilgal [Ephraim]": {
+        "name": "Gilgal",
+        "note": "[Ephraim]",
+        "refs": "19 D8"
+    },
+    "Gilgal [by Jordan]": {
+        "name": "Gilgal",
+        "note": "[by Jordan]",
+        "refs": "11 F7; 15 F7; 19 E9"
+    },
+    "Gilead": {
+        "name": "Gilead",
+        "refs": "7; 11 G6; 13"
+    },
+    "Gilboa": {
+        "name": "Gilboa",
+        "refs": "15 F5; 17 F5; 18 E6"
+    },
+    "Gihon": {
+        "name": "Gihon",
+        "refs": "21; 31"
+    },
+    "Gibeon": {
+        "name": "Gibeon",
+        "refs": "17 E9; 18; 19 D9"
+    },
+    "Gibeah [Judah]": {
+        "name": "Gibeah",
+        "note": "[Judah]",
+        "refs": "19 D10"
+    },
+    "Gibeah [Benjamin]": {
+        "name": "Gibeah",
+        "note": "[Benjamin]",
+        "refs": "17 E9; 18; 19 D10"
+    },
+    "Gibbethon": {
+        "name": "Gibbethon",
+        "refs": "19 C9"
+    },
+    "Gezer": {
+        "name": "Gezer",
+        "refs": "17 D9; 19 C9"
+    },
+    "Gethsemane": {
+        "name": "Gethsemane",
+        "refs": "31"
+    },
+    "Geshur": {
+        "name": "Geshur",
+        "refs": "17 H4"
+    },
+    "Germania": {
+        "name": "Germania",
+        "refs": "27 B1"
+    },
+    "Gerizim": {
+        "name": "Gerizim",
+        "refs": "15 F6; 19 D7; 29 D7"
+    },
+    "Gerasa": {
+        "name": "Gerasa",
+        "refs": "19 G7; 26 C3; 27 D3; 29 F7"
+    },
+    "Gerar [city]": {
+        "name": "Gerar",
+        "note": "[city]",
+        "refs": "7, 7 C4; 11 D9; 19 A12"
+    },
+    "Gerar": {
+        "name": "Gerar",
+        "refs": "19 A12"
+    },
+    "Gehenna (Hinnom)": {
+        "name": "Gehenna",
+        "note": "(Hinnom)",
+        "refs": "21; 31"
+    },
+    "Gedrosia": {
+        "name": "Gedrosia",
+        "refs": "24 G4; 26 G4"
+    },
+    "Gederah": {
+        "name": "Gederah",
+        "refs": "19 B10"
+    },
+    "Geba": {
+        "name": "Geba",
+        "refs": "17 E9; 18; 19 D9"
+    },
+    "Gaza": {
+        "name": "Gaza",
+        "refs": "9 G2; 11 C9; 15 C9; 17, 17 B10; 19 A11; 26 C4; 29 A11; 33 G5"
+    },
+    "Gaul": {
+        "name": "Gaul",
+        "refs": "27 B2"
+    },
+    "Gaugamela": {
+        "name": "Gaugamela",
+        "refs": "26 D3"
+    },
+    "Gath-rimmon [Dan]": {
+        "name": "Gath-rimmon",
+        "note": "[Dan]",
+        "refs": "19 B8"
+    },
+    "Gath-rimmon (Ibleam) [Manasseh]": {
+        "name": "Gath-rimmon",
+        "note": "(Ibleam) [Manasseh]",
+        "refs": "15 F5; 18 E6"
+    },
+    "Gath-hepher": {
+        "name": "Gath-hepher",
+        "refs": "18 E5"
+    },
+    "Gath": {
+        "name": "Gath",
+        "refs": "11 D8; 17 D9; 19 C10"
+    },
+    "Gamala": {
+        "name": "Gamala",
+        "refs": "29 F4"
+    },
+    "Gallim": {
+        "name": "Gallim",
+        "refs": "18"
+    },
+    "Galilee": {
+        "name": "Galilee",
+        "refs": "13; 29 D4"
+    },
+    "Galatia": {
+        "name": "Galatia",
+        "refs": "32 D2; 33 G2"
+    },
+    "Gadara": {
+        "name": "Gadara",
+        "refs": "18 F5; 29 F5"
+    },
+    "Gad": {
+        "name": "Gad",
+        "refs": "15 H6"
+    },
+    "Fertile Crescent": {
+        "name": "Fertile Crescent",
+        "refs": "7 G2"
+    },
+    "Farʽah": {
+        "name": "Farʽah",
+        "refs": "19 E7"
+    },
+    "Ezion-geber": {
+        "name": "Ezion-geber",
+        "refs": "9 H6; 17"
+    },
+    "Ezem": {
+        "name": "Ezem",
+        "refs": "15 E10"
+    },
+    "Euphrates": {
+        "name": "Euphrates",
+        "refs": "3; 5 F3; 7 E2; 17; 23 E2; 24 C3; 26 D3"
+    },
+    "Ethiopia": {
+        "name": "Ethiopia",
+        "refs": "3; 32 D4"
+    },
+    "Ether (Tochen)": {
+        "name": "Ether",
+        "note": "(Tochen)",
+        "refs": "15 D8"
+    },
+    "Etham [campsite]": {
+        "name": "Etham",
+        "note": "[campsite]",
+        "refs": "9 C5"
+    },
+    "Etham": {
+        "name": "Etham",
+        "refs": "9 D5"
+    },
+    "Etam [Simeon]": {
+        "name": "Etam",
+        "note": "[Simeon]",
+        "refs": "15 E9; 19 C11"
+    },
+    "Etam [Judah]": {
+        "name": "Etam",
+        "note": "[Judah]",
+        "refs": "19 D10"
+    },
+    "Eshtemoa": {
+        "name": "Eshtemoa",
+        "refs": "17 E11; 19 D12"
+    },
+    "Eshtaol": {
+        "name": "Eshtaol",
+        "refs": "19 C10"
+    },
+    "Erech": {
+        "name": "Erech",
+        "refs": "23 F4"
+    },
+    "Ephrath (Bethlehem [Judah])": {
+        "name": "Ephrath",
+        "note": "(Bethlehem [Judah])",
+        "refs": "7; 15 E8; 17 E9; 18; 19 D10; 29 D10"
+    },
+    "Ephraim [tribe]": {
+        "name": "Ephraim",
+        "note": "[tribe]",
+        "refs": "15 E7"
+    },
+    "Ephraim (Ophrah)": {
+        "name": "Ephraim",
+        "note": "(Ophrah)",
+        "refs": "17 F8; 19 E9; 29 D9"
+    },
+    "Ephesus": {
+        "name": "Ephesus",
+        "refs": "5 D3; 26 B2; 27 D3; 33 E2"
+    },
+    "En-shemesh": {
+        "name": "En-shemesh",
+        "refs": "18"
+    },
+    "En-rogel": {
+        "name": "En-rogel",
+        "refs": "17 E9; 18; 19 D10; 21; 31"
+    },
+    "En-rimmon (Ain [Simeon])": {
+        "name": "En-rimmon",
+        "note": "(Ain [Simeon])",
+        "refs": "15 D9; 19 C12"
+    },
+    "En-gedi": {
+        "name": "En-gedi",
+        "refs": "17 F11; 19 E12"
+    },
+    "En-gannim": {
+        "name": "En-gannim",
+        "refs": "18 E6"
+    },
+    "En-dor": {
+        "name": "En-dor",
+        "refs": "15 F4; 17 F5; 18 E5"
+    },
+    "Emmaus": {
+        "name": "Emmaus",
+        "refs": "18; 19 D10; 29 C9"
+    },
+    "Eltekeh (Elteke)": {
+        "name": "Eltekeh",
+        "note": "(Elteke)",
+        "refs": "19 B9"
+    },
+    "Elteke (Eltekeh)": {
+        "name": "Elteke",
+        "note": "(Eltekeh)",
+        "refs": "19 B9"
+    },
+    "Eloth (Elath)": {
+        "name": "Eloth",
+        "note": "(Elath)",
+        "refs": "17; 24 C4"
+    },
+    "Elim": {
+        "name": "Elim",
+        "refs": "9 D6"
+    },
+    "Elealeh": {
+        "name": "Elealeh",
+        "refs": "19 G10"
+    },
+    "Elburz": {
+        "name": "Elburz",
+        "refs": "24 E3"
+    },
+    "Elath (Eloth)": {
+        "name": "Elath",
+        "note": "(Eloth)",
+        "refs": "17; 24 C4"
+    },
+    "Elam": {
+        "name": "Elam",
+        "refs": "23 G4; 24 E4; 32 F3"
+    },
+    "Ekron": {
+        "name": "Ekron",
+        "refs": "17 D9; 19 C10"
+    },
+    "Egypt, T. V. of": {
+        "name": "Egypt, T. V. of",
+        "refs": "9 F3; 11 B11; 15 B11; 17"
+    },
+    "Egypt": {
+        "name": "Egypt",
+        "refs": "3; 5 D5; 7 A5; 9 A7; 23 B5; 24 B4; 26 B4; 27 D4; 32 D3; 33 F5"
+    },
+    "Eglon": {
+        "name": "Eglon",
+        "refs": "19 B11"
+    },
+    "Eglaim": {
+        "name": "Eglaim",
+        "refs": "19 F13"
+    },
+    "Edrei [Naphtali]": {
+        "name": "Edrei",
+        "note": "[Naphtali]",
+        "refs": "18 F3"
+    },
+    "Edrei [Manasseh]": {
+        "name": "Edrei",
+        "note": "[Manasseh]",
+        "refs": "11 H4; 18 H5"
+    },
+    "Edom": {
+        "name": "Edom",
+        "refs": "5 E4; 7 C5; 9 H4; 11 F12; 13"
+    },
+    "Eden": {
+        "name": "Eden",
+        "refs": "5 F3"
+    },
+    "Ecbatana (Achmetha)": {
+        "name": "Ecbatana",
+        "note": "(Achmetha)",
+        "refs": "24 E3; 26 E3"
+    },
+    "Ebenezer": {
+        "name": "Ebenezer",
+        "refs": "19 C8"
+    },
+    "Ebal": {
+        "name": "Ebal",
+        "refs": "15 F6; 19 D7; 29 D7"
+    },
+    "Drapsaca": {
+        "name": "Drapsaca",
+        "refs": "26 G3"
+    },
+    "Drangiana": {
+        "name": "Drangiana",
+        "refs": "24 F4; 26 F4"
+    },
+    "Dothan": {
+        "name": "Dothan",
+        "refs": "7; 18 D6"
+    },
+    "Dor": {
+        "name": "Dor",
+        "refs": "11 E4; 13; 15 E4; 17 D5; 18 C5"
+    },
+    "Dophkah": {
+        "name": "Dophkah",
+        "refs": "9 E7"
+    },
+    "Dion": {
+        "name": "Dion",
+        "refs": "29 G5"
+    },
+    "Dimon": {
+        "name": "Dimon",
+        "refs": "19 G13"
+    },
+    "Dimnah": {
+        "name": "Dimnah",
+        "refs": "18 E4"
+    },
+    "Dibon (Dibon-gad)": {
+        "name": "Dibon",
+        "note": "(Dibon-gad)",
+        "refs": "9 I1; 19 G11"
+    },
+    "Derbent": {
+        "name": "Derbent",
+        "refs": "26 G2"
+    },
+    "Derbe": {
+        "name": "Derbe",
+        "refs": "33 G3"
+    },
+    "Decapolis": {
+        "name": "Decapolis",
+        "refs": "29 G6"
+    },
+    "Debir [Levi]": {
+        "name": "Debir",
+        "note": "[Levi]",
+        "refs": "11 E9; 19 C12"
+    },
+    "Debir (Lo-debar) [Gad]": {
+        "name": "Debir",
+        "note": "(Lo-debar) [Gad]",
+        "refs": "17 G5; 18 F5"
+    },
+    "Dan [tribe]": {
+        "name": "Dan",
+        "note": "[tribe]",
+        "refs": "15 D7, G2"
+    },
+    "Dan (Laish) [city]": {
+        "name": "Dan",
+        "note": "(Laish) [city]",
+        "refs": "7 C3; 11 G2; 12; 15 G2; 17, 17 G2; 18 F2"
+    },
+    "Damascus": {
+        "name": "Damascus",
+        "refs": "5 E4; 7 C3; 11 I1; 15 I1; 17; 23 D3; 24 C3; 26 C3; 27 D3; 29 H1; 33 H4"
+    },
+    "Daberath": {
+        "name": "Daberath",
+        "refs": "18 E5"
+    },
+    "Dabbesheth": {
+        "name": "Dabbesheth",
+        "refs": "18 D5"
+    },
+    "Cyrene": {
+        "name": "Cyrene",
+        "refs": "24 A4; 26 A3; 27 C3; 32 C3"
+    },
+    "Cyprus": {
+        "name": "Cyprus",
+        "refs": "5 E3; 23 C2; 26 B3; 32 D2; 33 G4"
+    },
+    "Cun (Berothai)": {
+        "name": "Cun",
+        "note": "(Berothai)",
+        "refs": "17"
+    },
+    "Crete": {
+        "name": "Crete",
+        "refs": "5 C3; 26 A3; 32 C2; 33 D3"
+    },
+    "Cos": {
+        "name": "Cos",
+        "refs": "33 E3"
+    },
+    "Corinth": {
+        "name": "Corinth",
+        "refs": "5 C3; 33 D2"
+    },
+    "Constantinople (Byzantium)": {
+        "name": "Constantinople",
+        "note": "(Byzantium)",
+        "refs": "24 B2; 26 B2; 27 D2"
+    },
+    "Colossae": {
+        "name": "Colossae",
+        "refs": "33 F2"
+    },
+    "Cnidus": {
+        "name": "Cnidus",
+        "refs": "33 E3"
+    },
+    "Cilicia": {
+        "name": "Cilicia",
+        "refs": "24 C3; 32 E2; 33 H3"
+    },
+    "Chorazin": {
+        "name": "Chorazin",
+        "refs": "18 F4; 29 E4"
+    },
+    "Chitlish": {
+        "name": "Chitlish",
+        "refs": "19 B11"
+    },
+    "Chios": {
+        "name": "Chios",
+        "refs": "33 E2"
+    },
+    "Chinnereth": {
+        "name": "Chinnereth",
+        "refs": "18 F4"
+    },
+    "Chesulloth": {
+        "name": "Chesulloth",
+        "refs": "18 E5"
+    },
+    "Chesil (Hazor [Bethuel])": {
+        "name": "Chesil",
+        "note": "(Hazor [Bethuel])",
+        "refs": "15 E9; 19 D12"
+    },
+    "Chephirah": {
+        "name": "Chephirah",
+        "refs": "18; 19 D10"
+    },
+    "Chaldea": {
+        "name": "Chaldea",
+        "refs": "5 G4; 7 H4; 23 F4"
+    },
+    "Cauda": {
+        "name": "Cauda",
+        "refs": "33 D4"
+    },
+    "Carthage": {
+        "name": "Carthage",
+        "refs": "27 B3"
+    },
+    "Carmel [Judah]": {
+        "name": "Carmel",
+        "note": "[Judah]",
+        "refs": "17 E11; 19 D12"
+    },
+    "Carmel": {
+        "name": "Carmel",
+        "refs": "11 E4; 13; 18 C5"
+    },
+    "Carmania": {
+        "name": "Carmania",
+        "refs": "26 F4"
+    },
+    "Carchemish": {
+        "name": "Carchemish",
+        "refs": "7 D1; 23 D2; 24 C3"
+    },
+    "Cappadocia": {
+        "name": "Cappadocia",
+        "refs": "32 E2; 33 H2"
+    },
+    "Capernaum": {
+        "name": "Capernaum",
+        "refs": "18 F4; 29 E4"
+    },
+    "Canatha": {
+        "name": "Canatha",
+        "refs": "29 I5"
+    },
+    "Canaan": {
+        "name": "Canaan",
+        "refs": "7; 11 D8"
+    },
+    "Cana": {
+        "name": "Cana",
+        "refs": "18 E4; 29 D4"
+    },
+    "Calah": {
+        "name": "Calah",
+        "refs": "23 F2"
+    },
+    "Caesarea Philippi": {
+        "name": "Caesarea Philippi",
+        "refs": "18 F2; 29 F2"
+    },
+    "Caesarea": {
+        "name": "Caesarea",
+        "refs": "5 E4; 18 C6; 29 B6; 33 G4"
+    },
+    "Cabul": {
+        "name": "Cabul",
+        "refs": "17 E4; 18 D4"
+    },
+    "Byzantium": {
+        "name": "Byzantium",
+        "refs": "24 B2; 26 B2; 27 D2"
+    },
+    "Bukhara": {
+        "name": "Bukhara",
+        "refs": "26 G2"
+    },
+    "Britain": {
+        "name": "Britain",
+        "refs": "2; 27 A1"
+    },
+    "Bozrah": {
+        "name": "Bozrah",
+        "refs": "11 G11"
+    },
+    "Bithynia": {
+        "name": "Bithynia",
+        "refs": "32 D1; 33 G1"
+    },
+    "Bezer": {
+        "name": "Bezer",
+        "refs": "15 H8; 19 G10"
+    },
+    "Bezek": {
+        "name": "Bezek",
+        "refs": "18 E7"
+    },
+    "Betonim": {
+        "name": "Betonim",
+        "refs": "19 G9"
+    },
+    "Bethzatha": {
+        "name": "Bethzatha",
+        "refs": "31"
+    },
+    "Bethuel (Hazor)": {
+        "name": "Bethuel",
+        "note": "(Hazor)",
+        "refs": "15 E9; 19 D12"
+    },
+    "Bethsaida": {
+        "name": "Bethsaida",
+        "refs": "18 F4; 29 E4"
+    },
+    "Bethphage": {
+        "name": "Bethphage",
+        "refs": "18; 29 D9"
+    },
+    "Bethlehem [Zebulun]": {
+        "name": "Bethlehem",
+        "note": "[Zebulun]",
+        "refs": "15 E4; 18 D5"
+    },
+    "Bethlehem (Ephrath) [Judah]": {
+        "name": "Bethlehem",
+        "note": "(Ephrath) [Judah]",
+        "refs": "7; 15 E8; 17 E9; 18; 19 D10; 29 D10"
+    },
+    "Bethel (Luz)": {
+        "name": "Bethel",
+        "note": "(Luz)",
+        "refs": "7, 7 C4; 15 F7; 17 E8; 19 D9"
+    },
+    "Bethany (across the Jordan)": {
+        "name": "Bethany",
+        "note": "(across the Jordan)",
+        "refs": "29 E6"
+    },
+    "Bethany": {
+        "name": "Bethany",
+        "refs": "18; 19 D10; 29 D9"
+    },
+    "Beth-zur": {
+        "name": "Beth-zur",
+        "refs": "19 D11"
+    },
+    "Beth-shittah": {
+        "name": "Beth-shittah",
+        "refs": "15 F5; 18 E6"
+    },
+    "Beth-shemesh [Judah]": {
+        "name": "Beth-shemesh",
+        "note": "[Judah]",
+        "refs": "11 E8; 17 D9; 19 C10"
+    },
+    "Beth-shemesh [Issachar]": {
+        "name": "Beth-shemesh",
+        "note": "[Issachar]",
+        "refs": "18 F5"
+    },
+    "Beth-shean (Beth-shan) (Scythopolis)": {
+        "name": "Beth-shean",
+        "note": "(Beth-shan) (Scythopolis)",
+        "refs": "15 F5; 17 F6; 18 F6; 29 E6"
+    },
+    "Beth-peor": {
+        "name": "Beth-peor",
+        "refs": "19 F10"
+    },
+    "Beth-nimrah": {
+        "name": "Beth-nimrah",
+        "refs": "19 F9"
+    },
+    "Beth-marcaboth (Madmannah)": {
+        "name": "Beth-marcaboth",
+        "note": "(Madmannah)",
+        "refs": "15 E9; 19 C12"
+    },
+    "Beth-lebaoth (Beth-biri)": {
+        "name": "Beth-lebaoth",
+        "note": "(Beth-biri)",
+        "refs": "15 C10"
+    },
+    "Beth-jeshimoth": {
+        "name": "Beth-jeshimoth",
+        "refs": "19 F10"
+    },
+    "Beth-horon": {
+        "name": "Beth-horon",
+        "refs": "17 E9; 19 D9"
+    },
+    "Beth-hoglah": {
+        "name": "Beth-hoglah",
+        "refs": "19 F10"
+    },
+    "Beth-haran": {
+        "name": "Beth-haran",
+        "refs": "19 F10"
+    },
+    "Beth-ezel": {
+        "name": "Beth-ezel",
+        "refs": "19 C12"
+    },
+    "Beth-emek": {
+        "name": "Beth-emek",
+        "refs": "18 D3"
+    },
+    "Beth-dagon": {
+        "name": "Beth-dagon",
+        "refs": "19 B9"
+    },
+    "Beth-biri (Beth-lebaoth)": {
+        "name": "Beth-biri",
+        "note": "(Beth-lebaoth)",
+        "refs": "15 C10"
+    },
+    "Beth-arabah": {
+        "name": "Beth-arabah",
+        "refs": "19 F9"
+    },
+    "Beth-anath": {
+        "name": "Beth-anath",
+        "refs": "15 F2; 18 E2"
+    },
+    "Besor": {
+        "name": "Besor",
+        "refs": "19 A13"
+    },
+    "Berothai (Cun)": {
+        "name": "Berothai",
+        "note": "(Cun)",
+        "refs": "17"
+    },
+    "Beroea": {
+        "name": "Beroea",
+        "refs": "33 D1"
+    },
+    "Benjamin": {
+        "name": "Benjamin",
+        "refs": "15 F7"
+    },
+    "Bene-jaakan": {
+        "name": "Bene-jaakan",
+        "refs": "9 G3"
+    },
+    "Beeshterah (Ashtaroth)": {
+        "name": "Beeshterah",
+        "note": "(Ashtaroth)",
+        "refs": "11 H4; 18 H4"
+    },
+    "Beer-sheba": {
+        "name": "Beer-sheba",
+        "refs": "7, 7 C4; 9 G2; 11 D9; 13; 15 D9; 17, 17 D12; 19 B13; 29 B12"
+    },
+    "Beer-lahai-roi": {
+        "name": "Beer-lahai-roi",
+        "refs": "7"
+    },
+    "Bashan": {
+        "name": "Bashan",
+        "refs": "11 H3; 13"
+    },
+    "Bamoth-baal": {
+        "name": "Bamoth-baal",
+        "refs": "19 G10"
+    },
+    "Bahurim": {
+        "name": "Bahurim",
+        "refs": "18"
+    },
+    "Bactria": {
+        "name": "Bactria",
+        "refs": "24 G3; 26 G3"
+    },
+    "Bactra": {
+        "name": "Bactra",
+        "refs": "26 G3"
+    },
+    "Babylon (Babylonia)": {
+        "name": "Babylon",
+        "note": "(Babylonia)",
+        "refs": "3; 5 G4; 7 G3; 23 F3; 24 D4; 26 D3; 32 F3"
+    },
+    "Baalath-beer (Ramah) [Simeon]": {
+        "name": "Baalath-beer",
+        "note": "(Ramah) [Simeon]",
+        "refs": "15 E10; 19 D13"
+    },
+    "Baal-shalishah": {
+        "name": "Baal-shalishah",
+        "refs": "19 C8"
+    },
+    "Baal-perazim": {
+        "name": "Baal-perazim",
+        "refs": "17 E9; 18"
+    },
+    "Baal-meon": {
+        "name": "Baal-meon",
+        "refs": "19 G10"
+    },
+    "Baal-hazor": {
+        "name": "Baal-hazor",
+        "refs": "19 E9"
+    },
+    "Baal-gad": {
+        "name": "Baal-gad",
+        "refs": "11 G1; 18 F1"
+    },
+    "Baal (Ramah) [Simeon]": {
+        "name": "Baal",
+        "note": "(Ramah) [Simeon]",
+        "refs": "15 E10; 19 D13"
+    },
+    "Azmon": {
+        "name": "Azmon",
+        "refs": "9 G3; 15 C12"
+    },
+    "Azmaveth": {
+        "name": "Azmaveth",
+        "refs": "18"
+    },
+    "Azekah": {
+        "name": "Azekah",
+        "refs": "17 D9; 19 C10"
+    },
+    "Attalia": {
+        "name": "Attalia",
+        "refs": "33 F3"
+    },
+    "Athens": {
+        "name": "Athens",
+        "refs": "5 C3; 24 A3; 26 A2; 32 C2; 33 D2"
+    },
+    "Ataroth": {
+        "name": "Ataroth",
+        "refs": "19 F11"
+    },
+    "Assyria": {
+        "name": "Assyria",
+        "refs": "3; 5 F3; 23 F2; 24 D3"
+    },
+    "Assos": {
+        "name": "Assos",
+        "refs": "33 E2"
+    },
+    "Asshur": {
+        "name": "Asshur",
+        "refs": "23 F2"
+    },
+    "Asia Minor": {
+        "name": "Asia Minor",
+        "refs": "3; 5 E2; 27 D3"
+    },
+    "Asia [Roman]": {
+        "name": "Asia",
+        "note": "[Roman]",
+        "refs": "32 D2; 33 E2"
+    },
+    "Ashtaroth (Beeshterah)": {
+        "name": "Ashtaroth",
+        "note": "(Beeshterah)",
+        "refs": "11 H4; 18 H4"
+    },
+    "Ashkelon": {
+        "name": "Ashkelon",
+        "refs": "11 C8; 15 C8; 17 C10; 19 A11; 23 C4"
+    },
+    "Asher [tribe]": {
+        "name": "Asher",
+        "note": "[tribe]",
+        "refs": "15 E3"
+    },
+    "Asher": {
+        "name": "Asher",
+        "refs": "13"
+    },
+    "Ashdod": {
+        "name": "Ashdod",
+        "refs": "9 G1; 11 D8; 17 C9; 19 B10"
+    },
+    "Ashan (Ain)": {
+        "name": "Ashan",
+        "note": "(Ain)",
+        "refs": "15 D9; 19 B13"
+    },
+    "Arumah": {
+        "name": "Arumah",
+        "refs": "19 E8"
+    },
+    "Arubboth": {
+        "name": "Arubboth",
+        "refs": "17 E6; 18 D6"
+    },
+    "Arpad": {
+        "name": "Arpad",
+        "refs": "23 D2"
+    },
+    "Aroer": {
+        "name": "Aroer",
+        "refs": "11 G9; 15 G9; 17, 17 H11; 19 G12"
+    },
+    "Arnon": {
+        "name": "Arnon",
+        "refs": "9 I2; 11 G9; 15 G9; 19 G12"
+    },
+    "Armenia": {
+        "name": "Armenia",
+        "refs": "24 D2"
+    },
+    "Arimathea (Ramah) [Ephraim]": {
+        "name": "Arimathea",
+        "note": "(Ramah) [Ephraim]",
+        "refs": "17 D8; 19 C8; 29 C8"
+    },
+    "Aria": {
+        "name": "Aria",
+        "refs": "24 G3; 26 G3"
+    },
+    "Arbel": {
+        "name": "Arbel",
+        "refs": "18 G6"
+    },
+    "Ararat": {
+        "name": "Ararat",
+        "refs": "5 G2"
+    },
+    "Arad [Israelite]": {
+        "name": "Arad",
+        "note": "[Israelite]",
+        "refs": "19 D13"
+    },
+    "Arad [Canaanite]": {
+        "name": "Arad",
+        "note": "[Canaanite]",
+        "refs": "9 H2; 11 E10"
+    },
+    "Arachosia": {
+        "name": "Arachosia",
+        "refs": "24 G4; 26 G4"
+    },
+    "Arabian Desert": {
+        "name": "Arabian Desert",
+        "refs": "11 H12"
+    },
+    "Arabia": {
+        "name": "Arabia",
+        "refs": "3; 5 F5; 23 E4; 24 D4; 26 D4; 29 H12; 32 F4"
+    },
+    "Arabah": {
+        "name": "Arabah",
+        "refs": "13"
+    },
+    "Aphek [Manasseh]": {
+        "name": "Aphek",
+        "note": "[Manasseh]",
+        "refs": "18 F4"
+    },
+    "Aphek [Asher]": {
+        "name": "Aphek",
+        "note": "[Asher]",
+        "refs": "18 D4"
+    },
+    "Aphek (Antipatris) [Ephraim]": {
+        "name": "Aphek",
+        "note": "(Antipatris) [Ephraim]",
+        "refs": "11 E6; 17 D8; 19 C8; 29 C8"
+    },
+    "Antipatris (Aphek) [Ephraim]": {
+        "name": "Antipatris",
+        "note": "(Aphek) [Ephraim]",
+        "refs": "11 E6; 17 D8; 19 C8; 29 C8"
+    },
+    "Antioch [Syria]": {
+        "name": "Antioch",
+        "note": "[Syria]",
+        "refs": "5 E3; 26 C3; 27 D3; 33 H3"
+    },
+    "Antioch [Pisidia]": {
+        "name": "Antioch",
+        "note": "[Pisidia]",
+        "refs": "5 D3; 33 F2"
+    },
+    "Ankara": {
+        "name": "Ankara",
+        "refs": "26 C2"
+    },
+    "Anathoth": {
+        "name": "Anathoth",
+        "refs": "18; 19 D10"
+    },
+    "Anab": {
+        "name": "Anab",
+        "refs": "19 C12"
+    },
+    "Amphipolis": {
+        "name": "Amphipolis",
+        "refs": "33 D1"
+    },
+    "Amorites": {
+        "name": "Amorites",
+        "refs": "11 D10, G8, I5"
+    },
+    "Ammon": {
+        "name": "Ammon",
+        "refs": "11 I7; 13; 17 I9"
+    },
+    "Amalekites": {
+        "name": "Amalekites",
+        "refs": "11 B10"
+    },
+    "Almon-diblathaim": {
+        "name": "Almon-diblathaim",
+        "refs": "9 I1; 19 G11"
+    },
+    "Almon": {
+        "name": "Almon",
+        "refs": "18; 19 E10"
+    },
+    "Alexandria Prophthasia": {
+        "name": "Alexandria Prophthasia",
+        "refs": "26 G3"
+    },
+    "Alexandria Oxiana": {
+        "name": "Alexandria Oxiana",
+        "refs": "26 H3"
+    },
+    "Alexandria Margiana": {
+        "name": "Alexandria Margiana",
+        "refs": "26 G2"
+    },
+    "Alexandria Eschate": {
+        "name": "Alexandria Eschate",
+        "refs": "26 H2"
+    },
+    "Alexandria Areion": {
+        "name": "Alexandria Areion",
+        "refs": "26 G3"
+    },
+    "Alexandria Arachosiorum": {
+        "name": "Alexandria Arachosiorum",
+        "refs": "26 G4"
+    },
+    "Alexandria [India]": {
+        "name": "Alexandria",
+        "note": "[India]",
+        "refs": "26 H4"
+    },
+    "Alexandria [Egypt]": {
+        "name": "Alexandria",
+        "note": "[Egypt]",
+        "refs": "26 B4; 27 D3; 33 F5"
+    },
+    "Alexandria [Carmania]": {
+        "name": "Alexandria",
+        "note": "[Carmania]",
+        "refs": "26 F4"
+    },
+    "Aleppo": {
+        "name": "Aleppo",
+        "refs": "26 C3; 27 D3"
+    },
+    "Akrabbim": {
+        "name": "Akrabbim",
+        "refs": "11 E11"
+    },
+    "Ain [Simeon]": {
+        "name": "Ain",
+        "note": "[Simeon]",
+        "refs": "15 D9; 19 C12"
+    },
+    "Ain (Ashan) [Simeon/Levi]": {
+        "name": "Ain",
+        "note": "(Ashan) [Simeon/Levi]",
+        "refs": "15 D9; 19 B13"
+    },
+    "Aijalon": {
+        "name": "Aijalon",
+        "refs": "19 C10"
+    },
+    "Ai": {
+        "name": "Ai",
+        "refs": "7; 19 D9"
+    },
+    "Aenon": {
+        "name": "Aenon",
+        "refs": "18 F6; 29 E6"
+    },
+    "Adullam": {
+        "name": "Adullam",
+        "refs": "17 D10; 19 C11"
+    },
+    "Addar (Hazar-addar)": {
+        "name": "Addar",
+        "note": "(Hazar-addar)",
+        "refs": "11 C12"
+    },
+    "Adam": {
+        "name": "Adam",
+        "refs": "19 F8"
+    },
+    "Actium": {
+        "name": "Actium",
+        "refs": "27 C3"
+    },
+    "Achzib": {
+        "name": "Achzib",
+        "refs": "18 D3"
+    },
+    "Achmetha (Ecbatana)": {
+        "name": "Achmetha",
+        "note": "(Ecbatana)",
+        "refs": "24 E3; 26 E3"
+    },
+    "Achaia": {
+        "name": "Achaia",
+        "refs": "26 A2; 33 D3"
+    },
+    "Acco": {
+        "name": "Acco",
+        "refs": "18 D4"
+    },
+    "Abronah": {
+        "name": "Abronah",
+        "refs": "9 H5"
+    },
+    "Abilene": {
+        "name": "Abilene",
+        "refs": "29 F1"
+    },
+    "Abila": {
+        "name": "Abila",
+        "refs": "29 F5"
+    },
+    "Abel-meholah": {
+        "name": "Abel-meholah",
+        "refs": "15 G5; 17 G6; 18 F7"
+    },
+    "Abel-keramim": {
+        "name": "Abel-keramim",
+        "refs": "15 H7; 19 H9"
+    },
+    "Abel-beth-maacah": {
+        "name": "Abel-beth-maacah",
+        "refs": "17 G2; 18 F2"
+    },
+    "Abel of Beth-maacah": {
+        "name": "Abel of Beth-maacah",
+        "refs": "17 G2; 18 F2"
+    },
+    "Abdon": {
+        "name": "Abdon",
+        "refs": "18 D3"
+    }
+}

@@ -1,0 +1,9003 @@
+[
+  [
+    {
+      "events": [
+        "1513 B.C.E.-z"
+      ],
+      "locations": [
+        "Assyria",
+        "Eden",
+        "Euphrates",
+        "Gihon"
+      ],
+      "bookIndex": 0,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 1001001,
+      "endIndex": 1003024,
+      "url": "01001001-01003024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Eden"
+      ],
+      "bookIndex": 0,
+      "chapter": 4,
+      "endChapter": 7,
+      "ref": "4-7",
+      "startIndex": 1004001,
+      "endIndex": 1007024,
+      "url": "01004001-01007024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ararat",
+        "Asshur",
+        "Assyria",
+        "Calah",
+        "Canaan",
+        "Elam",
+        "Erech",
+        "Gaza",
+        "Gerar",
+        "Gerar [city]",
+        "Haran",
+        "Kittim (Cyprus)",
+        "Nineveh",
+        "Rehoboth",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Sidon",
+        "Sodom",
+        "Tarshish (Spain)",
+        "Ur"
+      ],
+      "bookIndex": 0,
+      "chapter": 8,
+      "endChapter": 11,
+      "ref": "8-11",
+      "startIndex": 1008001,
+      "endIndex": 1011032,
+      "url": "01008001-01011032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ai",
+        "Amalekites",
+        "Amorites",
+        "Bethel (Luz)",
+        "Canaan",
+        "Damascus",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Elam",
+        "Euphrates",
+        "Girgashites",
+        "Ham",
+        "Haran",
+        "Hebron (Kiriath-arba)",
+        "Hittites",
+        "Hobah",
+        "Jebusites",
+        "Jordan",
+        "Kadesh (Kadesh-barnea)",
+        "Kenites",
+        "Mamre",
+        "Moreh",
+        "Negeb",
+        "Perizzites",
+        "Salem (Jerusalem)",
+        "Seir",
+        "Seir [Judah]",
+        "Shechem",
+        "Sodom",
+        "Ur"
+      ],
+      "bookIndex": 0,
+      "chapter": 12,
+      "endChapter": 15,
+      "ref": "12-15",
+      "startIndex": 1012001,
+      "endIndex": 1015021,
+      "url": "01012001-01015021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Beer-lahai-roi",
+        "Canaan",
+        "Kadesh (Kadesh-barnea)",
+        "Mamre",
+        "Shur",
+        "Sodom"
+      ],
+      "bookIndex": 0,
+      "chapter": 16,
+      "endChapter": 18,
+      "ref": "16-18",
+      "startIndex": 1016001,
+      "endIndex": 1018033,
+      "url": "01016001-01018033"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Beer-sheba",
+        "Bethuel (Hazor)",
+        "Gerar",
+        "Gerar [city]",
+        "Kadesh (Kadesh-barnea)",
+        "Maacah",
+        "Moab",
+        "Moriah",
+        "Negeb",
+        "Paran",
+        "Shur",
+        "Sodom"
+      ],
+      "bookIndex": 0,
+      "chapter": 19,
+      "endChapter": 22,
+      "ref": "19-22",
+      "startIndex": 1019001,
+      "endIndex": 1022024,
+      "url": "01019001-01022024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Beer-lahai-roi",
+        "Bethuel (Hazor)",
+        "Canaan",
+        "Hebron (Kiriath-arba)",
+        "Kiriath-arba (Hebron)",
+        "Machpelah (also Hebron)",
+        "Mamre",
+        "Mesopotamia",
+        "Negeb"
+      ],
+      "bookIndex": 0,
+      "chapter": 23,
+      "endChapter": 24,
+      "ref": "23-24",
+      "startIndex": 1023001,
+      "endIndex": 1024067,
+      "url": "01023001-01024067"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Beer-lahai-roi",
+        "Beer-sheba",
+        "Bethuel (Hazor)",
+        "Edom",
+        "Gerar",
+        "Gerar [city]",
+        "Haran",
+        "Machpelah (also Hebron)",
+        "Mamre",
+        "Midian",
+        "Paddan-aram",
+        "Rehoboth",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Shur",
+        "Tema"
+      ],
+      "bookIndex": 0,
+      "chapter": 25,
+      "endChapter": 27,
+      "ref": "25-27",
+      "startIndex": 1025001,
+      "endIndex": 1027046,
+      "url": "01025001-01027046"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Beer-sheba",
+        "Bethel (Luz)",
+        "Bethuel (Hazor)",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Gad",
+        "Haran",
+        "Issachar",
+        "Luz (Bethel)",
+        "Naphtali",
+        "Paddan-aram",
+        "Reuben",
+        "Zebulun"
+      ],
+      "bookIndex": 0,
+      "chapter": 28,
+      "endChapter": 30,
+      "ref": "28-30",
+      "startIndex": 1028001,
+      "endIndex": 1030043,
+      "url": "01028001-01030043"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethel (Luz)",
+        "Canaan",
+        "Edom",
+        "Gilead",
+        "Jabbok",
+        "Jordan",
+        "Mahanaim",
+        "Paddan-aram",
+        "Penuel",
+        "Seir",
+        "Seir [Judah]"
+      ],
+      "bookIndex": 0,
+      "chapter": 31,
+      "endChapter": 32,
+      "ref": "31-32",
+      "startIndex": 1031001,
+      "endIndex": 1032032,
+      "url": "01031001-01032032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Canaan",
+        "Paddan-aram",
+        "Perizzites",
+        "Seir",
+        "Seir [Judah]",
+        "Shechem",
+        "Succoth [Egypt]",
+        "Succoth [Gad]"
+      ],
+      "bookIndex": 0,
+      "chapter": 33,
+      "endChapter": 34,
+      "ref": "33-34",
+      "startIndex": 1033001,
+      "endIndex": 1034031,
+      "url": "01033001-01034031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Bethel (Luz)",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Bozrah",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Dothan",
+        "Ebal",
+        "Edom",
+        "Ephrath (Bethlehem [Judah])",
+        "Gad",
+        "Gilead",
+        "Hebron (Kiriath-arba)",
+        "Issachar",
+        "Kiriath-arba (Hebron)",
+        "Luz (Bethel)",
+        "Mamre",
+        "Manahath",
+        "Moab",
+        "Naphtali",
+        "Paddan-aram",
+        "Rehoboth",
+        "Reuben",
+        "Seir",
+        "Seir [Judah]",
+        "Shechem",
+        "Zebulun"
+      ],
+      "bookIndex": 0,
+      "chapter": 35,
+      "endChapter": 37,
+      "ref": "35-37",
+      "startIndex": 1035001,
+      "endIndex": 1037036,
+      "url": "01035001-01037036"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Achzib",
+        "Tamar",
+        "Timnah [Judah/Dan]",
+        "Timnah [Judah]"
+      ],
+      "bookIndex": 0,
+      "chapter": 38,
+      "endChapter": 40,
+      "ref": "38-40",
+      "startIndex": 1038001,
+      "endIndex": 1040023,
+      "url": "01038001-01040023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Benjamin",
+        "Canaan",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Manasseh",
+        "Nile",
+        "On",
+        "Reuben"
+      ],
+      "bookIndex": 0,
+      "chapter": 41,
+      "endChapter": 42,
+      "ref": "41-42",
+      "startIndex": 1041001,
+      "endIndex": 1042038,
+      "url": "01041001-01042038"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Benjamin",
+        "Canaan",
+        "Goshen [Egypt]",
+        "Goshen [Judah]"
+      ],
+      "bookIndex": 0,
+      "chapter": 43,
+      "endChapter": 45,
+      "ref": "43-45",
+      "startIndex": 1043001,
+      "endIndex": 1045028,
+      "url": "01043001-01045028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Asher",
+        "Asher [tribe]",
+        "Beer-sheba",
+        "Benjamin",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Ephrath (Bethlehem [Judah])",
+        "Gad",
+        "Goshen [Egypt]",
+        "Goshen [Judah]",
+        "Issachar",
+        "Luz (Bethel)",
+        "Manasseh",
+        "Naphtali",
+        "Paddan-aram",
+        "Rameses",
+        "Reuben",
+        "Shimron",
+        "Zebulun"
+      ],
+      "bookIndex": 0,
+      "chapter": 46,
+      "endChapter": 48,
+      "ref": "46-48",
+      "startIndex": 1046001,
+      "endIndex": 1048022,
+      "url": "01046001-01048022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Goshen [Egypt]",
+        "Goshen [Judah]",
+        "Issachar",
+        "Jordan",
+        "Machpelah (also Hebron)",
+        "Mamre",
+        "Manasseh",
+        "Naphtali",
+        "Reuben",
+        "Shiloh",
+        "Sidon",
+        "Zebulun"
+      ],
+      "bookIndex": 0,
+      "chapter": 49,
+      "endChapter": 50,
+      "ref": "49-50",
+      "startIndex": 1049001,
+      "endIndex": 1050026,
+      "url": "01049001-01050026"
+    }
+  ],
+  [
+    {
+      "events": [
+        "1512 B.C.E.-z"
+      ],
+      "locations": [
+        "Amorites",
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Gad",
+        "Hittites",
+        "Hivites",
+        "Horeb (Sinai)",
+        "Issachar",
+        "Jebusites",
+        "Midian",
+        "Naphtali",
+        "Nile",
+        "Perizzites",
+        "Reuben",
+        "Zebulun"
+      ],
+      "bookIndex": 1,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 2001001,
+      "endIndex": 2004031,
+      "url": "02001001-02004031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Canaan",
+        "Hebron (Kiriath-arba)",
+        "Nile",
+        "Reuben"
+      ],
+      "bookIndex": 1,
+      "chapter": 5,
+      "endChapter": 7,
+      "ref": "5-7",
+      "startIndex": 2005001,
+      "endIndex": 2007025,
+      "url": "02005001-02007025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Goshen [Egypt]",
+        "Goshen [Judah]",
+        "Nile"
+      ],
+      "bookIndex": 1,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 2008001,
+      "endIndex": 2010029,
+      "url": "02008001-02010029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Etham",
+        "Etham [campsite]",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Rameses",
+        "Succoth [Egypt]",
+        "Succoth [Gad]"
+      ],
+      "bookIndex": 1,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 2011001,
+      "endIndex": 2013022,
+      "url": "02011001-02013022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Canaan",
+        "Edom",
+        "Elim",
+        "Marah",
+        "Migdol",
+        "Moab",
+        "Philistia",
+        "Pihahiroth",
+        "Shur"
+      ],
+      "bookIndex": 1,
+      "chapter": 14,
+      "endChapter": 15,
+      "ref": "14-15",
+      "startIndex": 2014001,
+      "endIndex": 2015027,
+      "url": "02014001-02015027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amalekites",
+        "Canaan",
+        "Elim",
+        "Horeb (Sinai)",
+        "Midian",
+        "Nile",
+        "Rephidim",
+        "Sin",
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 1,
+      "chapter": 16,
+      "endChapter": 18,
+      "ref": "16-18",
+      "startIndex": 2016001,
+      "endIndex": 2018027,
+      "url": "02016001-02018027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Rephidim",
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 1,
+      "chapter": 19,
+      "endChapter": 21,
+      "ref": "19-21",
+      "startIndex": 2019001,
+      "endIndex": 2021036,
+      "url": "02019001-02021036"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Perizzites",
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 1,
+      "chapter": 22,
+      "endChapter": 25,
+      "ref": "22-25",
+      "startIndex": 2022001,
+      "endIndex": 2025040,
+      "url": "02022001-02025040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 1,
+      "chapter": 26,
+      "endChapter": 28,
+      "ref": "26-28",
+      "startIndex": 2026001,
+      "endIndex": 2028043,
+      "url": "02026001-02028043"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 1,
+      "chapter": 29,
+      "endChapter": 30,
+      "ref": "29-30",
+      "startIndex": 2029001,
+      "endIndex": 2030038,
+      "url": "02029001-02030038"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Hittites",
+        "Hivites",
+        "Horeb (Sinai)",
+        "Jebusites",
+        "Perizzites",
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 1,
+      "chapter": 31,
+      "endChapter": 33,
+      "ref": "31-33",
+      "startIndex": 2031001,
+      "endIndex": 2033023,
+      "url": "02031001-02033023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Perizzites",
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 1,
+      "chapter": 34,
+      "endChapter": 35,
+      "ref": "34-35",
+      "startIndex": 2034001,
+      "endIndex": 2035035,
+      "url": "02034001-02035035"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Dan (Laish) [city]",
+        "Dan [tribe]"
+      ],
+      "bookIndex": 1,
+      "chapter": 36,
+      "endChapter": 38,
+      "ref": "36-38",
+      "startIndex": 2036001,
+      "endIndex": 2038031,
+      "url": "02036001-02038031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 1,
+      "chapter": 39,
+      "endChapter": 40,
+      "ref": "39-40",
+      "startIndex": 2039001,
+      "endIndex": 2040038,
+      "url": "02039001-02040038"
+    }
+  ],
+  [
+    {
+      "events": [
+        "1512 B.C.E.-y"
+      ],
+      "locations": [],
+      "bookIndex": 2,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 3001001,
+      "endIndex": 3004035,
+      "url": "03001001-03004035"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 2,
+      "chapter": 5,
+      "endChapter": 7,
+      "ref": "5-7",
+      "startIndex": 3005001,
+      "endIndex": 3007038,
+      "url": "03005001-03007038"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 2,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 3008001,
+      "endIndex": 3010020,
+      "url": "03008001-03010020"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 2,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 3011001,
+      "endIndex": 3013059,
+      "url": "03011001-03013059"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Canaan"
+      ],
+      "bookIndex": 2,
+      "chapter": 14,
+      "endChapter": 15,
+      "ref": "14-15",
+      "startIndex": 3014001,
+      "endIndex": 3015033,
+      "url": "03014001-03015033"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Canaan"
+      ],
+      "bookIndex": 2,
+      "chapter": 16,
+      "endChapter": 18,
+      "ref": "16-18",
+      "startIndex": 3016001,
+      "endIndex": 3018030,
+      "url": "03016001-03018030"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 2,
+      "chapter": 19,
+      "endChapter": 21,
+      "ref": "19-21",
+      "startIndex": 3019001,
+      "endIndex": 3021024,
+      "url": "03019001-03021024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 2,
+      "chapter": 22,
+      "endChapter": 23,
+      "ref": "22-23",
+      "startIndex": 3022001,
+      "endIndex": 3023044,
+      "url": "03022001-03023044"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 2,
+      "chapter": 24,
+      "endChapter": 25,
+      "ref": "24-25",
+      "startIndex": 3024001,
+      "endIndex": 3025055,
+      "url": "03024001-03025055"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 2,
+      "chapter": 26,
+      "endChapter": 27,
+      "ref": "26-27",
+      "startIndex": 3026001,
+      "endIndex": 3027034,
+      "url": "03026001-03027034"
+    }
+  ],
+  [
+    {
+      "events": [
+        "1473 B.C.E.-z"
+      ],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Hebron (Kiriath-arba)",
+        "Issachar",
+        "Manasseh",
+        "Naphtali",
+        "Reuben",
+        "Sinai (Horeb)",
+        "Zebulun"
+      ],
+      "bookIndex": 3,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 4001001,
+      "endIndex": 4003051,
+      "url": "04001001-04003051"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 3,
+      "chapter": 4,
+      "endChapter": 6,
+      "ref": "4-6",
+      "startIndex": 4004001,
+      "endIndex": 4006027,
+      "url": "04004001-04006027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Issachar",
+        "Manasseh",
+        "Naphtali",
+        "Reuben",
+        "Sinai (Horeb)",
+        "Zebulun"
+      ],
+      "bookIndex": 3,
+      "chapter": 7,
+      "endChapter": 9,
+      "ref": "7-9",
+      "startIndex": 4007001,
+      "endIndex": 4009023,
+      "url": "04007001-04009023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Hazeroth",
+        "Issachar",
+        "Kibroth-hattaavah",
+        "Manasseh",
+        "Naphtali",
+        "Paran",
+        "Reuben",
+        "Sinai (Horeb)",
+        "Zebulun"
+      ],
+      "bookIndex": 3,
+      "chapter": 10,
+      "endChapter": 12,
+      "ref": "10-12",
+      "startIndex": 4010001,
+      "endIndex": 4012016,
+      "url": "04010001-04012016"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amalekites",
+        "Amorites",
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Hebron (Kiriath-arba)",
+        "Hittites",
+        "Issachar",
+        "Jebusites",
+        "Jordan",
+        "Kadesh (Kadesh-barnea)",
+        "Manasseh",
+        "Naphtali",
+        "Negeb",
+        "Paran",
+        "Rehob",
+        "Reuben",
+        "Zebulun",
+        "Zin",
+        "Zoan"
+      ],
+      "bookIndex": 3,
+      "chapter": 13,
+      "endChapter": 15,
+      "ref": "13-15",
+      "startIndex": 4013001,
+      "endIndex": 4015041,
+      "url": "04013001-04015041"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Reuben"
+      ],
+      "bookIndex": 3,
+      "chapter": 16,
+      "endChapter": 18,
+      "ref": "16-18",
+      "startIndex": 4016001,
+      "endIndex": 4018032,
+      "url": "04016001-04018032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Arad [Canaanite]",
+        "Arad [Israelite]",
+        "Arnon",
+        "Bashan",
+        "Dibon (Dibon-gad)",
+        "Edom",
+        "Edrei [Manasseh]",
+        "Edrei [Naphtali]",
+        "Heshbon",
+        "Hor",
+        "Iye-abarim",
+        "Jabbok",
+        "Kadesh (Kadesh-barnea)",
+        "King’s Road",
+        "Medeba",
+        "Moab",
+        "Negeb",
+        "Pisgah (Nebo)",
+        "Zered",
+        "Zin"
+      ],
+      "bookIndex": 3,
+      "chapter": 19,
+      "endChapter": 21,
+      "ref": "19-21",
+      "startIndex": 4019001,
+      "endIndex": 4021035,
+      "url": "04019001-04021035"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Arnon",
+        "Assyria",
+        "Bamoth-baal",
+        "Edom",
+        "Jericho",
+        "Jordan",
+        "Kain",
+        "Kenites",
+        "Kittim (Cyprus)",
+        "Midian",
+        "Moab",
+        "Pisgah (Nebo)",
+        "Seir",
+        "Seir [Judah]"
+      ],
+      "bookIndex": 3,
+      "chapter": 22,
+      "endChapter": 24,
+      "ref": "22-24",
+      "startIndex": 4022001,
+      "endIndex": 4024025,
+      "url": "04022001-04024025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Gilead",
+        "Hepher",
+        "Issachar",
+        "Jericho",
+        "Jordan",
+        "Kadesh (Kadesh-barnea)",
+        "Manasseh",
+        "Midian",
+        "Moab",
+        "Naphtali",
+        "Reuben",
+        "Shechem",
+        "Shimron",
+        "Shittim",
+        "Sinai (Horeb)",
+        "Tirzah",
+        "Zebulun",
+        "Zin"
+      ],
+      "bookIndex": 3,
+      "chapter": 25,
+      "endChapter": 27,
+      "ref": "25-27",
+      "startIndex": 4025001,
+      "endIndex": 4027023,
+      "url": "04025001-04027023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 3,
+      "chapter": 28,
+      "endChapter": 30,
+      "ref": "28-30",
+      "startIndex": 4028001,
+      "endIndex": 4030016,
+      "url": "04028001-04030016"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Aroer",
+        "Ataroth",
+        "Baal-meon",
+        "Bashan",
+        "Beth-haran",
+        "Beth-nimrah",
+        "Canaan",
+        "Dibon (Dibon-gad)",
+        "Elealeh",
+        "Gad",
+        "Gilead",
+        "Heshbon",
+        "Jericho",
+        "Jogbehah",
+        "Jordan",
+        "Kadesh (Kadesh-barnea)",
+        "Kiriathaim",
+        "Manasseh",
+        "Midian",
+        "Moab",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Reuben"
+      ],
+      "bookIndex": 3,
+      "chapter": 31,
+      "endChapter": 32,
+      "ref": "31-32",
+      "startIndex": 4031001,
+      "endIndex": 4032042,
+      "url": "04031001-04032042"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abronah",
+        "Ain (Ashan) [Simeon/Levi]",
+        "Ain [Simeon]",
+        "Akrabbim",
+        "Almon-diblathaim",
+        "Arad [Canaanite]",
+        "Arad [Israelite]",
+        "Asher",
+        "Asher [tribe]",
+        "Azmon",
+        "Baal (Ramah) [Simeon]",
+        "Bene-jaakan",
+        "Benjamin",
+        "Beth-jeshimoth",
+        "Canaan",
+        "Chinnereth",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Dibon (Dibon-gad)",
+        "Dophkah",
+        "Edom",
+        "Elim",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Etham",
+        "Etham [campsite]",
+        "Ezion-geber",
+        "Gilead",
+        "Hazar-addar (Addar)",
+        "Hazeroth",
+        "Hor",
+        "Hor-haggidgad",
+        "Issachar",
+        "Iye-abarim",
+        "Jericho",
+        "Jordan",
+        "Jotbathah",
+        "Kadesh (Kadesh-barnea)",
+        "Kibroth-hattaavah",
+        "Libnah",
+        "Manasseh",
+        "Marah",
+        "Migdol",
+        "Moab",
+        "Naphtali",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Negeb",
+        "Pihahiroth",
+        "Punon",
+        "Rameses",
+        "Rephidim",
+        "Riblah",
+        "Rimmon-perez",
+        "Rissah",
+        "Sin",
+        "Sinai (Horeb)",
+        "Succoth [Egypt]",
+        "Succoth [Gad]",
+        "Tirzah",
+        "Zalmonah",
+        "Zebulun",
+        "Zin"
+      ],
+      "bookIndex": 3,
+      "chapter": 33,
+      "endChapter": 36,
+      "ref": "33-36",
+      "startIndex": 4033001,
+      "endIndex": 4036013,
+      "url": "04033001-04036013"
+    }
+  ],
+  [
+    {
+      "events": [
+        "1473 B.C.E.-y"
+      ],
+      "locations": [
+        "Amorites",
+        "Arabah",
+        "Arnon",
+        "Aroer",
+        "Ashtaroth (Beeshterah)",
+        "Bashan",
+        "Edrei [Manasseh]",
+        "Edrei [Naphtali]",
+        "Elath (Eloth)",
+        "Euphrates",
+        "Ezion-geber",
+        "Gaza",
+        "Gilead",
+        "Hazeroth",
+        "Heshbon",
+        "Horeb (Sinai)",
+        "Jabbok",
+        "Jordan",
+        "Kadesh (Kadesh-barnea)",
+        "Kedemoth",
+        "Lebanon",
+        "Moab",
+        "Negeb",
+        "Paran",
+        "Seir",
+        "Seir [Judah]",
+        "Shephelah",
+        "Zered"
+      ],
+      "bookIndex": 4,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 5001001,
+      "endIndex": 5002037,
+      "url": "05001001-05002037"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Arabah",
+        "Arnon",
+        "Aroer",
+        "Baal (Ramah) [Simeon]",
+        "Bashan",
+        "Beth-peor",
+        "Bezer",
+        "Chinnereth",
+        "Edrei [Manasseh]",
+        "Edrei [Naphtali]",
+        "Gilead",
+        "Golan",
+        "Hermon",
+        "Heshbon",
+        "Horeb (Sinai)",
+        "Jabbok",
+        "Jordan",
+        "Lebanon",
+        "Manasseh",
+        "Pisgah (Nebo)",
+        "Rabbah (Philadelphia)",
+        "Ramoth (Jarmuth)"
+      ],
+      "bookIndex": 4,
+      "chapter": 3,
+      "endChapter": 4,
+      "ref": "3-4",
+      "startIndex": 5003001,
+      "endIndex": 5004049,
+      "url": "05003001-05004049"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Girgashites",
+        "Hittites",
+        "Hivites",
+        "Horeb (Sinai)",
+        "Jebusites",
+        "Perizzites"
+      ],
+      "bookIndex": 4,
+      "chapter": 5,
+      "endChapter": 7,
+      "ref": "5-7",
+      "startIndex": 5005001,
+      "endIndex": 5007026,
+      "url": "05005001-05007026"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bene-jaakan",
+        "Horeb (Sinai)",
+        "Jordan",
+        "Jotbathah",
+        "Kadesh (Kadesh-barnea)",
+        "Kibroth-hattaavah"
+      ],
+      "bookIndex": 4,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 5008001,
+      "endIndex": 5010022,
+      "url": "05008001-05010022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Ebal",
+        "Euphrates",
+        "Gerizim",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Jordan",
+        "Lebanon",
+        "Moreh",
+        "Reuben"
+      ],
+      "bookIndex": 4,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 5011001,
+      "endIndex": 5013018,
+      "url": "05011001-05013018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 4,
+      "chapter": 14,
+      "endChapter": 16,
+      "ref": "14-16",
+      "startIndex": 5014001,
+      "endIndex": 5016022,
+      "url": "05014001-05016022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Horeb (Sinai)"
+      ],
+      "bookIndex": 4,
+      "chapter": 17,
+      "endChapter": 19,
+      "ref": "17-19",
+      "startIndex": 5017001,
+      "endIndex": 5019021,
+      "url": "05017001-05019021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Perizzites"
+      ],
+      "bookIndex": 4,
+      "chapter": 20,
+      "endChapter": 22,
+      "ref": "20-22",
+      "startIndex": 5020001,
+      "endIndex": 5022030,
+      "url": "05020001-05022030"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Mesopotamia"
+      ],
+      "bookIndex": 4,
+      "chapter": 23,
+      "endChapter": 26,
+      "ref": "23-26",
+      "startIndex": 5023001,
+      "endIndex": 5026019,
+      "url": "05023001-05026019"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ebal",
+        "Gad",
+        "Gerizim",
+        "Issachar",
+        "Jordan",
+        "Naphtali",
+        "Reuben",
+        "Zebulun"
+      ],
+      "bookIndex": 4,
+      "chapter": 27,
+      "endChapter": 28,
+      "ref": "27-28",
+      "startIndex": 5027001,
+      "endIndex": 5028068,
+      "url": "05027001-05028068"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Bashan",
+        "Heshbon",
+        "Horeb (Sinai)",
+        "Jordan",
+        "Moab",
+        "Sodom"
+      ],
+      "bookIndex": 4,
+      "chapter": 29,
+      "endChapter": 31,
+      "ref": "29-31",
+      "startIndex": 5029001,
+      "endIndex": 5031030,
+      "url": "05029001-05031030"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bashan",
+        "Canaan",
+        "Hor",
+        "Jericho",
+        "Jordan",
+        "Kadesh (Kadesh-barnea)",
+        "Moab",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Sodom",
+        "Zin"
+      ],
+      "bookIndex": 4,
+      "chapter": 32,
+      "endChapter": 32,
+      "ref": "32",
+      "startIndex": 5032001,
+      "endIndex": 5032052,
+      "url": "05032001-05032052"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Bashan",
+        "Benjamin",
+        "Beth-peor",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Gilead",
+        "Issachar",
+        "Jericho",
+        "Manasseh",
+        "Moab",
+        "Naphtali",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Negeb",
+        "Paran",
+        "Pisgah (Nebo)",
+        "Reuben",
+        "Seir",
+        "Seir [Judah]",
+        "Sinai (Horeb)",
+        "Zebulun"
+      ],
+      "bookIndex": 4,
+      "chapter": 33,
+      "endChapter": 34,
+      "ref": "33-34",
+      "startIndex": 5033001,
+      "endIndex": 5034012,
+      "url": "05033001-05034012"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 1450 B.C.E.-z"
+      ],
+      "locations": [
+        "Adam",
+        "Amorites",
+        "Arabah",
+        "Euphrates",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Girgashites",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Jericho",
+        "Jordan",
+        "Lebanon",
+        "Manasseh",
+        "Perizzites",
+        "Shittim",
+        "Zarethan"
+      ],
+      "bookIndex": 5,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 6001001,
+      "endIndex": 6004024,
+      "url": "06001001-06004024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ai",
+        "Amorites",
+        "Bethel (Luz)",
+        "Canaan",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Jericho",
+        "Jordan"
+      ],
+      "bookIndex": 5,
+      "chapter": 5,
+      "endChapter": 7,
+      "ref": "5-7",
+      "startIndex": 6005001,
+      "endIndex": 6007026,
+      "url": "06005001-06007026"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ai",
+        "Amorites",
+        "Ashtaroth (Beeshterah)",
+        "Bashan",
+        "Bethel (Luz)",
+        "Chephirah",
+        "Ebal",
+        "Gerizim",
+        "Gibeon",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Heshbon",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Jericho",
+        "Jordan",
+        "Kiriath-jearim",
+        "Lebanon",
+        "Perizzites",
+        "Shephelah"
+      ],
+      "bookIndex": 5,
+      "chapter": 8,
+      "endChapter": 9,
+      "ref": "8-9",
+      "startIndex": 6008001,
+      "endIndex": 6009027,
+      "url": "06008001-06009027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Adullam",
+        "Ai",
+        "Aijalon",
+        "Amorites",
+        "Anab",
+        "Aphek (Antipatris) [Ephraim]",
+        "Aphek [Asher]",
+        "Aphek [Manasseh]",
+        "Arabah",
+        "Arad [Canaanite]",
+        "Arad [Israelite]",
+        "Arnon",
+        "Aroer",
+        "Ashdod",
+        "Ashtaroth (Beeshterah)",
+        "Azekah",
+        "Baal-gad",
+        "Bashan",
+        "Beth-horon",
+        "Beth-jeshimoth",
+        "Bethel (Luz)",
+        "Carmel",
+        "Carmel [Judah]",
+        "Chinnereth",
+        "Debir (Lo-debar) [Gad]",
+        "Debir [Levi]",
+        "Dor",
+        "Edrei [Manasseh]",
+        "Edrei [Naphtali]",
+        "Eglon",
+        "Gath",
+        "Gaza",
+        "Gezer",
+        "Gibeon",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Goshen [Egypt]",
+        "Goshen [Judah]",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Hebron (Kiriath-arba)",
+        "Hepher",
+        "Hermon",
+        "Heshbon",
+        "Hittites",
+        "Hivites",
+        "Jabbok",
+        "Jarmuth (Ramoth) [Issachar]",
+        "Jarmuth [Judah]",
+        "Jebusites",
+        "Jericho",
+        "Jokneam (Jokmeam)",
+        "Jordan",
+        "Kadesh (Kadesh-barnea)",
+        "Kedesh [Issachar]",
+        "Kedesh [Naphtali]",
+        "Lachish",
+        "Lassharon",
+        "Lebanon",
+        "Libnah",
+        "Madon",
+        "Makkedah",
+        "Manasseh",
+        "Megiddo",
+        "Merom",
+        "Misrephoth-maim",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Negeb",
+        "Perizzites",
+        "Pisgah (Nebo)",
+        "Seir",
+        "Seir [Judah]",
+        "Shephelah",
+        "Shimron",
+        "Sidon",
+        "Taanach",
+        "Tappuah",
+        "Tirzah"
+      ],
+      "bookIndex": 5,
+      "chapter": 10,
+      "endChapter": 12,
+      "ref": "10-12",
+      "startIndex": 6010001,
+      "endIndex": 6012024,
+      "url": "06010001-06012024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Achzib",
+        "Addar (Hazar-addar)",
+        "Adullam",
+        "Ain (Ashan) [Simeon/Levi]",
+        "Ain [Simeon]",
+        "Akrabbim",
+        "Amorites",
+        "Anab",
+        "Aphek (Antipatris) [Ephraim]",
+        "Aphek [Asher]",
+        "Aphek [Manasseh]",
+        "Arnon",
+        "Aroer",
+        "Ashan (Ain)",
+        "Ashdod",
+        "Ashtaroth (Beeshterah)",
+        "Azekah",
+        "Azmon",
+        "Baal-gad",
+        "Bamoth-baal",
+        "Bashan",
+        "Beer-sheba",
+        "Beth-arabah",
+        "Beth-dagon",
+        "Beth-hoglah",
+        "Beth-jeshimoth",
+        "Beth-nimrah",
+        "Beth-peor",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Beth-zur",
+        "Betonim",
+        "Canaan",
+        "Carmel",
+        "Carmel [Judah]",
+        "Chesil (Hazor [Bethuel])",
+        "Chinnereth",
+        "Chitlish",
+        "City of Salt",
+        "Debir (Lo-debar) [Gad]",
+        "Debir [Levi]",
+        "Dibon (Dibon-gad)",
+        "Edom",
+        "Edrei [Manasseh]",
+        "Edrei [Naphtali]",
+        "Eglon",
+        "Ekron",
+        "En-gannim",
+        "En-gedi",
+        "En-rogel",
+        "En-shemesh",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Eshtaol",
+        "Ether (Tochen)",
+        "Ezem",
+        "Gad",
+        "Gaza",
+        "Gederah",
+        "Geshur",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Giloh",
+        "Goshen [Egypt]",
+        "Goshen [Judah]",
+        "Hazar-shual",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Hebron (Kiriath-arba)",
+        "Hermon",
+        "Heshbon",
+        "Hinnom",
+        "Holon",
+        "Jabneel [Judah]",
+        "Jabneel [Naphtali]",
+        "Jagur",
+        "Jarmuth (Ramoth) [Issachar]",
+        "Jarmuth [Judah]",
+        "Jattir",
+        "Jebusites",
+        "Jericho",
+        "Jezreel",
+        "Jordan",
+        "Juttah",
+        "Kadesh (Kadesh-barnea)",
+        "Kain",
+        "Kedemoth",
+        "Kedesh [Issachar]",
+        "Kedesh [Naphtali]",
+        "Keilah",
+        "Kiriath-arba (Hebron)",
+        "Kiriath-jearim",
+        "Kiriathaim",
+        "Lachish",
+        "Lebanon",
+        "Libnah",
+        "Madmannah (Beth-marcaboth)",
+        "Mahanaim",
+        "Makkedah",
+        "Manasseh",
+        "Maon",
+        "Mareshah",
+        "Medeba",
+        "Mephaath",
+        "Misrephoth-maim",
+        "Moab",
+        "Negeb",
+        "Nephtoah",
+        "Nibshan",
+        "Nile",
+        "Pisgah (Nebo)",
+        "Rabbah (Philadelphia)",
+        "Reuben",
+        "Rimmon (Ain [Simeon])",
+        "Sansannah (Hazar-susah)",
+        "Secacah",
+        "Seir",
+        "Seir [Judah]",
+        "Shaaraim (Sharuhen)",
+        "Shamir (Samaria [city])",
+        "Shephelah",
+        "Shilhim (Sharuhen)",
+        "Socoh [Judah]",
+        "Socoh [Manasseh]",
+        "Succoth [Egypt]",
+        "Succoth [Gad]",
+        "Tappuah",
+        "Timnah [Judah/Dan]",
+        "Timnah [Judah]",
+        "Zanoah",
+        "Zaphon",
+        "Zereth-shahar",
+        "Ziklag",
+        "Zin",
+        "Ziph",
+        "Zorah"
+      ],
+      "bookIndex": 5,
+      "chapter": 13,
+      "endChapter": 15,
+      "ref": "13-15",
+      "startIndex": 6013001,
+      "endIndex": 6015063,
+      "url": "06013001-06015063"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Asher",
+        "Asher [tribe]",
+        "Ataroth",
+        "Bashan",
+        "Benjamin",
+        "Beth-arabah",
+        "Beth-hoglah",
+        "Beth-horon",
+        "Beth-shean (Beth-shan) (Scythopolis)",
+        "Bethel (Luz)",
+        "Chephirah",
+        "Dor",
+        "En-dor",
+        "En-rogel",
+        "En-shemesh",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Geba",
+        "Gezer",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gibeon",
+        "Gilead",
+        "Hepher",
+        "Hinnom",
+        "Ibleam (Gath-rimmon)",
+        "Issachar",
+        "Janoah",
+        "Jericho",
+        "Jezreel",
+        "Jordan",
+        "Kanah",
+        "Kiriath-jearim",
+        "Luz (Bethel)",
+        "Manasseh",
+        "Megiddo",
+        "Michmethath",
+        "Mozah",
+        "Naarah",
+        "Nephtoah",
+        "Ophni",
+        "Ophrah (Ephraim)",
+        "Ophrah [in Issachar]",
+        "Parah",
+        "Perizzites",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Reuben",
+        "Shechem",
+        "Shiloh",
+        "Taanach",
+        "Taanath-shiloh",
+        "Tappuah",
+        "Tirzah"
+      ],
+      "bookIndex": 5,
+      "chapter": 16,
+      "endChapter": 18,
+      "ref": "16-18",
+      "startIndex": 6016001,
+      "endIndex": 6018028,
+      "url": "06016001-06018028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abdon",
+        "Achzib",
+        "Aijalon",
+        "Ain (Ashan) [Simeon/Levi]",
+        "Ain [Simeon]",
+        "Almon",
+        "Anathoth",
+        "Aphek (Antipatris) [Ephraim]",
+        "Aphek [Asher]",
+        "Aphek [Manasseh]",
+        "Ashan (Ain)",
+        "Asher",
+        "Asher [tribe]",
+        "Baalath-beer (Ramah) [Simeon]",
+        "Bashan",
+        "Beer-sheba",
+        "Beeshterah (Ashtaroth)",
+        "Benjamin",
+        "Beth-anath",
+        "Beth-dagon",
+        "Beth-emek",
+        "Beth-horon",
+        "Beth-lebaoth (Beth-biri)",
+        "Beth-marcaboth (Madmannah)",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Bezer",
+        "Cabul",
+        "Canaan",
+        "Carmel",
+        "Carmel [Judah]",
+        "Chesulloth",
+        "Chinnereth",
+        "Dabbesheth",
+        "Daberath",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Debir (Lo-debar) [Gad]",
+        "Debir [Levi]",
+        "Dimnah",
+        "Edrei [Manasseh]",
+        "Edrei [Naphtali]",
+        "Ekron",
+        "Elteke (Eltekeh)",
+        "Eltekeh (Elteke)",
+        "En-gannim",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Eshtaol",
+        "Eshtemoa",
+        "Ether (Tochen)",
+        "Ezem",
+        "Gad",
+        "Galilee",
+        "Gath-hepher",
+        "Gath-rimmon (Ibleam) [Manasseh]",
+        "Gath-rimmon [Dan]",
+        "Geba",
+        "Gezer",
+        "Gibbethon",
+        "Gibeon",
+        "Gilead",
+        "Golan",
+        "Hali",
+        "Hammath (Hammoth-dor)",
+        "Hammon",
+        "Hammoth-dor (Hammath)",
+        "Hazar-shual",
+        "Hazar-susah (Sansannah)",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Hebron (Kiriath-arba)",
+        "Helkath",
+        "Heshbon",
+        "Holon",
+        "Issachar",
+        "Jabneel [Judah]",
+        "Jabneel [Naphtali]",
+        "Jarmuth (Ramoth) [Issachar]",
+        "Jarmuth [Judah]",
+        "Jattir",
+        "Jehud",
+        "Jericho",
+        "Jezreel",
+        "Jokneam (Jokmeam)",
+        "Joppa",
+        "Jordan",
+        "Juttah",
+        "Kanah",
+        "Kedemoth",
+        "Kedesh [Issachar]",
+        "Kedesh [Naphtali]",
+        "Kiriath-arba (Hebron)",
+        "Kishion (Kedesh [Issachar])",
+        "Libnah",
+        "Mahanaim",
+        "Manasseh",
+        "Mephaath",
+        "Migdal-el",
+        "Naphtali",
+        "Neiel",
+        "Rakkath",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Ramoth (Jarmuth)",
+        "Rehob",
+        "Reuben",
+        "Rimmon (Ain [Simeon])",
+        "Sarid",
+        "Sharuhen",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Shechem",
+        "Shiloh",
+        "Shimron",
+        "Shunem",
+        "Sidon",
+        "Taanach",
+        "Tabor",
+        "Timnah [Judah/Dan]",
+        "Timnah [Judah]",
+        "Timnath-serah",
+        "Tyre",
+        "Yiron",
+        "Zebulun",
+        "Ziklag",
+        "Zorah"
+      ],
+      "bookIndex": 5,
+      "chapter": 19,
+      "endChapter": 21,
+      "ref": "19-21",
+      "startIndex": 6019001,
+      "endIndex": 6021045,
+      "url": "06019001-06021045"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Bashan",
+        "Canaan",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Gilead",
+        "Girgashites",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Jericho",
+        "Jordan",
+        "Manasseh",
+        "Moab",
+        "Perizzites",
+        "Reuben",
+        "Seir",
+        "Seir [Judah]",
+        "Shechem",
+        "Shiloh",
+        "Timnath-serah"
+      ],
+      "bookIndex": 5,
+      "chapter": 22,
+      "endChapter": 24,
+      "ref": "22-24",
+      "startIndex": 6022001,
+      "endIndex": 6024033,
+      "url": "06022001-06024033"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 1100 B.C.E.-z"
+      ],
+      "locations": [
+        "Acco",
+        "Achzib",
+        "Aijalon",
+        "Akrabbim",
+        "Amorites",
+        "Arad [Canaanite]",
+        "Arad [Israelite]",
+        "Asher",
+        "Asher [tribe]",
+        "Ashkelon",
+        "Baal (Ramah) [Simeon]",
+        "Beth-anath",
+        "Beth-shean (Beth-shan) (Scythopolis)",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Bethel (Luz)",
+        "Bezek",
+        "Debir (Lo-debar) [Gad]",
+        "Debir [Levi]",
+        "Dor",
+        "Ekron",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gaza",
+        "Gezer",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Hebron (Kiriath-arba)",
+        "Helbah",
+        "Hittites",
+        "Ibleam (Gath-rimmon)",
+        "Jebusites",
+        "Kiriath-arba (Hebron)",
+        "Luz (Bethel)",
+        "Manasseh",
+        "Megiddo",
+        "Naphtali",
+        "Negeb",
+        "Perizzites",
+        "Rehob",
+        "Shaalbim",
+        "Shephelah",
+        "Sidon",
+        "Taanach",
+        "Zebulun"
+      ],
+      "bookIndex": 6,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 7001001,
+      "endIndex": 7002023,
+      "url": "07001001-07002023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amalekites",
+        "Amorites",
+        "Asher",
+        "Asher [tribe]",
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Bethel (Luz)",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Edom",
+        "Eglon",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Harosheth",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Hittites",
+        "Hivites",
+        "Issachar",
+        "Jebusites",
+        "Jordan",
+        "Kedesh [Issachar]",
+        "Kedesh [Naphtali]",
+        "Kenites",
+        "Kishon",
+        "Lebanon",
+        "Megiddo",
+        "Meroz",
+        "Mesopotamia",
+        "Moab",
+        "Naphtali",
+        "Perizzites",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Reuben",
+        "Seir",
+        "Seir [Judah]",
+        "Sinai (Horeb)",
+        "Taanach",
+        "Tabor",
+        "Zebulun"
+      ],
+      "bookIndex": 6,
+      "chapter": 3,
+      "endChapter": 5,
+      "ref": "3-5",
+      "startIndex": 7003001,
+      "endIndex": 7005031,
+      "url": "07003001-07005031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abel-meholah",
+        "Amorites",
+        "Asher",
+        "Asher [tribe]",
+        "Baal (Ramah) [Simeon]",
+        "Beth-shittah",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gaza",
+        "Harod",
+        "Jezreel",
+        "Jordan",
+        "Manasseh",
+        "Midian",
+        "Moreh",
+        "Naphtali",
+        "Ophrah (Ephraim)",
+        "Ophrah [in Issachar]",
+        "Zebulun"
+      ],
+      "bookIndex": 6,
+      "chapter": 6,
+      "endChapter": 7,
+      "ref": "6-7",
+      "startIndex": 7006001,
+      "endIndex": 7007025,
+      "url": "07006001-07007025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arumah",
+        "Baal (Ramah) [Simeon]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gerizim",
+        "Jogbehah",
+        "Jordan",
+        "Lebanon",
+        "Midian",
+        "Ophrah (Ephraim)",
+        "Ophrah [in Issachar]",
+        "Penuel",
+        "Shechem",
+        "Succoth [Egypt]",
+        "Succoth [Gad]",
+        "Tabor",
+        "Thebez"
+      ],
+      "bookIndex": 6,
+      "chapter": 8,
+      "endChapter": 9,
+      "ref": "8-9",
+      "startIndex": 7008001,
+      "endIndex": 7009057,
+      "url": "07008001-07009057"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abel-keramim",
+        "Ammon",
+        "Amorites",
+        "Arnon",
+        "Aroer",
+        "Benjamin",
+        "Edom",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gilead",
+        "Heshbon",
+        "Issachar",
+        "Jabbok",
+        "Jordan",
+        "Kadesh (Kadesh-barnea)",
+        "Manasseh",
+        "Midian",
+        "Minnith",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Moab",
+        "Shamir (Samaria [city])",
+        "Sidon"
+      ],
+      "bookIndex": 6,
+      "chapter": 10,
+      "endChapter": 11,
+      "ref": "10-11",
+      "startIndex": 7010001,
+      "endIndex": 7011040,
+      "url": "07010001-07011040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abdon",
+        "Aijalon",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Eshtaol",
+        "Gilead",
+        "Jordan",
+        "Manasseh",
+        "Pirathon",
+        "Zaphon",
+        "Zebulun",
+        "Zorah"
+      ],
+      "bookIndex": 6,
+      "chapter": 12,
+      "endChapter": 13,
+      "ref": "12-13",
+      "startIndex": 7012001,
+      "endIndex": 7013025,
+      "url": "07012001-07013025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ashkelon",
+        "Eshtaol",
+        "Etam [Judah]",
+        "Etam [Simeon]",
+        "Gaza",
+        "Hebron (Kiriath-arba)",
+        "Lehi",
+        "Sorek",
+        "Timnah [Judah/Dan]",
+        "Timnah [Judah]",
+        "Zorah"
+      ],
+      "bookIndex": 6,
+      "chapter": 14,
+      "endChapter": 16,
+      "ref": "14-16",
+      "startIndex": 7014001,
+      "endIndex": 7016031,
+      "url": "07014001-07016031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Benjamin",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Eshtaol",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Jebusites",
+        "Kiriath-jearim",
+        "Laish (Dan [city])",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Shiloh",
+        "Sidon",
+        "Zorah"
+      ],
+      "bookIndex": 6,
+      "chapter": 17,
+      "endChapter": 19,
+      "ref": "17-19",
+      "startIndex": 7017001,
+      "endIndex": 7019030,
+      "url": "07017001-07019030"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Beer-sheba",
+        "Benjamin",
+        "Bethel (Luz)",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilead",
+        "Jabesh-gilead",
+        "Lebonah",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Rimmon (Ain [Simeon])",
+        "Shechem",
+        "Shiloh"
+      ],
+      "bookIndex": 6,
+      "chapter": 20,
+      "endChapter": 21,
+      "ref": "20-21",
+      "startIndex": 7020001,
+      "endIndex": 7021025,
+      "url": "07020001-07021025"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 1090 B.C.E.-z"
+      ],
+      "locations": [
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Moab",
+        "Tamar"
+      ],
+      "bookIndex": 7,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 8001001,
+      "endIndex": 8004022,
+      "url": "08001001-08004022"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 1078 B.C.E.-z"
+      ],
+      "locations": [
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Shiloh"
+      ],
+      "bookIndex": 8,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 9001001,
+      "endIndex": 9002036,
+      "url": "09001001-09002036"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Aphek (Antipatris) [Ephraim]",
+        "Aphek [Asher]",
+        "Aphek [Manasseh]",
+        "Ashdod",
+        "Ashkelon",
+        "Beer-sheba",
+        "Benjamin",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ebenezer",
+        "Ekron",
+        "Gath",
+        "Gaza",
+        "Kiriath-jearim",
+        "Shiloh"
+      ],
+      "bookIndex": 8,
+      "chapter": 3,
+      "endChapter": 6,
+      "ref": "3-6",
+      "startIndex": 9003001,
+      "endIndex": 9006021,
+      "url": "09003001-09006021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Beer-sheba",
+        "Benjamin",
+        "Bethel (Luz)",
+        "Ebenezer",
+        "Ekron",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gath",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Jeshanah",
+        "Kiriath-jearim",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]"
+      ],
+      "bookIndex": 8,
+      "chapter": 7,
+      "endChapter": 9,
+      "ref": "7-9",
+      "startIndex": 9007001,
+      "endIndex": 9009027,
+      "url": "09007001-09009027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Benjamin",
+        "Bethel (Luz)",
+        "Bezek",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Moab",
+        "Tabor"
+      ],
+      "bookIndex": 8,
+      "chapter": 10,
+      "endChapter": 12,
+      "ref": "10-12",
+      "startIndex": 9010001,
+      "endIndex": 9012025,
+      "url": "09010001-09012025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Aijalon",
+        "Amalekites",
+        "Benjamin",
+        "Beth-horon",
+        "Bethel (Luz)",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Geba",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Jordan",
+        "Michmash",
+        "Migron",
+        "Ophrah (Ephraim)",
+        "Ophrah [in Issachar]",
+        "Shiloh"
+      ],
+      "bookIndex": 8,
+      "chapter": 13,
+      "endChapter": 14,
+      "ref": "13-14",
+      "startIndex": 9013001,
+      "endIndex": 9014052,
+      "url": "09013001-09014052"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amalekites",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Carmel",
+        "Carmel [Judah]",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Kenites",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Shur"
+      ],
+      "bookIndex": 8,
+      "chapter": 15,
+      "endChapter": 16,
+      "ref": "15-16",
+      "startIndex": 9015001,
+      "endIndex": 9016023,
+      "url": "09015001-09016023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Azekah",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Ekron",
+        "Gath",
+        "Shaaraim (Sharuhen)",
+        "Socoh [Judah]",
+        "Socoh [Manasseh]"
+      ],
+      "bookIndex": 8,
+      "chapter": 17,
+      "endChapter": 18,
+      "ref": "17-18",
+      "startIndex": 9017001,
+      "endIndex": 9018030,
+      "url": "09017001-09018030"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Gath",
+        "Nob",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]"
+      ],
+      "bookIndex": 8,
+      "chapter": 19,
+      "endChapter": 21,
+      "ref": "19-21",
+      "startIndex": 9019001,
+      "endIndex": 9021015,
+      "url": "09019001-09021015"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Adullam",
+        "Arabah",
+        "En-gedi",
+        "Gad",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Horesh",
+        "Keilah",
+        "Maon",
+        "Moab",
+        "Nob",
+        "Ziph"
+      ],
+      "bookIndex": 8,
+      "chapter": 22,
+      "endChapter": 24,
+      "ref": "22-24",
+      "startIndex": 9022001,
+      "endIndex": 9024022,
+      "url": "09022001-09024022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amalekites",
+        "Carmel",
+        "Carmel [Judah]",
+        "Gallim",
+        "Gath",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Jezreel",
+        "Kenites",
+        "Laish (Dan [city])",
+        "Maon",
+        "Paran",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Shur",
+        "Ziklag",
+        "Ziph"
+      ],
+      "bookIndex": 8,
+      "chapter": 25,
+      "endChapter": 27,
+      "ref": "25-27",
+      "startIndex": 9025001,
+      "endIndex": 9027012,
+      "url": "09025001-09027012"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amalekites",
+        "Aphek (Antipatris) [Ephraim]",
+        "Aphek [Asher]",
+        "Aphek [Manasseh]",
+        "Aroer",
+        "Besor",
+        "Bethel (Luz)",
+        "En-dor",
+        "Eshtemoa",
+        "Gilboa",
+        "Hebron (Kiriath-arba)",
+        "Jabesh-gilead",
+        "Jattir",
+        "Jezreel",
+        "Jordan",
+        "Kenites",
+        "Negeb",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Ramoth (Jarmuth)",
+        "Shunem",
+        "Ziklag"
+      ],
+      "bookIndex": 8,
+      "chapter": 28,
+      "endChapter": 31,
+      "ref": "28-31",
+      "startIndex": 9028001,
+      "endIndex": 9031013,
+      "url": "09028001-09031013"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 1040 B.C.E.-z"
+      ],
+      "locations": [
+        "Amalekites",
+        "Arabah",
+        "Ashkelon",
+        "Benjamin",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gath",
+        "Gibeon",
+        "Gilboa",
+        "Gilead",
+        "Hebron (Kiriath-arba)",
+        "Helkath",
+        "Jabesh-gilead",
+        "Jezreel",
+        "Jordan",
+        "Mahanaim",
+        "Ziklag"
+      ],
+      "bookIndex": 9,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 10001001,
+      "endIndex": 10002032,
+      "url": "10001001-10002032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Baal-perazim",
+        "Bahurim",
+        "Beer-sheba",
+        "Benjamin",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Geba",
+        "Geshur",
+        "Gezer",
+        "Gibeon",
+        "Hebron (Kiriath-arba)",
+        "Jebusites",
+        "Jezreel",
+        "Laish (Dan [city])",
+        "Maacah",
+        "Rimmon (Ain [Simeon])",
+        "Tyre",
+        "Ziklag",
+        "Zion"
+      ],
+      "bookIndex": 9,
+      "chapter": 3,
+      "endChapter": 5,
+      "ref": "3-5",
+      "startIndex": 10003001,
+      "endIndex": 10005025,
+      "url": "10003001-10005025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amalekites",
+        "Berothai (Cun)",
+        "Damascus",
+        "Edom",
+        "Euphrates",
+        "Hamath",
+        "Moab",
+        "Rehob",
+        "Syria"
+      ],
+      "bookIndex": 9,
+      "chapter": 6,
+      "endChapter": 8,
+      "ref": "6-8",
+      "startIndex": 10006001,
+      "endIndex": 10008018,
+      "url": "10006001-10008018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Helam",
+        "Jericho",
+        "Jordan",
+        "Lo-debar (Debir)",
+        "Maacah",
+        "Rabbah (Philadelphia)",
+        "Rehob",
+        "Thebez"
+      ],
+      "bookIndex": 9,
+      "chapter": 9,
+      "endChapter": 12,
+      "ref": "9-12",
+      "startIndex": 10009001,
+      "endIndex": 10012031,
+      "url": "10009001-10012031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal-hazor",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Geshur",
+        "Tamar",
+        "Tekoa"
+      ],
+      "bookIndex": 9,
+      "chapter": 13,
+      "endChapter": 14,
+      "ref": "13-14",
+      "startIndex": 10013001,
+      "endIndex": 10014033,
+      "url": "10013001-10014033"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bahurim",
+        "Gath",
+        "Geshur",
+        "Giloh",
+        "Hebron (Kiriath-arba)",
+        "Kidron",
+        "Mount of Olives",
+        "Syria"
+      ],
+      "bookIndex": 9,
+      "chapter": 15,
+      "endChapter": 16,
+      "ref": "15-16",
+      "startIndex": 10015001,
+      "endIndex": 10016023,
+      "url": "10015001-10016023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bahurim",
+        "Beer-sheba",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "En-rogel",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gilead",
+        "Jordan",
+        "Lo-debar (Debir)",
+        "Mahanaim",
+        "Rabbah (Philadelphia)",
+        "Rogelim"
+      ],
+      "bookIndex": 9,
+      "chapter": 17,
+      "endChapter": 18,
+      "ref": "17-18",
+      "startIndex": 10017001,
+      "endIndex": 10018033,
+      "url": "10017001-10018033"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abel of Beth-maacah",
+        "Bahurim",
+        "Benjamin",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gibeon",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Jordan",
+        "Mahanaim",
+        "Rogelim",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]"
+      ],
+      "bookIndex": 9,
+      "chapter": 19,
+      "endChapter": 20,
+      "ref": "19-20",
+      "startIndex": 10019001,
+      "endIndex": 10020026,
+      "url": "10019001-10020026"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Benjamin",
+        "Gath",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilboa",
+        "Jabesh-gilead"
+      ],
+      "bookIndex": 9,
+      "chapter": 21,
+      "endChapter": 22,
+      "ref": "21-22",
+      "startIndex": 10021001,
+      "endIndex": 10022051,
+      "url": "10021001-10022051"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Adullam",
+        "Aroer",
+        "Azmaveth",
+        "Beer-sheba",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Gad",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilead",
+        "Hivites",
+        "Jordan",
+        "Lehi",
+        "Moab",
+        "Negeb",
+        "Sidon",
+        "Tyre"
+      ],
+      "bookIndex": 9,
+      "chapter": 23,
+      "endChapter": 24,
+      "ref": "23-24",
+      "startIndex": 10023001,
+      "endIndex": 10024025,
+      "url": "10023001-10024025"
+    }
+  ],
+  [
+    {
+      "events": [
+        "580 B.C.E.-z"
+      ],
+      "locations": [
+        "Anathoth",
+        "Bahurim",
+        "En-rogel",
+        "Gath",
+        "Gihon",
+        "Hebron (Kiriath-arba)",
+        "Jordan",
+        "Kidron",
+        "Maacah",
+        "Mahanaim",
+        "Shiloh"
+      ],
+      "bookIndex": 10,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 11001001,
+      "endIndex": 11002046,
+      "url": "11001001-11002046"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abel-meholah",
+        "Amorites",
+        "Arubboth",
+        "Asher",
+        "Asher [tribe]",
+        "Bashan",
+        "Beer-sheba",
+        "Benjamin",
+        "Beth-shean (Beth-shan) (Scythopolis)",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Dor",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gaza",
+        "Gibeon",
+        "Gilead",
+        "Hepher",
+        "Issachar",
+        "Jezreel",
+        "Lebanon",
+        "Mahanaim",
+        "Makaz",
+        "Manasseh",
+        "Megiddo",
+        "Naphtali",
+        "Ramoth-gilead",
+        "Shaalbim",
+        "Socoh [Judah]",
+        "Socoh [Manasseh]",
+        "Taanach",
+        "Tiphsah",
+        "Tyre",
+        "Zarethan"
+      ],
+      "bookIndex": 10,
+      "chapter": 3,
+      "endChapter": 5,
+      "ref": "3-5",
+      "startIndex": 11003001,
+      "endIndex": 11005018,
+      "url": "11003001-11005018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Jordan",
+        "Lebanon",
+        "Naphtali",
+        "Succoth [Egypt]",
+        "Succoth [Gad]",
+        "Tyre",
+        "Zarethan"
+      ],
+      "bookIndex": 10,
+      "chapter": 6,
+      "endChapter": 7,
+      "ref": "6-7",
+      "startIndex": 11006001,
+      "endIndex": 11007051,
+      "url": "11006001-11007051"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Horeb (Sinai)",
+        "Zion"
+      ],
+      "bookIndex": 10,
+      "chapter": 8,
+      "endChapter": 8,
+      "ref": "8",
+      "startIndex": 11008001,
+      "endIndex": 11008066,
+      "url": "11008001-11008066"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Beth-horon",
+        "Cabul",
+        "Edom",
+        "Eloth (Elath)",
+        "Ezion-geber",
+        "Galilee",
+        "Gezer",
+        "Gibeon",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Lebanon",
+        "Megiddo",
+        "Perizzites",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Shephelah",
+        "Syria",
+        "Tamar",
+        "Tarshish (Spain)",
+        "Tyre"
+      ],
+      "bookIndex": 10,
+      "chapter": 9,
+      "endChapter": 10,
+      "ref": "9-10",
+      "startIndex": 11009001,
+      "endIndex": 11010029,
+      "url": "11009001-11010029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Benjamin",
+        "Bethel (Luz)",
+        "Damascus",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Edom",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Midian",
+        "Moab",
+        "Paran",
+        "Penuel",
+        "Shechem",
+        "Syria",
+        "Zeredah"
+      ],
+      "bookIndex": 10,
+      "chapter": 11,
+      "endChapter": 12,
+      "ref": "11-12",
+      "startIndex": 11011001,
+      "endIndex": 11012033,
+      "url": "11011001-11012033"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethel (Luz)",
+        "Samaria",
+        "Samaria [city]",
+        "Shiloh",
+        "Tirzah"
+      ],
+      "bookIndex": 10,
+      "chapter": 13,
+      "endChapter": 14,
+      "ref": "13-14",
+      "startIndex": 11013001,
+      "endIndex": 11014031,
+      "url": "11013001-11014031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abel-beth-maacah",
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Chinnereth",
+        "Damascus",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Geba",
+        "Gibbethon",
+        "Gilead",
+        "Ijon",
+        "Issachar",
+        "Jericho",
+        "Jordan",
+        "Kidron",
+        "Maacah",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Naphtali",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Samaria",
+        "Samaria [city]",
+        "Sidon",
+        "Syria",
+        "Tirzah",
+        "Zarephath"
+      ],
+      "bookIndex": 10,
+      "chapter": 15,
+      "endChapter": 17,
+      "ref": "15-17",
+      "startIndex": 11015001,
+      "endIndex": 11017024,
+      "url": "11015001-11017024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abel-meholah",
+        "Baal (Ramah) [Simeon]",
+        "Beer-sheba",
+        "Carmel",
+        "Carmel [Judah]",
+        "Damascus",
+        "Horeb (Sinai)",
+        "Jezreel",
+        "Kishon",
+        "Samaria",
+        "Samaria [city]",
+        "Syria"
+      ],
+      "bookIndex": 10,
+      "chapter": 18,
+      "endChapter": 19,
+      "ref": "18-19",
+      "startIndex": 11018001,
+      "endIndex": 11019021,
+      "url": "11018001-11019021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Aphek (Antipatris) [Ephraim]",
+        "Aphek [Asher]",
+        "Aphek [Manasseh]",
+        "Damascus",
+        "Jezreel",
+        "Samaria",
+        "Samaria [city]",
+        "Syria"
+      ],
+      "bookIndex": 10,
+      "chapter": 20,
+      "endChapter": 21,
+      "ref": "20-21",
+      "startIndex": 11020001,
+      "endIndex": 11021029,
+      "url": "11020001-11021029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Edom",
+        "Ezion-geber",
+        "Ramoth-gilead",
+        "Samaria",
+        "Samaria [city]",
+        "Syria",
+        "Tarshish (Spain)"
+      ],
+      "bookIndex": 10,
+      "chapter": 22,
+      "endChapter": 22,
+      "ref": "22",
+      "startIndex": 11022001,
+      "endIndex": 11022053,
+      "url": "11022001-11022053"
+    }
+  ],
+  [
+    {
+      "events": [
+        "580 B.C.E.-y"
+      ],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Bethel (Luz)",
+        "Carmel",
+        "Carmel [Judah]",
+        "Edom",
+        "Ekron",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Jericho",
+        "Jordan",
+        "Moab",
+        "Samaria",
+        "Samaria [city]"
+      ],
+      "bookIndex": 11,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 12001001,
+      "endIndex": 12003027,
+      "url": "12001001-12003027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal-shalishah",
+        "Carmel",
+        "Carmel [Judah]",
+        "Damascus",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Jordan",
+        "Ophel",
+        "Rimmon (Ain [Simeon])",
+        "Samaria",
+        "Samaria [city]",
+        "Shunem",
+        "Syria"
+      ],
+      "bookIndex": 11,
+      "chapter": 4,
+      "endChapter": 5,
+      "ref": "4-5",
+      "startIndex": 12004001,
+      "endIndex": 12005027,
+      "url": "12004001-12005027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Damascus",
+        "Dothan",
+        "Edom",
+        "Hittites",
+        "Jezreel",
+        "Jordan",
+        "Libnah",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Ramoth-gilead",
+        "Samaria",
+        "Samaria [city]",
+        "Syria"
+      ],
+      "bookIndex": 11,
+      "chapter": 6,
+      "endChapter": 8,
+      "ref": "6-8",
+      "startIndex": 12006001,
+      "endIndex": 12008029,
+      "url": "12006001-12008029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arnon",
+        "Aroer",
+        "Baal (Ramah) [Simeon]",
+        "Bashan",
+        "Bethel (Luz)",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Gilead",
+        "Ibleam (Gath-rimmon)",
+        "Jezreel",
+        "Jordan",
+        "Megiddo",
+        "Ramoth-gilead",
+        "Samaria",
+        "Samaria [city]",
+        "Syria"
+      ],
+      "bookIndex": 11,
+      "chapter": 9,
+      "endChapter": 10,
+      "ref": "9-10",
+      "startIndex": 12009001,
+      "endIndex": 12010036,
+      "url": "12009001-12010036"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Aphek (Antipatris) [Ephraim]",
+        "Aphek [Asher]",
+        "Aphek [Manasseh]",
+        "Baal (Ramah) [Simeon]",
+        "Beer-sheba",
+        "Gath",
+        "Samaria",
+        "Samaria [city]",
+        "Syria"
+      ],
+      "bookIndex": 11,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 12011001,
+      "endIndex": 12013025,
+      "url": "12011001-12013025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abel-beth-maacah",
+        "Arabah",
+        "Assyria",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Damascus",
+        "Edom",
+        "Elath (Eloth)",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Galilee",
+        "Gath-hepher",
+        "Gilead",
+        "Hamath",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Ibleam (Gath-rimmon)",
+        "Ijon",
+        "Janoah",
+        "Kedesh [Issachar]",
+        "Kedesh [Naphtali]",
+        "Lachish",
+        "Lebanon",
+        "Naphtali",
+        "Samaria",
+        "Samaria [city]",
+        "Syria",
+        "Tiphsah",
+        "Tirzah"
+      ],
+      "bookIndex": 11,
+      "chapter": 14,
+      "endChapter": 15,
+      "ref": "14-15",
+      "startIndex": 12014001,
+      "endIndex": 12015038,
+      "url": "12014001-12015038"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Baal (Ramah) [Simeon]",
+        "Babylon (Babylonia)",
+        "Bethel (Luz)",
+        "Damascus",
+        "Edom",
+        "Elath (Eloth)",
+        "Gozan",
+        "Hamath",
+        "Samaria",
+        "Samaria [city]",
+        "Succoth [Egypt]",
+        "Succoth [Gad]",
+        "Syria"
+      ],
+      "bookIndex": 11,
+      "chapter": 16,
+      "endChapter": 17,
+      "ref": "16-17",
+      "startIndex": 12016001,
+      "endIndex": 12017041,
+      "url": "12016001-12017041"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ararat",
+        "Arpad",
+        "Assyria",
+        "Eden",
+        "Ethiopia",
+        "Gaza",
+        "Gozan",
+        "Hamath",
+        "Haran",
+        "Lachish",
+        "Lebanon",
+        "Libnah",
+        "Nineveh",
+        "Samaria",
+        "Samaria [city]",
+        "Zion"
+      ],
+      "bookIndex": 11,
+      "chapter": 18,
+      "endChapter": 19,
+      "ref": "18-19",
+      "startIndex": 12018001,
+      "endIndex": 12019037,
+      "url": "12018001-12019037"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Assyria",
+        "Baal (Ramah) [Simeon]",
+        "Babylon (Babylonia)",
+        "Jotbah",
+        "Manasseh",
+        "Samaria",
+        "Samaria [city]"
+      ],
+      "bookIndex": 11,
+      "chapter": 20,
+      "endChapter": 22,
+      "ref": "20-22",
+      "startIndex": 12020001,
+      "endIndex": 12022020,
+      "url": "12020001-12022020"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Assyria",
+        "Baal (Ramah) [Simeon]",
+        "Babylon (Babylonia)",
+        "Beer-sheba",
+        "Bethel (Luz)",
+        "Euphrates",
+        "Geba",
+        "Hamath",
+        "Hinnom",
+        "Jericho",
+        "Kidron",
+        "Libnah",
+        "Manasseh",
+        "Megiddo",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Moab",
+        "Riblah",
+        "Rumah",
+        "Samaria",
+        "Samaria [city]"
+      ],
+      "bookIndex": 11,
+      "chapter": 23,
+      "endChapter": 25,
+      "ref": "23-25",
+      "startIndex": 12023001,
+      "endIndex": 12025030,
+      "url": "12023001-12025030"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 460 B.C.E.-z"
+      ],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Asshur",
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Beth-zur",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Bozrah",
+        "Canaan",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ebal",
+        "Edom",
+        "Elam",
+        "Ephrath (Bethlehem [Judah])",
+        "Gad",
+        "Geshur",
+        "Gilead",
+        "Hammath (Hammoth-dor)",
+        "Haran",
+        "Hebron (Kiriath-arba)",
+        "Issachar",
+        "Kenites",
+        "Kiriath-jearim",
+        "Kittim (Cyprus)",
+        "Maacah",
+        "Madmannah (Beth-marcaboth)",
+        "Manahath",
+        "Maon",
+        "Mareshah",
+        "Midian",
+        "Moab",
+        "Naphtali",
+        "Rehoboth",
+        "Reuben",
+        "Seir",
+        "Seir [Judah]",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Sidon",
+        "Syria",
+        "Tamar",
+        "Tappuah",
+        "Tarshish (Spain)",
+        "Tekoa",
+        "Tema",
+        "Zebulun",
+        "Ziph"
+      ],
+      "bookIndex": 12,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 13001001,
+      "endIndex": 13002055,
+      "url": "13001001-13002055"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ain (Ashan) [Simeon/Levi]",
+        "Ain [Simeon]",
+        "Amalekites",
+        "Aroer",
+        "Ashan (Ain)",
+        "Assyria",
+        "Baal (Ramah) [Simeon]",
+        "Baal-meon",
+        "Bashan",
+        "Beer-sheba",
+        "Beth-biri (Beth-lebaoth)",
+        "Beth-marcaboth (Madmannah)",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Bethuel (Hazor)",
+        "Eshtemoa",
+        "Etam [Judah]",
+        "Etam [Simeon]",
+        "Euphrates",
+        "Ezem",
+        "Gad",
+        "Gederah",
+        "Geshur",
+        "Gilead",
+        "Gozan",
+        "Hazar-shual",
+        "Hazar-susim (Sansannah)",
+        "Hebron (Kiriath-arba)",
+        "Hepher",
+        "Hermon",
+        "Jezreel",
+        "Keilah",
+        "Maacah",
+        "Manasseh",
+        "Mareshah",
+        "Naarah",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Ophrah (Ephraim)",
+        "Ophrah [in Issachar]",
+        "Penuel",
+        "Reuben",
+        "Rimmon (Ain [Simeon])",
+        "Seir",
+        "Seir [Judah]",
+        "Shaaraim (Sharuhen)",
+        "Sharon",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Soco [Judah]",
+        "Tamar",
+        "Tekoa",
+        "Tochen (Ether)",
+        "Zanoah",
+        "Ziklag",
+        "Ziph"
+      ],
+      "bookIndex": 12,
+      "chapter": 3,
+      "endChapter": 5,
+      "ref": "3-5",
+      "startIndex": 13003001,
+      "endIndex": 13005026,
+      "url": "13003001-13005026"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abdon",
+        "Aijalon",
+        "Anathoth",
+        "Ashan (Ain)",
+        "Asher",
+        "Asher [tribe]",
+        "Ashtaroth (Beeshterah)",
+        "Bashan",
+        "Benjamin",
+        "Beth-horon",
+        "Beth-shean (Beth-shan) (Scythopolis)",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Bethel (Luz)",
+        "Bezer",
+        "Daberath",
+        "Debir (Lo-debar) [Gad]",
+        "Debir [Levi]",
+        "Dor",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Eshtemoa",
+        "Gad",
+        "Galilee",
+        "Gath",
+        "Gath-rimmon (Ibleam) [Manasseh]",
+        "Gath-rimmon [Dan]",
+        "Geba",
+        "Gezer",
+        "Gilead",
+        "Golan",
+        "Hammon",
+        "Hebron (Kiriath-arba)",
+        "Heshbon",
+        "Issachar",
+        "Jattir",
+        "Jericho",
+        "Jordan",
+        "Kedemoth",
+        "Kedesh [Issachar]",
+        "Kedesh [Naphtali]",
+        "Kiriathaim",
+        "Libnah",
+        "Maacah",
+        "Mahanaim",
+        "Manasseh",
+        "Megiddo",
+        "Mephaath",
+        "Naphtali",
+        "Ramoth (Jarmuth)",
+        "Rehob",
+        "Reuben",
+        "Shechem",
+        "Shimron",
+        "Taanach",
+        "Tabor",
+        "Tarshish (Spain)",
+        "Zebulun"
+      ],
+      "bookIndex": 12,
+      "chapter": 6,
+      "endChapter": 7,
+      "ref": "6-7",
+      "startIndex": 13006001,
+      "endIndex": 13007040,
+      "url": "13006001-13007040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abdon",
+        "Addar (Hazar-addar)",
+        "Aijalon",
+        "Arad [Canaanite]",
+        "Arad [Israelite]",
+        "Azmaveth",
+        "Baal (Ramah) [Simeon]",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Elam",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gath",
+        "Geba",
+        "Gibeon",
+        "Gilboa",
+        "Gilead",
+        "Lod (Lydda)",
+        "Maacah",
+        "Manahath",
+        "Manasseh",
+        "Moab",
+        "Ono",
+        "Penuel"
+      ],
+      "bookIndex": 12,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 13008001,
+      "endIndex": 13010014,
+      "url": "13008001-13010014"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Adullam",
+        "Asher",
+        "Asher [tribe]",
+        "Azmaveth",
+        "Benjamin",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Hebron (Kiriath-arba)",
+        "Hepher",
+        "Issachar",
+        "Jebusites",
+        "Jordan",
+        "Maacah",
+        "Manasseh",
+        "Moab",
+        "Naphtali",
+        "Ur",
+        "Zebulun",
+        "Ziklag",
+        "Zion"
+      ],
+      "bookIndex": 12,
+      "chapter": 11,
+      "endChapter": 12,
+      "ref": "11-12",
+      "startIndex": 13011001,
+      "endIndex": 13012040,
+      "url": "13011001-13012040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal-perazim",
+        "Gezer",
+        "Gibeon",
+        "Hebron (Kiriath-arba)",
+        "Kiriath-jearim",
+        "Tyre"
+      ],
+      "bookIndex": 12,
+      "chapter": 13,
+      "endChapter": 15,
+      "ref": "13-15",
+      "startIndex": 13013001,
+      "endIndex": 13015029,
+      "url": "13013001-13015029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Canaan",
+        "Gibeon"
+      ],
+      "bookIndex": 12,
+      "chapter": 16,
+      "endChapter": 17,
+      "ref": "16-17",
+      "startIndex": 13016001,
+      "endIndex": 13017027,
+      "url": "13016001-13017027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amalekites",
+        "Cun (Berothai)",
+        "Damascus",
+        "Edom",
+        "Euphrates",
+        "Gath",
+        "Gezer",
+        "Hamath",
+        "Jericho",
+        "Jordan",
+        "Maacah",
+        "Medeba",
+        "Mesopotamia",
+        "Moab",
+        "Rabbah (Philadelphia)",
+        "Syria"
+      ],
+      "bookIndex": 12,
+      "chapter": 18,
+      "endChapter": 20,
+      "ref": "18-20",
+      "startIndex": 13018001,
+      "endIndex": 13020008,
+      "url": "13018001-13020008"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Beer-sheba",
+        "Benjamin",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Gad",
+        "Gibeon",
+        "Haran",
+        "Hebron (Kiriath-arba)"
+      ],
+      "bookIndex": 12,
+      "chapter": 21,
+      "endChapter": 23,
+      "ref": "21-23",
+      "startIndex": 13021001,
+      "endIndex": 13023032,
+      "url": "13021001-13023032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Elam",
+        "Gilead",
+        "Hebron (Kiriath-arba)",
+        "Issachar",
+        "Jeshua (Sheba)",
+        "Jordan",
+        "Shamir (Samaria [city])"
+      ],
+      "bookIndex": 12,
+      "chapter": 24,
+      "endChapter": 26,
+      "ref": "24-26",
+      "startIndex": 13024001,
+      "endIndex": 13026032,
+      "url": "13024001-13026032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Azmaveth",
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Gilead",
+        "Hebron (Kiriath-arba)",
+        "Issachar",
+        "Maacah",
+        "Manasseh",
+        "Naphtali",
+        "Sharon",
+        "Shephelah",
+        "Zebulun"
+      ],
+      "bookIndex": 12,
+      "chapter": 27,
+      "endChapter": 29,
+      "ref": "27-29",
+      "startIndex": 13027001,
+      "endIndex": 13029030,
+      "url": "13027001-13029030"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 460 B.C.E.-y"
+      ],
+      "locations": [
+        "Gibeon",
+        "Hittites",
+        "Joppa",
+        "Kiriath-jearim",
+        "Lebanon",
+        "Moriah",
+        "Shephelah",
+        "Syria",
+        "Tyre"
+      ],
+      "bookIndex": 13,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 14001001,
+      "endIndex": 14003017,
+      "url": "14001001-14003017"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Horeb (Sinai)",
+        "Jordan",
+        "Succoth [Egypt]",
+        "Succoth [Gad]",
+        "Zeredah",
+        "Zion"
+      ],
+      "bookIndex": 13,
+      "chapter": 4,
+      "endChapter": 6,
+      "ref": "4-6",
+      "startIndex": 14004001,
+      "endIndex": 14006042,
+      "url": "14004001-14006042"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Beth-horon",
+        "Edom",
+        "Eloth (Elath)",
+        "Ezion-geber",
+        "Hamath",
+        "Hittites",
+        "Hivites",
+        "Jebusites",
+        "Lebanon",
+        "Perizzites",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Shephelah",
+        "Tadmor (Palmyra)",
+        "Tarshish (Spain)"
+      ],
+      "bookIndex": 13,
+      "chapter": 7,
+      "endChapter": 9,
+      "ref": "7-9",
+      "startIndex": 14007001,
+      "endIndex": 14009031,
+      "url": "14007001-14009031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Adullam",
+        "Aijalon",
+        "Azekah",
+        "Benjamin",
+        "Beth-zur",
+        "Bethel (Luz)",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Etam [Judah]",
+        "Etam [Simeon]",
+        "Gath",
+        "Gerar",
+        "Gerar [city]",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Hebron (Kiriath-arba)",
+        "Jeshanah",
+        "Lachish",
+        "Maacah",
+        "Mareshah",
+        "Shechem",
+        "Soco [Judah]",
+        "Tekoa",
+        "Ziph",
+        "Zorah"
+      ],
+      "bookIndex": 13,
+      "chapter": 10,
+      "endChapter": 14,
+      "ref": "10-14",
+      "startIndex": 14010001,
+      "endIndex": 14014015,
+      "url": "14010001-14014015"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Benjamin",
+        "Damascus",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Geba",
+        "Ijon",
+        "Kidron",
+        "Maacah",
+        "Manasseh",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Naphtali",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Ramoth-gilead",
+        "Samaria",
+        "Samaria [city]",
+        "Syria"
+      ],
+      "bookIndex": 13,
+      "chapter": 15,
+      "endChapter": 18,
+      "ref": "15-18",
+      "startIndex": 14015001,
+      "endIndex": 14018034,
+      "url": "14015001-14018034"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ammon",
+        "Beer-sheba",
+        "Edom",
+        "En-gedi",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Ezion-geber",
+        "Jezreel",
+        "Libnah",
+        "Maresha",
+        "Moab",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Ramoth-gilead",
+        "Samaria",
+        "Samaria [city]",
+        "Seir",
+        "Seir [Judah]",
+        "Syria",
+        "Tarshish (Spain)",
+        "Tekoa"
+      ],
+      "bookIndex": 13,
+      "chapter": 19,
+      "endChapter": 22,
+      "ref": "19-22",
+      "startIndex": 14019001,
+      "endIndex": 14022012,
+      "url": "14019001-14022012"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Beer-sheba",
+        "Benjamin",
+        "Beth-horon",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Damascus",
+        "Edom",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Lachish",
+        "Lebanon",
+        "Samaria",
+        "Samaria [city]",
+        "Seir",
+        "Seir [Judah]"
+      ],
+      "bookIndex": 13,
+      "chapter": 23,
+      "endChapter": 25,
+      "ref": "23-25",
+      "startIndex": 14023001,
+      "endIndex": 14025028,
+      "url": "14023001-14025028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Aijalon",
+        "Ashdod",
+        "Assyria",
+        "Beth-shemesh [Issachar]",
+        "Beth-shemesh [Judah]",
+        "Carmel",
+        "Carmel [Judah]",
+        "Damascus",
+        "Eloth (Elath)",
+        "Gath",
+        "Gimzo",
+        "Hinnom",
+        "Jericho",
+        "Negeb",
+        "Ophel",
+        "Samaria",
+        "Samaria [city]",
+        "Shephelah",
+        "Soco [Judah]",
+        "Syria",
+        "Timnah [Judah/Dan]",
+        "Timnah [Judah]"
+      ],
+      "bookIndex": 13,
+      "chapter": 26,
+      "endChapter": 28,
+      "ref": "26-28",
+      "startIndex": 14026001,
+      "endIndex": 14028027,
+      "url": "14026001-14028027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Assyria",
+        "Beer-sheba",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Eden",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Issachar",
+        "Kidron",
+        "Manasseh",
+        "Zebulun"
+      ],
+      "bookIndex": 13,
+      "chapter": 29,
+      "endChapter": 30,
+      "ref": "29-30",
+      "startIndex": 14029001,
+      "endIndex": 14030027,
+      "url": "14029001-14030027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Eden",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gihon",
+        "Hinnom",
+        "Jeshua (Sheba)",
+        "Lachish",
+        "Manasseh",
+        "Ophel"
+      ],
+      "bookIndex": 13,
+      "chapter": 31,
+      "endChapter": 33,
+      "ref": "31-33",
+      "startIndex": 14031001,
+      "endIndex": 14033025,
+      "url": "14031001-14033025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abdon",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Carchemish",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Euphrates",
+        "Manasseh",
+        "Megiddo",
+        "Naphtali",
+        "Persia"
+      ],
+      "bookIndex": 13,
+      "chapter": 34,
+      "endChapter": 36,
+      "ref": "34-36",
+      "startIndex": 14034001,
+      "endIndex": 14036023,
+      "url": "14034001-14036023"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 460 B.C.E.-x"
+      ],
+      "locations": [
+        "Ai",
+        "Anathoth",
+        "Azmaveth",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Bethel (Luz)",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Chephirah",
+        "Elam",
+        "Geba",
+        "Hadid",
+        "Jericho",
+        "Jeshua (Sheba)",
+        "Joppa",
+        "Kiriath-jearim",
+        "Lebanon",
+        "Lod (Lydda)",
+        "Michmas",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Netophah",
+        "Ono",
+        "Persia",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]"
+      ],
+      "bookIndex": 14,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 15001001,
+      "endIndex": 15003013,
+      "url": "15001001-15003013"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Ecbatana (Achmetha)",
+        "Erech",
+        "Jeshua (Sheba)",
+        "Media",
+        "Persia",
+        "Samaria",
+        "Samaria [city]",
+        "Susa (Shushan)"
+      ],
+      "bookIndex": 14,
+      "chapter": 4,
+      "endChapter": 7,
+      "ref": "4-7",
+      "startIndex": 15004001,
+      "endIndex": 15007028,
+      "url": "15004001-15007028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Elam",
+        "Hittites",
+        "Jebusites",
+        "Jeshua (Sheba)",
+        "Manasseh",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Perizzites",
+        "Persia"
+      ],
+      "bookIndex": 14,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 15008001,
+      "endIndex": 15010044,
+      "url": "15008001-15010044"
+    }
+  ],
+  [
+    {
+      "events": [
+        "a. 443 B.C.E.-z"
+      ],
+      "locations": [
+        "Benjamin",
+        "Beth-zur",
+        "Gibeon",
+        "Jericho",
+        "Jeshua (Sheba)",
+        "Jordan",
+        "Keilah",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Ophel",
+        "Shushan",
+        "Zanoah"
+      ],
+      "bookIndex": 15,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 16001001,
+      "endIndex": 16003032,
+      "url": "16001001-16003032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ono",
+        "Samaria",
+        "Samaria [city]"
+      ],
+      "bookIndex": 15,
+      "chapter": 4,
+      "endChapter": 6,
+      "ref": "4-6",
+      "startIndex": 16004001,
+      "endIndex": 16006019,
+      "url": "16004001-16006019"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ai",
+        "Anathoth",
+        "Babylon (Babylonia)",
+        "Bethel (Luz)",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Chephirah",
+        "Elam",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Geba",
+        "Gibeon",
+        "Hadid",
+        "Jericho",
+        "Jeshua (Sheba)",
+        "Kiriath-jearim",
+        "Lod (Lydda)",
+        "Michmas",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Netophah",
+        "Ono",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]"
+      ],
+      "bookIndex": 15,
+      "chapter": 7,
+      "endChapter": 8,
+      "ref": "7-8",
+      "startIndex": 16007001,
+      "endIndex": 16008018,
+      "url": "16007001-16008018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Anathoth",
+        "Assyria",
+        "Bashan",
+        "Elam",
+        "Girgashites",
+        "Heshbon",
+        "Hittites",
+        "Jebusites",
+        "Jeshua (Sheba)",
+        "Perizzites",
+        "Rehob",
+        "Sinai (Horeb)",
+        "Ur"
+      ],
+      "bookIndex": 15,
+      "chapter": 9,
+      "endChapter": 10,
+      "ref": "9-10",
+      "startIndex": 16009001,
+      "endIndex": 16010039,
+      "url": "16009001-16010039"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Adullam",
+        "Anathoth",
+        "Azekah",
+        "Azmaveth",
+        "Babylon (Babylonia)",
+        "Beer-sheba",
+        "Benjamin",
+        "Bethel (Luz)",
+        "Dibon (Dibon-gad)",
+        "Elam",
+        "En-rimmon (Ain [Simeon])",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Geba",
+        "Hadid",
+        "Hazar-shual",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Hinnom",
+        "Jarmuth (Ramoth) [Issachar]",
+        "Jarmuth [Judah]",
+        "Jeshua (Sheba)",
+        "Kiriath-arba (Hebron)",
+        "Lachish",
+        "Lod (Lydda)",
+        "Michmash",
+        "Neballat",
+        "Nob",
+        "Ono",
+        "Ophel",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Zanoah",
+        "Ziklag",
+        "Zorah"
+      ],
+      "bookIndex": 15,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 16011001,
+      "endIndex": 16013031,
+      "url": "16011001-16013031"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 475 B.C.E.-z"
+      ],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Ethiopia",
+        "India",
+        "Media",
+        "Persia",
+        "Shushan",
+        "Tarshish (Spain)"
+      ],
+      "bookIndex": 16,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 17001001,
+      "endIndex": 17004017,
+      "url": "17001001-17004017"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ethiopia",
+        "India",
+        "Media",
+        "Persia",
+        "Shushan"
+      ],
+      "bookIndex": 16,
+      "chapter": 5,
+      "endChapter": 10,
+      "ref": "5-10",
+      "startIndex": 17005001,
+      "endIndex": 17010003,
+      "url": "17005001-17010003"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 1473 B.C.E.-z"
+      ],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 1,
+      "endChapter": 5,
+      "ref": "1-5",
+      "startIndex": 18001001,
+      "endIndex": 18005027,
+      "url": "18001001-18005027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Tema"
+      ],
+      "bookIndex": 17,
+      "chapter": 6,
+      "endChapter": 9,
+      "ref": "6-9",
+      "startIndex": 18006001,
+      "endIndex": 18009035,
+      "url": "18006001-18009035"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 10,
+      "endChapter": 14,
+      "ref": "10-14",
+      "startIndex": 18010001,
+      "endIndex": 18014022,
+      "url": "18010001-18014022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 15,
+      "endChapter": 18,
+      "ref": "15-18",
+      "startIndex": 18015001,
+      "endIndex": 18018021,
+      "url": "18015001-18018021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 19,
+      "endChapter": 20,
+      "ref": "19-20",
+      "startIndex": 18019001,
+      "endIndex": 18020029,
+      "url": "18019001-18020029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 21,
+      "endChapter": 24,
+      "ref": "21-24",
+      "startIndex": 18021001,
+      "endIndex": 18024025,
+      "url": "18021001-18024025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 25,
+      "endChapter": 29,
+      "ref": "25-29",
+      "startIndex": 18025001,
+      "endIndex": 18029025,
+      "url": "18025001-18029025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 30,
+      "endChapter": 31,
+      "ref": "30-31",
+      "startIndex": 18030001,
+      "endIndex": 18031040,
+      "url": "18030001-18031040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 32,
+      "endChapter": 34,
+      "ref": "32-34",
+      "startIndex": 18032001,
+      "endIndex": 18034037,
+      "url": "18032001-18034037"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 17,
+      "chapter": 35,
+      "endChapter": 38,
+      "ref": "35-38",
+      "startIndex": 18035001,
+      "endIndex": 18038041,
+      "url": "18035001-18038041"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Jordan"
+      ],
+      "bookIndex": 17,
+      "chapter": 39,
+      "endChapter": 42,
+      "ref": "39-42",
+      "startIndex": 18039001,
+      "endIndex": 18042017,
+      "url": "18039001-18042017"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 460 B.C.E.-w"
+      ],
+      "locations": [
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 1,
+      "endChapter": 8,
+      "ref": "1-8",
+      "startIndex": 19001001,
+      "endIndex": 19008009,
+      "url": "19001001-19008009"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 9,
+      "endChapter": 16,
+      "ref": "9-16",
+      "startIndex": 19009001,
+      "endIndex": 19016011,
+      "url": "19009001-19016011"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 18,
+      "chapter": 17,
+      "endChapter": 19,
+      "ref": "17-19",
+      "startIndex": 19017001,
+      "endIndex": 19019014,
+      "url": "19017001-19019014"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bashan",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 20,
+      "endChapter": 25,
+      "ref": "20-25",
+      "startIndex": 19020001,
+      "endIndex": 19025022,
+      "url": "19020001-19025022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Kadesh (Kadesh-barnea)",
+        "Lebanon"
+      ],
+      "bookIndex": 18,
+      "chapter": 26,
+      "endChapter": 31,
+      "ref": "26-31",
+      "startIndex": 19026001,
+      "endIndex": 19031024,
+      "url": "19026001-19031024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 18,
+      "chapter": 32,
+      "endChapter": 35,
+      "ref": "32-35",
+      "startIndex": 19032001,
+      "endIndex": 19035028,
+      "url": "19032001-19035028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 18,
+      "chapter": 36,
+      "endChapter": 38,
+      "ref": "36-38",
+      "startIndex": 19036001,
+      "endIndex": 19038022,
+      "url": "19036001-19038022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Hermon",
+        "Jordan"
+      ],
+      "bookIndex": 18,
+      "chapter": 39,
+      "endChapter": 42,
+      "ref": "39-42",
+      "startIndex": 19039001,
+      "endIndex": 19042011,
+      "url": "19039001-19042011"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Tyre"
+      ],
+      "bookIndex": 18,
+      "chapter": 43,
+      "endChapter": 47,
+      "ref": "43-47",
+      "startIndex": 19043001,
+      "endIndex": 19047009,
+      "url": "19043001-19047009"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Tarshish (Spain)",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 48,
+      "endChapter": 52,
+      "ref": "48-52",
+      "startIndex": 19048001,
+      "endIndex": 19052009,
+      "url": "19048001-19052009"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Gath",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 53,
+      "endChapter": 58,
+      "ref": "53-58",
+      "startIndex": 19053001,
+      "endIndex": 19058011,
+      "url": "19053001-19058011"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Edom",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gilead",
+        "Manasseh",
+        "Moab",
+        "Philistia",
+        "Shechem",
+        "Succoth [Egypt]",
+        "Succoth [Gad]"
+      ],
+      "bookIndex": 18,
+      "chapter": 59,
+      "endChapter": 64,
+      "ref": "59-64",
+      "startIndex": 19059001,
+      "endIndex": 19064010,
+      "url": "19059001-19064010"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bashan",
+        "Benjamin",
+        "Naphtali",
+        "Sinai (Horeb)",
+        "Zebulun",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 65,
+      "endChapter": 68,
+      "ref": "65-68",
+      "startIndex": 19065001,
+      "endIndex": 19068035,
+      "url": "19065001-19068035"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Lebanon",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Tarshish (Spain)",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 69,
+      "endChapter": 72,
+      "ref": "69-72",
+      "startIndex": 19069001,
+      "endIndex": 19072020,
+      "url": "19069001-19072020"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Salem (Jerusalem)",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 73,
+      "endChapter": 77,
+      "ref": "73-77",
+      "startIndex": 19073001,
+      "endIndex": 19077020,
+      "url": "19073001-19077020"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Nile",
+        "Shiloh",
+        "Zion",
+        "Zoan"
+      ],
+      "bookIndex": 18,
+      "chapter": 78,
+      "endChapter": 79,
+      "ref": "78-79",
+      "startIndex": 19078001,
+      "endIndex": 19079013,
+      "url": "19078001-19079013"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ammon",
+        "Assyria",
+        "Benjamin",
+        "Edom",
+        "En-dor",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Kishon",
+        "Manasseh",
+        "Midian",
+        "Moab",
+        "Philistia",
+        "Tyre",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 80,
+      "endChapter": 86,
+      "ref": "80-86",
+      "startIndex": 19080001,
+      "endIndex": 19086017,
+      "url": "19080001-19086017"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Hermon",
+        "Philistia",
+        "Tabor",
+        "Tyre",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 87,
+      "endChapter": 90,
+      "ref": "87-90",
+      "startIndex": 19087001,
+      "endIndex": 19090017,
+      "url": "19087001-19090017"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Lebanon"
+      ],
+      "bookIndex": 18,
+      "chapter": 91,
+      "endChapter": 96,
+      "ref": "91-96",
+      "startIndex": 19091001,
+      "endIndex": 19096013,
+      "url": "19091001-19096013"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 97,
+      "endChapter": 103,
+      "ref": "97-103",
+      "startIndex": 19097001,
+      "endIndex": 19103022,
+      "url": "19097001-19103022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Canaan",
+        "Lebanon"
+      ],
+      "bookIndex": 18,
+      "chapter": 104,
+      "endChapter": 105,
+      "ref": "104-105",
+      "startIndex": 19104001,
+      "endIndex": 19105045,
+      "url": "19104001-19105045"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Canaan",
+        "Edom",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gilead",
+        "Horeb (Sinai)",
+        "Manasseh",
+        "Moab",
+        "Philistia",
+        "Shechem",
+        "Succoth [Egypt]",
+        "Succoth [Gad]"
+      ],
+      "bookIndex": 18,
+      "chapter": 106,
+      "endChapter": 108,
+      "ref": "106-108",
+      "startIndex": 19106001,
+      "endIndex": 19108013,
+      "url": "19106001-19108013"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Jordan",
+        "Sin",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 109,
+      "endChapter": 115,
+      "ref": "109-115",
+      "startIndex": 19109001,
+      "endIndex": 19115018,
+      "url": "19109001-19115018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 18,
+      "chapter": 116,
+      "endChapter": 118,
+      "ref": "116-118",
+      "startIndex": 19116001,
+      "endIndex": 19118029,
+      "url": "19116001-19118029"
+    },
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 18,
+      "chapter": 119,
+      "endChapter": 119,
+      "ref": "119:1-63",
+      "startIndex": 19119001,
+      "endIndex": 19119063,
+      "url": "19119001-19119063"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Sin"
+      ],
+      "bookIndex": 18,
+      "chapter": 119,
+      "endChapter": 119,
+      "ref": "119:64-176",
+      "startIndex": 19119064,
+      "endIndex": 19119176,
+      "url": "19119064-19119176"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Negeb",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 120,
+      "endChapter": 129,
+      "ref": "120-129",
+      "startIndex": 19120001,
+      "endIndex": 19129008,
+      "url": "19120001-19129008"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Amorites",
+        "Babylon (Babylonia)",
+        "Bashan",
+        "Canaan",
+        "Hermon",
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 130,
+      "endChapter": 138,
+      "ref": "130-138",
+      "startIndex": 19130001,
+      "endIndex": 19138008,
+      "url": "19130001-19138008"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 18,
+      "chapter": 139,
+      "endChapter": 144,
+      "ref": "139-144",
+      "startIndex": 19139001,
+      "endIndex": 19144015,
+      "url": "19139001-19144015"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Zion"
+      ],
+      "bookIndex": 18,
+      "chapter": 145,
+      "endChapter": 150,
+      "ref": "145-150",
+      "startIndex": 19145001,
+      "endIndex": 19150006,
+      "url": "19145001-19150006"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 717 B.C.E.-z"
+      ],
+      "locations": [],
+      "bookIndex": 19,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 20001001,
+      "endIndex": 20004027,
+      "url": "20001001-20004027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 19,
+      "chapter": 5,
+      "endChapter": 8,
+      "ref": "5-8",
+      "startIndex": 20005001,
+      "endIndex": 20008036,
+      "url": "20005001-20008036"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 19,
+      "chapter": 9,
+      "endChapter": 12,
+      "ref": "9-12",
+      "startIndex": 20009001,
+      "endIndex": 20012028,
+      "url": "20009001-20012028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 19,
+      "chapter": 13,
+      "endChapter": 16,
+      "ref": "13-16",
+      "startIndex": 20013001,
+      "endIndex": 20016033,
+      "url": "20013001-20016033"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 19,
+      "chapter": 17,
+      "endChapter": 19,
+      "ref": "17-19",
+      "startIndex": 20017001,
+      "endIndex": 20019029,
+      "url": "20017001-20019029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 19,
+      "chapter": 20,
+      "endChapter": 22,
+      "ref": "20-22",
+      "startIndex": 20020001,
+      "endIndex": 20022029,
+      "url": "20020001-20022029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 19,
+      "chapter": 23,
+      "endChapter": 27,
+      "ref": "23-27",
+      "startIndex": 20023001,
+      "endIndex": 20027027,
+      "url": "20023001-20027027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 19,
+      "chapter": 28,
+      "endChapter": 31,
+      "ref": "28-31",
+      "startIndex": 20028001,
+      "endIndex": 20031031,
+      "url": "20028001-20031031"
+    }
+  ],
+  [
+    {
+      "events": [
+        "b. 1000 B.C.E.-z"
+      ],
+      "locations": [],
+      "bookIndex": 20,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 21001001,
+      "endIndex": 21004016,
+      "url": "21001001-21004016"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 20,
+      "chapter": 5,
+      "endChapter": 8,
+      "ref": "5-8",
+      "startIndex": 21005001,
+      "endIndex": 21008017,
+      "url": "21005001-21008017"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 20,
+      "chapter": 9,
+      "endChapter": 12,
+      "ref": "9-12",
+      "startIndex": 21009001,
+      "endIndex": 21012014,
+      "url": "21009001-21012014"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 1020 B.C.E.-z"
+      ],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Carmel",
+        "Carmel [Judah]",
+        "Damascus",
+        "En-gedi",
+        "Gilead",
+        "Hermon",
+        "Heshbon",
+        "Lebanon",
+        "Tirzah",
+        "Zion"
+      ],
+      "bookIndex": 21,
+      "chapter": 1,
+      "endChapter": 8,
+      "ref": "1-8",
+      "startIndex": 22001001,
+      "endIndex": 22008014,
+      "url": "22001001-22008014"
+    }
+  ],
+  [
+    {
+      "events": [
+        "a. 732 B.C.E.-z"
+      ],
+      "locations": [
+        "Bashan",
+        "Lebanon",
+        "Sodom",
+        "Tarshish (Spain)",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 23001001,
+      "endIndex": 23004006,
+      "url": "23001001-23004006"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Damascus",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Nile",
+        "Samaria",
+        "Samaria [city]",
+        "Syria"
+      ],
+      "bookIndex": 22,
+      "chapter": 5,
+      "endChapter": 7,
+      "ref": "5-7",
+      "startIndex": 23005001,
+      "endIndex": 23007025,
+      "url": "23005001-23007025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Anathoth",
+        "Arpad",
+        "Assyria",
+        "Carchemish",
+        "Damascus",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Galilee",
+        "Gallim",
+        "Geba",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Hamath",
+        "Jordan",
+        "Lebanon",
+        "Manasseh",
+        "Michmash",
+        "Midian",
+        "Migron",
+        "Naphtali",
+        "Nob",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Samaria",
+        "Samaria [city]",
+        "Syria",
+        "Zebulun",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 23008001,
+      "endIndex": 23010034,
+      "url": "23008001-23010034"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Edom",
+        "Elam",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Hamath",
+        "Lebanon",
+        "Moab",
+        "Philistia",
+        "Sodom",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 11,
+      "endChapter": 14,
+      "ref": "11-14",
+      "startIndex": 23011001,
+      "endIndex": 23014032,
+      "url": "23011001-23014032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arnon",
+        "Aroer",
+        "Assyria",
+        "Canaan",
+        "Damascus",
+        "Dibon (Dibon-gad)",
+        "Dimon",
+        "Eglaim",
+        "Elealeh",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Ethiopia",
+        "Heshbon",
+        "Kir of Moab (Kir-hareseth)",
+        "Medeba",
+        "Moab",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Nile",
+        "Noph (Memphis)",
+        "Syria",
+        "Zion",
+        "Zoan"
+      ],
+      "bookIndex": 22,
+      "chapter": 15,
+      "endChapter": 19,
+      "ref": "15-19",
+      "startIndex": 23015001,
+      "endIndex": 23019025,
+      "url": "23015001-23019025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ashdod",
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Elam",
+        "Ethiopia",
+        "Kittim (Cyprus)",
+        "Media",
+        "Nile",
+        "Phoenicia",
+        "Seir",
+        "Seir [Judah]",
+        "Sidon",
+        "Tarshish (Spain)",
+        "Tema",
+        "Tyre",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 20,
+      "endChapter": 24,
+      "ref": "20-24",
+      "startIndex": 23020001,
+      "endIndex": 23024023,
+      "url": "23020001-23024023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gibeon",
+        "Moab",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 25,
+      "endChapter": 28,
+      "ref": "25-28",
+      "startIndex": 23025001,
+      "endIndex": 23028029,
+      "url": "23025001-23028029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Lebanon",
+        "Zion",
+        "Zoan"
+      ],
+      "bookIndex": 22,
+      "chapter": 29,
+      "endChapter": 31,
+      "ref": "29-31",
+      "startIndex": 23029001,
+      "endIndex": 23031009,
+      "url": "23029001-23031009"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bashan",
+        "Bozrah",
+        "Carmel",
+        "Carmel [Judah]",
+        "Edom",
+        "Lebanon",
+        "Ophel",
+        "Sharon",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 32,
+      "endChapter": 35,
+      "ref": "32-35",
+      "startIndex": 23032001,
+      "endIndex": 23035010,
+      "url": "23032001-23035010"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ararat",
+        "Arpad",
+        "Assyria",
+        "Eden",
+        "Ethiopia",
+        "Gozan",
+        "Hamath",
+        "Haran",
+        "Lachish",
+        "Lebanon",
+        "Libnah",
+        "Nineveh",
+        "Samaria",
+        "Samaria [city]",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 36,
+      "endChapter": 37,
+      "ref": "36-37",
+      "startIndex": 23036001,
+      "endIndex": 23037038,
+      "url": "23036001-23037038"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Lebanon",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 38,
+      "endChapter": 40,
+      "ref": "38-40",
+      "startIndex": 23038001,
+      "endIndex": 23040031,
+      "url": "23038001-23040031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Ethiopia",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 41,
+      "endChapter": 43,
+      "ref": "41-43",
+      "startIndex": 23041001,
+      "endIndex": 23043028,
+      "url": "23041001-23043028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Ethiopia",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 44,
+      "endChapter": 47,
+      "ref": "44-47",
+      "startIndex": 23044001,
+      "endIndex": 23047015,
+      "url": "23044001-23047015"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 48,
+      "endChapter": 50,
+      "ref": "48-50",
+      "startIndex": 23048001,
+      "endIndex": 23050011,
+      "url": "23048001-23050011"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Eden",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 51,
+      "endChapter": 55,
+      "ref": "51-55",
+      "startIndex": 23051001,
+      "endIndex": 23055013,
+      "url": "23051001-23055013"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 22,
+      "chapter": 56,
+      "endChapter": 58,
+      "ref": "56-58",
+      "startIndex": 23056001,
+      "endIndex": 23058014,
+      "url": "23056001-23058014"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Lebanon",
+        "Midian",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Tarshish (Spain)",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 59,
+      "endChapter": 62,
+      "ref": "59-62",
+      "startIndex": 23059001,
+      "endIndex": 23062012,
+      "url": "23059001-23062012"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bozrah",
+        "Edom",
+        "Sharon",
+        "Tarshish (Spain)",
+        "Zion"
+      ],
+      "bookIndex": 22,
+      "chapter": 63,
+      "endChapter": 66,
+      "ref": "63-66",
+      "startIndex": 23063001,
+      "endIndex": 23066024,
+      "url": "23063001-23066024"
+    }
+  ],
+  [
+    {
+      "events": [
+        "580 B.C.E.-x"
+      ],
+      "locations": [
+        "Anathoth",
+        "Assyria",
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Kittim (Cyprus)",
+        "Noph (Memphis)",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 24001001,
+      "endIndex": 24003025,
+      "url": "24001001-24003025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 4,
+      "endChapter": 5,
+      "ref": "4-5",
+      "startIndex": 24004001,
+      "endIndex": 24005031,
+      "url": "24004001-24005031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Hinnom",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Shiloh",
+        "Tekoa",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 6,
+      "endChapter": 7,
+      "ref": "6-7",
+      "startIndex": 24006001,
+      "endIndex": 24007034,
+      "url": "24006001-24007034"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Edom",
+        "Gilead",
+        "Moab",
+        "Tarshish (Spain)",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 24008001,
+      "endIndex": 24010025,
+      "url": "24008001-24010025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Anathoth",
+        "Baal (Ramah) [Simeon]",
+        "Euphrates",
+        "Jordan"
+      ],
+      "bookIndex": 23,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 24011001,
+      "endIndex": 24013027,
+      "url": "24011001-24013027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Manasseh",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 14,
+      "endChapter": 16,
+      "ref": "14-16",
+      "startIndex": 24014001,
+      "endIndex": 24016021,
+      "url": "24014001-24016021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Hinnom",
+        "Lebanon",
+        "Negeb"
+      ],
+      "bookIndex": 23,
+      "chapter": 17,
+      "endChapter": 20,
+      "ref": "17-20",
+      "startIndex": 24017001,
+      "endIndex": 24020018,
+      "url": "24017001-24020018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Babylon (Babylonia)",
+        "Bashan",
+        "Gilead",
+        "Lebanon",
+        "Samaria",
+        "Samaria [city]",
+        "Sodom"
+      ],
+      "bookIndex": 23,
+      "chapter": 21,
+      "endChapter": 23,
+      "ref": "21-23",
+      "startIndex": 24021001,
+      "endIndex": 24023040,
+      "url": "24021001-24023040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ashdod",
+        "Ashkelon",
+        "Babylon (Babylonia)",
+        "Edom",
+        "Ekron",
+        "Elam",
+        "Gaza",
+        "Kiriath-jearim",
+        "Moab",
+        "Moresheth",
+        "Shiloh",
+        "Sidon",
+        "Tema",
+        "Tyre",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 24,
+      "endChapter": 26,
+      "ref": "24-26",
+      "startIndex": 24024001,
+      "endIndex": 24026024,
+      "url": "24024001-24026024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Anathoth",
+        "Babylon (Babylonia)",
+        "Edom",
+        "Gibeon",
+        "Moab",
+        "Sidon",
+        "Tyre"
+      ],
+      "bookIndex": 23,
+      "chapter": 27,
+      "endChapter": 29,
+      "ref": "27-29",
+      "startIndex": 24027001,
+      "endIndex": 24029032,
+      "url": "24027001-24029032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Kidron",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Samaria",
+        "Samaria [city]",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 30,
+      "endChapter": 31,
+      "ref": "30-31",
+      "startIndex": 24030001,
+      "endIndex": 24031040,
+      "url": "24030001-24031040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Anathoth",
+        "Baal (Ramah) [Simeon]",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Hinnom"
+      ],
+      "bookIndex": 23,
+      "chapter": 32,
+      "endChapter": 33,
+      "ref": "32-33",
+      "startIndex": 24032001,
+      "endIndex": 24033026,
+      "url": "24032001-24033026"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Azekah",
+        "Babylon (Babylonia)",
+        "Lachish"
+      ],
+      "bookIndex": 23,
+      "chapter": 34,
+      "endChapter": 36,
+      "ref": "34-36",
+      "startIndex": 24034001,
+      "endIndex": 24036032,
+      "url": "24034001-24036032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Babylon (Babylonia)",
+        "Benjamin",
+        "Hamath",
+        "Jericho",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Riblah"
+      ],
+      "bookIndex": 23,
+      "chapter": 37,
+      "endChapter": 39,
+      "ref": "37-39",
+      "startIndex": 24037001,
+      "endIndex": 24039018,
+      "url": "24037001-24039018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ammon",
+        "Babylon (Babylonia)",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Edom",
+        "Gibeon",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Moab",
+        "Ramah [Benjamin]",
+        "Samaria",
+        "Samaria [city]",
+        "Shechem",
+        "Shiloh"
+      ],
+      "bookIndex": 23,
+      "chapter": 40,
+      "endChapter": 42,
+      "ref": "40-42",
+      "startIndex": 24040001,
+      "endIndex": 24042022,
+      "url": "24040001-24042022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Beth-shemesh (On)",
+        "Migdol",
+        "Noph (Memphis)",
+        "Tahpanhes"
+      ],
+      "bookIndex": 23,
+      "chapter": 43,
+      "endChapter": 44,
+      "ref": "43-44",
+      "startIndex": 24043001,
+      "endIndex": 24044030,
+      "url": "24043001-24044030"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arnon",
+        "Aroer",
+        "Ashkelon",
+        "Babylon (Babylonia)",
+        "Bethel (Luz)",
+        "Bozrah",
+        "Carchemish",
+        "Carmel",
+        "Carmel [Judah]",
+        "Dibon (Dibon-gad)",
+        "Elealeh",
+        "Euphrates",
+        "Gaza",
+        "Gilead",
+        "Heshbon",
+        "Holon",
+        "Kiriathaim",
+        "Mephaath",
+        "Migdol",
+        "Moab",
+        "Nebo (Pisgah)",
+        "Nebo [city]",
+        "Nile",
+        "Noph (Memphis)",
+        "Sidon",
+        "Tabor",
+        "Tahpanhes",
+        "Tyre"
+      ],
+      "bookIndex": 23,
+      "chapter": 45,
+      "endChapter": 48,
+      "ref": "45-48",
+      "startIndex": 24045001,
+      "endIndex": 24048047,
+      "url": "24045001-24048047"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ai",
+        "Arpad",
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Bashan",
+        "Bozrah",
+        "Carmel",
+        "Carmel [Judah]",
+        "Chaldea",
+        "Damascus",
+        "Edom",
+        "Elam",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Gilead",
+        "Hamath",
+        "Hazor (Bethuel)",
+        "Hazor [Benjamin]",
+        "Hazor [Naphtali]",
+        "Heshbon",
+        "Jordan",
+        "Rabbah (Philadelphia)",
+        "Sodom",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 49,
+      "endChapter": 50,
+      "ref": "49-50",
+      "startIndex": 24049001,
+      "endIndex": 24050046,
+      "url": "24049001-24050046"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Ararat",
+        "Babylon (Babylonia)",
+        "Chaldea",
+        "Euphrates",
+        "Hamath",
+        "Jericho",
+        "Libnah",
+        "Media",
+        "Minni",
+        "Riblah",
+        "Zion"
+      ],
+      "bookIndex": 23,
+      "chapter": 51,
+      "endChapter": 52,
+      "ref": "51-52",
+      "startIndex": 24051001,
+      "endIndex": 24052034,
+      "url": "24051001-24052034"
+    }
+  ],
+  [
+    {
+      "events": [
+        "607 B.C.E.-z"
+      ],
+      "locations": [
+        "Zion"
+      ],
+      "bookIndex": 24,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 25001001,
+      "endIndex": 25002022,
+      "url": "25001001-25002022"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Edom",
+        "Sin",
+        "Sodom",
+        "Zion"
+      ],
+      "bookIndex": 24,
+      "chapter": 3,
+      "endChapter": 5,
+      "ref": "3-5",
+      "startIndex": 25003001,
+      "endIndex": 25005022,
+      "url": "25003001-25005022"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 591 B.C.E.-z"
+      ],
+      "locations": [],
+      "bookIndex": 25,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 26001001,
+      "endIndex": 26003027,
+      "url": "26001001-26003027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 25,
+      "chapter": 4,
+      "endChapter": 6,
+      "ref": "4-6",
+      "startIndex": 26004001,
+      "endIndex": 26006014,
+      "url": "26004001-26006014"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 25,
+      "chapter": 7,
+      "endChapter": 9,
+      "ref": "7-9",
+      "startIndex": 26007001,
+      "endIndex": 26009011,
+      "url": "26007001-26009011"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Chaldea"
+      ],
+      "bookIndex": 25,
+      "chapter": 10,
+      "endChapter": 12,
+      "ref": "10-12",
+      "startIndex": 26010001,
+      "endIndex": 26012028,
+      "url": "26010001-26012028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 25,
+      "chapter": 13,
+      "endChapter": 15,
+      "ref": "13-15",
+      "startIndex": 26013001,
+      "endIndex": 26015008,
+      "url": "26013001-26015008"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Samaria",
+        "Samaria [city]",
+        "Sodom",
+        "Syria"
+      ],
+      "bookIndex": 25,
+      "chapter": 16,
+      "endChapter": 16,
+      "ref": "16",
+      "startIndex": 26016001,
+      "endIndex": 26016063,
+      "url": "26016001-26016063"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Lebanon"
+      ],
+      "bookIndex": 25,
+      "chapter": 17,
+      "endChapter": 18,
+      "ref": "17-18",
+      "startIndex": 26017001,
+      "endIndex": 26018032,
+      "url": "26017001-26018032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Rabbah (Philadelphia)"
+      ],
+      "bookIndex": 25,
+      "chapter": 19,
+      "endChapter": 21,
+      "ref": "19-21",
+      "startIndex": 26019001,
+      "endIndex": 26021032,
+      "url": "26019001-26021032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Chaldea",
+        "Samaria",
+        "Samaria [city]"
+      ],
+      "bookIndex": 25,
+      "chapter": 22,
+      "endChapter": 23,
+      "ref": "22-23",
+      "startIndex": 26022001,
+      "endIndex": 26023049,
+      "url": "26022001-26023049"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal-meon",
+        "Babylon (Babylonia)",
+        "Beth-jeshimoth",
+        "Edom",
+        "Kiriathaim",
+        "Moab",
+        "Rabbah (Philadelphia)",
+        "Seir",
+        "Seir [Judah]",
+        "Tyre"
+      ],
+      "bookIndex": 25,
+      "chapter": 24,
+      "endChapter": 26,
+      "ref": "24-26",
+      "startIndex": 26024001,
+      "endIndex": 26026021,
+      "url": "26024001-26026021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asshur",
+        "Bashan",
+        "Damascus",
+        "Eden",
+        "Edom",
+        "Haran",
+        "Kittim (Cyprus)",
+        "Lebanon",
+        "Minnith",
+        "Persia",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Sidon",
+        "Tarshish (Spain)",
+        "Tyre"
+      ],
+      "bookIndex": 25,
+      "chapter": 27,
+      "endChapter": 28,
+      "ref": "27-28",
+      "startIndex": 26027001,
+      "endIndex": 26028026,
+      "url": "26027001-26028026"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Eden",
+        "Ethiopia",
+        "Lebanon",
+        "Migdol",
+        "Nile",
+        "Noph (Memphis)",
+        "Sin",
+        "Syene",
+        "Tyre",
+        "Zoan"
+      ],
+      "bookIndex": 25,
+      "chapter": 29,
+      "endChapter": 31,
+      "ref": "29-31",
+      "startIndex": 26029001,
+      "endIndex": 26031018,
+      "url": "26029001-26031018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Edom",
+        "Elam"
+      ],
+      "bookIndex": 25,
+      "chapter": 32,
+      "endChapter": 33,
+      "ref": "32-33",
+      "startIndex": 26032001,
+      "endIndex": 26033033,
+      "url": "26032001-26033033"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Eden",
+        "Edom",
+        "Seir",
+        "Seir [Judah]"
+      ],
+      "bookIndex": 25,
+      "chapter": 34,
+      "endChapter": 36,
+      "ref": "34-36",
+      "startIndex": 26034001,
+      "endIndex": 26036038,
+      "url": "26034001-26036038"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Ethiopia",
+        "Persia",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Tarshish (Spain)"
+      ],
+      "bookIndex": 25,
+      "chapter": 37,
+      "endChapter": 38,
+      "ref": "37-38",
+      "startIndex": 26037001,
+      "endIndex": 26038023,
+      "url": "26037001-26038023"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bashan"
+      ],
+      "bookIndex": 25,
+      "chapter": 39,
+      "endChapter": 40,
+      "ref": "39-40",
+      "startIndex": 26039001,
+      "endIndex": 26040049,
+      "url": "26039001-26040049"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 25,
+      "chapter": 41,
+      "endChapter": 43,
+      "ref": "41-43",
+      "startIndex": 26041001,
+      "endIndex": 26043027,
+      "url": "26041001-26043027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 25,
+      "chapter": 44,
+      "endChapter": 45,
+      "ref": "44-45",
+      "startIndex": 26044001,
+      "endIndex": 26045025,
+      "url": "26044001-26045025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Damascus",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "En-gedi",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gad",
+        "Gilead",
+        "Hamath",
+        "Issachar",
+        "Jordan",
+        "Manasseh",
+        "Naphtali",
+        "Reuben",
+        "Tamar",
+        "Zebulun"
+      ],
+      "bookIndex": 25,
+      "chapter": 46,
+      "endChapter": 48,
+      "ref": "46-48",
+      "startIndex": 26046001,
+      "endIndex": 26048035,
+      "url": "26046001-26048035"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 536 B.C.E.-z"
+      ],
+      "locations": [
+        "Babylon (Babylonia)"
+      ],
+      "bookIndex": 26,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 27001001,
+      "endIndex": 27002049,
+      "url": "27001001-27002049"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)"
+      ],
+      "bookIndex": 26,
+      "chapter": 3,
+      "endChapter": 4,
+      "ref": "3-4",
+      "startIndex": 27003001,
+      "endIndex": 27004037,
+      "url": "27003001-27004037"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)"
+      ],
+      "bookIndex": 26,
+      "chapter": 5,
+      "endChapter": 7,
+      "ref": "5-7",
+      "startIndex": 27005001,
+      "endIndex": 27007028,
+      "url": "27005001-27007028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Elam",
+        "Greece",
+        "Media",
+        "Persia",
+        "Shushan",
+        "Tigris"
+      ],
+      "bookIndex": 26,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 27008001,
+      "endIndex": 27010021,
+      "url": "27008001-27010021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Edom",
+        "Greece",
+        "Kittim (Cyprus)",
+        "Moab",
+        "Persia"
+      ],
+      "bookIndex": 26,
+      "chapter": 11,
+      "endChapter": 12,
+      "ref": "11-12",
+      "startIndex": 27011001,
+      "endIndex": 27012013,
+      "url": "27011001-27012013"
+    }
+  ],
+  [
+    {
+      "events": [
+        "a. 745 B.C.E.-z"
+      ],
+      "locations": [
+        "Assyria",
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Jezreel",
+        "Mizpah (Mizpeh) [Benjamin]",
+        "Mizpah (Mizpeh) [Gad]",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Samaria",
+        "Samaria [city]",
+        "Shechem",
+        "Tabor"
+      ],
+      "bookIndex": 27,
+      "chapter": 1,
+      "endChapter": 7,
+      "ref": "1-7",
+      "startIndex": 28001001,
+      "endIndex": 28007016,
+      "url": "28001001-28007016"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arbel",
+        "Assyria",
+        "Baal (Ramah) [Simeon]",
+        "Bethel (Luz)",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gibeah [Benjamin]",
+        "Gibeah [Judah]",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Lebanon",
+        "Memphis (Noph)",
+        "Samaria",
+        "Samaria [city]",
+        "Tyre"
+      ],
+      "bookIndex": 27,
+      "chapter": 8,
+      "endChapter": 14,
+      "ref": "8-14",
+      "startIndex": 28008001,
+      "endIndex": 28014009,
+      "url": "28008001-28014009"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 820 (?) B.C.E.-z"
+      ],
+      "locations": [
+        "Eden",
+        "Edom",
+        "Philistia",
+        "Sheba (Jeshua)",
+        "Sheba [kingdom]",
+        "Sidon",
+        "Tyre",
+        "Zion"
+      ],
+      "bookIndex": 28,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 29001001,
+      "endIndex": 29003021,
+      "url": "29001001-29003021"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 804 B.C.E.-z"
+      ],
+      "locations": [
+        "Ashdod",
+        "Ashkelon",
+        "Bashan",
+        "Beer-sheba",
+        "Bethel (Luz)",
+        "Bozrah",
+        "Carmel",
+        "Carmel [Judah]",
+        "Damascus",
+        "Edom",
+        "Ekron",
+        "Gaza",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Moab",
+        "Rabbah (Philadelphia)",
+        "Samaria",
+        "Samaria [city]",
+        "Sodom",
+        "Syria",
+        "Tekoa",
+        "Tyre",
+        "Zion"
+      ],
+      "bookIndex": 29,
+      "chapter": 1,
+      "endChapter": 5,
+      "ref": "1-5",
+      "startIndex": 30001001,
+      "endIndex": 30005027,
+      "url": "30001001-30005027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Beer-sheba",
+        "Bethel (Luz)",
+        "Carmel",
+        "Carmel [Judah]",
+        "Crete",
+        "Dan (Laish) [city]",
+        "Dan [tribe]",
+        "Edom",
+        "Gath",
+        "Hamath",
+        "Nile",
+        "Samaria",
+        "Samaria [city]",
+        "Syria",
+        "Zion"
+      ],
+      "bookIndex": 29,
+      "chapter": 6,
+      "endChapter": 9,
+      "ref": "6-9",
+      "startIndex": 30006001,
+      "endIndex": 30009015,
+      "url": "30006001-30009015"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 607 B.C.E.-z"
+      ],
+      "locations": [
+        "Benjamin",
+        "Edom",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gilead",
+        "Negeb",
+        "Samaria",
+        "Samaria [city]",
+        "Shephelah",
+        "Zarephath",
+        "Zion"
+      ],
+      "bookIndex": 30,
+      "chapter": 1,
+      "endChapter": 1,
+      "ref": "",
+      "startIndex": 31001001,
+      "endIndex": 31001021,
+      "url": "31001001-31001021"
+    },
+    {
+      "events": [
+        "c. 844 B.C.E.-z"
+      ],
+      "locations": [
+        "Joppa",
+        "Nineveh",
+        "Tarshish (Spain)"
+      ],
+      "bookIndex": 31,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 32001001,
+      "endIndex": 32004011,
+      "url": "32001001-32004011"
+    }
+  ],
+  [
+    {
+      "events": [
+        "b. 717 B.C.E.-z"
+      ],
+      "locations": [
+        "Achzib",
+        "Adullam",
+        "Assyria",
+        "Babylon (Babylonia)",
+        "Bashan",
+        "Beth-ezel",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Gath",
+        "Gilead",
+        "Gilgal [Ephraim]",
+        "Gilgal [by Jordan]",
+        "Lachish",
+        "Mareshah",
+        "Moab",
+        "Moresheth",
+        "Samaria",
+        "Samaria [city]",
+        "Shaphir",
+        "Shittim",
+        "Zion"
+      ],
+      "bookIndex": 32,
+      "chapter": 1,
+      "endChapter": 7,
+      "ref": "1-7",
+      "startIndex": 33001001,
+      "endIndex": 33007020,
+      "url": "33001001-33007020"
+    }
+  ],
+  [
+    {
+      "events": [
+        "b. 632 B.C.E.-z"
+      ],
+      "locations": [
+        "Assyria",
+        "Bashan",
+        "Carmel",
+        "Carmel [Judah]",
+        "Ethiopia",
+        "Lebanon",
+        "Nile",
+        "Nineveh",
+        "No-amon (Thebes)"
+      ],
+      "bookIndex": 33,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 34001001,
+      "endIndex": 34003019,
+      "url": "34001001-34003019"
+    },
+    {
+      "events": [
+        "c. 628 (?) B.C.E.-z"
+      ],
+      "locations": [
+        "Lebanon",
+        "Midian",
+        "Paran"
+      ],
+      "bookIndex": 34,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 35001001,
+      "endIndex": 35003019,
+      "url": "35001001-35003019"
+    }
+  ],
+  [
+    {
+      "events": [
+        "b. 648 B.C.E.-z"
+      ],
+      "locations": [
+        "Ashdod",
+        "Ashkelon",
+        "Assyria",
+        "Baal (Ramah) [Simeon]",
+        "Canaan",
+        "Ekron",
+        "Ethiopia",
+        "Gaza",
+        "Moab",
+        "Nineveh",
+        "Sodom",
+        "Zion"
+      ],
+      "bookIndex": 35,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 36001001,
+      "endIndex": 36003020,
+      "url": "36001001-36003020"
+    },
+    {
+      "events": [
+        "520 B.C.E.-z"
+      ],
+      "locations": [],
+      "bookIndex": 36,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 37001001,
+      "endIndex": 37002023,
+      "url": "37001001-37002023"
+    }
+  ],
+  [
+    {
+      "events": [
+        "518 B.C.E.-z"
+      ],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Bethel (Luz)",
+        "Negeb",
+        "Shephelah",
+        "Zion"
+      ],
+      "bookIndex": 37,
+      "chapter": 1,
+      "endChapter": 7,
+      "ref": "1-7",
+      "startIndex": 38001001,
+      "endIndex": 38007014,
+      "url": "38001001-38007014"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ashdod",
+        "Ashkelon",
+        "Assyria",
+        "Bashan",
+        "Damascus",
+        "Ekron",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Gaza",
+        "Gilead",
+        "Greece",
+        "Hamath",
+        "Jordan",
+        "Lebanon",
+        "Nile",
+        "Sidon",
+        "Tyre",
+        "Zion"
+      ],
+      "bookIndex": 37,
+      "chapter": 8,
+      "endChapter": 11,
+      "ref": "8-11",
+      "startIndex": 38008001,
+      "endIndex": 38011017,
+      "url": "38008001-38011017"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arabah",
+        "Benjamin",
+        "Geba",
+        "Hadadrimmon",
+        "Megiddo",
+        "Mount of Olives",
+        "Rimmon (Ain [Simeon])"
+      ],
+      "bookIndex": 37,
+      "chapter": 12,
+      "endChapter": 14,
+      "ref": "12-14",
+      "startIndex": 38012001,
+      "endIndex": 38014021,
+      "url": "38012001-38014021"
+    }
+  ],
+  [
+    {
+      "events": [
+        "a. 443 B.C.E.-y"
+      ],
+      "locations": [
+        "Edom",
+        "Horeb (Sinai)"
+      ],
+      "bookIndex": 38,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 39001001,
+      "endIndex": 39004006,
+      "url": "39001001-39004006"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 41 C.E.-z"
+      ],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Capernaum",
+        "Decapolis",
+        "Galilee",
+        "Jordan",
+        "Manasseh",
+        "Naphtali",
+        "Nazareth",
+        "Ramah (Arimathea) [Ephraim]",
+        "Ramah (Baal) (Baalath-beer) [Simeon]",
+        "Ramah [Benjamin]",
+        "Ramah [Naphtali]",
+        "Syria",
+        "Tamar",
+        "Zebulun"
+      ],
+      "bookIndex": 39,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 40001001,
+      "endIndex": 40004025,
+      "url": "40001001-40004025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Gehenna (Hinnom)"
+      ],
+      "bookIndex": 39,
+      "chapter": 5,
+      "endChapter": 7,
+      "ref": "5-7",
+      "startIndex": 40005001,
+      "endIndex": 40007029,
+      "url": "40005001-40007029"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Capernaum",
+        "Gehenna (Hinnom)",
+        "Sodom"
+      ],
+      "bookIndex": 39,
+      "chapter": 8,
+      "endChapter": 10,
+      "ref": "8-10",
+      "startIndex": 40008001,
+      "endIndex": 40010042,
+      "url": "40008001-40010042"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethsaida",
+        "Capernaum",
+        "Chorazin",
+        "Nineveh",
+        "Sidon",
+        "Sodom",
+        "Tyre"
+      ],
+      "bookIndex": 39,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 40011001,
+      "endIndex": 40013058,
+      "url": "40011001-40013058"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Caesarea Philippi",
+        "Capernaum",
+        "Galilee",
+        "Magadan",
+        "Sidon",
+        "Tyre"
+      ],
+      "bookIndex": 39,
+      "chapter": 14,
+      "endChapter": 17,
+      "ref": "14-17",
+      "startIndex": 40014001,
+      "endIndex": 40017027,
+      "url": "40014001-40017027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Galilee",
+        "Gehenna (Hinnom)",
+        "Jericho",
+        "Jordan"
+      ],
+      "bookIndex": 39,
+      "chapter": 18,
+      "endChapter": 20,
+      "ref": "18-20",
+      "startIndex": 40018001,
+      "endIndex": 40020034,
+      "url": "40018001-40020034"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethany",
+        "Bethany (across the Jordan)",
+        "Bethphage",
+        "Galilee",
+        "Gehenna (Hinnom)",
+        "Mount of Olives",
+        "Nazareth",
+        "Zion"
+      ],
+      "bookIndex": 39,
+      "chapter": 21,
+      "endChapter": 23,
+      "ref": "21-23",
+      "startIndex": 40021001,
+      "endIndex": 40023039,
+      "url": "40021001-40023039"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Mount of Olives"
+      ],
+      "bookIndex": 39,
+      "chapter": 24,
+      "endChapter": 25,
+      "ref": "24-25",
+      "startIndex": 40024001,
+      "endIndex": 40025046,
+      "url": "40024001-40025046"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethany",
+        "Bethany (across the Jordan)",
+        "Galilee",
+        "Gethsemane",
+        "Mount of Olives"
+      ],
+      "bookIndex": 39,
+      "chapter": 26,
+      "endChapter": 26,
+      "ref": "26",
+      "startIndex": 40026001,
+      "endIndex": 40026075,
+      "url": "40026001-40026075"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arimathea (Ramah) [Ephraim]",
+        "Cyrene",
+        "Galilee",
+        "Golgotha"
+      ],
+      "bookIndex": 39,
+      "chapter": 27,
+      "endChapter": 28,
+      "ref": "27-28",
+      "startIndex": 40027001,
+      "endIndex": 40028020,
+      "url": "40027001-40028020"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 60-65 C.E.-z"
+      ],
+      "locations": [
+        "Capernaum",
+        "Galilee",
+        "Idumea",
+        "Jordan",
+        "Nazareth",
+        "Sidon",
+        "Tyre"
+      ],
+      "bookIndex": 40,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 41001001,
+      "endIndex": 41003035,
+      "url": "41001001-41003035"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Decapolis"
+      ],
+      "bookIndex": 40,
+      "chapter": 4,
+      "endChapter": 5,
+      "ref": "4-5",
+      "startIndex": 41004001,
+      "endIndex": 41005043,
+      "url": "41004001-41005043"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethsaida",
+        "Caesarea Philippi",
+        "Decapolis",
+        "Galilee",
+        "Sidon",
+        "Tyre"
+      ],
+      "bookIndex": 40,
+      "chapter": 6,
+      "endChapter": 8,
+      "ref": "6-8",
+      "startIndex": 41006001,
+      "endIndex": 41008038,
+      "url": "41006001-41008038"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Capernaum",
+        "Galilee",
+        "Gehenna (Hinnom)",
+        "Jericho",
+        "Jordan"
+      ],
+      "bookIndex": 40,
+      "chapter": 9,
+      "endChapter": 10,
+      "ref": "9-10",
+      "startIndex": 41009001,
+      "endIndex": 41010052,
+      "url": "41009001-41010052"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethany",
+        "Bethany (across the Jordan)",
+        "Bethphage",
+        "Mount of Olives"
+      ],
+      "bookIndex": 40,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 41011001,
+      "endIndex": 41013037,
+      "url": "41011001-41013037"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arimathea (Ramah) [Ephraim]",
+        "Bethany",
+        "Bethany (across the Jordan)",
+        "Cyrene",
+        "Galilee",
+        "Gethsemane",
+        "Golgotha",
+        "Mount of Olives"
+      ],
+      "bookIndex": 40,
+      "chapter": 14,
+      "endChapter": 16,
+      "ref": "14-16",
+      "startIndex": 41014001,
+      "endIndex": 41016008,
+      "url": "41014001-41016008"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 56-58 C.E.-z"
+      ],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Galilee",
+        "Nazareth",
+        "Syria"
+      ],
+      "bookIndex": 41,
+      "chapter": 1,
+      "endChapter": 2,
+      "ref": "1-2",
+      "startIndex": 42001001,
+      "endIndex": 42002052,
+      "url": "42001001-42002052"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Abilene",
+        "Capernaum",
+        "Galilee",
+        "Ituraea",
+        "Jordan",
+        "Nazareth",
+        "Sidon",
+        "Trachonitis",
+        "Zarephath"
+      ],
+      "bookIndex": 41,
+      "chapter": 3,
+      "endChapter": 5,
+      "ref": "3-5",
+      "startIndex": 42003001,
+      "endIndex": 42005039,
+      "url": "42003001-42005039"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Capernaum",
+        "Nain",
+        "Sidon",
+        "Tyre"
+      ],
+      "bookIndex": 41,
+      "chapter": 6,
+      "endChapter": 7,
+      "ref": "6-7",
+      "startIndex": 42006001,
+      "endIndex": 42007050,
+      "url": "42006001-42007050"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethsaida",
+        "Galilee"
+      ],
+      "bookIndex": 41,
+      "chapter": 8,
+      "endChapter": 9,
+      "ref": "8-9",
+      "startIndex": 42008001,
+      "endIndex": 42009062,
+      "url": "42008001-42009062"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethsaida",
+        "Capernaum",
+        "Chorazin",
+        "Jericho",
+        "Nineveh",
+        "Sidon",
+        "Sodom",
+        "Tyre"
+      ],
+      "bookIndex": 41,
+      "chapter": 10,
+      "endChapter": 11,
+      "ref": "10-11",
+      "startIndex": 42010001,
+      "endIndex": 42011054,
+      "url": "42010001-42011054"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Gehenna (Hinnom)",
+        "Siloam"
+      ],
+      "bookIndex": 41,
+      "chapter": 12,
+      "endChapter": 13,
+      "ref": "12-13",
+      "startIndex": 42012001,
+      "endIndex": 42013035,
+      "url": "42012001-42013035"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Galilee",
+        "Samaria",
+        "Samaria [city]",
+        "Sodom"
+      ],
+      "bookIndex": 41,
+      "chapter": 14,
+      "endChapter": 17,
+      "ref": "14-17",
+      "startIndex": 42014001,
+      "endIndex": 42017037,
+      "url": "42014001-42017037"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethany",
+        "Bethany (across the Jordan)",
+        "Bethphage",
+        "Jericho",
+        "Mount of Olives"
+      ],
+      "bookIndex": 41,
+      "chapter": 18,
+      "endChapter": 19,
+      "ref": "18-19",
+      "startIndex": 42018001,
+      "endIndex": 42019048,
+      "url": "42018001-42019048"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Mount of Olives"
+      ],
+      "bookIndex": 41,
+      "chapter": 20,
+      "endChapter": 22,
+      "ref": "20-22",
+      "startIndex": 42020001,
+      "endIndex": 42022071,
+      "url": "42020001-42022071"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arimathea (Ramah) [Ephraim]",
+        "Bethany",
+        "Bethany (across the Jordan)",
+        "Cyrene",
+        "Emmaus",
+        "Galilee"
+      ],
+      "bookIndex": 41,
+      "chapter": 23,
+      "endChapter": 24,
+      "ref": "23-24",
+      "startIndex": 42023001,
+      "endIndex": 42024053,
+      "url": "42023001-42024053"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 98 C.E.-z"
+      ],
+      "locations": [
+        "Aenon",
+        "Bethany",
+        "Bethany (across the Jordan)",
+        "Bethsaida",
+        "Cana",
+        "Capernaum",
+        "Galilee",
+        "Jordan",
+        "Nazareth",
+        "Salim"
+      ],
+      "bookIndex": 42,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 43001001,
+      "endIndex": 43003036,
+      "url": "43001001-43003036"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethzatha",
+        "Cana",
+        "Capernaum",
+        "Galilee",
+        "Jacob’s Fountain",
+        "Samaria",
+        "Samaria [city]",
+        "Sychar"
+      ],
+      "bookIndex": 42,
+      "chapter": 4,
+      "endChapter": 5,
+      "ref": "4-5",
+      "startIndex": 43004001,
+      "endIndex": 43005047,
+      "url": "43004001-43005047"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethlehem (Ephrath) [Judah]",
+        "Bethlehem [Zebulun]",
+        "Capernaum",
+        "Galilee",
+        "Tiberias"
+      ],
+      "bookIndex": 42,
+      "chapter": 6,
+      "endChapter": 7,
+      "ref": "6-7",
+      "startIndex": 43006001,
+      "endIndex": 43007052,
+      "url": "43006001-43007052"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Siloam"
+      ],
+      "bookIndex": 42,
+      "chapter": 8,
+      "endChapter": 9,
+      "ref": "8-9",
+      "startIndex": 43008001,
+      "endIndex": 43009041,
+      "url": "43008001-43009041"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Bethany",
+        "Bethany (across the Jordan)",
+        "Bethsaida",
+        "Ephraim (Ophrah)",
+        "Ephraim [tribe]",
+        "Galilee",
+        "Jordan",
+        "Zion"
+      ],
+      "bookIndex": 42,
+      "chapter": 10,
+      "endChapter": 12,
+      "ref": "10-12",
+      "startIndex": 43010001,
+      "endIndex": 43012050,
+      "url": "43010001-43012050"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 42,
+      "chapter": 13,
+      "endChapter": 15,
+      "ref": "13-15",
+      "startIndex": 43013001,
+      "endIndex": 43015027,
+      "url": "43013001-43015027"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Kidron"
+      ],
+      "bookIndex": 42,
+      "chapter": 16,
+      "endChapter": 18,
+      "ref": "16-18",
+      "startIndex": 43016001,
+      "endIndex": 43018040,
+      "url": "43016001-43018040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Arimathea (Ramah) [Ephraim]",
+        "Cana",
+        "Galilee",
+        "Golgotha",
+        "Tiberias"
+      ],
+      "bookIndex": 42,
+      "chapter": 19,
+      "endChapter": 21,
+      "ref": "19-21",
+      "startIndex": 43019001,
+      "endIndex": 43021025,
+      "url": "43019001-43021025"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 61 C.E.-z"
+      ],
+      "locations": [
+        "Asia [Roman]",
+        "Cappadocia",
+        "Cyrene",
+        "Galilee",
+        "Libya",
+        "Mesopotamia",
+        "Mount of Olives",
+        "Pamphylia",
+        "Phrygia",
+        "Pontus",
+        "Rome",
+        "Samaria",
+        "Samaria [city]"
+      ],
+      "bookIndex": 43,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 44001001,
+      "endIndex": 44003026,
+      "url": "44001001-44003026"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Antioch [Pisidia]",
+        "Antioch [Syria]",
+        "Asia [Roman]",
+        "Cilicia",
+        "Cyprus"
+      ],
+      "bookIndex": 43,
+      "chapter": 4,
+      "endChapter": 6,
+      "ref": "4-6",
+      "startIndex": 44004001,
+      "endIndex": 44006015,
+      "url": "44004001-44006015"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Ashdod",
+        "Babylon (Babylonia)",
+        "Caesarea",
+        "Canaan",
+        "Gaza",
+        "Haran",
+        "Mesopotamia",
+        "Midian",
+        "Samaria",
+        "Samaria [city]",
+        "Shechem",
+        "Sinai (Horeb)"
+      ],
+      "bookIndex": 43,
+      "chapter": 7,
+      "endChapter": 8,
+      "ref": "7-8",
+      "startIndex": 44007001,
+      "endIndex": 44008040,
+      "url": "44007001-44008040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Antioch [Pisidia]",
+        "Antioch [Syria]",
+        "Caesarea",
+        "Cyprus",
+        "Cyrene",
+        "Damascus",
+        "Galilee",
+        "Joppa",
+        "Lydda (Lod)",
+        "Nazareth",
+        "Phoenicia",
+        "Samaria",
+        "Samaria [city]",
+        "Sharon",
+        "Tarsus"
+      ],
+      "bookIndex": 43,
+      "chapter": 9,
+      "endChapter": 11,
+      "ref": "9-11",
+      "startIndex": 44009001,
+      "endIndex": 44011030,
+      "url": "44009001-44011030"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Antioch [Pisidia]",
+        "Antioch [Syria]",
+        "Attalia",
+        "Benjamin",
+        "Caesarea",
+        "Canaan",
+        "Cyprus",
+        "Cyrene",
+        "Derbe",
+        "Galilee",
+        "Iconium",
+        "Lycaonia",
+        "Lystra",
+        "Pamphylia",
+        "Paphos",
+        "Perga",
+        "Pisidia",
+        "Salamis [Cyprus]",
+        "Salamis [Greece]",
+        "Seleucia",
+        "Sidon",
+        "Tyre"
+      ],
+      "bookIndex": 43,
+      "chapter": 12,
+      "endChapter": 14,
+      "ref": "12-14",
+      "startIndex": 44012001,
+      "endIndex": 44014028,
+      "url": "44012001-44014028"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Antioch [Pisidia]",
+        "Antioch [Syria]",
+        "Asia [Roman]",
+        "Bithynia",
+        "Cilicia",
+        "Cyprus",
+        "Derbe",
+        "Galatia",
+        "Iconium",
+        "Lydia",
+        "Lystra",
+        "Macedonia",
+        "Mysia",
+        "Neapolis",
+        "Pamphylia",
+        "Philippi",
+        "Phoenicia",
+        "Phrygia",
+        "Samaria",
+        "Samaria [city]",
+        "Samothrace",
+        "Syria",
+        "Thyatira",
+        "Troas"
+      ],
+      "bookIndex": 43,
+      "chapter": 15,
+      "endChapter": 16,
+      "ref": "15-16",
+      "startIndex": 44015001,
+      "endIndex": 44016040,
+      "url": "44015001-44016040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Achaia",
+        "Alexandria [Carmania]",
+        "Alexandria [Egypt]",
+        "Alexandria [India]",
+        "Amphipolis",
+        "Antioch [Pisidia]",
+        "Antioch [Syria]",
+        "Asia [Roman]",
+        "Athens",
+        "Beroea",
+        "Caesarea",
+        "Corinth",
+        "Ephesus",
+        "Galatia",
+        "Italy",
+        "Macedonia",
+        "Phrygia",
+        "Pontus",
+        "Rome",
+        "Syria",
+        "Thessalonica"
+      ],
+      "bookIndex": 43,
+      "chapter": 17,
+      "endChapter": 19,
+      "ref": "17-19",
+      "startIndex": 44017001,
+      "endIndex": 44019041,
+      "url": "44017001-44019041"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asia [Roman]",
+        "Assos",
+        "Beroea",
+        "Caesarea",
+        "Chios",
+        "Cilicia",
+        "Cos",
+        "Cyprus",
+        "Derbe",
+        "Ephesus",
+        "Greece",
+        "Macedonia",
+        "Miletus",
+        "Mitylene",
+        "Patara",
+        "Philippi",
+        "Phoenicia",
+        "Ptolemais",
+        "Rhodes",
+        "Samos",
+        "Syria",
+        "Tarsus",
+        "Troas",
+        "Tyre"
+      ],
+      "bookIndex": 43,
+      "chapter": 20,
+      "endChapter": 21,
+      "ref": "20-21",
+      "startIndex": 44020001,
+      "endIndex": 44021040,
+      "url": "44020001-44021040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Antipatris (Aphek) [Ephraim]",
+        "Caesarea",
+        "Cilicia",
+        "Damascus",
+        "Rome",
+        "Tarsus"
+      ],
+      "bookIndex": 43,
+      "chapter": 22,
+      "endChapter": 23,
+      "ref": "22-23",
+      "startIndex": 44022001,
+      "endIndex": 44023035,
+      "url": "44022001-44023035"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asia [Roman]",
+        "Caesarea",
+        "Damascus"
+      ],
+      "bookIndex": 43,
+      "chapter": 24,
+      "endChapter": 26,
+      "ref": "24-26",
+      "startIndex": 44024001,
+      "endIndex": 44026032,
+      "url": "44024001-44026032"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Alexandria [Carmania]",
+        "Alexandria [Egypt]",
+        "Alexandria [India]",
+        "Asia [Roman]",
+        "Cauda",
+        "Cilicia",
+        "Cnidus",
+        "Crete",
+        "Cyprus",
+        "Italy",
+        "Lycia",
+        "Malta",
+        "Myra",
+        "Pamphylia",
+        "Puteoli",
+        "Rhegium",
+        "Rome",
+        "Sidon",
+        "Syracuse",
+        "Thessalonica"
+      ],
+      "bookIndex": 43,
+      "chapter": 27,
+      "endChapter": 28,
+      "ref": "27-28",
+      "startIndex": 44027001,
+      "endIndex": 44028031,
+      "url": "44027001-44028031"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 56 C.E.-z"
+      ],
+      "locations": [
+        "Rome"
+      ],
+      "bookIndex": 44,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 45001001,
+      "endIndex": 45003031,
+      "url": "45001001-45003031"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 44,
+      "chapter": 4,
+      "endChapter": 7,
+      "ref": "4-7",
+      "startIndex": 45004001,
+      "endIndex": 45007025,
+      "url": "45004001-45007025"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Baal (Ramah) [Simeon]",
+        "Benjamin",
+        "Sodom",
+        "Zion"
+      ],
+      "bookIndex": 44,
+      "chapter": 8,
+      "endChapter": 11,
+      "ref": "8-11",
+      "startIndex": 45008001,
+      "endIndex": 45011036,
+      "url": "45008001-45011036"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Achaia",
+        "Asia [Roman]",
+        "Illyricum",
+        "Macedonia",
+        "Spain (Tarshish)"
+      ],
+      "bookIndex": 44,
+      "chapter": 12,
+      "endChapter": 16,
+      "ref": "12-16",
+      "startIndex": 45012001,
+      "endIndex": 45016027,
+      "url": "45012001-45016027"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 55 C.E.-z"
+      ],
+      "locations": [
+        "Corinth"
+      ],
+      "bookIndex": 45,
+      "chapter": 1,
+      "endChapter": 6,
+      "ref": "1-6",
+      "startIndex": 46001001,
+      "endIndex": 46006020,
+      "url": "46001001-46006020"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 45,
+      "chapter": 7,
+      "endChapter": 10,
+      "ref": "7-10",
+      "startIndex": 46007001,
+      "endIndex": 46010033,
+      "url": "46007001-46010033"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 45,
+      "chapter": 11,
+      "endChapter": 14,
+      "ref": "11-14",
+      "startIndex": 46011001,
+      "endIndex": 46014040,
+      "url": "46011001-46014040"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Achaia",
+        "Asia [Roman]",
+        "Ephesus",
+        "Galatia",
+        "Macedonia"
+      ],
+      "bookIndex": 45,
+      "chapter": 15,
+      "endChapter": 16,
+      "ref": "15-16",
+      "startIndex": 46015001,
+      "endIndex": 46016024,
+      "url": "46015001-46016024"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 55 C.E.-y"
+      ],
+      "locations": [
+        "Achaia",
+        "Asia [Roman]",
+        "Corinth",
+        "Macedonia",
+        "Troas"
+      ],
+      "bookIndex": 46,
+      "chapter": 1,
+      "endChapter": 6,
+      "ref": "1-6",
+      "startIndex": 47001001,
+      "endIndex": 47006018,
+      "url": "47001001-47006018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Achaia",
+        "Macedonia"
+      ],
+      "bookIndex": 46,
+      "chapter": 7,
+      "endChapter": 10,
+      "ref": "7-10",
+      "startIndex": 47007001,
+      "endIndex": 47010018,
+      "url": "47007001-47010018"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Achaia",
+        "Damascus",
+        "Macedonia"
+      ],
+      "bookIndex": 46,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 47011001,
+      "endIndex": 47013014,
+      "url": "47011001-47013014"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 50-52 C.E.-z"
+      ],
+      "locations": [
+        "Antioch [Pisidia]",
+        "Antioch [Syria]",
+        "Arabia",
+        "Cilicia",
+        "Damascus",
+        "Galatia",
+        "Sinai (Horeb)",
+        "Syria"
+      ],
+      "bookIndex": 47,
+      "chapter": 1,
+      "endChapter": 6,
+      "ref": "1-6",
+      "startIndex": 48001001,
+      "endIndex": 48006018,
+      "url": "48001001-48006018"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 60-61 C.E.-z"
+      ],
+      "locations": [
+        "Ephesus"
+      ],
+      "bookIndex": 48,
+      "chapter": 1,
+      "endChapter": 6,
+      "ref": "1-6",
+      "startIndex": 49001001,
+      "endIndex": 49006024,
+      "url": "49001001-49006024"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 60-61 C.E.-y"
+      ],
+      "locations": [
+        "Benjamin",
+        "Macedonia",
+        "Philippi",
+        "Thessalonica"
+      ],
+      "bookIndex": 49,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 50001001,
+      "endIndex": 50004023,
+      "url": "50001001-50004023"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 60-61 C.E.-x"
+      ],
+      "locations": [
+        "Colossae",
+        "Laodicea"
+      ],
+      "bookIndex": 50,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 51001001,
+      "endIndex": 51004018,
+      "url": "51001001-51004018"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 50 C.E.-z"
+      ],
+      "locations": [
+        "Achaia",
+        "Athens",
+        "Macedonia",
+        "Philippi"
+      ],
+      "bookIndex": 51,
+      "chapter": 1,
+      "endChapter": 5,
+      "ref": "1-5",
+      "startIndex": 52001001,
+      "endIndex": 52005028,
+      "url": "52001001-52005028"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 51 C.E.-z"
+      ],
+      "locations": [],
+      "bookIndex": 52,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 53001001,
+      "endIndex": 53003018,
+      "url": "53001001-53003018"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 61-64 C.E.-z"
+      ],
+      "locations": [
+        "Ephesus",
+        "Macedonia"
+      ],
+      "bookIndex": 53,
+      "chapter": 1,
+      "endChapter": 6,
+      "ref": "1-6",
+      "startIndex": 54001001,
+      "endIndex": 54006021,
+      "url": "54001001-54006021"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 65 C.E.-z"
+      ],
+      "locations": [
+        "Antioch [Pisidia]",
+        "Antioch [Syria]",
+        "Asia [Roman]",
+        "Corinth",
+        "Ephesus",
+        "Galatia",
+        "Iconium",
+        "Lystra",
+        "Miletus",
+        "Rome",
+        "Thessalonica",
+        "Troas"
+      ],
+      "bookIndex": 54,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 55001001,
+      "endIndex": 55004022,
+      "url": "55001001-55004022"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 61-64 C.E.-y"
+      ],
+      "locations": [
+        "Crete"
+      ],
+      "bookIndex": 55,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 56001001,
+      "endIndex": 56003015,
+      "url": "56001001-56003015"
+    },
+    {
+      "events": [
+        "c. 60-61 C.E.-w"
+      ],
+      "locations": [],
+      "bookIndex": 56,
+      "chapter": 1,
+      "endChapter": 1,
+      "ref": "",
+      "startIndex": 57001001,
+      "endIndex": 57001025,
+      "url": "57001001-57001025"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 61 C.E.-y"
+      ],
+      "locations": [],
+      "bookIndex": 57,
+      "chapter": 1,
+      "endChapter": 6,
+      "ref": "1-6",
+      "startIndex": 58001001,
+      "endIndex": 58006020,
+      "url": "58001001-58006020"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Salem (Jerusalem)"
+      ],
+      "bookIndex": 57,
+      "chapter": 7,
+      "endChapter": 10,
+      "ref": "7-10",
+      "startIndex": 58007001,
+      "endIndex": 58010039,
+      "url": "58007001-58010039"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Italy",
+        "Jericho",
+        "Zion"
+      ],
+      "bookIndex": 57,
+      "chapter": 11,
+      "endChapter": 13,
+      "ref": "11-13",
+      "startIndex": 58011001,
+      "endIndex": 58013025,
+      "url": "58011001-58013025"
+    }
+  ],
+  [
+    {
+      "events": [
+        "b. 62 C.E.-z"
+      ],
+      "locations": [
+        "Gehenna (Hinnom)"
+      ],
+      "bookIndex": 58,
+      "chapter": 1,
+      "endChapter": 5,
+      "ref": "1-5",
+      "startIndex": 59001001,
+      "endIndex": 59005020,
+      "url": "59001001-59005020"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 62-64 C.E.-z"
+      ],
+      "locations": [
+        "Asia [Roman]",
+        "Babylon (Babylonia)",
+        "Bithynia",
+        "Cappadocia",
+        "Galatia",
+        "Pontus",
+        "Zion"
+      ],
+      "bookIndex": 59,
+      "chapter": 1,
+      "endChapter": 5,
+      "ref": "1-5",
+      "startIndex": 60001001,
+      "endIndex": 60005014,
+      "url": "60001001-60005014"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 64 C.E.-z"
+      ],
+      "locations": [
+        "Sodom"
+      ],
+      "bookIndex": 60,
+      "chapter": 1,
+      "endChapter": 3,
+      "ref": "1-3",
+      "startIndex": 61001001,
+      "endIndex": 61003018,
+      "url": "61001001-61003018"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 98 C.E.-y"
+      ],
+      "locations": [],
+      "bookIndex": 61,
+      "chapter": 1,
+      "endChapter": 5,
+      "ref": "1-5",
+      "startIndex": 62001001,
+      "endIndex": 62005021,
+      "url": "62001001-62005021"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 98 C.E.-x"
+      ],
+      "locations": [],
+      "bookIndex": 62,
+      "chapter": 1,
+      "endChapter": 1,
+      "ref": "",
+      "startIndex": 63001001,
+      "endIndex": 63001013,
+      "url": "63001001-63001013"
+    },
+    {
+      "events": [
+        "c. 98 C.E.-w"
+      ],
+      "locations": [],
+      "bookIndex": 63,
+      "chapter": 1,
+      "endChapter": 1,
+      "ref": "",
+      "startIndex": 64001001,
+      "endIndex": 64001014,
+      "url": "64001001-64001014"
+    },
+    {
+      "events": [
+        "c. 65 C.E.-y"
+      ],
+      "locations": [
+        "Sodom"
+      ],
+      "bookIndex": 64,
+      "chapter": 1,
+      "endChapter": 1,
+      "ref": "",
+      "startIndex": 65001001,
+      "endIndex": 65001025,
+      "url": "65001001-65001025"
+    }
+  ],
+  [
+    {
+      "events": [
+        "c. 96 C.E.-z"
+      ],
+      "locations": [
+        "Asia [Roman]",
+        "Ephesus",
+        "Laodicea",
+        "Patmos",
+        "Pergamum",
+        "Philadelphia (Rabbah)",
+        "Philadelphia [Asia Minor]",
+        "Sardis",
+        "Smyrna",
+        "Thyatira"
+      ],
+      "bookIndex": 65,
+      "chapter": 1,
+      "endChapter": 4,
+      "ref": "1-4",
+      "startIndex": 66001001,
+      "endIndex": 66004011,
+      "url": "66001001-66004011"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Asher",
+        "Asher [tribe]",
+        "Benjamin",
+        "Euphrates",
+        "Gad",
+        "Issachar",
+        "Manasseh",
+        "Naphtali",
+        "Reuben",
+        "Zebulun"
+      ],
+      "bookIndex": 65,
+      "chapter": 5,
+      "endChapter": 9,
+      "ref": "5-9",
+      "startIndex": 66005001,
+      "endIndex": 66009021,
+      "url": "66005001-66009021"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Sodom",
+        "Zion"
+      ],
+      "bookIndex": 65,
+      "chapter": 10,
+      "endChapter": 14,
+      "ref": "10-14",
+      "startIndex": 66010001,
+      "endIndex": 66014020,
+      "url": "66010001-66014020"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [
+        "Babylon (Babylonia)",
+        "Euphrates"
+      ],
+      "bookIndex": 65,
+      "chapter": 15,
+      "endChapter": 18,
+      "ref": "15-18",
+      "startIndex": 66015001,
+      "endIndex": 66018024,
+      "url": "66015001-66018024"
+    }
+  ],
+  [
+    {
+      "events": [],
+      "locations": [],
+      "bookIndex": 65,
+      "chapter": 19,
+      "endChapter": 22,
+      "ref": "19-22",
+      "startIndex": 66019001,
+      "endIndex": 66022021,
+      "url": "66019001-66022021"
+    }
+  ]
+]
