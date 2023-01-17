@@ -12,6 +12,11 @@ import 'src/settings/repositories/theme_mode_repository.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final container = ProviderContainer(observers: [Logger()]);
+  container.read(plansRepositoryProvider);
+  container.read(locationsRepositoryProvider);
+  container.read(eventsRepositoryProvider);
+  container.read(schedulesRepositoryProvider);
+  container.read(bibleLanguagesRepositoryProvider);
   await container.read(themeModeProvider.future);
 
   runApp(UncontrolledProviderScope(

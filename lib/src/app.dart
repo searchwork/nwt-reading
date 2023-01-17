@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/settings/presentations/settings_page.dart';
 import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
 import 'package:nwt_reading/src/theme.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/sample_item_list_view.dart';
+import 'schedule/presentations/schedule_page.dart';
+import 'plans/presentations/plans_page.dart';
+import 'settings/presentations/settings_page.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});
@@ -34,11 +34,11 @@ class App extends ConsumerWidget {
                 switch (routeSettings.name) {
                   case SettingsPage.routeName:
                     return const SettingsPage();
-                  case SampleItemDetailsView.routeName:
-                    return const SampleItemDetailsView();
-                  case SampleItemListView.routeName:
+                  case SchedulePage.routeName:
+                    return const SchedulePage();
+                  case PlansPage.routeName:
                   default:
-                    return const SampleItemListView();
+                    return const PlansPage();
                 }
               },
             ));
