@@ -14,19 +14,19 @@ class ThemeModeRepository extends AsyncNotifier<ThemeMode> {
     final preferences = await SharedPreferences.getInstance();
     final themeModeIndex = preferences.getInt(_preferenceKey);
 
-    return ThemeMode.values[themeModeIndex ?? 0];
+    return ThemeMode.values[themeModeIndex ?? ThemeMode.system.index];
   }
 
-  void _writeSharedPreference() async {
+  Future<void> _writeSharedPreference() async {
     final preferences = await SharedPreferences.getInstance();
     await future;
     if (state.valueOrNull != null) {
-      preferences.setInt(_preferenceKey, state.valueOrNull?.index ?? 0);
+      await preferences.setInt(_preferenceKey, state.valueOrNull?.index ?? 0);
     }
   }
 
   Future<void> updateThemeMode(ThemeMode themeMode) async {
     await update((previousThemeMode) => themeMode);
-    _writeSharedPreference();
+    await _writeSharedPreference();
   }
 }
