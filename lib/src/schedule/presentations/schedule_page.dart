@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:nwt_reading/src/plans/domains/plan.dart';
 import 'package:nwt_reading/src/plans/domains/plans.dart';
-import 'package:nwt_reading/src/plans/presentations/plans_page.dart';
 import 'package:nwt_reading/src/schedule/domains/schedules.dart';
 import 'package:nwt_reading/src/schedule/presentations/day_card.dart';
 
