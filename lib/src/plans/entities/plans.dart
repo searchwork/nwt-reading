@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:nwt_reading/src/base/domains/incomplete_notifier.dart';
-import 'package:nwt_reading/src/plans/domains/plan.dart';
-import 'package:nwt_reading/src/schedule/domains/schedules.dart';
+import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
+import 'package:nwt_reading/src/plans/entities/plan.dart';
+import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 import 'package:uuid/uuid.dart';
 
 typedef Plans = List<Plan>;

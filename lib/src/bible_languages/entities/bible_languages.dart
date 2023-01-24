@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/base/domains/incomplete_notifier.dart';
+import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
 final bibleLanguagesProvider =
     AsyncNotifierProvider<IncompleteNotifier<BibleLanguages>, BibleLanguages>(

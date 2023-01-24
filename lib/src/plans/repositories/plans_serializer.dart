@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:nwt_reading/src/plans/domains/plan.dart';
-import 'package:nwt_reading/src/plans/domains/plans.dart';
-import 'package:nwt_reading/src/schedule/domains/schedules.dart';
+import 'package:nwt_reading/src/plans/entities/plan.dart';
+import 'package:nwt_reading/src/plans/entities/plans.dart';
+import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
 class PlansSerializer {
   List<String> convertPlansToStringList(Plans plans) => List<String>.from(

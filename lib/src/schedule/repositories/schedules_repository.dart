@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/schedule/repositories/schedule_deserializer.dart';
-import 'package:nwt_reading/src/schedule/domains/schedules.dart';
+import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
 final schedulesRepositoryProvider = Provider<SchedulesRepository>(
     (ref) => SchedulesRepository(ref),

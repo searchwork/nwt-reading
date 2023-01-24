@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/plans/domains/plan.dart';
-import 'package:nwt_reading/src/schedule/domains/schedules.dart';
+import 'package:nwt_reading/src/plans/entities/plan.dart';
+import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 import 'package:nwt_reading/src/schedule/presentations/schedule_page.dart';
 
 class PlanCard extends ConsumerWidget {

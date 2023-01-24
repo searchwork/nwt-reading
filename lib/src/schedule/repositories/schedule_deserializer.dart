@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:nwt_reading/src/schedule/domains/schedules.dart';
+import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
 class ScheduleDeserializer {
   Schedule convertJsonToSchedule(String json) {

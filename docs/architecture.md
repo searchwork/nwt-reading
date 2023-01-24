@@ -4,13 +4,13 @@
 
 > **Dependency Rule**
 >
-> - Across architectural boundaries all dependencies point **inwards**, that is towards the domains (the business rules).
+> - Across architectural boundaries all dependencies point **inwards**, that is towards the entities (the business rules).
 > - Inner rings must **not depend on outer rings**.
 > - **Sections on the same ring** should not depend on each other. They may use each other indirectly through inner rings.
 
-## Domains
+## Entities
 
-The domains contain the application independent **business rules**.
+The entities contain the application independent **business rules**.
 
 The data **types** are exposed as **immutable classes** and the **objects** as [Riverpod] [AsyncNotifierProvider] objects called `<model>Provider` or `<model>FamilyProvider`.
 

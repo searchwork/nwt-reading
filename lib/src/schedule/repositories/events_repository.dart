@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/schedule/domains/events.dart';
+import 'package:nwt_reading/src/schedule/entities/events.dart';
 import 'package:nwt_reading/src/schedule/repositories/events_deserializer.dart';
 
 final eventsRepositoryProvider = Provider<EventsRepository>(

@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/schedule/domains/locations.dart';
+import 'package:nwt_reading/src/schedule/entities/locations.dart';
 import 'package:nwt_reading/src/schedule/repositories/locations_deserializer.dart';
 
 final locationsRepositoryProvider = Provider<LocationsRepository>(

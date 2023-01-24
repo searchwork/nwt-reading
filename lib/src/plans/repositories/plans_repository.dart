@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/plans/domains/plans.dart';
+import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_deserializer.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_serializer.dart';
 import 'package:shared_preferences/shared_preferences.dart';

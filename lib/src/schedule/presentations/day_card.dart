@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/bible_languages/domains/bible_languages.dart';
-import 'package:nwt_reading/src/plans/domains/plan.dart';
-import 'package:nwt_reading/src/schedule/domains/events.dart';
-import 'package:nwt_reading/src/schedule/domains/locations.dart';
-import 'package:nwt_reading/src/schedule/domains/schedules.dart';
+import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
+import 'package:nwt_reading/src/plans/entities/plan.dart';
+import 'package:nwt_reading/src/schedule/entities/events.dart';
+import 'package:nwt_reading/src/schedule/entities/locations.dart';
+import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
 class DayCard extends ConsumerWidget {
   const DayCard(
