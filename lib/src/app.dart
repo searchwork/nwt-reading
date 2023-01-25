@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
+import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 import 'package:nwt_reading/src/theme.dart';
 
 import 'schedule/presentations/schedule_page.dart';

@@ -5,9 +5,10 @@ import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
 import 'package:nwt_reading/src/schedule/repositories/events_repository.dart';
 import 'package:nwt_reading/src/schedule/repositories/locations_repository.dart';
 import 'package:nwt_reading/src/schedule/repositories/schedules_repository.dart';
+import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
+import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 
 import 'src/app.dart';
-import 'src/settings/repositories/theme_mode_repository.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +18,7 @@ void main() async {
   container.read(eventsRepositoryProvider);
   container.read(schedulesRepositoryProvider);
   container.read(bibleLanguagesRepositoryProvider);
+  container.read(themeModeRepositoryProvider);
   await container.read(themeModeProvider.future);
 
   runApp(UncontrolledProviderScope(
