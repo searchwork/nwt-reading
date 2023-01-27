@@ -4,15 +4,16 @@ import 'package:nwt_reading/src/base/repositories/shared_preferences_repositorie
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 
 final themeModeRepositoryProvider = Provider<ThemeModeRepository>(
-    (ref) => ThemeModeRepository(ref: ref, stateProvider: themeModeProvider),
+    (ref) => ThemeModeRepository(ref),
     name: 'themeModeRepository');
 
 class ThemeModeRepository
     extends AbstractIntSharedPreferencesRepository<ThemeMode> {
-  ThemeModeRepository(
-      {required super.ref,
-      required super.stateProvider,
-      super.preferenceKey = 'themeMode'});
+  ThemeModeRepository(ref)
+      : super(
+            ref: ref,
+            stateProvider: themeModeProvider,
+            preferenceKey: 'themeMode');
 
   @override
   int serialize(ThemeMode state) => state.index;
