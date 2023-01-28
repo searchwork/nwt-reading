@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
@@ -23,9 +24,12 @@ class Locations {
 typedef LocationID = String;
 
 @immutable
-class Location {
+class Location extends Equatable {
   const Location({required this.name, required this.refs});
 
   final String name;
   final String refs;
+
+  @override
+  List<Object> get props => [name, refs];
 }

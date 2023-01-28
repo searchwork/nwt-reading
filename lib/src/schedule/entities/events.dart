@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
@@ -23,10 +24,13 @@ class Events {
 typedef EventID = String;
 
 @immutable
-class Event {
+class Event extends Equatable {
   const Event({this.prefix, required this.year, required this.isCE});
 
   final String? prefix;
   final String year;
   final bool isCE;
+
+  @override
+  List<Object?> get props => [prefix, year, isCE];
 }

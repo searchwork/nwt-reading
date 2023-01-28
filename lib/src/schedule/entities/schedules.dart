@@ -59,6 +59,9 @@ class Schedule {
   int get length => days.length;
 
   Day getDay(int index) => days[index];
+
+  @override
+  String toString() => days.toString();
 }
 
 @immutable
@@ -68,10 +71,13 @@ class Day {
       Day._internal(List.unmodifiable(sections));
 
   final List<Section> sections;
+
+  @override
+  String toString() => sections.toString();
 }
 
 @immutable
-class Section {
+class Section extends Equatable {
   const Section(
       {required this.bookIndex,
       required this.chapter,
@@ -92,4 +98,17 @@ class Section {
   final String url;
   final List<String> events;
   final List<String> locations;
+
+  @override
+  List<Object> get props => [
+        bookIndex,
+        chapter,
+        endChapter,
+        ref,
+        startIndex,
+        endIndex,
+        url,
+        events,
+        locations
+      ];
 }
