@@ -27,7 +27,7 @@ class PlansPage extends ConsumerWidget {
           ],
         ),
         body: plans.when(
-            data: (plans) => plans.isEmpty
+            data: (plans) => plans.plans.isEmpty
                 ? Center(
                     child: Text(AppLocalizations.of(context)!.noPlanYet),
                   )
@@ -46,11 +46,11 @@ class PlansPage extends ConsumerWidget {
                 )),
         floatingActionButton: FloatingActionButton(
           tooltip: AppLocalizations.of(context)!.addPlanTooltip,
-          onPressed: () => ref.read(plansProvider.notifier).addPlan(),
+          onPressed: () => ref.read(plansProvider.notifier).newPlan(),
           child: const Icon(Icons.add),
         ));
   }
 }
 
 List<PlanCard> _buildPlansGrid(Plans plans) =>
-    plans.map((plan) => PlanCard(plan: plan)).toList();
+    plans.plans.map((plan) => PlanCard(plan: plan)).toList();

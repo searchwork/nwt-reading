@@ -6,7 +6,7 @@ import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
 class PlansSerializer {
   List<String> convertPlansToStringList(Plans plans) => List<String>.from(
-      plans.map((plan) => jsonEncode(_convertPlanToMap(plan))));
+      plans.plans.map((plan) => jsonEncode(_convertPlanToMap(plan))));
 
   Map<String, dynamic> _convertPlanToMap(Plan plan) => {
         'id': plan.id,

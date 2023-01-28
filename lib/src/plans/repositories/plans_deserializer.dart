@@ -5,9 +5,10 @@ import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
 class PlansDeserializer {
-  Plans convertStringListToPlans(List<String> plansStringList) =>
-      List<Plan>.from(plansStringList
-          .map((planJson) => _convertMapToPlan(jsonDecode(planJson))));
+  Plans convertStringListToPlans(List<String>? plansStringList) =>
+      Plans((plansStringList ?? [])
+          .map((planJson) => _convertMapToPlan(jsonDecode(planJson)))
+          .toList());
 
   ScheduleKey convertMapToScheduleKey(Map<String, dynamic> scheduleKeyMap) {
     final type = ScheduleType.values[scheduleKeyMap['type']];

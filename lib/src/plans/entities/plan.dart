@@ -1,3 +1,5 @@
+import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedule/entities/schedules.dart';
@@ -6,7 +8,7 @@ final plansFamilyProvider =
     FutureProvider.family<PlansFamilyProvider?, String>((ref, planId) async {
   ref.watch(plansProvider);
   final plans = await ref.watch(plansProvider.notifier).future;
-  final planList = plans.where((plan) => plan.id == planId);
+  final planList = plans.plans.where((plan) => plan.id == planId);
 
   return planList.isEmpty
       ? null
@@ -22,7 +24,7 @@ class PlansFamilyProvider {
   Schedule? get schedule {
     final schedules = ref.read(schedulesProvider).valueOrNull;
 
-    return schedules?[plan.scheduleKey];
+    return schedules?.schedules[plan.scheduleKey];
   }
 
   int? get length => schedule?.length;
@@ -60,8 +62,9 @@ class PlansFamilyProvider {
   }
 }
 
-class Plan {
-  Plan({
+@immutable
+class Plan extends Equatable {
+  const Plan({
     required this.id,
     required this.name,
     required this.scheduleKey,
@@ -108,10 +111,25 @@ class Plan {
         showEvents: showEvents ?? this.showEvents,
         showLocations: showLocations ?? this.showLocations,
       );
+
+  @override
+  List<Object?> get props => [
+        id,
+        name,
+        scheduleKey,
+        language,
+        bookmark,
+        startDate,
+        endDate,
+        withEndDate,
+        showEvents,
+        showLocations
+      ];
 }
 
-class Bookmark implements Comparable<Bookmark> {
-  Bookmark({
+@immutable
+class Bookmark extends Equatable implements Comparable<Bookmark> {
+  const Bookmark({
     required this.dayIndex,
     required this.sectionIndex,
   });
@@ -127,6 +145,9 @@ class Bookmark implements Comparable<Bookmark> {
         dayIndex: dayIndex ?? this.dayIndex,
         sectionIndex: sectionIndex ?? this.sectionIndex,
       );
+
+  @override
+  List<Object> get props => [dayIndex, sectionIndex];
 
   @override
   int compareTo(Bookmark other) {
