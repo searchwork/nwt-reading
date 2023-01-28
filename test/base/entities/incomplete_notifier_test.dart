@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
 void main() {
-  test('Build stays on isLoading', () async {
+  test('Stays on isLoading before init', () async {
     final incompleteNotifierProvider =
         AsyncNotifierProvider<IncompleteNotifier<int>, int>(
             IncompleteNotifier.new);
@@ -20,7 +20,7 @@ void main() {
     expect(isLoading, true);
   });
 
-  test('Build resolves to init value', () async {
+  test('Resolves to init value', () async {
     const testValue = 'test';
     final incompleteNotifierProvider =
         AsyncNotifierProvider<IncompleteNotifier<String>, String>(

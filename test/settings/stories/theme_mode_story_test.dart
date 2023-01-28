@@ -13,8 +13,10 @@ const asyncLoadingValue = AsyncLoading<ThemeMode>();
 final tester = IncompleteNotifierTester<ThemeMode>(themeModeProvider);
 
 void main() async {
-  test('Stays on AsyncLoading<ThemeMode>() before init', () async {
+  test('Stays on AsyncLoading before init', () async {
     tester.reset();
+    addTearDown(tester.container.dispose);
+
     verify(
       () => tester.listener(null, asyncLoadingValue),
     );
@@ -23,6 +25,7 @@ void main() async {
 
   test('Defaults to ThemeMode.system', () async {
     tester.reset();
+    addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues({});
     tester.container.read(themeModeRepositoryProvider);
     await tester.container.read(themeModeProvider.future);
@@ -37,6 +40,7 @@ void main() async {
 
   test('Resolves to Shared Preferences', () async {
     tester.reset();
+    addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues(
         {preferenceKey: ThemeMode.dark.index});
     const data = AsyncData<ThemeMode>(ThemeMode.dark);
@@ -52,6 +56,7 @@ void main() async {
 
   test('Resolves to updated value', () async {
     tester.reset();
+    addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues({});
     tester.container.read(themeModeRepositoryProvider);
     for (var themeMode in ThemeMode.values) {

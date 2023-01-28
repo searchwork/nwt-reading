@@ -15,6 +15,7 @@ class IncompleteNotifierTester<T> {
 
   void reset() {
     mocktail.reset(listener);
+    container.dispose();
     container = ProviderContainer();
     container.listen(
       provider,
