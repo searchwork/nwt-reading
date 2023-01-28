@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
@@ -24,19 +25,25 @@ class BibleLanguages {
 typedef BibleLanguageCode = String;
 
 @immutable
-class BibleLanguage {
+class BibleLanguage extends Equatable {
   const BibleLanguage(
       {required this.name, required this.urlPath, required this.books});
 
   final String name;
   final String urlPath;
   final List<Book> books;
+
+  @override
+  List<Object> get props => [name, urlPath, books];
 }
 
 @immutable
-class Book {
+class Book extends Equatable {
   const Book({required this.name, required this.urlSegment});
 
   final String name;
   final String urlSegment;
+
+  @override
+  List<Object> get props => [name, urlSegment];
 }
