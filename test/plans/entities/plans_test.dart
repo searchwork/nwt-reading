@@ -70,7 +70,7 @@ void main() async {
     verifyNoMoreInteractions(tester.listener);
   });
 
-  test('Defaults to empty Plans', () async {
+  test('Defaults to the empty entity', () async {
     tester.reset();
     addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues({});
