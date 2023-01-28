@@ -57,7 +57,6 @@ void main() async {
   ];
   const asyncLoadingValue = AsyncLoading<Plans>();
   final emptyPlans = Plans(const []);
-  final emptyPlansValue = AsyncData<Plans>(Plans(const []));
   final tester = IncompleteNotifierTester<Plans>(plansProvider);
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
