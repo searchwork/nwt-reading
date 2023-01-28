@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
@@ -6,8 +7,11 @@ final eventsProvider =
         IncompleteNotifier.new,
         name: 'events');
 
+@immutable
 class Events {
-  Events({required this.events});
+  const Events._internal(this.events);
+  factory Events(Map<EventID, Event> bibleLanguages) =>
+      Events._internal(Map.unmodifiable(bibleLanguages));
 
   final Map<EventID, Event> events;
 
@@ -18,8 +22,9 @@ class Events {
 
 typedef EventID = String;
 
+@immutable
 class Event {
-  Event({this.prefix, required this.year, required this.isCE});
+  const Event({this.prefix, required this.year, required this.isCE});
 
   final String? prefix;
   final String year;

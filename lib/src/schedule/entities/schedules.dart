@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
@@ -7,7 +8,14 @@ final schedulesProvider =
         IncompleteNotifier.new,
         name: 'schedules');
 
-typedef Schedules = Map<ScheduleKey, Schedule>;
+@immutable
+class Schedules {
+  const Schedules._internal(this.schedules);
+  factory Schedules(Map<ScheduleKey, Schedule> schedules) =>
+      Schedules._internal(Map.unmodifiable(schedules));
+
+  final Map<ScheduleKey, Schedule> schedules;
+}
 
 enum ScheduleType {
   chronological,
@@ -28,6 +36,7 @@ final List<ScheduleKey> scheduleKeys = ScheduleType.values.fold(
 
 typedef Version = String;
 
+@immutable
 class ScheduleKey extends Equatable {
   const ScheduleKey(
       {required this.type, required this.duration, required this.version});
@@ -39,8 +48,11 @@ class ScheduleKey extends Equatable {
   List<Object> get props => [type, duration, version];
 }
 
+@immutable
 class Schedule {
-  Schedule(this.days);
+  const Schedule._internal(this.days);
+  factory Schedule(List<Day> days) =>
+      Schedule._internal(List.unmodifiable(days));
 
   final List<Day> days;
 
@@ -49,14 +61,18 @@ class Schedule {
   Day getDay(int index) => days[index];
 }
 
+@immutable
 class Day {
-  Day(this.sections);
+  const Day._internal(this.sections);
+  factory Day(List<Section> sections) =>
+      Day._internal(List.unmodifiable(sections));
 
   final List<Section> sections;
 }
 
+@immutable
 class Section {
-  Section(
+  const Section(
       {required this.bookIndex,
       required this.chapter,
       required this.endChapter,

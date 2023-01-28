@@ -20,10 +20,10 @@ class SchedulesRepository {
     ref.read(schedulesProvider.notifier).init(schedules);
   }
 
-  Future<Schedules> _getSchedulesFromJsonFiles() async => {
+  Future<Schedules> _getSchedulesFromJsonFiles() async => Schedules({
         for (var scheduleKey in scheduleKeys)
           scheduleKey: await _getScheduleFromJsonFile(scheduleKey)
-      };
+      });
 
   Future<Schedule> _getScheduleFromJsonFile(ScheduleKey key) async {
     debugPrint(

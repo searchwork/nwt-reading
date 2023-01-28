@@ -9,7 +9,7 @@ class LocationsDeserializer {
         (locationKey, locationMap) =>
             MapEntry(locationKey, _convertMapToLocation(locationMap))));
 
-    return Locations(locations: locations);
+    return Locations(locations);
   }
 
   Location _convertMapToLocation(Map<String, dynamic> locationMap) {

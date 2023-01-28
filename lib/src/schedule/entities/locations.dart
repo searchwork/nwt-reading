@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
@@ -6,8 +7,11 @@ final locationsProvider =
         IncompleteNotifier.new,
         name: 'locations');
 
+@immutable
 class Locations {
-  Locations({required this.locations});
+  const Locations._internal(this.locations);
+  factory Locations(Map<LocationID, Location> locations) =>
+      Locations._internal(Map.unmodifiable(locations));
 
   final Map<LocationID, Location> locations;
 
@@ -18,8 +22,9 @@ class Locations {
 
 typedef LocationID = String;
 
+@immutable
 class Location {
-  Location({required this.name, required this.refs});
+  const Location({required this.name, required this.refs});
 
   final String name;
   final String refs;

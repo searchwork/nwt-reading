@@ -9,7 +9,7 @@ class EventsDeserializer {
         (String eventKey, eventMap) =>
             MapEntry(eventKey, _convertMapToEvent(eventMap))));
 
-    return Events(events: events);
+    return Events(events);
   }
 
   Event _convertMapToEvent(Map<String, dynamic> eventMap) {
