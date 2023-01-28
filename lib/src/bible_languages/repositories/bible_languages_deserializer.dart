@@ -9,7 +9,7 @@ class BibleLanguagesDeserializer {
         bibleLanguagesMap.map((bibleLanguageKey, bibleLanguageMap) => MapEntry(
             bibleLanguageKey, _convertMapToBibleLanguage(bibleLanguageMap))));
 
-    return BibleLanguages(bibleLanguages: bibleLanguages);
+    return BibleLanguages(bibleLanguages);
   }
 
   BibleLanguage _convertMapToBibleLanguage(

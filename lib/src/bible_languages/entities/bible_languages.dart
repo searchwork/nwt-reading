@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
@@ -6,8 +7,12 @@ final bibleLanguagesProvider =
         IncompleteNotifier.new,
         name: 'bibleLanguages');
 
+@immutable
 class BibleLanguages {
-  BibleLanguages({required this.bibleLanguages});
+  const BibleLanguages._internal(this.bibleLanguages);
+  factory BibleLanguages(
+          Map<BibleLanguageCode, BibleLanguage> bibleLanguages) =>
+      BibleLanguages._internal(Map.unmodifiable(bibleLanguages));
 
   final Map<BibleLanguageCode, BibleLanguage> bibleLanguages;
 
@@ -18,8 +23,9 @@ class BibleLanguages {
 
 typedef BibleLanguageCode = String;
 
+@immutable
 class BibleLanguage {
-  BibleLanguage(
+  const BibleLanguage(
       {required this.name, required this.urlPath, required this.books});
 
   final String name;
@@ -27,8 +33,9 @@ class BibleLanguage {
   final List<Book> books;
 }
 
+@immutable
 class Book {
-  Book({required this.name, required this.urlSegment});
+  const Book({required this.name, required this.urlSegment});
 
   final String name;
   final String urlSegment;
