@@ -44,8 +44,7 @@ jobs:
         with:
           channel: stable
 
-      - run: flutter pub get
-      - run: flutter test integration_test --verbose
+      - run: flutter test integration_test
 
   build-android:
     name: Build Android
