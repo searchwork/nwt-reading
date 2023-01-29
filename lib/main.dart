@@ -10,7 +10,7 @@ import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 
 import 'src/app.dart';
 
-void main() async {
+Future<ProviderContainer> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final container = ProviderContainer(observers: [Logger()]);
   container.read(plansRepositoryProvider);
@@ -25,6 +25,8 @@ void main() async {
     container: container,
     child: const App(),
   ));
+
+  return container;
 }
 
 class Logger extends ProviderObserver {
