@@ -75,7 +75,7 @@ void main() async {
 
     await tester.scrollUntilVisible(
       find.byKey(const Key('day-33')),
-      100.0,
+      500.0,
     );
     await tester.pumpAndSettle();
 
@@ -114,7 +114,7 @@ void main() async {
 
     await tester.scrollUntilVisible(
       find.byKey(const Key('day-10')),
-      100.0,
+      500.0,
     );
     await tester.pumpAndSettle();
 
@@ -151,7 +151,5 @@ void main() async {
     expect(container.read(plansProvider).valueOrNull?.plans.length, 1);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
     expect(find.byType(PlanCard), findsOneWidget);
-
-    await Future.delayed(const Duration(seconds: 10));
   });
 }
