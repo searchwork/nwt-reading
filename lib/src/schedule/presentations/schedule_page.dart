@@ -58,9 +58,13 @@ class SchedulePage extends ConsumerWidget {
   }
 }
 
-List<DayCard> _buildScheduleGrid(String planId, Schedule schedule) => schedule
-    .days
-    .asMap()
-    .entries
-    .map((day) => DayCard(planId: planId, day: day.value, dayIndex: day.key))
-    .toList();
+List<DayCard> _buildScheduleGrid(String planId, Schedule schedule) =>
+    schedule.days
+        .asMap()
+        .entries
+        .map((day) => DayCard(
+            key: Key('day-${day.key}'),
+            planId: planId,
+            day: day.value,
+            dayIndex: day.key))
+        .toList();

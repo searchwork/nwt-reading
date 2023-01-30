@@ -28,6 +28,7 @@ class DayCard extends ConsumerWidget {
                 child: Column(
               children: [
                 ...day.sections.asMap().entries.map((section) => SectionWidget(
+                    key: Key('section-${section.key}'),
                     planId: planId,
                     section: section.value,
                     dayIndex: dayIndex,

@@ -29,6 +29,7 @@ class PlansPage extends ConsumerWidget {
         body: plans.when(
             data: (plans) => plans.plans.isEmpty
                 ? Center(
+                    key: const Key('no-plan-yet'),
                     child: Text(AppLocalizations.of(context)!.noPlanYet),
                   )
                 : GridView.extent(
