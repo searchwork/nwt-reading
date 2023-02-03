@@ -111,6 +111,13 @@ void main() async {
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
             .uncontrolledProviderScope;
     final container = uncontrolledProviderScope.container;
+
+    await tester.scrollUntilVisible(
+      find.byKey(Key(
+          'plan-${container.read(plansProvider).valueOrNull?.plans.last.id}')),
+      500.0,
+    );
+
     await tester.tap(find.byType(PlanCard).last);
     await tester.pumpAndSettle();
 
