@@ -66,7 +66,7 @@ class SectionWidget extends ConsumerWidget {
     final bibleLanguage = ref.watch(bibleLanguagesProvider.select(
         (bibleLanguages) => bibleLanguages.valueOrNull
             ?.bibleLanguages[Localizations.localeOf(context).languageCode]));
-    final planProvider = ref.read(plansFamilyProvider(planId)).valueOrNull;
+    final planProvider = ref.read(planFamilyProvider(planId)).valueOrNull;
     final isRead =
         planProvider?.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
 

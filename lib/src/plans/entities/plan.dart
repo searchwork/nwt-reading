@@ -4,19 +4,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
-final plansFamilyProvider =
-    FutureProvider.family<PlansFamilyProvider?, String>((ref, planId) async {
-  ref.watch(plansProvider);
-  final plans = await ref.watch(plansProvider.notifier).future;
+final planFamilyProvider =
+    FutureProvider.family<PlanFamily?, String>((ref, planId) async {
+  ref.watch(plansNotifierProvider);
+  final plans = await ref.watch(plansNotifierProvider.notifier).future;
   final planList = plans.plans.where((plan) => plan.id == planId);
 
-  return planList.isEmpty
-      ? null
-      : PlansFamilyProvider(ref, plan: planList.first);
+  return planList.isEmpty ? null : PlanFamily(ref, plan: planList.first);
 }, name: "plansFamily");
 
-class PlansFamilyProvider {
-  PlansFamilyProvider(this.ref, {required this.plan});
+class PlanFamily {
+  PlanFamily(this.ref, {required this.plan});
 
   final Ref ref;
   final Plan plan;
@@ -53,7 +51,7 @@ class PlansFamilyProvider {
     final updatedPlan = plan.copyWith(
         bookmark: Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex));
     ref
-        .read(plansProvider.notifier)
+        .read(plansNotifierProvider.notifier)
         .updatePlan(planId: plan.id, plan: updatedPlan);
   }
 

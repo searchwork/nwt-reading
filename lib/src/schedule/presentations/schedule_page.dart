@@ -14,7 +14,7 @@ class SchedulePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final planProvider = ref.watch(plansFamilyProvider(planId)).valueOrNull;
+    final planProvider = ref.watch(planFamilyProvider(planId)).valueOrNull;
     final plan = planProvider?.plan;
     final progress = planProvider?.progress;
     final schedule = planProvider?.schedule;
@@ -32,7 +32,7 @@ class SchedulePage extends ConsumerWidget {
             IconButton(
               icon: const Icon(Icons.delete),
               onPressed: () =>
-                  ref.read(plansProvider.notifier).removePlan(planId),
+                  ref.read(plansNotifierProvider.notifier).removePlan(planId),
             ),
           ],
         ),

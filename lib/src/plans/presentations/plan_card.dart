@@ -11,7 +11,7 @@ class PlanCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref.watch(schedulesProvider);
-    final planProvider = ref.watch(plansFamilyProvider(plan.id)).valueOrNull;
+    final planProvider = ref.watch(planFamilyProvider(plan.id)).valueOrNull;
     final remainingDays = planProvider?.remainingDays;
     final progress = planProvider?.progress;
 
