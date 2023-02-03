@@ -12,7 +12,7 @@ import '../../test_plans.dart';
 void main() async {
   const asyncLoadingValue = AsyncLoading<Plans>();
   final emptyPlans = Plans(const []);
-  final tester = IncompleteNotifierTester<Plans>(plansProvider);
+  final tester = IncompleteNotifierTester<Plans>(plansNotifierProvider);
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
@@ -30,7 +30,7 @@ void main() async {
     addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues({});
     tester.container.read(plansRepositoryProvider);
-    final result = await tester.container.read(plansProvider.future);
+    final result = await tester.container.read(plansNotifierProvider.future);
 
     expect(deepCollectionEquals(result.plans, emptyPlans.plans), true);
     verifyInOrder([
@@ -45,7 +45,7 @@ void main() async {
     addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues(testPlansPreferences);
     tester.container.read(plansRepositoryProvider);
-    final result = await tester.container.read(plansProvider.future);
+    final result = await tester.container.read(plansNotifierProvider.future);
 
     expect(deepCollectionEquals(result.plans, testPlans.plans), true);
     verifyInOrder([
@@ -60,10 +60,12 @@ void main() async {
     addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues({});
     tester.container.read(plansRepositoryProvider);
-    List<Plans> results = [await tester.container.read(plansProvider.future)];
+    List<Plans> results = [
+      await tester.container.read(plansNotifierProvider.future)
+    ];
     for (var plan in testPlans.plans) {
-      await tester.container.read(plansProvider.notifier).addPlan(plan);
-      results.add(await tester.container.read(plansProvider.future));
+      await tester.container.read(plansNotifierProvider.notifier).addPlan(plan);
+      results.add(await tester.container.read(plansNotifierProvider.future));
     }
 
     expect(deepCollectionEquals(results[3].plans, testPlans.plans), true);
@@ -86,7 +88,7 @@ void main() async {
     final container = ProviderContainer();
     container.read(plansRepositoryProvider);
     for (var plan in testPlans.plans) {
-      await container.read(plansProvider.notifier).addPlan(plan);
+      await container.read(plansNotifierProvider.notifier).addPlan(plan);
     }
     final actualPlansSerialized =
         sharedPreferences.getStringList(plansPreferenceKey);

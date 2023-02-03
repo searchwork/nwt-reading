@@ -11,7 +11,10 @@ final plansRepositoryProvider = Provider<PlansRepository>(
 class PlansRepository
     extends AbstractStringListSharedPreferencesRepository<Plans> {
   PlansRepository(ref)
-      : super(ref: ref, stateProvider: plansProvider, preferenceKey: 'plans');
+      : super(
+            ref: ref,
+            stateProvider: plansNotifierProvider,
+            preferenceKey: 'plans');
 
   @override
   List<String> serialize(Plans state) =>
