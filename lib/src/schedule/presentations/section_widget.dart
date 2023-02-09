@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
-import 'package:nwt_reading/src/plans/entities/plan.dart';
+import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 import 'package:nwt_reading/src/schedule/entities/events.dart';
 import 'package:nwt_reading/src/schedule/entities/locations.dart';
 import 'package:nwt_reading/src/schedule/entities/schedules.dart';
@@ -28,9 +27,9 @@ class SectionWidget extends ConsumerWidget {
     final bibleLanguage = ref.watch(bibleLanguagesNotifier.select(
         (bibleLanguages) => bibleLanguages.valueOrNull
             ?.bibleLanguages[Localizations.localeOf(context).languageCode]));
-    final planProvider = ref.read(planFamilyProvider(planId)).valueOrNull;
-    final isRead =
-        planProvider?.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
+    final plan = ref.watch(planFamilyEdit(planId));
+    final planEdit = ref.watch(planFamilyEdit(planId).notifier);
+    final isRead = plan.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,9 +39,9 @@ class SectionWidget extends ConsumerWidget {
           icon: const Icon(Icons.check_circle_outline),
           selectedIcon: const Icon(Icons.check_circle),
           onPressed: () => isRead == true
-              ? planProvider?.setUnread(
+              ? planEdit.saveUnread(
                   dayIndex: dayIndex, sectionIndex: sectionIndex)
-              : planProvider?.setRead(
+              : planEdit.saveRead(
                   dayIndex: dayIndex, sectionIndex: sectionIndex),
         ),
         Expanded(

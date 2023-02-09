@@ -11,11 +11,11 @@ class SettledTester {
   final WidgetTester tester;
   final Map<String, Object> sharedPreferences;
 
-  Future<UncontrolledProviderScope> get uncontrolledProviderScope async {
+  Future<ProviderContainer> get providerContainer async {
     UncontrolledProviderScope uncontrolledProviderScope = await app.main();
     await tester.pumpWidget(uncontrolledProviderScope);
     await tester.pumpAndSettle();
 
-    return uncontrolledProviderScope;
+    return uncontrolledProviderScope.container;
   }
 }

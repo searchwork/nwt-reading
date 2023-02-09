@@ -39,7 +39,7 @@ class PlansPage extends ConsumerWidget {
                     crossAxisSpacing: 20,
                     mainAxisSpacing: 20,
                     restorationId: 'plansView',
-                    children: _buildPlansGrid(plans),
+                    children: buildPlansGrid(plans),
                   ),
             error: (error, stack) => Text(error.toString()),
             loading: () => const Center(
@@ -51,7 +51,7 @@ class PlansPage extends ConsumerWidget {
           child: const Icon(Icons.add),
         ));
   }
-}
 
-List<PlanCard> _buildPlansGrid(Plans plans) =>
-    plans.plans.map((plan) => PlanCard(plan: plan)).toList();
+  List<PlanCard> buildPlansGrid(Plans plans) =>
+      plans.plans.map((plan) => PlanCard(plan)).toList();
+}

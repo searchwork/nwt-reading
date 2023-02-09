@@ -5,15 +5,22 @@ import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 import 'package:nwt_reading/src/schedule/presentations/schedule_page.dart';
 
 class PlanCard extends ConsumerWidget {
-  const PlanCard({super.key, required this.plan});
+  const PlanCard(this.plan, {super.key});
+
   final Plan plan;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(schedulesNotifier);
-    final planProvider = ref.watch(planFamilyProvider(plan.id)).valueOrNull;
-    final remainingDays = planProvider?.remainingDays;
-    final progress = planProvider?.progress;
+    final scheduleProvider =
+        ref.watch(scheduleFamily(plan.scheduleKey)).valueOrNull;
+    // final plansProvider = ref.watch(plansNotifierProvider.select((plans) => plans.valueOrNull;
+    final remainingDays = scheduleProvider?.getRemainingDays(plan.bookmark);
+    final progress = scheduleProvider?.getProgress(plan.bookmark);
+    const planTypeIcons = {
+      ScheduleType.chronological: Icons.hourglass_empty,
+      ScheduleType.sequential: Icons.menu_book,
+      ScheduleType.written: Icons.edit_note,
+    };
 
     return GestureDetector(
         onTap: () {
@@ -28,11 +35,11 @@ class PlanCard extends ConsumerWidget {
                     left: 10,
                     top: 10,
                     child: Row(children: [
-                      const Icon(
-                        Icons.hourglass_empty,
+                      Icon(
+                        planTypeIcons[plan.scheduleKey.type],
                         color: Colors.black54,
                         size: 56,
-                        shadows: [
+                        shadows: const [
                           Shadow(
                               offset: Offset(-1, -1),
                               color: Colors.black26,

@@ -51,7 +51,6 @@ void main() async {
 
   test('Resolves to Shared Preferences', () async {
     final tester = await getTester({preferenceKey: ThemeMode.dark.index});
-    const data = AsyncData<ThemeMode>(ThemeMode.dark);
     tester.container.read(themeModeRepository);
     final result = await tester.container.read(themeModeProvider.future);
 
