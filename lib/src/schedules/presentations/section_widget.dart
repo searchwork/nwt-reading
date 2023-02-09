@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
-import 'package:nwt_reading/src/schedule/entities/events.dart';
-import 'package:nwt_reading/src/schedule/entities/locations.dart';
-import 'package:nwt_reading/src/schedule/entities/schedules.dart';
-import 'package:nwt_reading/src/schedule/presentations/event_widget.dart';
-import 'package:nwt_reading/src/schedule/presentations/locations_widget.dart';
+import 'package:nwt_reading/src/schedules/entities/events.dart';
+import 'package:nwt_reading/src/schedules/entities/locations.dart';
+import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/presentations/event_widget.dart';
+import 'package:nwt_reading/src/schedules/presentations/locations_widget.dart';
 
 class SectionWidget extends ConsumerWidget {
   const SectionWidget(

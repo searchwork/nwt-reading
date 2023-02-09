@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/schedule/entities/locations.dart';
-import 'package:nwt_reading/src/schedule/repositories/locations_deserializer.dart';
+import 'package:nwt_reading/src/schedules/entities/locations.dart';
+import 'package:nwt_reading/src/schedules/repositories/locations_deserializer.dart';
 
 final locationsRepository = Provider<LocationsRepository>(
     (ref) => LocationsRepository(ref),

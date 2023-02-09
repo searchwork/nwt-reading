@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/presentations/plans_page.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
-import 'package:nwt_reading/src/schedule/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
 class PlanEditDialog extends ConsumerWidget {
   const PlanEditDialog(this.planId, {super.key});

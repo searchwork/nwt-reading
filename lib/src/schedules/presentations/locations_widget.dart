@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/schedule/entities/locations.dart';
+import 'package:nwt_reading/src/schedules/entities/locations.dart';
 
 class LocationsWidget extends ConsumerWidget {
   const LocationsWidget(this.locations, {super.key});

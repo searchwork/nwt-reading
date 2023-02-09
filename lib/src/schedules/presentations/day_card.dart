@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/schedule/entities/schedules.dart';
-import 'package:nwt_reading/src/schedule/presentations/section_widget.dart';
+import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/presentations/section_widget.dart';
 
 class DayCard extends ConsumerWidget {
   const DayCard(

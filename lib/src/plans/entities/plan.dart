@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:nwt_reading/src/schedule/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
 // @immutable
 class Plan extends Equatable {

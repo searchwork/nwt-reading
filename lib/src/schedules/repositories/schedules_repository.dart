@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/schedule/repositories/schedule_deserializer.dart';
-import 'package:nwt_reading/src/schedule/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/repositories/schedule_deserializer.dart';
+import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
 final schedulesRepository = Provider<SchedulesRepository>(
     (ref) => SchedulesRepository(ref),

@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 import 'package:nwt_reading/src/theme.dart';
 
-import 'schedule/presentations/schedule_page.dart';
+import 'schedules/presentations/schedule_page.dart';
 import 'plans/presentations/plans_page.dart';
 import 'settings/presentations/settings_page.dart';
 
