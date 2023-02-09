@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
-import 'package:nwt_reading/src/schedule/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();

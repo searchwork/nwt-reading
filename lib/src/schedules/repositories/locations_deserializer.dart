@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:nwt_reading/src/schedule/entities/locations.dart';
+import 'package:nwt_reading/src/schedules/entities/locations.dart';
 
 class LocationsDeserializer {
   Locations convertJsonToLocations(String json) {

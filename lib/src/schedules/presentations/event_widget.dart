@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/schedule/entities/events.dart';
+import 'package:nwt_reading/src/schedules/entities/events.dart';
 
 class EventWidget extends ConsumerWidget {
   const EventWidget(this.event, {super.key});

@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
-import 'package:nwt_reading/src/schedule/entities/events.dart';
-import 'package:nwt_reading/src/schedule/repositories/events_repository.dart';
+import 'package:nwt_reading/src/schedules/entities/events.dart';
+import 'package:nwt_reading/src/schedules/repositories/events_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../incomplete_notifier_tester.dart';

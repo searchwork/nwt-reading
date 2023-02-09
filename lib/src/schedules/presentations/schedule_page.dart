@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
-import 'package:nwt_reading/src/schedule/entities/schedules.dart';
-import 'package:nwt_reading/src/schedule/presentations/day_card.dart';
+import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/presentations/day_card.dart';
 
 class SchedulePage extends ConsumerWidget {
   const SchedulePage({super.key});

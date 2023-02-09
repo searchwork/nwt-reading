@@ -8,9 +8,9 @@ import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_card.dart';
-import 'package:nwt_reading/src/schedule/entities/events.dart';
-import 'package:nwt_reading/src/schedule/entities/locations.dart';
-import 'package:nwt_reading/src/schedule/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/events.dart';
+import 'package:nwt_reading/src/schedules/entities/locations.dart';
+import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 
 import '../test/test_plans.dart';

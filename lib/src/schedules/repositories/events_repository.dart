@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/schedule/entities/events.dart';
-import 'package:nwt_reading/src/schedule/repositories/events_deserializer.dart';
+import 'package:nwt_reading/src/schedules/entities/events.dart';
+import 'package:nwt_reading/src/schedules/repositories/events_deserializer.dart';
 
 final eventsRepository = Provider<EventsRepository>(
     (ref) => EventsRepository(ref),
