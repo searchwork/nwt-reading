@@ -13,12 +13,12 @@ import 'src/app.dart';
 Future<UncontrolledProviderScope> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final container = ProviderContainer(observers: [Logger()]);
-  container.read(plansRepositoryProvider);
-  container.read(locationsRepositoryProvider);
-  container.read(eventsRepositoryProvider);
-  container.read(schedulesRepositoryProvider);
-  container.read(bibleLanguagesRepositoryProvider);
-  container.read(themeModeRepositoryProvider);
+  container.read(plansRepository);
+  container.read(locationsRepository);
+  container.read(eventsRepository);
+  container.read(schedulesRepository);
+  container.read(bibleLanguagesRepository);
+  container.read(themeModeRepository);
   await container.read(themeModeProvider.future);
 
   final uncontrolledProviderScope = UncontrolledProviderScope(

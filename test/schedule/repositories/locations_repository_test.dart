@@ -12,7 +12,7 @@ void main() async {
   const asyncLoadingValue = AsyncLoading<Locations>();
   const testLocation =
       Location(name: 'Bethlehem', refs: '7; 15 E8; 17 E9; 18; 19 D10; 29 D10');
-  final tester = IncompleteNotifierTester<Locations>(locationsProvider);
+  final tester = IncompleteNotifierTester<Locations>(locationsNotifier);
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
@@ -28,8 +28,8 @@ void main() async {
   test('Resolves to the asset', () async {
     tester.reset();
     addTearDown(tester.container.dispose);
-    tester.container.read(locationsRepositoryProvider);
-    final result = await tester.container.read(locationsProvider.future);
+    tester.container.read(locationsRepository);
+    final result = await tester.container.read(locationsNotifier.future);
 
     expect(result.locations.length, greaterThanOrEqualTo(639));
     expect(

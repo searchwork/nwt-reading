@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/schedule/entities/locations.dart';
 import 'package:nwt_reading/src/schedule/repositories/locations_deserializer.dart';
 
-final locationsRepositoryProvider = Provider<LocationsRepository>(
+final locationsRepository = Provider<LocationsRepository>(
     (ref) => LocationsRepository(ref),
     name: 'locationsRepository');
 
@@ -22,6 +22,6 @@ class LocationsRepository {
     final json =
         await rootBundle.loadString('assets/repositories/locations.json');
     final locations = LocationsDeserializer().convertJsonToLocations(json);
-    ref.read(locationsProvider.notifier).init(locations);
+    ref.read(locationsNotifier.notifier).init(locations);
   }
 }

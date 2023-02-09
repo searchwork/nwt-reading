@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
-final eventsProvider =
+final eventsNotifier =
     AsyncNotifierProvider<IncompleteNotifier<Events>, Events>(
         IncompleteNotifier.new,
         name: 'events');

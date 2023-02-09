@@ -82,7 +82,7 @@ void main() async {
         Book(name: 'Revelation', urlSegment: 'revelation')
       ]);
   final tester =
-      IncompleteNotifierTester<BibleLanguages>(bibleLanguagesProvider);
+      IncompleteNotifierTester<BibleLanguages>(bibleLanguagesNotifier);
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
@@ -98,8 +98,8 @@ void main() async {
   test('Resolves to the asset', () async {
     tester.reset();
     addTearDown(tester.container.dispose);
-    tester.container.read(bibleLanguagesRepositoryProvider);
-    final result = await tester.container.read(bibleLanguagesProvider.future);
+    tester.container.read(bibleLanguagesRepository);
+    final result = await tester.container.read(bibleLanguagesNotifier.future);
 
     expect(result.bibleLanguages.length, greaterThanOrEqualTo(192));
     expect(deepCollectionEquals(result.bibleLanguages['en'], testBibleLanguage),

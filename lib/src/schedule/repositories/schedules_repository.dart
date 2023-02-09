@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/schedule/repositories/schedule_deserializer.dart';
 import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
-final schedulesRepositoryProvider = Provider<SchedulesRepository>(
+final schedulesRepository = Provider<SchedulesRepository>(
     (ref) => SchedulesRepository(ref),
     name: 'schedulesRepository');
 
@@ -17,7 +17,7 @@ class SchedulesRepository {
 
   void _init() async {
     final schedules = await _getSchedulesFromJsonFiles();
-    ref.read(schedulesProvider.notifier).init(schedules);
+    ref.read(schedulesNotifier.notifier).init(schedules);
   }
 
   Future<Schedules> _getSchedulesFromJsonFiles() async => Schedules({

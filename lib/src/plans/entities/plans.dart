@@ -8,7 +8,7 @@ import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 import 'package:uuid/uuid.dart';
 
-final plansNotifierProvider = AsyncNotifierProvider<PlansNotifier, Plans>(
+final plansNotifier = AsyncNotifierProvider<PlansNotifier, Plans>(
     PlansNotifier.new,
     name: "plans");
 

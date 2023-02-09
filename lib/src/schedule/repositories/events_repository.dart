@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/schedule/entities/events.dart';
 import 'package:nwt_reading/src/schedule/repositories/events_deserializer.dart';
 
-final eventsRepositoryProvider = Provider<EventsRepository>(
+final eventsRepository = Provider<EventsRepository>(
     (ref) => EventsRepository(ref),
     name: 'eventsRepository');
 
@@ -21,6 +21,6 @@ class EventsRepository {
   void _setEventsFromJsonFiles() async {
     final json = await rootBundle.loadString('assets/repositories/events.json');
     final events = EventsDeserializer().convertJsonToEvents(json);
-    ref.read(eventsProvider.notifier).init(events);
+    ref.read(eventsNotifier.notifier).init(events);
   }
 }

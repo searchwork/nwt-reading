@@ -11,7 +11,7 @@ void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
   const asyncLoadingValue = AsyncLoading<Events>();
   const testEvent = Event(prefix: 'b.', year: '1000', isCE: false);
-  final tester = IncompleteNotifierTester<Events>(eventsProvider);
+  final tester = IncompleteNotifierTester<Events>(eventsNotifier);
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
@@ -27,8 +27,8 @@ void main() async {
   test('Resolves to the asset', () async {
     tester.reset();
     addTearDown(tester.container.dispose);
-    tester.container.read(eventsRepositoryProvider);
-    final result = await tester.container.read(eventsProvider.future);
+    tester.container.read(eventsRepository);
+    final result = await tester.container.read(eventsNotifier.future);
 
     expect(result.events.length, greaterThanOrEqualTo(244));
     expect(deepCollectionEquals(result.events['b. 1000 B.C.E.-z'], testEvent),
