@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_repositories.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 
-final themeModeRepository = Provider<ThemeModeRepository>(
-    (ref) => ThemeModeRepository(ref),
-    name: 'themeModeRepository');
+const _preferenceKey = 'themeMode';
 
-class ThemeModeRepository
-    extends AbstractIntSharedPreferencesRepository<ThemeMode> {
-  ThemeModeRepository(ref)
-      : super(
-            ref: ref,
-            stateProvider: themeModeProvider,
-            preferenceKey: 'themeMode');
+final themeModeRepository = Provider<void>((ref) {
+  final preferences = ref.watch(sharedPreferencesRepository);
+  final themeModeSerialized =
+      preferences.getInt(_preferenceKey) ?? ThemeMode.system.index;
+  ref
+      .read(themeModeProvider.notifier)
+      .init(ThemeMode.values[themeModeSerialized]);
 
-  @override
-  int serialize(ThemeMode state) => state.index;
-
-  @override
-  ThemeMode deserialize(int? serialized) =>
-      ThemeMode.values[serialized ?? ThemeMode.system.index];
-}
+  ref.listen(
+      themeModeProvider,
+      (previousThemeMode, currentThemeMode) => currentThemeMode.whenData(
+          (themeMode) => preferences.setInt(_preferenceKey, themeMode.index)));
+}, name: 'themeModeRepository');

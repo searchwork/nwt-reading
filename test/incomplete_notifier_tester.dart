@@ -7,20 +7,16 @@ class Listener<T> extends mocktail.Mock {
 }
 
 class IncompleteNotifierTester<T> {
-  IncompleteNotifierTester(this.provider);
-
-  final AsyncNotifierProvider<IncompleteNotifier, T> provider;
-  final listener = Listener<AsyncValue<T>>();
-  ProviderContainer container = ProviderContainer();
-
-  void reset() {
-    mocktail.reset(listener);
-    container.dispose();
-    container = ProviderContainer();
+  IncompleteNotifierTester(this.provider, {overrides = const []}) {
+    container = ProviderContainer(overrides: overrides);
     container.listen(
       provider,
       listener,
       fireImmediately: true,
     );
   }
+
+  final AsyncNotifierProvider<IncompleteNotifier, T> provider;
+  final listener = Listener<AsyncValue<T>>();
+  ProviderContainer container = ProviderContainer();
 }

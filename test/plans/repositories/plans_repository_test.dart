@@ -2,6 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,15 +10,27 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../incomplete_notifier_tester.dart';
 import '../../test_plans.dart';
 
+Future<IncompleteNotifierTester<Plans>> getTester(
+    [Map<String, Object> preferences = const {}]) async {
+  SharedPreferences.setMockInitialValues(preferences);
+  final sharedPreferences = await SharedPreferences.getInstance();
+
+  final tester = IncompleteNotifierTester<Plans>(plansNotifier, overrides: [
+    sharedPreferencesRepository.overrideWith((ref) => sharedPreferences),
+  ]);
+  addTearDown(tester.container.dispose);
+
+  return tester;
+}
+
 void main() async {
+  TestWidgetsFlutterBinding.ensureInitialized();
   const asyncLoadingValue = AsyncLoading<Plans>();
   final emptyPlans = Plans(const []);
-  final tester = IncompleteNotifierTester<Plans>(plansNotifier);
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
+    final tester = await getTester();
 
     verify(
       () => tester.listener(null, asyncLoadingValue),
@@ -26,9 +39,7 @@ void main() async {
   });
 
   test('Defaults to the empty entity', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
-    SharedPreferences.setMockInitialValues({});
+    final tester = await getTester();
     tester.container.read(plansRepository);
     final result = await tester.container.read(plansNotifier.future);
 
@@ -41,9 +52,7 @@ void main() async {
   });
 
   test('Resolves to Shared Preferences', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
-    SharedPreferences.setMockInitialValues(testPlansPreferences);
+    final tester = await getTester(testPlansPreferences);
     tester.container.read(plansRepository);
     final result = await tester.container.read(plansNotifier.future);
 
@@ -56,9 +65,7 @@ void main() async {
   });
 
   test('Resolves to updated value', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
-    SharedPreferences.setMockInitialValues({});
+    final tester = await getTester();
     tester.container.read(plansRepository);
     List<Plans> results = [await tester.container.read(plansNotifier.future)];
     for (var plan in testPlans.plans) {
@@ -81,15 +88,14 @@ void main() async {
   });
 
   test('Shared Preferences are set to updated value', () async {
-    SharedPreferences.setMockInitialValues({});
-    final sharedPreferences = await SharedPreferences.getInstance();
-    final container = ProviderContainer();
-    container.read(plansRepository);
+    final tester = await getTester();
+    tester.container.read(plansRepository);
     for (var plan in testPlans.plans) {
-      await container.read(plansNotifier.notifier).addPlan(plan);
+      await tester.container.read(plansNotifier.notifier).addPlan(plan);
     }
-    final actualPlansSerialized =
-        sharedPreferences.getStringList(plansPreferenceKey);
+    final actualPlansSerialized = tester.container
+        .read(sharedPreferencesRepository)
+        .getStringList(plansPreferenceKey);
 
     expect(actualPlansSerialized, testPlansSerialized);
   });
