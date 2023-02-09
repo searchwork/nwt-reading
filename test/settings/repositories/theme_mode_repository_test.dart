@@ -2,20 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
 import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../incomplete_notifier_tester.dart';
 
-const preferenceKey = 'themeMode';
-const asyncLoadingValue = AsyncLoading<ThemeMode>();
-final tester = IncompleteNotifierTester<ThemeMode>(themeModeProvider);
+Future<IncompleteNotifierTester<ThemeMode>> getTester(
+    [Map<String, Object> preferences = const {}]) async {
+  SharedPreferences.setMockInitialValues(preferences);
+  final sharedPreferences = await SharedPreferences.getInstance();
+
+  final tester =
+      IncompleteNotifierTester<ThemeMode>(themeModeProvider, overrides: [
+    sharedPreferencesRepository.overrideWith((ref) => sharedPreferences),
+  ]);
+  addTearDown(tester.container.dispose);
+
+  return tester;
+}
 
 void main() async {
+  const preferenceKey = 'themeMode';
+  const asyncLoadingValue = AsyncLoading<ThemeMode>();
+
   test('Stays on AsyncLoading before init', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
+    final tester = await getTester();
 
     verify(
       () => tester.listener(null, asyncLoadingValue),
@@ -24,71 +37,70 @@ void main() async {
   });
 
   test('Defaults to ThemeMode.system', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
-    SharedPreferences.setMockInitialValues({});
+    final tester = await getTester();
     tester.container.read(themeModeRepository);
-    await tester.container.read(themeModeProvider.future);
-    const data = AsyncData<ThemeMode>(ThemeMode.system);
+    final result = await tester.container.read(themeModeProvider.future);
 
+    expect(result, ThemeMode.system);
     verifyInOrder([
       () => tester.listener(null, asyncLoadingValue),
-      () => tester.listener(asyncLoadingValue, data),
+      () => tester.listener(asyncLoadingValue, AsyncData<ThemeMode>(result)),
     ]);
     verifyNoMoreInteractions(tester.listener);
   });
 
   test('Resolves to Shared Preferences', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
-    SharedPreferences.setMockInitialValues(
-        {preferenceKey: ThemeMode.dark.index});
+    final tester = await getTester({preferenceKey: ThemeMode.dark.index});
     const data = AsyncData<ThemeMode>(ThemeMode.dark);
     tester.container.read(themeModeRepository);
-    await tester.container.read(themeModeProvider.future);
+    final result = await tester.container.read(themeModeProvider.future);
 
+    expect(result, ThemeMode.dark);
     verifyInOrder([
       () => tester.listener(null, asyncLoadingValue),
-      () => tester.listener(asyncLoadingValue, data),
+      () => tester.listener(asyncLoadingValue, AsyncData<ThemeMode>(result)),
     ]);
     verifyNoMoreInteractions(tester.listener);
   });
 
   test('Resolves to updated value', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
-    SharedPreferences.setMockInitialValues({});
+    final tester = await getTester();
     tester.container.read(themeModeRepository);
+    List<ThemeMode> results = [
+      await tester.container.read(themeModeProvider.future)
+    ];
     for (var themeMode in ThemeMode.values) {
-      await tester.container
+      tester.container
           .read(themeModeProvider.notifier)
           .updateThemeMode(themeMode);
+      results.add(await tester.container.read(themeModeProvider.future));
     }
 
+    expect(results, [ThemeMode.system, ...ThemeMode.values]);
     verifyInOrder([
       () => tester.listener(null, asyncLoadingValue),
+      () =>
+          tester.listener(asyncLoadingValue, AsyncData<ThemeMode>(results[0])),
       () => tester.listener(
-          asyncLoadingValue, AsyncData<ThemeMode>(ThemeMode.values[0])),
-      () => tester.listener(AsyncData<ThemeMode>(ThemeMode.values[0]),
-          AsyncData<ThemeMode>(ThemeMode.values[0])),
-      () => tester.listener(AsyncData<ThemeMode>(ThemeMode.values[0]),
-          AsyncData<ThemeMode>(ThemeMode.values[1])),
-      () => tester.listener(AsyncData<ThemeMode>(ThemeMode.values[1]),
-          AsyncData<ThemeMode>(ThemeMode.values[2])),
+          AsyncData<ThemeMode>(results[0]), AsyncData<ThemeMode>(results[1])),
+      () => tester.listener(
+          AsyncData<ThemeMode>(results[1]), AsyncData<ThemeMode>(results[2])),
+      () => tester.listener(
+          AsyncData<ThemeMode>(results[2]), AsyncData<ThemeMode>(results[3])),
     ]);
     verifyNoMoreInteractions(tester.listener);
   });
 
   test('Shared Preferences are set to updated value', () async {
-    SharedPreferences.setMockInitialValues({});
-    final sharedPreferences = await SharedPreferences.getInstance();
-    final container = ProviderContainer();
-    container.read(themeModeRepository);
+    final tester = await getTester();
+    tester.container.read(themeModeRepository);
     for (var themeMode in ThemeMode.values) {
-      await container
+      tester.container
           .read(themeModeProvider.notifier)
           .updateThemeMode(themeMode);
-      final actualThemeIndex = sharedPreferences.getInt(preferenceKey);
+      final actualThemeIndex = tester.container
+          .read(sharedPreferencesRepository)
+          .getInt(preferenceKey);
 
       expect(ThemeMode.values[actualThemeIndex!], themeMode);
     }

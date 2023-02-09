@@ -7,7 +7,6 @@ final themeModeProvider = AsyncNotifierProvider<ThemeModeNotifier, ThemeMode>(
     name: 'themeMode');
 
 class ThemeModeNotifier extends IncompleteNotifier<ThemeMode> {
-  Future<void> updateThemeMode(ThemeMode themeMode) async {
-    await update((previousThemeMode) => themeMode);
-  }
+  void updateThemeMode(ThemeMode themeMode) =>
+      state = AsyncValue<ThemeMode>.data(themeMode);
 }

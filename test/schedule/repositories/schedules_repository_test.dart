@@ -2,10 +2,26 @@ import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
 import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 import 'package:nwt_reading/src/schedule/repositories/schedules_repository.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../incomplete_notifier_tester.dart';
+
+Future<IncompleteNotifierTester<Schedules>> getTester(
+    [Map<String, Object> preferences = const {}]) async {
+  SharedPreferences.setMockInitialValues(preferences);
+  final sharedPreferences = await SharedPreferences.getInstance();
+
+  final tester =
+      IncompleteNotifierTester<Schedules>(schedulesNotifier, overrides: [
+    sharedPreferencesRepository.overrideWith((ref) => sharedPreferences),
+  ]);
+  addTearDown(tester.container.dispose);
+
+  return tester;
+}
 
 void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -22,12 +38,10 @@ void main() async {
         events: [],
         locations: ['Gehenna (Hinnom)'])
   ];
-  final tester = IncompleteNotifierTester<Schedules>(schedulesNotifier);
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
+    final tester = await getTester();
 
     verify(
       () => tester.listener(null, asyncLoadingValue),
@@ -36,8 +50,7 @@ void main() async {
   });
 
   test('Resolves to the asset', () async {
-    tester.reset();
-    addTearDown(tester.container.dispose);
+    final tester = await getTester();
     tester.container.read(schedulesRepository);
     final result = await tester.container.read(schedulesNotifier.future);
 

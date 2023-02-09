@@ -13,7 +13,7 @@ class App extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final themeMode = ref.watch(themeModeProvider).value ?? ThemeMode.system;
+    final themeMode = ref.watch(themeModeProvider).valueOrNull;
 
     return MaterialApp(
         restorationScopeId: 'app',
