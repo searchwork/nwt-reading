@@ -1,5 +1,9 @@
 {
   "appTitle": "NWT Reading",
+  "planEditPageTitle": "Editiere Plan",
+  "@planEditPageTitle": {
+    "description": "Der Titel der editiere Plan Seite"
+  },
   "plansPageTitle": "Biblelese-Pläne",
   "noPlanYet": "Noch kein Bibelleseplan da. Füge einen hinzu.",
   "addPlanTooltip": "Hinzufügen"

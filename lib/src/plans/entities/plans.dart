@@ -8,11 +8,23 @@ import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 import 'package:uuid/uuid.dart';
 
+const _uuid = Uuid();
+
 final plansNotifier = AsyncNotifierProvider<PlansNotifier, Plans>(
     PlansNotifier.new,
     name: "plans");
 
 class PlansNotifier extends IncompleteNotifier<Plans> {
+  bool existPlan(String planId) => state.when(
+        data: (plans) =>
+            plans.plans.indexWhere(
+              (plan) => plan.id == planId,
+            ) >=
+            0,
+        error: (error, stackTrace) => false,
+        loading: () => false,
+      );
+
   Future<void> newPlan() async {
     await update((plans) {
       final scheduleKey = ScheduleKey(
@@ -21,7 +33,7 @@ class PlansNotifier extends IncompleteNotifier<Plans> {
           version: '1.0');
       const bookmark = Bookmark(dayIndex: 0, sectionIndex: -1);
       final plan = Plan(
-          id: const Uuid().v4(),
+          id: _uuid.v4(),
           name: toBeginningOfSentenceCase(scheduleKey.type.name)!,
           scheduleKey: scheduleKey,
           language: 'en',
@@ -43,9 +55,9 @@ class PlansNotifier extends IncompleteNotifier<Plans> {
         Plans(plans.plans.where((plan) => plan.id != planId).toList()));
   }
 
-  Future<void> updatePlan({required String planId, required Plan plan}) async {
+  Future<void> updatePlan(Plan plan) async {
     await update((plans) =>
-        Plans(plans.plans.map((p) => p.id == planId ? plan : p).toList()));
+        Plans(plans.plans.map((p) => p.id == plan.id ? plan : p).toList()));
   }
 }
 

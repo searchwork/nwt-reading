@@ -3,6 +3,10 @@
   "@appTitle": {
     "description": "The title of the application"
   },
+  "planEditPageTitle": "Edit Plan",
+  "@planEditPageTitle": {
+    "description": "The title of the edit plan page"
+  },
   "plansPageTitle": "Bible Reading Plans",
   "@plansPageTitle": {
     "description": "The title of the plans page"

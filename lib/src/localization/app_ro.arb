@@ -1,5 +1,9 @@
 {
   "appTitle": "NWT Reading",
+  "planEditPageTitle": "Editează planul",
+  "@planEditPageTitle": {
+    "description": "Titlul paginii editează planul"
+  },
   "plansPageTitle": "Planuri de citire a Bibliei",
   "noPlanYet": "Încă nu ai adăugat nici un plan. Încearcă.",
   "addPlanTooltip": "Adaugă"
