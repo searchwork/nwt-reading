@@ -12,7 +12,7 @@ class PlansPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final plans = ref.watch(plansNotifierProvider);
+    final plans = ref.watch(plansNotifier);
 
     return Scaffold(
         appBar: AppBar(
@@ -47,7 +47,7 @@ class PlansPage extends ConsumerWidget {
                 )),
         floatingActionButton: FloatingActionButton(
           tooltip: AppLocalizations.of(context)!.addPlanTooltip,
-          onPressed: () => ref.read(plansNotifierProvider.notifier).newPlan(),
+          onPressed: () => ref.read(plansNotifier.notifier).newPlan(),
           child: const Icon(Icons.add),
         ));
   }

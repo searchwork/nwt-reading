@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repositories.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 
-final themeModeRepositoryProvider = Provider<ThemeModeRepository>(
+final themeModeRepository = Provider<ThemeModeRepository>(
     (ref) => ThemeModeRepository(ref),
     name: 'themeModeRepository');
 

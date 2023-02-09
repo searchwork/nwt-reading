@@ -28,12 +28,12 @@ void main() async {
 
     expect(
         deepCollectionEquals(
-            container.read(plansNotifierProvider).valueOrNull?.plans, <Plan>[]),
+            container.read(plansNotifier).valueOrNull?.plans, <Plan>[]),
         true);
-    expect(container.read(locationsProvider).valueOrNull, isA<Locations>());
-    expect(container.read(eventsProvider).valueOrNull, isA<Events>());
-    expect(container.read(schedulesProvider).valueOrNull, isA<Schedules>());
-    expect(container.read(bibleLanguagesProvider).valueOrNull,
+    expect(container.read(locationsNotifier).valueOrNull, isA<Locations>());
+    expect(container.read(eventsNotifier).valueOrNull, isA<Events>());
+    expect(container.read(schedulesNotifier).valueOrNull, isA<Schedules>());
+    expect(container.read(bibleLanguagesNotifier).valueOrNull,
         isA<BibleLanguages>());
     expect(container.read(themeModeProvider).valueOrNull, ThemeMode.system);
   });
@@ -52,14 +52,14 @@ void main() async {
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
 
-    expect(container.read(plansNotifierProvider).valueOrNull?.plans.length, 1);
+    expect(container.read(plansNotifier).valueOrNull?.plans.length, 1);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
     expect(find.byType(PlanCard), findsOneWidget);
 
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
 
-    expect(container.read(plansNotifierProvider).valueOrNull?.plans.length, 2);
+    expect(container.read(plansNotifier).valueOrNull?.plans.length, 2);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
     expect(find.byType(PlanCard), findsNWidgets(2));
   });
@@ -95,7 +95,7 @@ void main() async {
 
     expect(
         container
-            .read(plansNotifierProvider)
+            .read(plansNotifier)
             .valueOrNull
             ?.plans
             .first
@@ -114,7 +114,7 @@ void main() async {
 
     await tester.scrollUntilVisible(
       find.byKey(Key(
-          'plan-${container.read(plansNotifierProvider).valueOrNull?.plans.last.id}')),
+          'plan-${container.read(plansNotifier).valueOrNull?.plans.last.id}')),
       500.0,
     );
 
@@ -143,13 +143,7 @@ void main() async {
     await tester.pumpAndSettle();
 
     expect(
-        container
-            .read(plansNotifierProvider)
-            .valueOrNull
-            ?.plans
-            .last
-            .bookmark
-            .dayIndex,
+        container.read(plansNotifier).valueOrNull?.plans.last.bookmark.dayIndex,
         10);
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
   });
@@ -164,7 +158,7 @@ void main() async {
     await tester.tap(find.byIcon(Icons.delete));
     await tester.pumpAndSettle();
 
-    expect(container.read(plansNotifierProvider).valueOrNull?.plans.length, 2);
+    expect(container.read(plansNotifier).valueOrNull?.plans.length, 2);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
     expect(find.byType(PlanCard), findsNWidgets(2));
   });

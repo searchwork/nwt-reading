@@ -32,7 +32,7 @@ class SchedulePage extends ConsumerWidget {
             IconButton(
               icon: const Icon(Icons.delete),
               onPressed: () =>
-                  ref.read(plansNotifierProvider.notifier).removePlan(planId),
+                  ref.read(plansNotifier.notifier).removePlan(planId),
             ),
           ],
         ),

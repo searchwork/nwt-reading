@@ -27,7 +27,7 @@ void main() async {
     tester.reset();
     addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues({});
-    tester.container.read(themeModeRepositoryProvider);
+    tester.container.read(themeModeRepository);
     await tester.container.read(themeModeProvider.future);
     const data = AsyncData<ThemeMode>(ThemeMode.system);
 
@@ -44,7 +44,7 @@ void main() async {
     SharedPreferences.setMockInitialValues(
         {preferenceKey: ThemeMode.dark.index});
     const data = AsyncData<ThemeMode>(ThemeMode.dark);
-    tester.container.read(themeModeRepositoryProvider);
+    tester.container.read(themeModeRepository);
     await tester.container.read(themeModeProvider.future);
 
     verifyInOrder([
@@ -58,7 +58,7 @@ void main() async {
     tester.reset();
     addTearDown(tester.container.dispose);
     SharedPreferences.setMockInitialValues({});
-    tester.container.read(themeModeRepositoryProvider);
+    tester.container.read(themeModeRepository);
     for (var themeMode in ThemeMode.values) {
       await tester.container
           .read(themeModeProvider.notifier)
@@ -83,7 +83,7 @@ void main() async {
     SharedPreferences.setMockInitialValues({});
     final sharedPreferences = await SharedPreferences.getInstance();
     final container = ProviderContainer();
-    container.read(themeModeRepositoryProvider);
+    container.read(themeModeRepository);
     for (var themeMode in ThemeMode.values) {
       await container
           .read(themeModeProvider.notifier)

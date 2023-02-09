@@ -61,9 +61,9 @@ class SectionWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final events = ref.watch(eventsProvider).valueOrNull;
-    final locations = ref.watch(locationsProvider).valueOrNull;
-    final bibleLanguage = ref.watch(bibleLanguagesProvider.select(
+    final events = ref.watch(eventsNotifier).valueOrNull;
+    final locations = ref.watch(locationsNotifier).valueOrNull;
+    final bibleLanguage = ref.watch(bibleLanguagesNotifier.select(
         (bibleLanguages) => bibleLanguages.valueOrNull
             ?.bibleLanguages[Localizations.localeOf(context).languageCode]));
     final planProvider = ref.read(planFamilyProvider(planId)).valueOrNull;

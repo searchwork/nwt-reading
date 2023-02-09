@@ -6,8 +6,8 @@ import 'package:nwt_reading/src/schedule/entities/schedules.dart';
 
 final planFamilyProvider =
     FutureProvider.family<PlanFamily?, String>((ref, planId) async {
-  ref.watch(plansNotifierProvider);
-  final plans = await ref.watch(plansNotifierProvider.notifier).future;
+  ref.watch(plansNotifier);
+  final plans = await ref.watch(plansNotifier.notifier).future;
   final planList = plans.plans.where((plan) => plan.id == planId);
 
   return planList.isEmpty ? null : PlanFamily(ref, plan: planList.first);
@@ -20,7 +20,7 @@ class PlanFamily {
   final Plan plan;
 
   Schedule? get schedule {
-    final schedules = ref.read(schedulesProvider).valueOrNull;
+    final schedules = ref.read(schedulesNotifier).valueOrNull;
 
     return schedules?.schedules[plan.scheduleKey];
   }
@@ -51,7 +51,7 @@ class PlanFamily {
     final updatedPlan = plan.copyWith(
         bookmark: Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex));
     ref
-        .read(plansNotifierProvider.notifier)
+        .read(plansNotifier.notifier)
         .updatePlan(planId: plan.id, plan: updatedPlan);
   }
 

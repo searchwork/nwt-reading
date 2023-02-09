@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
-final schedulesProvider =
+final schedulesNotifier =
     AsyncNotifierProvider<IncompleteNotifier<Schedules>, Schedules>(
         IncompleteNotifier.new,
         name: 'schedules');

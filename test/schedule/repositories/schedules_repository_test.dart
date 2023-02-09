@@ -22,7 +22,7 @@ void main() async {
         events: [],
         locations: ['Gehenna (Hinnom)'])
   ];
-  final tester = IncompleteNotifierTester<Schedules>(schedulesProvider);
+  final tester = IncompleteNotifierTester<Schedules>(schedulesNotifier);
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
@@ -38,8 +38,8 @@ void main() async {
   test('Resolves to the asset', () async {
     tester.reset();
     addTearDown(tester.container.dispose);
-    tester.container.read(schedulesRepositoryProvider);
-    final result = await tester.container.read(schedulesProvider.future);
+    tester.container.read(schedulesRepository);
+    final result = await tester.container.read(schedulesNotifier.future);
 
     expect(result.schedules.length, greaterThanOrEqualTo(3));
     expect(
