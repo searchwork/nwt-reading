@@ -10,12 +10,12 @@ final schedulesRepository = Provider<SchedulesRepository>(
 
 class SchedulesRepository {
   SchedulesRepository(this.ref) {
-    _init();
+    _setSchedulesFromJsonFiles();
   }
 
   final Ref ref;
 
-  void _init() async {
+  void _setSchedulesFromJsonFiles() async {
     final schedules = await _getSchedulesFromJsonFiles();
     ref.read(schedulesNotifier.notifier).init(schedules);
   }

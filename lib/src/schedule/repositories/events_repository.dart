@@ -9,14 +9,10 @@ final eventsRepository = Provider<EventsRepository>(
 
 class EventsRepository {
   EventsRepository(this.ref) {
-    _init();
+    _setEventsFromJsonFiles();
   }
 
   final Ref ref;
-
-  void _init() async {
-    _setEventsFromJsonFiles();
-  }
 
   void _setEventsFromJsonFiles() async {
     final json = await rootBundle.loadString('assets/repositories/events.json');
