@@ -9,14 +9,10 @@ final bibleLanguagesRepository = Provider<BibleLanguagesRepository>(
 
 class BibleLanguagesRepository {
   BibleLanguagesRepository(this.ref) {
-    _init();
+    _setBibleLanguagesFromJsonFiles();
   }
 
   final Ref ref;
-
-  void _init() async {
-    _setBibleLanguagesFromJsonFiles();
-  }
 
   void _setBibleLanguagesFromJsonFiles() async {
     final json =

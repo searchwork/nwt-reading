@@ -9,14 +9,10 @@ final locationsRepository = Provider<LocationsRepository>(
 
 class LocationsRepository {
   LocationsRepository(this.ref) {
-    _init();
+    _setLocationsFromJsonFiles();
   }
 
   final Ref ref;
-
-  void _init() async {
-    _setLocationsFromJsonFiles();
-  }
 
   void _setLocationsFromJsonFiles() async {
     final json =
