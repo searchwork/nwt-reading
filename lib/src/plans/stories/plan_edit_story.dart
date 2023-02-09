@@ -65,10 +65,10 @@ class PlanEdit extends FamilyNotifier<Plan, String?> {
   void reset() => state = build(state.id);
 
   void save() {
-    final _plansNotifier = ref.read(plansNotifier.notifier);
-    _plansNotifier.existPlan(state.id)
-        ? _plansNotifier.updatePlan(state)
-        : _plansNotifier.addPlan(state);
+    final notifier = ref.read(plansNotifier.notifier);
+    notifier.existPlan(state.id)
+        ? notifier.updatePlan(state)
+        : notifier.addPlan(state);
   }
 
   // void delete() => {};

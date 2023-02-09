@@ -40,7 +40,7 @@ void main() async {
   });
 
   testWidgets('No plans', (tester) async {
-    final providerContainer = await SettledTester(tester).providerContainer;
+    await SettledTester(tester).providerContainer;
 
     expect(find.byKey(const Key('no-plan-yet')), findsOneWidget);
     expect(find.byType(PlanCard), findsNothing);
