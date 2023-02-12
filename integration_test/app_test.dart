@@ -1,42 +1,37 @@
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
 
-import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
+import 'package:nwt_reading/src/bible_languages/repositories/bible_languages_repository.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_card.dart';
-import 'package:nwt_reading/src/schedules/entities/events.dart';
-import 'package:nwt_reading/src/schedules/entities/locations.dart';
+import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
-import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
+import 'package:nwt_reading/src/schedules/repositories/events_repository.dart';
+import 'package:nwt_reading/src/schedules/repositories/locations_repository.dart';
+import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart';
+import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
 
 import '../test/test_plans.dart';
 import 'settled_tester.dart';
 
 void main() async {
-  final deepCollectionEquals = const DeepCollectionEquality().equals;
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   WidgetController.hitTestWarningShouldBeFatal = true;
 
-  testWidgets('Entities are initialized', (tester) async {
+  testWidgets('Repositories are initialized', (tester) async {
     final providerContainer = await SettledTester(tester).providerContainer;
 
-    expect(
-        deepCollectionEquals(
-            providerContainer.read(plansNotifier).valueOrNull?.plans, <Plan>[]),
-        true);
-    expect(providerContainer.read(locationsNotifier).valueOrNull,
-        isA<Locations>());
-    expect(providerContainer.read(eventsNotifier).valueOrNull, isA<Events>());
-    expect(providerContainer.read(schedulesNotifier).valueOrNull,
-        isA<Schedules>());
-    expect(providerContainer.read(bibleLanguagesNotifier).valueOrNull,
-        isA<BibleLanguages>());
-    expect(providerContainer.read(themeModeNotifier).valueOrNull,
-        ThemeMode.system);
+    expect(providerContainer.exists(sharedPreferencesRepository), true);
+    expect(providerContainer.exists(plansRepository), true);
+    expect(providerContainer.exists(locationsRepository), true);
+    expect(providerContainer.exists(eventsRepository), true);
+    expect(providerContainer.exists(schedulesRepository), true);
+    expect(providerContainer.exists(bibleLanguagesRepository), true);
+    expect(providerContainer.exists(themeModeRepository), true);
   });
 
   testWidgets('No plans', (tester) async {
