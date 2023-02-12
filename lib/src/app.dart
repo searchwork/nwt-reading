@@ -16,6 +16,7 @@ class App extends ConsumerWidget {
     final themeMode = ref.watch(themeModeProvider).valueOrNull;
 
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         restorationScopeId: 'app',
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
