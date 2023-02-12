@@ -15,11 +15,12 @@ import 'package:nwt_reading/src/schedules/repositories/locations_repository.dart
 import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart';
 import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
 
-import '../test/test_plans.dart';
+import 'take_screenshot.dart';
+import 'test_plans.dart';
 import 'settled_tester.dart';
 
 void main() async {
-  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   WidgetController.hitTestWarningShouldBeFatal = true;
 
   testWidgets('Repositories are initialized', (tester) async {
@@ -62,6 +63,7 @@ void main() async {
     final providerContainer =
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
             .providerContainer;
+    await takeScreenshot(tester: tester, binding: binding, filename: 'plans');
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
 
@@ -75,6 +77,8 @@ void main() async {
       500.0,
     );
     await tester.pumpAndSettle();
+    await takeScreenshot(
+        tester: tester, binding: binding, filename: 'schedule');
 
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
     expect(find.byIcon(Icons.check_circle), findsNothing);
@@ -159,6 +163,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await takeScreenshot(tester: tester, binding: binding, filename: 'edit');
     await tester.tap(find.byIcon(Icons.hourglass_empty));
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.done));
