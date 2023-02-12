@@ -14,7 +14,7 @@ class SchedulePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final plan = ref.watch(planFamilyEdit(planId));
+    final plan = ref.watch(planEditFamilyNotifier(planId));
     final scheduleProvider =
         ref.watch(scheduleFamily(plan.scheduleKey)).valueOrNull;
     final progress = scheduleProvider?.getProgress(plan.bookmark);

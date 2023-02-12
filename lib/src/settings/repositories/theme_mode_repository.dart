@@ -10,11 +10,11 @@ final themeModeRepository = Provider<void>((ref) {
   final themeModeSerialized =
       preferences.getInt(_preferenceKey) ?? ThemeMode.system.index;
   ref
-      .read(themeModeProvider.notifier)
+      .read(themeModeNotifier.notifier)
       .init(ThemeMode.values[themeModeSerialized]);
 
   ref.listen(
-      themeModeProvider,
+      themeModeNotifier,
       (previousThemeMode, currentThemeMode) => currentThemeMode.whenData(
           (themeMode) => preferences.setInt(_preferenceKey, themeMode.index)));
 }, name: 'themeModeRepository');

@@ -7,8 +7,9 @@ import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-final planFamilyEdit =
-    NotifierProvider.family<PlanEdit, Plan, String?>(PlanEdit.new);
+final planEditFamilyNotifier = NotifierProvider.family<PlanEdit, Plan, String?>(
+    PlanEdit.new,
+    name: 'planEdit');
 
 class PlanEdit extends FamilyNotifier<Plan, String?> {
   @override
