@@ -15,7 +15,7 @@ Future<IncompleteNotifierTester<ThemeMode>> getTester(
   final sharedPreferences = await SharedPreferences.getInstance();
 
   final tester =
-      IncompleteNotifierTester<ThemeMode>(themeModeProvider, overrides: [
+      IncompleteNotifierTester<ThemeMode>(themeModeNotifier, overrides: [
     sharedPreferencesRepository.overrideWith((ref) => sharedPreferences),
   ]);
   addTearDown(tester.container.dispose);
@@ -39,7 +39,7 @@ void main() async {
   test('Defaults to ThemeMode.system', () async {
     final tester = await getTester();
     tester.container.read(themeModeRepository);
-    final result = await tester.container.read(themeModeProvider.future);
+    final result = await tester.container.read(themeModeNotifier.future);
 
     expect(result, ThemeMode.system);
     verifyInOrder([
@@ -52,7 +52,7 @@ void main() async {
   test('Resolves to Shared Preferences', () async {
     final tester = await getTester({preferenceKey: ThemeMode.dark.index});
     tester.container.read(themeModeRepository);
-    final result = await tester.container.read(themeModeProvider.future);
+    final result = await tester.container.read(themeModeNotifier.future);
 
     expect(result, ThemeMode.dark);
     verifyInOrder([
@@ -66,13 +66,13 @@ void main() async {
     final tester = await getTester();
     tester.container.read(themeModeRepository);
     List<ThemeMode> results = [
-      await tester.container.read(themeModeProvider.future)
+      await tester.container.read(themeModeNotifier.future)
     ];
     for (var themeMode in ThemeMode.values) {
       tester.container
-          .read(themeModeProvider.notifier)
+          .read(themeModeNotifier.notifier)
           .updateThemeMode(themeMode);
-      results.add(await tester.container.read(themeModeProvider.future));
+      results.add(await tester.container.read(themeModeNotifier.future));
     }
 
     expect(results, [ThemeMode.system, ...ThemeMode.values]);
@@ -95,7 +95,7 @@ void main() async {
     tester.container.read(themeModeRepository);
     for (var themeMode in ThemeMode.values) {
       tester.container
-          .read(themeModeProvider.notifier)
+          .read(themeModeNotifier.notifier)
           .updateThemeMode(themeMode);
       final actualThemeIndex = tester.container
           .read(sharedPreferencesRepository)

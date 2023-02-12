@@ -35,7 +35,7 @@ void main() async {
         isA<Schedules>());
     expect(providerContainer.read(bibleLanguagesNotifier).valueOrNull,
         isA<BibleLanguages>());
-    expect(providerContainer.read(themeModeProvider).valueOrNull,
+    expect(providerContainer.read(themeModeNotifier).valueOrNull,
         ThemeMode.system);
   });
 

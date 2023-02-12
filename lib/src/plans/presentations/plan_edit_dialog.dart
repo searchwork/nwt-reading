@@ -11,7 +11,7 @@ class PlanEditDialog extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final planEdit = ref.watch(planFamilyEdit(planId).notifier);
+    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
 
     return Dialog.fullscreen(
       child: Column(
@@ -55,8 +55,8 @@ class PlanTypeSegmentedButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planFamilyEdit(planId));
-    final planEdit = ref.watch(planFamilyEdit(planId).notifier);
+    final plan = ref.watch(planEditFamilyNotifier(planId));
+    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
 
     return SegmentedButton<ScheduleType>(
       segments: const <ButtonSegment<ScheduleType>>[

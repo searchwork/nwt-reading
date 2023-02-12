@@ -27,8 +27,8 @@ class SectionWidget extends ConsumerWidget {
     final bibleLanguage = ref.watch(bibleLanguagesNotifier.select(
         (bibleLanguages) => bibleLanguages.valueOrNull
             ?.bibleLanguages[Localizations.localeOf(context).languageCode]));
-    final plan = ref.watch(planFamilyEdit(planId));
-    final planEdit = ref.watch(planFamilyEdit(planId).notifier);
+    final plan = ref.watch(planEditFamilyNotifier(planId));
+    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
     final isRead = plan.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
 
     return Row(
