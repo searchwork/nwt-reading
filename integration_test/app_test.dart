@@ -10,6 +10,7 @@ import 'package:nwt_reading/src/bible_languages/repositories/bible_languages_rep
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_card.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
 import 'package:nwt_reading/src/schedules/entities/events.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
@@ -219,6 +220,37 @@ void main() async {
     plan = providerContainer.read(plansNotifier).valueOrNull?.plans.last;
     expect(plan?.scheduleKey.type, ScheduleType.sequential);
     expect(plan?.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
+  });
+
+  testWidgets('Change plan duration', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.scrollUntilVisible(
+      find.byKey(Key(
+          'plan-${providerContainer.read(plansNotifier).valueOrNull?.plans.last.id}')),
+      500.0,
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.byType(PlanCard).last);
+    await tester.pumpAndSettle();
+
+    for (var duration in ScheduleDuration.values) {
+      await tester.tap(find.byIcon(Icons.edit));
+      await tester.pumpAndSettle();
+      await tester.tap(find
+          .descendant(
+              of: find.byType(SegmentedButton<ScheduleDuration>),
+              matching: find.byType(Text))
+          .at(duration.index));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byIcon(Icons.done));
+      await tester.pumpAndSettle();
+
+      var plan = providerContainer.read(plansNotifier).valueOrNull?.plans.last;
+      expect(plan?.scheduleKey.duration, duration);
+      expect(plan?.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
+    }
   });
 
   testWidgets('Cancel edit plan', (tester) async {

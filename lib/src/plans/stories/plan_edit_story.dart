@@ -53,6 +53,15 @@ class PlanEdit extends FamilyNotifier<Plan, String?> {
     save();
   }
 
+  void updateScheduleDuration(ScheduleDuration scheduleDuration) {
+    if (scheduleDuration != state.scheduleKey.duration) {
+      state = state.copyWith(
+        scheduleKey: state.scheduleKey.copyWith(duration: scheduleDuration),
+        bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),
+      );
+    }
+  }
+
   void updateScheduleType(ScheduleType scheduleType) {
     if (scheduleType != state.scheduleKey.type) {
       state = state.copyWith(
@@ -72,6 +81,5 @@ class PlanEdit extends FamilyNotifier<Plan, String?> {
         : notifier.addPlan(state);
   }
 
-  // void delete() => {};
   void delete() => ref.read(plansNotifier.notifier).removePlan(state.id);
 }
