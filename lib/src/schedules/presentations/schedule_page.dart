@@ -21,10 +21,6 @@ class SchedulePage extends ConsumerWidget {
     final schedule = scheduleProvider?.schedule;
     final scheduleGrid =
         schedule == null ? [] : buildScheduleGrid(planId, schedule);
-    if (schedule == null) {
-      WidgetsBinding.instance
-          .addPostFrameCallback((_) => Navigator.pop(context));
-    }
 
     return Scaffold(
         appBar: AppBar(
