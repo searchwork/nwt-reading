@@ -56,7 +56,7 @@ final List<ScheduleKey> scheduleKeys = ScheduleType.values.fold(
     (scheduleKeys, type) =>
         scheduleKeys +
         [
-          for (var duration in [ScheduleDuration.y1])
+          for (var duration in ScheduleDuration.values)
             ScheduleKey(type: type, duration: duration, version: "1.0")
         ]);
 

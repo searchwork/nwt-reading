@@ -34,6 +34,7 @@ class PlanEditDialog extends ConsumerWidget {
                 })
           ]),
           PlanTypeSegmentedButton(planId),
+          PlanDurationSegmentedButton(planId),
           ElevatedButton.icon(
               onPressed: () {
                 planEdit.delete();
@@ -76,6 +77,37 @@ class PlanTypeSegmentedButton extends ConsumerWidget {
       selected: {plan.scheduleKey.type},
       onSelectionChanged: (Set<ScheduleType> newSelection) {
         planEdit.updateScheduleType(newSelection.single);
+      },
+    );
+  }
+}
+
+class PlanDurationSegmentedButton extends ConsumerWidget {
+  const PlanDurationSegmentedButton(this.planId, {super.key});
+
+  final String planId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final plan = ref.watch(planEditFamilyNotifier(planId));
+    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
+
+    return SegmentedButton<ScheduleDuration>(
+      segments: const <ButtonSegment<ScheduleDuration>>[
+        ButtonSegment<ScheduleDuration>(
+            value: ScheduleDuration.m3, label: Text('3 months')),
+        ButtonSegment<ScheduleDuration>(
+            value: ScheduleDuration.m6, label: Text('6 months')),
+        ButtonSegment<ScheduleDuration>(
+            value: ScheduleDuration.y1, label: Text('1 year')),
+        ButtonSegment<ScheduleDuration>(
+            value: ScheduleDuration.y2, label: Text('2 years')),
+        ButtonSegment<ScheduleDuration>(
+            value: ScheduleDuration.y4, label: Text('4 years')),
+      ],
+      selected: {plan.scheduleKey.duration},
+      onSelectionChanged: (Set<ScheduleDuration> newSelection) {
+        planEdit.updateScheduleDuration(newSelection.single);
       },
     );
   }
