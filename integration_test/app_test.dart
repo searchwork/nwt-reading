@@ -10,7 +10,6 @@ import 'package:nwt_reading/src/bible_languages/repositories/bible_languages_rep
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_card.dart';
-import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
 import 'package:nwt_reading/src/schedules/entities/events.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
