@@ -7,6 +7,7 @@ import 'package:nwt_reading/src/schedules/entities/locations.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:nwt_reading/src/schedules/presentations/event_widget.dart';
 import 'package:nwt_reading/src/schedules/presentations/locations_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SectionWidget extends ConsumerWidget {
   const SectionWidget(
@@ -47,8 +48,12 @@ class SectionWidget extends ConsumerWidget {
         Expanded(
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text("${bibleLanguage?.books[section.bookIndex].name} ${section.ref}",
-              style: const TextStyle(color: Color(0xff007bff))),
+          TextButton(
+              onPressed: () => _launchUrl(Uri.parse(
+                  'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${planEdit.plan.language}&prefer=lang&bible=${section.url}')),
+              child: Text(
+                  "${bibleLanguage?.books[section.bookIndex].name} ${section.ref}",
+                  style: const TextStyle(color: Color(0xff007bff)))),
           ...section.events
               .map((eventKey) => events?.events[eventKey] != null
                   ? EventWidget(events!.events[eventKey]!)
@@ -63,5 +68,11 @@ class SectionWidget extends ConsumerWidget {
         ])),
       ],
     );
+  }
+}
+
+Future<void> _launchUrl(Uri url) async {
+  if (!await launchUrl(url)) {
+    throw Exception('Could not launch $url');
   }
 }
