@@ -20,9 +20,9 @@ import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart
 import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 
-import '../test/test_plans.dart';
-import 'take_screenshot.dart';
 import 'settled_tester.dart';
+import 'take_screenshot.dart';
+import 'test_plans.dart';
 
 void main() async {
   final deepCollectionEquals = const DeepCollectionEquality().equals;
@@ -250,6 +250,47 @@ void main() async {
       expect(plan?.scheduleKey.duration, duration);
       expect(plan?.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
     }
+  });
+
+  testWidgets('Change plan language', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.scrollUntilVisible(
+      find.byKey(Key(
+          'plan-${providerContainer.read(plansNotifier).valueOrNull?.plans.last.id}')),
+      500.0,
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.byType(PlanCard).first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('language')));
+    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await tester.tap(find.byKey(const Key('language-es')).last);
+    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.close));
+    await tester.pumpAndSettle();
+
+    var plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
+    expect(plan?.language, 'en');
+
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('language')));
+    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await tester.tap(find.byKey(const Key('language-es')).last);
+    await tester.pumpAndSettle(const Duration(seconds: 1));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
+    expect(plan?.language, 'es');
   });
 
   testWidgets('Cancel edit plan', (tester) async {
