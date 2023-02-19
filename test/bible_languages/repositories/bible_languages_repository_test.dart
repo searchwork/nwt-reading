@@ -29,6 +29,7 @@ void main() async {
   const asyncLoadingValue = AsyncLoading<BibleLanguages>();
   const testBibleLanguage = BibleLanguage(
       name: 'English',
+      wtCode: 'E',
       urlPath: '/en/library/bible/study-bible/books/',
       books: [
         Book(name: 'Genesis', urlSegment: 'genesis'),
