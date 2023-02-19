@@ -53,6 +53,12 @@ class PlanEdit extends FamilyNotifier<Plan, String?> {
     save();
   }
 
+  void updateLanguage(String language) {
+    if (language != state.language) {
+      state = state.copyWith(language: language);
+    }
+  }
+
   void updateScheduleDuration(ScheduleDuration scheduleDuration) {
     if (scheduleDuration != state.scheduleKey.duration) {
       state = state.copyWith(

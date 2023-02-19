@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/plans/presentations/plans_page.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
@@ -35,6 +36,7 @@ class PlanEditDialog extends ConsumerWidget {
           ]),
           PlanTypeSegmentedButton(planId),
           PlanDurationSegmentedButton(planId),
+          PlanLanguageDropdownButton(planId),
           ElevatedButton.icon(
               onPressed: () {
                 planEdit.delete();
@@ -109,6 +111,39 @@ class PlanDurationSegmentedButton extends ConsumerWidget {
       onSelectionChanged: (Set<ScheduleDuration> newSelection) {
         planEdit.updateScheduleDuration(newSelection.single);
       },
+    );
+  }
+}
+
+class PlanLanguageDropdownButton extends ConsumerWidget {
+  const PlanLanguageDropdownButton(this.planId, {super.key});
+
+  final String planId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    ref.watch(planEditFamilyNotifier(planId));
+    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
+    final bibleLanguages = ref.watch(bibleLanguagesNotifier).valueOrNull;
+
+    return DropdownButton<String>(
+      key: const Key('language'),
+      value: bibleLanguages?.bibleLanguages[planEdit.plan.language] == null
+          ? 'en'
+          : planEdit.plan.language,
+      onChanged: (String? value) {
+        if (value != null) planEdit.updateLanguage(value);
+      },
+      items: bibleLanguages?.bibleLanguages.entries
+          .map((MapEntry<String, BibleLanguage> bibleLanguage) =>
+              DropdownMenuItem<String>(
+                value: bibleLanguage.key,
+                child: Text(
+                  bibleLanguage.value.name,
+                  key: Key('language-${bibleLanguage.key}'),
+                ),
+              ))
+          .toList(),
     );
   }
 }
