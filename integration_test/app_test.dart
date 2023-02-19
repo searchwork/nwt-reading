@@ -20,8 +20,8 @@ import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart
 import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 
+import '../test/test_plans.dart';
 import 'take_screenshot.dart';
-import 'test_plans.dart';
 import 'settled_tester.dart';
 
 void main() async {
