@@ -27,14 +27,18 @@ typedef BibleLanguageCode = String;
 @immutable
 class BibleLanguage extends Equatable {
   const BibleLanguage(
-      {required this.name, required this.urlPath, required this.books});
+      {required this.name,
+      required this.wtCode,
+      required this.urlPath,
+      required this.books});
 
   final String name;
+  final String wtCode;
   final String urlPath;
   final List<Book> books;
 
   @override
-  List<Object> get props => [name, urlPath, books];
+  List<Object> get props => [name, wtCode, urlPath, books];
 }
 
 @immutable

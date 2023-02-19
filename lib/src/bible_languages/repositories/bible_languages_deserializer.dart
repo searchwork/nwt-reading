@@ -15,11 +15,13 @@ class BibleLanguagesDeserializer {
   BibleLanguage _convertMapToBibleLanguage(
       Map<String, dynamic> bibleLanguageMap) {
     final name = bibleLanguageMap['name'] as String;
+    final wtCode = bibleLanguageMap['wtCode'] as String;
     final urlPath = bibleLanguageMap['urlPath'] as String;
     final books = List<Book>.from(
         bibleLanguageMap['books'].map((bookMap) => _convertMapToBook(bookMap)));
 
-    return BibleLanguage(name: name, urlPath: urlPath, books: books);
+    return BibleLanguage(
+        name: name, wtCode: wtCode, urlPath: urlPath, books: books);
   }
 
   Book _convertMapToBook(Map<String, dynamic> bookMap) {
