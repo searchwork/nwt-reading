@@ -36,7 +36,7 @@ class PlansNotifier extends IncompleteNotifier<Plans> {
           id: _uuid.v4(),
           name: toBeginningOfSentenceCase(scheduleKey.type.name)!,
           scheduleKey: scheduleKey,
-          language: 'E',
+          language: 'en',
           bookmark: bookmark,
           withEndDate: true,
           showEvents: true,
