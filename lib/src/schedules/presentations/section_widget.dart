@@ -25,12 +25,12 @@ class SectionWidget extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final events = ref.watch(eventsNotifier).valueOrNull;
     final locations = ref.watch(locationsNotifier).valueOrNull;
-    final bibleLanguage = ref.watch(bibleLanguagesNotifier.select(
-        (bibleLanguages) => bibleLanguages.valueOrNull
-            ?.bibleLanguages[Localizations.localeOf(context).languageCode]));
     final plan = ref.watch(planEditFamilyNotifier(planId));
     final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
     final isRead = plan.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
+    final bibleLanguage = ref.watch(bibleLanguagesNotifier.select(
+        (bibleLanguages) => bibleLanguages
+            .valueOrNull?.bibleLanguages[planEdit.plan.language]));
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
