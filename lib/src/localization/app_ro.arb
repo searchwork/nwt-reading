@@ -6,5 +6,6 @@
   },
   "plansPageTitle": "Planuri de citire a Bibliei",
   "noPlanYet": "Încă nu ai adăugat nici un plan. Încearcă.",
-  "addPlanTooltip": "Adaugă"
+  "addPlanTooltip": "Adaugă",
+  "goToBookmarkTooltip": "Sare la semnul de carte"
 }
