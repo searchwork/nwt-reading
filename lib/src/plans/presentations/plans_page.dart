@@ -15,41 +15,42 @@ class PlansPage extends ConsumerWidget {
     final plans = ref.watch(plansNotifier);
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text(AppLocalizations.of(context)!.plansPageTitle),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.settings),
-              onPressed: () {
-                Navigator.restorablePushNamed(context, SettingsPage.routeName);
-              },
-            ),
-          ],
-        ),
-        body: plans.when(
-            data: (plans) => plans.plans.isEmpty
-                ? Center(
-                    key: const Key('no-plan-yet'),
-                    child: Text(AppLocalizations.of(context)!.noPlanYet),
-                  )
-                : GridView.extent(
-                    childAspectRatio: 1.6,
-                    maxCrossAxisExtent: 600,
-                    padding: const EdgeInsets.all(20),
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20,
-                    restorationId: 'plansView',
-                    children: buildPlansGrid(plans),
-                  ),
-            error: (error, stack) => Text(error.toString()),
-            loading: () => const Center(
-                  child: CircularProgressIndicator(),
-                )),
-        floatingActionButton: FloatingActionButton(
-          tooltip: AppLocalizations.of(context)!.addPlanTooltip,
-          onPressed: () => ref.read(plansNotifier.notifier).newPlan(),
-          child: const Icon(Icons.add),
-        ));
+      appBar: AppBar(
+        title: Text(AppLocalizations.of(context)!.plansPageTitle),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              Navigator.restorablePushNamed(context, SettingsPage.routeName);
+            },
+          ),
+        ],
+      ),
+      body: plans.when(
+          data: (plans) => plans.plans.isEmpty
+              ? Center(
+                  key: const Key('no-plan-yet'),
+                  child: Text(AppLocalizations.of(context)!.noPlanYet),
+                )
+              : GridView.extent(
+                  childAspectRatio: 1.6,
+                  maxCrossAxisExtent: 600,
+                  padding: const EdgeInsets.all(20),
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                  restorationId: 'plansView',
+                  children: buildPlansGrid(plans),
+                ),
+          error: (error, stack) => Text(error.toString()),
+          loading: () => const Center(
+                child: CircularProgressIndicator(),
+              )),
+      floatingActionButton: FloatingActionButton(
+        tooltip: AppLocalizations.of(context)!.addPlanTooltip,
+        onPressed: () => ref.read(plansNotifier.notifier).newPlan(),
+        child: const Icon(Icons.add),
+      ),
+    );
   }
 
   List<PlanCard> buildPlansGrid(Plans plans) =>

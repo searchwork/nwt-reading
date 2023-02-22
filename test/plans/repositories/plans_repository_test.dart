@@ -73,7 +73,7 @@ void main() async {
       results.add(await tester.container.read(plansNotifier.future));
     }
 
-    expect(deepCollectionEquals(results[3].plans, testPlans.plans), true);
+    expect(deepCollectionEquals(results[4].plans, testPlans.plans), true);
     verifyInOrder([
       () => tester.listener(null, asyncLoadingValue),
       () => tester.listener(asyncLoadingValue, AsyncData<Plans>(results[0])),
@@ -83,6 +83,8 @@ void main() async {
           AsyncData<Plans>(results[1]), AsyncData<Plans>(results[2])),
       () => tester.listener(
           AsyncData<Plans>(results[2]), AsyncData<Plans>(results[3])),
+      () => tester.listener(
+          AsyncData<Plans>(results[3]), AsyncData<Plans>(results[4])),
     ]);
     verifyNoMoreInteractions(tester.listener);
   });

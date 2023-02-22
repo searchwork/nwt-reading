@@ -6,5 +6,6 @@
   },
   "plansPageTitle": "Biblelese-Pläne",
   "noPlanYet": "Noch kein Bibelleseplan da. Füge einen hinzu.",
-  "addPlanTooltip": "Hinzufügen"
+  "addPlanTooltip": "Hinzufügen",
+  "goToBookmarkTooltip": "Springe zum Lesezeichen"
 }

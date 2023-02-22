@@ -12,5 +12,6 @@
     "description": "The title of the plans page"
   },
   "noPlanYet": "No Bible reading plan yet. Try adding one.",
-  "addPlanTooltip": "Add"
+  "addPlanTooltip": "Add",
+  "goToBookmarkTooltip": "Jump to bookmark"
 }
