@@ -292,8 +292,6 @@ void main() async {
     expect(plan?.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
   });
 
-  ;
-
   testWidgets('Change plan language', (tester) async {
     final providerContainer =
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
