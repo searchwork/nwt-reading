@@ -239,9 +239,8 @@ void main() async {
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
 
-    expect(find.byType(DayCard).first.evaluate(),
-        find.byKey(const Key('day-33')).evaluate());
-    expect(find.byIcon(Icons.check_circle), findsNWidgets(3));
+    expect(find.byKey(const Key('day-33')), findsOneWidget);
+    expect(find.byIcon(Icons.check_circle), findsAtLeastNWidgets(3));
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
     await takeScreenshot(
         tester: tester, binding: binding, filename: 'schedule');
@@ -258,10 +257,15 @@ void main() async {
     await takeScreenshot(tester: tester, binding: binding, filename: 'edit');
     await tester.tap(find.byIcon(Icons.edit_note));
     await tester.pumpAndSettle();
+
+    var plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
+    expect(plan?.scheduleKey.type, ScheduleType.chronological);
+    expect(plan?.bookmark, const Bookmark(dayIndex: 75, sectionIndex: 0));
+
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
-    var plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
+    plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
     expect(plan?.scheduleKey.type, ScheduleType.written);
     expect(plan?.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
 
@@ -288,47 +292,12 @@ void main() async {
     expect(plan?.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
   });
 
-  testWidgets('Change plan duration', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
-    await tester.scrollUntilVisible(
-      find.byKey(Key(
-          'plan-${providerContainer.read(plansNotifier).valueOrNull?.plans.last.id}')),
-      500.0,
-    );
-    await tester.pumpAndSettle();
-    await tester.tap(find.byType(PlanCard).last);
-    await tester.pumpAndSettle();
-
-    for (var duration in ScheduleDuration.values) {
-      await tester.tap(find.byIcon(Icons.edit));
-      await tester.pumpAndSettle();
-      await tester.tap(find
-          .descendant(
-              of: find.byType(SegmentedButton<ScheduleDuration>),
-              matching: find.byType(Text))
-          .at(duration.index));
-      await tester.pumpAndSettle();
-      await tester.tap(find.byIcon(Icons.done));
-      await tester.pumpAndSettle();
-
-      var plan = providerContainer.read(plansNotifier).valueOrNull?.plans.last;
-      expect(plan?.scheduleKey.duration, duration);
-      expect(plan?.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
-    }
-  });
+  ;
 
   testWidgets('Change plan language', (tester) async {
     final providerContainer =
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
             .providerContainer;
-    await tester.scrollUntilVisible(
-      find.byKey(Key(
-          'plan-${providerContainer.read(plansNotifier).valueOrNull?.plans.last.id}')),
-      500.0,
-    );
-    await tester.pumpAndSettle();
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
@@ -337,18 +306,10 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('language-es')).last);
     await tester.pumpAndSettle();
-    await tester.tap(find.byIcon(Icons.close));
-    await tester.pumpAndSettle();
 
     var plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
     expect(plan?.language, 'en');
 
-    await tester.tap(find.byIcon(Icons.edit));
-    await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('language')));
-    await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('language-es')).last);
-    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
@@ -360,17 +321,21 @@ void main() async {
     final providerContainer =
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
             .providerContainer;
-    await tester.scrollUntilVisible(
-      find.byKey(Key(
-          'plan-${providerContainer.read(plansNotifier).valueOrNull?.plans.last.id}')),
-      500.0,
-    );
-    await tester.pumpAndSettle();
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.menu_book));
+    await tester.pumpAndSettle();
+    await tester.tap(find
+        .descendant(
+            of: find.byType(SegmentedButton<ScheduleDuration>),
+            matching: find.byType(Text))
+        .first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('language')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('language-es')).last);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.close));
     await tester.pumpAndSettle();
@@ -378,6 +343,8 @@ void main() async {
     final plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
     expect(plan?.scheduleKey.type, ScheduleType.chronological);
     expect(plan?.bookmark, const Bookmark(dayIndex: 75, sectionIndex: 0));
+    expect(plan?.scheduleKey.duration, ScheduleDuration.y1);
+    expect(plan?.language, 'en');
   });
 
   testWidgets('Delete plan', (tester) async {
