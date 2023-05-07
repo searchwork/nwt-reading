@@ -8,11 +8,11 @@ if [[ $(uname) == 'Darwin' ]]; then
     flutter test integration_test -d macos
 fi
 
-flutter build apk
-flutter build appbundle
+flutter build apk --release
+flutter build appbundle --release
 
 if [[ $(uname) == 'Darwin' ]]; then
-    flutter build ios --release --no-codesign
+    flutter build ios --release
 
     flutter build web
 
