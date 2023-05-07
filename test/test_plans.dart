@@ -2,6 +2,7 @@ import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
+const legacyExportPreferenceKey = 'legacyExport';
 const plansPreferenceKey = 'plans';
 
 final Plans testPlans = Plans(const [
@@ -62,4 +63,80 @@ const List<String> testPlansSerialized = [
   '{"id":"e37bf9df-077a-49db-adcb-d56384906103","name":"Chronological","scheduleKey":{"type":0,"duration":1,"version":"1.0"},"language":"en","bookmark":{"dayIndex":182,"sectionIndex":1},"withEndDate":true,"showEvents":true,"showLocations":true}'
 ];
 
-final testPlansPreferences = {plansPreferenceKey: testPlansSerialized};
+final testPlansPreferences = {
+  plansPreferenceKey: testPlansSerialized,
+  legacyExportPreferenceKey:
+      '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": {} }, "currentSchedule": "sequential" }'
+};
+
+class LegacyExport {
+  const LegacyExport({
+    required this.preferences,
+    required this.plans,
+  });
+
+  final Map<String, String> preferences;
+  final Plans plans;
+}
+
+final List<LegacyExport> testLegacyExports = [
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": {} }, "currentSchedule": "sequential" }'
+      },
+      plans: Plans(const [
+        Plan(
+            id: "3266e6fd-ce74-48f0-a491-da086a7704c7",
+            name: "Sequential",
+            scheduleKey: ScheduleKey(
+                type: ScheduleType.sequential,
+                duration: ScheduleDuration.y1,
+                version: "1.0"),
+            language: "en",
+            bookmark: Bookmark(dayIndex: 0, sectionIndex: -1),
+            withEndDate: true,
+            showEvents: true,
+            showLocations: true),
+      ])),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": { "readIndex": 104, "endDate": "2024-01-27T00:00:00.000Z" } }, "currentSchedule": "chronological" }'
+      },
+      plans: Plans([
+        Plan(
+            id: "3266e6fd-ce74-48f0-a491-da086a7704c7",
+            name: "Chronological",
+            scheduleKey: const ScheduleKey(
+                type: ScheduleType.chronological,
+                duration: ScheduleDuration.y1,
+                version: "1.0"),
+            language: "en",
+            bookmark: const Bookmark(dayIndex: 104, sectionIndex: -1),
+            endDate: DateTime.utc(2024, 1, 27),
+            withEndDate: true,
+            showEvents: true,
+            showLocations: true),
+      ])),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": { "duration": "1y", "readIndex": 26, "endDate": "2025-04-16T00:00:00.000Z" } }, "currentSchedule": "chronological", "language": "ro", "readingLanguage": "de", "withEndDate": true, "showEvents": true, "showLocations": true }'
+      },
+      plans: Plans([
+        Plan(
+            id: "3266e6fd-ce74-48f0-a491-da086a7704c7",
+            name: "Chronological",
+            scheduleKey: const ScheduleKey(
+                type: ScheduleType.chronological,
+                duration: ScheduleDuration.y1,
+                version: "1.0"),
+            language: "de",
+            bookmark: const Bookmark(dayIndex: 26, sectionIndex: -1),
+            endDate: DateTime.utc(2025, 4, 16),
+            withEndDate: true,
+            showEvents: true,
+            showLocations: true),
+      ])),
+];

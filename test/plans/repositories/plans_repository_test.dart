@@ -51,6 +51,22 @@ void main() async {
     verifyNoMoreInteractions(tester.listener);
   });
 
+  test('Imports legacy settings', () async {
+    for (var testLegacyExport in testLegacyExports) {
+      final tester = await getTester(testLegacyExport.preferences);
+      tester.container.read(plansRepository);
+      final result = await tester.container.read(plansNotifier.future);
+
+      expect(deepCollectionEquals(result.plans, testLegacyExport.plans.plans),
+          true);
+      verifyInOrder([
+        () => tester.listener(null, asyncLoadingValue),
+        () => tester.listener(asyncLoadingValue, AsyncData<Plans>(result)),
+      ]);
+      verifyNoMoreInteractions(tester.listener);
+    }
+  });
+
   test('Resolves to Shared Preferences', () async {
     final tester = await getTester(testPlansPreferences);
     tester.container.read(plansRepository);
