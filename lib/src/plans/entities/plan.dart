@@ -59,7 +59,6 @@ class Plan extends Equatable {
 
   @override
   List<Object?> get props => [
-        id,
         name,
         scheduleKey,
         language,
