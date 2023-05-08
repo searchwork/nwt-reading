@@ -81,13 +81,16 @@ class LegacyExport {
 
 final List<LegacyExport> testLegacyExports = [
   LegacyExport(
+      preferences: {legacyExportPreferenceKey: 'this is not JSON'},
+      plans: Plans(const [])),
+  LegacyExport(
       preferences: {
         legacyExportPreferenceKey:
             '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": {} }, "currentSchedule": "sequential" }'
       },
       plans: Plans(const [
         Plan(
-            id: "3266e6fd-ce74-48f0-a491-da086a7704c7",
+            id: "",
             name: "Sequential",
             scheduleKey: ScheduleKey(
                 type: ScheduleType.sequential,
@@ -102,11 +105,11 @@ final List<LegacyExport> testLegacyExports = [
   LegacyExport(
       preferences: {
         legacyExportPreferenceKey:
-            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": { "readIndex": 104, "endDate": "2024-01-27T00:00:00.000Z" } }, "currentSchedule": "chronological" }'
+            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": { "readIndex": "104", "endDate": "2024-01-27T00:00:00.000Z" } }, "currentSchedule": "chronological" }'
       },
       plans: Plans([
         Plan(
-            id: "3266e6fd-ce74-48f0-a491-da086a7704c7",
+            id: "",
             name: "Chronological",
             scheduleKey: const ScheduleKey(
                 type: ScheduleType.chronological,
@@ -122,7 +125,7 @@ final List<LegacyExport> testLegacyExports = [
   LegacyExport(
       preferences: {
         legacyExportPreferenceKey:
-            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": { "duration": "1y", "readIndex": 26, "endDate": "2025-04-16T00:00:00.000Z" } }, "currentSchedule": "chronological", "language": "ro", "readingLanguage": "de", "withEndDate": true, "showEvents": true, "showLocations": true }'
+            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": { "duration": "1y", "readIndex": "26", "endDate": "2025-04-16T00:00:00.000Z" } }, "currentSchedule": "chronological", "language": "ro", "readingLanguage": "de", "withEndDate": true, "showEvents": true, "showLocations": true }'
       },
       plans: Plans([
         Plan(
