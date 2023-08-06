@@ -32,6 +32,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
+    namespace "org.searchwork.nwtreading"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
