@@ -315,6 +315,38 @@ void main() async {
     expect(plan?.language, 'es');
   });
 
+  testWidgets('Change plan with end date setting', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.tap(find.byType(PlanCard).first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.pumpAndSettle();
+
+    var plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
+    expect(plan?.withEndDate, true);
+
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
+    expect(plan?.withEndDate, false);
+
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
+    expect(plan?.withEndDate, true);
+  });
+
   testWidgets('Cancel edit plan', (tester) async {
     final providerContainer =
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
@@ -335,6 +367,8 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('language-es')).last);
     await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.close));
     await tester.pumpAndSettle();
 
@@ -343,6 +377,7 @@ void main() async {
     expect(plan?.bookmark, const Bookmark(dayIndex: 75, sectionIndex: 0));
     expect(plan?.scheduleKey.duration, ScheduleDuration.y1);
     expect(plan?.language, 'en');
+    expect(plan?.withEndDate, true);
   });
 
   testWidgets('Delete plan', (tester) async {
