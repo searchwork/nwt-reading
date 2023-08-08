@@ -327,13 +327,13 @@ void main() async {
     await tester.pumpAndSettle();
 
     var plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
-    expect(plan?.withEndDate, true);
+    expect(plan?.withTargetDate, true);
 
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
     plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
-    expect(plan?.withEndDate, false);
+    expect(plan?.withTargetDate, false);
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
@@ -344,7 +344,7 @@ void main() async {
     await tester.pumpAndSettle();
 
     plan = providerContainer.read(plansNotifier).valueOrNull?.plans.first;
-    expect(plan?.withEndDate, true);
+    expect(plan?.withTargetDate, true);
   });
 
   testWidgets('Cancel edit plan', (tester) async {
@@ -377,7 +377,7 @@ void main() async {
     expect(plan?.bookmark, const Bookmark(dayIndex: 75, sectionIndex: 0));
     expect(plan?.scheduleKey.duration, ScheduleDuration.y1);
     expect(plan?.language, 'en');
-    expect(plan?.withEndDate, true);
+    expect(plan?.withTargetDate, true);
   });
 
   testWidgets('Delete plan', (tester) async {

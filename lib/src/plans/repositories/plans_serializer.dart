@@ -15,8 +15,8 @@ class PlansSerializer {
         'language': plan.language,
         'bookmark': _convertBookmarkToMap(plan.bookmark),
         if (plan.startDate != null) 'startDate': plan.startDate,
-        if (plan.endDate != null) 'endDate': plan.endDate,
-        'withEndDate': plan.withEndDate,
+        if (plan.targetDate != null) 'targetDate': plan.targetDate,
+        'withTargetDate': plan.withTargetDate,
         'showEvents': plan.showEvents,
         'showLocations': plan.showLocations,
       };

@@ -38,7 +38,7 @@ class PlansNotifier extends IncompleteNotifier<Plans> {
           scheduleKey: scheduleKey,
           language: 'en',
           bookmark: bookmark,
-          withEndDate: true,
+          withTargetDate: true,
           showEvents: true,
           showLocations: true);
 

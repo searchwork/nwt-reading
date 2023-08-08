@@ -29,8 +29,8 @@ class PlansDeserializer {
     final language = planMap['language'] as String;
     final bookmark = _convertMapToBookmark(planMap['bookmark']);
     final startDate = planMap['startDate'] as DateTime?;
-    final endDate = planMap['endDate'] as DateTime?;
-    final withEndDate = planMap['withEndDate'] as bool;
+    final targetDate = planMap['targetDate'] as DateTime?;
+    final withTargetDate = planMap['withTargetDate'] as bool;
     final showEvents = planMap['showEvents'] as bool;
     final showLocations = planMap['showLocations'] as bool;
 
@@ -41,8 +41,8 @@ class PlansDeserializer {
         language: language,
         bookmark: bookmark,
         startDate: startDate,
-        endDate: endDate,
-        withEndDate: withEndDate,
+        targetDate: targetDate,
+        withTargetDate: withTargetDate,
         showEvents: showEvents,
         showLocations: showLocations);
   }

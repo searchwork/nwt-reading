@@ -26,7 +26,7 @@ class PlanEdit extends FamilyNotifier<Plan, String?> {
           version: '1.0'),
       language: 'en',
       bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),
-      withEndDate: true,
+      withTargetDate: true,
       showEvents: true,
       showLocations: true);
 
@@ -78,9 +78,9 @@ class PlanEdit extends FamilyNotifier<Plan, String?> {
     }
   }
 
-  void updateWithEndDate(bool withEndDate) {
-    if (withEndDate != state.withEndDate) {
-      state = state.copyWith(withEndDate: withEndDate);
+  void updateWithTargetDate(bool withTargetDate) {
+    if (withTargetDate != state.withTargetDate) {
+      state = state.copyWith(withTargetDate: withTargetDate);
     }
   }
 

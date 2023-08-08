@@ -30,7 +30,7 @@ class ScheduleFamily {
 
   double getProgress(Bookmark bookmark) => bookmark.dayIndex / length;
 
-  DateTime calcEndDate(Bookmark bookmark) =>
+  DateTime calcTargetDate(Bookmark bookmark) =>
       DateTime.now().add(Duration(days: getRemainingDays(bookmark)));
 }
 

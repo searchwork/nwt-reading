@@ -43,8 +43,9 @@ class PlanEditDialog extends ConsumerWidget {
             trailing: PlanLanguageDropdownButton(planId),
           ),
           ListTile(
-            title: const Text('With end date'),
-            trailing: PlanWithEndDateSwitch(planId),
+            title: const Text('With Target Date'),
+            subtitle: const Text('Track daily reading with a target date.'),
+            trailing: PlanWithTargetDateSwitch(planId),
           ),
           ElevatedButton.icon(
               onPressed: () {
@@ -157,8 +158,8 @@ class PlanLanguageDropdownButton extends ConsumerWidget {
   }
 }
 
-class PlanWithEndDateSwitch extends ConsumerWidget {
-  const PlanWithEndDateSwitch(this.planId, {super.key});
+class PlanWithTargetDateSwitch extends ConsumerWidget {
+  const PlanWithTargetDateSwitch(this.planId, {super.key});
 
   final String planId;
 
@@ -169,9 +170,9 @@ class PlanWithEndDateSwitch extends ConsumerWidget {
 
     return Switch(
       key: const Key('with-end-date'),
-      value: plan.withEndDate,
+      value: plan.withTargetDate,
       onChanged: (bool value) {
-        planEdit.updateWithEndDate(value);
+        planEdit.updateWithTargetDate(value);
       },
     );
   }

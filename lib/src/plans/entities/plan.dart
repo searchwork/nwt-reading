@@ -11,8 +11,8 @@ class Plan extends Equatable {
     required this.language,
     required this.bookmark,
     this.startDate,
-    this.endDate,
-    required this.withEndDate,
+    this.targetDate,
+    required this.withTargetDate,
     required this.showEvents,
     required this.showLocations,
   });
@@ -23,8 +23,8 @@ class Plan extends Equatable {
   final String language;
   final Bookmark bookmark;
   final DateTime? startDate;
-  final DateTime? endDate;
-  final bool withEndDate;
+  final DateTime? targetDate;
+  final bool withTargetDate;
   final bool showEvents;
   final bool showLocations;
 
@@ -40,8 +40,8 @@ class Plan extends Equatable {
           String? language,
           Bookmark? bookmark,
           DateTime? startDate,
-          DateTime? endDate,
-          bool? withEndDate,
+          DateTime? targetDate,
+          bool? withTargetDate,
           bool? showEvents,
           bool? showLocations}) =>
       Plan(
@@ -51,8 +51,8 @@ class Plan extends Equatable {
         language: language ?? this.language,
         bookmark: bookmark ?? this.bookmark,
         startDate: startDate ?? this.startDate,
-        endDate: endDate ?? this.endDate,
-        withEndDate: withEndDate ?? this.withEndDate,
+        targetDate: targetDate ?? this.targetDate,
+        withTargetDate: withTargetDate ?? this.withTargetDate,
         showEvents: showEvents ?? this.showEvents,
         showLocations: showLocations ?? this.showLocations,
       );
@@ -64,8 +64,8 @@ class Plan extends Equatable {
         language,
         bookmark,
         startDate,
-        endDate,
-        withEndDate,
+        targetDate,
+        withTargetDate,
         showEvents,
         showLocations
       ];

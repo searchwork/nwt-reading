@@ -35,7 +35,7 @@ final plansRepository = Provider<void>((ref) {
         final schedules = legacyExport['schedules'] as Map<String, dynamic>?;
         final language = legacyExport['language'] as String?;
         final readingLanguage = legacyExport['readingLanguage'] as String?;
-        final withEndDate = legacyExport['withEndDate'] as bool? ?? true;
+        final withTargetDate = legacyExport['withEndDate'] as bool? ?? true;
         final showEvents = legacyExport['showEvents'] as bool? ?? true;
         final showLocations = legacyExport['showLocations'] as bool? ?? true;
 
@@ -49,9 +49,10 @@ final plansRepository = Provider<void>((ref) {
         final bookmark = Bookmark(
             dayIndex: int.tryParse(schedule['readIndex'] ?? '0') ?? 0,
             sectionIndex: -1);
-        final DateTime? endDate = withEndDate && schedule['endDate'] != null
-            ? DateTime.tryParse(schedule['endDate'])
-            : null;
+        final DateTime? targetDate =
+            withTargetDate && schedule['endDate'] != null
+                ? DateTime.tryParse(schedule['endDate'])
+                : null;
 
         plans = Plans([
           Plan(
@@ -60,8 +61,8 @@ final plansRepository = Provider<void>((ref) {
             scheduleKey: scheduleKey,
             language: readingLanguage ?? language ?? 'en',
             bookmark: bookmark,
-            endDate: endDate,
-            withEndDate: withEndDate,
+            targetDate: targetDate,
+            withTargetDate: withTargetDate,
             showEvents: showEvents,
             showLocations: showLocations,
           )
