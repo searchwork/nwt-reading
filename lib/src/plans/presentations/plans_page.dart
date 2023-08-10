@@ -54,5 +54,5 @@ class PlansPage extends ConsumerWidget {
   }
 
   List<PlanCard> buildPlansGrid(Plans plans) =>
-      plans.plans.map((plan) => PlanCard(plan)).toList();
+      plans.plans.map((plan) => PlanCard(plan.id)).toList();
 }

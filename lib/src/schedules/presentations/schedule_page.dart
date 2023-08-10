@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
-import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:nwt_reading/src/schedules/presentations/day_card.dart';
 
@@ -25,7 +25,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final bookmark = ref.read(planEditFamilyNotifier(planId)).bookmark;
+    final bookmark = ref.read(planFamily(planId)).valueOrNull?.plan.bookmark;
     resetTopDayIndex(bookmark);
   }
 
@@ -35,16 +35,20 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
   @override
   Widget build(BuildContext context) {
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final plan = ref.watch(planEditFamilyNotifier(planId));
-    final scheduleProvider =
-        ref.watch(scheduleFamily(plan.scheduleKey)).valueOrNull;
-    final progress = scheduleProvider?.getProgress(plan.bookmark);
+    final planProvider = ref.watch(planFamily(planId)).valueOrNull;
+    final plan = planProvider?.plan;
+    final scheduleProvider = plan != null
+        ? ref.watch(scheduleFamily(plan.scheduleKey)).valueOrNull
+        : null;
+    final progress =
+        plan != null ? scheduleProvider?.getProgress(plan.bookmark) : null;
     final schedule = scheduleProvider?.schedule;
     const Key centerKey = ValueKey<String>('today');
     final controller = ScrollController();
-    if (scheduleKey != plan.scheduleKey) {
-      scheduleKey = plan.scheduleKey;
-      resetTopDayIndex(plan.bookmark);
+    final deviationDays = planProvider?.deviationDays ?? 0;
+    if (scheduleKey != plan?.scheduleKey) {
+      scheduleKey = plan?.scheduleKey;
+      resetTopDayIndex(plan?.bookmark);
     }
 
     DayCard? scheduleListBuilder(index) {
@@ -61,7 +65,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text(plan.name),
+          title: plan == null ? null : Text(plan.name),
           actions: [
             IconButton(
               icon: const Icon(Icons.edit),
@@ -105,7 +109,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
         floatingActionButton: FloatingActionButton(
           tooltip: AppLocalizations.of(context)!.goToBookmarkTooltip,
           onPressed: () {
-            resetTopDayIndex(plan.bookmark);
+            resetTopDayIndex(plan?.bookmark);
             controller.jumpTo(0.0);
           },
           child: const Icon(Icons.bookmark),

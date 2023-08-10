@@ -1,6 +1,65 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+
+final planFamily =
+    FutureProvider.family<PlanFamily?, String>((ref, planId) async {
+  ref.watch(plansNotifier);
+
+  final plans = await ref.read(plansNotifier.notifier).future;
+  final plan = plans.plans.firstWhere((plan) => plan.id == planId);
+
+  return PlanFamily(ref,
+      plansNotifier: await ref.read(plansNotifier.notifier), plan: plan);
+}, name: "planFamily");
+
+class PlanFamily {
+  PlanFamily(this.ref, {required this.plansNotifier, required this.plan});
+
+  final Ref ref;
+  final Plan plan;
+  final PlansNotifier plansNotifier;
+
+  void delete() => plansNotifier.removePlan(plan.id);
+
+  int get deviationDays => plan.targetDate == null
+      ? 0
+      : plan.targetDate!.difference(_calcTargetDate(plan.bookmark)!).inDays;
+
+  void resetTargetDate() {
+    if (plan.withTargetDate) {
+      plansNotifier.updatePlan(
+          plan.copyWith(targetDate: _calcTargetDate(plan.bookmark)));
+    }
+  }
+
+  DateTime? _calcTargetDate(Bookmark bookmark) {
+    if (plan.withTargetDate) {
+      final scheduleProvider =
+          ref.read(scheduleFamily(plan.scheduleKey)).valueOrNull;
+
+      return scheduleProvider?.calcTargetDate(bookmark);
+    } else {
+      return null;
+    }
+  }
+
+  void setRead({required int dayIndex, required int sectionIndex}) {
+    final bookmark = Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
+    final startDate = plan.startDate ?? DateUtils.dateOnly(DateTime.now());
+
+    plansNotifier.updatePlan(plan.copyWith(
+      bookmark: bookmark,
+      startDate: startDate,
+      targetDate: plan.targetDate ?? _calcTargetDate(bookmark),
+    ));
+  }
+
+  void setUnread({required int dayIndex, required int sectionIndex}) =>
+      setRead(dayIndex: dayIndex, sectionIndex: sectionIndex - 1);
+}
 
 // @immutable
 class Plan extends Equatable {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
-import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
+import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/events.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
@@ -25,12 +25,12 @@ class SectionWidget extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final events = ref.watch(eventsNotifier).valueOrNull;
     final locations = ref.watch(locationsNotifier).valueOrNull;
-    final plan = ref.watch(planEditFamilyNotifier(planId));
-    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
-    final isRead = plan.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
+    final planProvider = ref.watch(planFamily(planId)).valueOrNull;
+    final plan = planProvider?.plan;
+    final isRead = plan?.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
     final bibleLanguage = ref.watch(bibleLanguagesNotifier.select(
-        (bibleLanguages) => bibleLanguages
-            .valueOrNull?.bibleLanguages[planEdit.plan.language]));
+        (bibleLanguages) =>
+            bibleLanguages.valueOrNull?.bibleLanguages[plan?.language]));
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,9 +40,9 @@ class SectionWidget extends ConsumerWidget {
           icon: const Icon(Icons.check_circle_outline),
           selectedIcon: const Icon(Icons.check_circle),
           onPressed: () => isRead == true
-              ? planEdit.saveUnread(
+              ? planProvider?.setUnread(
                   dayIndex: dayIndex, sectionIndex: sectionIndex)
-              : planEdit.saveRead(
+              : planProvider?.setRead(
                   dayIndex: dayIndex, sectionIndex: sectionIndex),
         ),
         Expanded(
@@ -50,7 +50,7 @@ class SectionWidget extends ConsumerWidget {
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           TextButton(
               onPressed: () => _launchUrl(Uri.parse(
-                  'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${planEdit.plan.language}&prefer=lang&bible=${section.url}')),
+                  'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${plan?.language}&prefer=lang&bible=${section.url}')),
               child: Text(
                   "${bibleLanguage?.books[section.bookIndex].name} ${section.ref}",
                   style: const TextStyle(color: Color(0xff007bff)))),

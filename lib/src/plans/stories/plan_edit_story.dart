@@ -36,23 +36,6 @@ class PlanEdit extends FamilyNotifier<Plan, String?> {
           orElse: () => _getNew(planId)) ??
       _getNew(planId);
 
-  void setRead({required int dayIndex, required int sectionIndex}) =>
-      state = state.copyWith(
-          bookmark: Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex));
-
-  void saveRead({required int dayIndex, required int sectionIndex}) {
-    setRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
-    save();
-  }
-
-  void setUnread({required int dayIndex, required int sectionIndex}) =>
-      setRead(dayIndex: dayIndex, sectionIndex: sectionIndex - 1);
-
-  void saveUnread({required int dayIndex, required int sectionIndex}) {
-    setUnread(dayIndex: dayIndex, sectionIndex: sectionIndex);
-    save();
-  }
-
   void updateLanguage(String language) {
     if (language != state.language) {
       state = state.copyWith(language: language);
