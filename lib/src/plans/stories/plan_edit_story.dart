@@ -7,11 +7,10 @@ import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-final planEditFamilyNotifier = NotifierProvider.family<PlanEdit, Plan, String?>(
-    PlanEdit.new,
-    name: 'planEdit');
+final planEditFamilyNotifier = NotifierProvider.autoDispose
+    .family<PlanEdit, Plan, String?>(PlanEdit.new, name: 'planEdit');
 
-class PlanEdit extends FamilyNotifier<Plan, String?> {
+class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   @override
   Plan build(arg) => _getPlan(arg ?? _uuid.v4());
 
