@@ -26,12 +26,14 @@ class ScheduleFamily {
 
   int get length => schedule.length;
 
-  int getRemainingDays(Bookmark bookmark) => length - bookmark.dayIndex;
+  int getRemainingDays(Bookmark bookmark) =>
+      length - bookmark.dayIndex - 1 + (bookmark.sectionIndex < 0 ? 1 : 0);
 
   double getProgress(Bookmark bookmark) => bookmark.dayIndex / length;
 
   DateTime calcTargetDate(Bookmark bookmark) =>
-      DateTime.now().add(Duration(days: getRemainingDays(bookmark)));
+      DateUtils.dateOnly(DateTime.now())
+          .add(Duration(days: getRemainingDays(bookmark)));
 }
 
 @immutable
