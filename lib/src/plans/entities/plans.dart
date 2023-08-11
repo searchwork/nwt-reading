@@ -12,7 +12,7 @@ const _uuid = Uuid();
 
 final plansProvider = AsyncNotifierProvider<PlansNotifier, Plans>(
     PlansNotifier.new,
-    name: "plans");
+    name: 'plansProvider');
 
 class PlansNotifier extends IncompleteNotifier<Plans> {
   bool existPlan(String planId) => getPlan(planId) != null;

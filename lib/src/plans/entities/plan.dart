@@ -16,7 +16,7 @@ final planFamilyProvider =
   } else {
     return null;
   }
-}, name: "planFamily");
+}, name: 'planFamilyProvider');
 
 class PlanFamily {
   PlanFamily(this.ref, {required this.plan})

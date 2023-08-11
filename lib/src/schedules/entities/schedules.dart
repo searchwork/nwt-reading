@@ -14,7 +14,7 @@ final scheduleFamilyProvider =
   final schedules = await ref.read(schedulesProvider.notifier).future;
 
   return schedules.schedules[scheduleKey];
-}, name: "scheduleFamily");
+}, name: 'scheduleFamilyProvider');
 
 @immutable
 class Schedules {
