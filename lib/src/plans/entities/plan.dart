@@ -8,25 +8,45 @@ final planFamilyProvider =
     FutureProviderFamily<PlanFamily?, String>((ref, planId) async {
   ref.watch(plansProvider);
 
-  final plans = await ref.read(plansProvider.notifier).future;
-  final plan = plans.plans.firstWhere((plan) => plan.id == planId);
+  final plan = ref.read(plansProvider.notifier).getPlan(planId);
+  if (plan != null) {
+    ref.watch(scheduleFamilyProvider(plan.scheduleKey).future);
 
-  return PlanFamily(ref,
-      plansNotifier: await ref.read(plansProvider.notifier), plan: plan);
+    return PlanFamily(ref, plan: plan);
+  } else {
+    return null;
+  }
 }, name: "planFamily");
 
 class PlanFamily {
-  PlanFamily(this.ref, {required this.plansNotifier, required this.plan});
+  PlanFamily(this.ref, {required this.plan})
+      : plansNotifier = ref.read(plansProvider.notifier),
+        schedule =
+            ref.read(scheduleFamilyProvider(plan.scheduleKey)).valueOrNull;
 
   final Ref ref;
   final Plan plan;
   final PlansNotifier plansNotifier;
+  final Schedule? schedule;
+
+  DateTime? _calcTargetDate(Bookmark bookmark) => plan.withTargetDate
+      ? DateUtils.dateOnly(DateTime.now())
+          .add(Duration(days: _getRemainingDays(bookmark)))
+      : null;
 
   void delete() => plansNotifier.removePlan(plan.id);
 
   int get deviationDays => plan.targetDate == null
       ? 0
       : plan.targetDate!.difference(_calcTargetDate(plan.bookmark)!).inDays;
+
+  double getProgress() =>
+      schedule == null ? 0 : plan.bookmark.dayIndex / schedule!.length;
+
+  int _getRemainingDays(Bookmark bookmark) =>
+      schedule == null ? 0 : schedule!.length - bookmark.dayIndex;
+
+  int getRemainingDays() => _getRemainingDays(plan.bookmark);
 
   void resetTargetDate() {
     if (plan.withTargetDate) {
@@ -35,25 +55,17 @@ class PlanFamily {
     }
   }
 
-  DateTime? _calcTargetDate(Bookmark bookmark) {
-    if (plan.withTargetDate) {
-      final scheduleProvider =
-          ref.read(scheduleFamilyProvider(plan.scheduleKey)).valueOrNull;
-
-      return scheduleProvider?.calcTargetDate(bookmark);
-    } else {
-      return null;
-    }
-  }
-
   void setRead({required int dayIndex, required int sectionIndex}) {
-    final bookmark = Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
+    final sections = schedule?.days[dayIndex].sections.length;
+    final newBookmark = sections != null && sectionIndex >= sections - 1
+        ? Bookmark(dayIndex: dayIndex + 1, sectionIndex: -1)
+        : Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
     final startDate = plan.startDate ?? DateUtils.dateOnly(DateTime.now());
 
     plansNotifier.updatePlan(plan.copyWith(
-      bookmark: bookmark,
+      bookmark: newBookmark,
       startDate: startDate,
-      targetDate: plan.targetDate ?? _calcTargetDate(bookmark),
+      targetDate: plan.targetDate ?? _calcTargetDate(newBookmark),
     ));
   }
 

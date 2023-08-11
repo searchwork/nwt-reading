@@ -38,12 +38,10 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     final planId = ModalRoute.of(context)!.settings.arguments as String;
     final planProvider = ref.watch(planFamilyProvider(planId)).valueOrNull;
     final plan = planProvider?.plan;
-    final scheduleProvider = plan != null
+    final schedule = plan != null
         ? ref.watch(scheduleFamilyProvider(plan.scheduleKey)).valueOrNull
         : null;
-    final progress =
-        plan != null ? scheduleProvider?.getProgress(plan.bookmark) : null;
-    final schedule = scheduleProvider?.schedule;
+    final progress = plan != null ? planProvider?.getProgress() : null;
     const Key centerKey = ValueKey<String>('today');
     final controller = ScrollController();
 

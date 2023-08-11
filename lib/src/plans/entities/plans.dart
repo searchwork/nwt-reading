@@ -15,15 +15,10 @@ final plansProvider = AsyncNotifierProvider<PlansNotifier, Plans>(
     name: "plans");
 
 class PlansNotifier extends IncompleteNotifier<Plans> {
-  bool existPlan(String planId) => state.when(
-        data: (plans) =>
-            plans.plans.indexWhere(
-              (plan) => plan.id == planId,
-            ) >=
-            0,
-        error: (error, stackTrace) => false,
-        loading: () => false,
-      );
+  bool existPlan(String planId) => getPlan(planId) != null;
+
+  Plan? getPlan(String planId) =>
+      state.valueOrNull?.plans.firstWhere((plan) => plan.id == planId);
 
   Future<void> newPlan() async {
     await update((plans) {

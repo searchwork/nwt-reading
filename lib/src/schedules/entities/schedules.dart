@@ -2,7 +2,6 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
-import 'package:nwt_reading/src/plans/entities/plan.dart';
 
 final schedulesProvider =
     AsyncNotifierProvider<IncompleteNotifier<Schedules>, Schedules>(
@@ -10,32 +9,12 @@ final schedulesProvider =
         name: 'schedulesProvider');
 
 final scheduleFamilyProvider =
-    FutureProviderFamily<ScheduleFamily?, ScheduleKey>(
-        (ref, scheduleKey) async {
+    FutureProviderFamily<Schedule?, ScheduleKey>((ref, scheduleKey) async {
   ref.watch(schedulesProvider);
   final schedules = await ref.read(schedulesProvider.notifier).future;
-  final schedule = schedules.schedules[scheduleKey];
 
-  return schedule == null ? null : ScheduleFamily(ref, schedule: schedule);
+  return schedules.schedules[scheduleKey];
 }, name: "scheduleFamily");
-
-class ScheduleFamily {
-  ScheduleFamily(this.ref, {required this.schedule});
-
-  final Ref ref;
-  final Schedule schedule;
-
-  int get length => schedule.length;
-
-  int getRemainingDays(Bookmark bookmark) =>
-      length - bookmark.dayIndex - 1 + (bookmark.sectionIndex < 0 ? 1 : 0);
-
-  double getProgress(Bookmark bookmark) => bookmark.dayIndex / length;
-
-  DateTime calcTargetDate(Bookmark bookmark) =>
-      DateUtils.dateOnly(DateTime.now())
-          .add(Duration(days: getRemainingDays(bookmark)));
-}
 
 @immutable
 class Schedules {
@@ -44,6 +23,8 @@ class Schedules {
       Schedules._internal(Map.unmodifiable(schedules));
 
   final Map<ScheduleKey, Schedule> schedules;
+
+  int get length => schedules.length;
 }
 
 enum ScheduleType {

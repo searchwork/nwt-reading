@@ -13,13 +13,8 @@ class PlanCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final planProvider = ref.watch(planFamilyProvider(planId)).valueOrNull;
     final plan = planProvider?.plan;
-    final scheduleProvider = plan != null
-        ? ref.watch(scheduleFamilyProvider(plan.scheduleKey)).valueOrNull
-        : null;
-    final remainingDays =
-        plan != null ? scheduleProvider?.getRemainingDays(plan.bookmark) : 0;
-    final progress =
-        plan != null ? scheduleProvider?.getProgress(plan.bookmark) : null;
+    final remainingDays = plan != null ? planProvider?.getRemainingDays() : 0;
+    final progress = plan != null ? planProvider?.getProgress() : null;
     const planTypeIcons = {
       ScheduleType.chronological: Icons.hourglass_empty,
       ScheduleType.sequential: Icons.menu_book,
