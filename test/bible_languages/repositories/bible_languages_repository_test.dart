@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/bible_languages/repositories/bible_languages_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,9 +15,10 @@ Future<IncompleteNotifierTester<BibleLanguages>> getTester(
   final sharedPreferences = await SharedPreferences.getInstance();
 
   final tester = IncompleteNotifierTester<BibleLanguages>(
-      bibleLanguagesNotifier,
+      bibleLanguagesProvider,
       overrides: [
-        sharedPreferencesRepository.overrideWith((ref) => sharedPreferences),
+        sharedPreferencesRepositoryProvider
+            .overrideWith((ref) => sharedPreferences),
       ]);
   addTearDown(tester.container.dispose);
 
@@ -112,8 +113,8 @@ void main() async {
 
   test('Resolves to the asset', () async {
     final tester = await getTester();
-    tester.container.read(bibleLanguagesRepository);
-    final result = await tester.container.read(bibleLanguagesNotifier.future);
+    tester.container.read(bibleLanguagesRepositoryProvider);
+    final result = await tester.container.read(bibleLanguagesProvider.future);
 
     expect(result.bibleLanguages.length, greaterThanOrEqualTo(192));
     expect(deepCollectionEquals(result.bibleLanguages['en'], testBibleLanguage),

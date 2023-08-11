@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
-final themeModeNotifier = AsyncNotifierProvider<ThemeModeNotifier, ThemeMode>(
+final themeModeProvider = AsyncNotifierProvider<ThemeModeNotifier, ThemeMode>(
     ThemeModeNotifier.new,
-    name: 'themeMode');
+    name: 'themeModeProvider');
 
 class ThemeModeNotifier extends IncompleteNotifier<ThemeMode> {
   void updateThemeMode(ThemeMode themeMode) =>

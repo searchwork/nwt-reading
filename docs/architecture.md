@@ -12,11 +12,12 @@ The architecture is based on the [Clean Architecture] pattern using the followin
 
 The entities contain the application independent **business rules**.
 
-The data **types** are exposed as [immutable classes] and the **objects** as [Riverpod] [AsyncNotifierProvider] objects called `<model>Provider` respectively `<model>FamilyProvider`.
+The data **types** are exposed as [immutable classes] and the **objects** as [Riverpod] [AsyncNotifierProvider] objects called `<model>Provider` respectively [Riverpod] [FutureProviderFamily] objects called `<model>FamilyProvider`.
 
 [immutable classes]: https://dart.academy/immutable-data-patterns-in-dart-and-flutter
 [Riverpod]: https://docs-v2.riverpod.dev
 [AsyncNotifierProvider]: https://pub.dev/documentation/riverpod/latest/riverpod/AsyncNotifier-class.html
+[FutureProviderFamily]: https://pub.dev/documentation/riverpod/latest/riverpod/FutureProviderFamily-class.html
 
 ### Stories
 

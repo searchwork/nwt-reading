@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_deserializer.dart';
@@ -15,8 +15,8 @@ const _legacyExportPreferenceKey = 'legacyExport';
 const _preferenceKey = 'plans';
 const _uuid = Uuid();
 
-final plansRepository = Provider<void>((ref) {
-  final preferences = ref.watch(sharedPreferencesRepository);
+final plansRepositoryProvider = Provider<void>((ref) {
+  final preferences = ref.watch(sharedPreferencesRepositoryProvider);
   final plansSerialized = preferences.getStringList(_preferenceKey);
   final legacyExportSerialized =
       preferences.getString(_legacyExportPreferenceKey);
@@ -72,13 +72,13 @@ final plansRepository = Provider<void>((ref) {
   } catch (e) {
     debugPrint('Import from legacy failed with error $e');
   }
-  ref.read(plansNotifier.notifier).init(plans);
+  ref.read(plansProvider.notifier).init(plans);
 
   ref.listen(
-      plansNotifier,
+      plansProvider,
       (previousPlans, currentPlans) => currentPlans.whenData((plans) {
             final plansSerialized =
                 PlansSerializer().convertPlansToStringList(plans);
             preferences.setStringList(_preferenceKey, plansSerialized);
           }));
-}, name: 'plansRepository');
+}, name: 'plansRepositoryProvider');

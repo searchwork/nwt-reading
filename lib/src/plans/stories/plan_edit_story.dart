@@ -7,8 +7,9 @@ import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-final planEditFamilyNotifier = NotifierProvider.autoDispose
-    .family<PlanEdit, Plan, String?>(PlanEdit.new, name: 'planEdit');
+final planEditFamilyProvider =
+    AutoDisposeNotifierProviderFamily<PlanEdit, Plan, String?>(PlanEdit.new,
+        name: 'planEditFamilyProvider');
 
 class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   @override
@@ -30,7 +31,7 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
       showLocations: true);
 
   Plan _getPlan(planId) =>
-      ref.read(plansNotifier).valueOrNull?.plans.firstWhere(
+      ref.read(plansProvider).valueOrNull?.plans.firstWhere(
           (plan) => plan.id == planId,
           orElse: () => _getNew(planId)) ??
       _getNew(planId);
@@ -69,11 +70,11 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   void reset() => state = build(state.id);
 
   void save() {
-    final notifier = ref.read(plansNotifier.notifier);
+    final notifier = ref.read(plansProvider.notifier);
     notifier.existPlan(state.id)
         ? notifier.updatePlan(state)
         : notifier.addPlan(state);
   }
 
-  void delete() => ref.read(plansNotifier.notifier).removePlan(state.id);
+  void delete() => ref.read(plansProvider.notifier).removePlan(state.id);
 }

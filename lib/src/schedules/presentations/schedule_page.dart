@@ -25,7 +25,8 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final bookmark = ref.read(planFamily(planId)).valueOrNull?.plan.bookmark;
+    final bookmark =
+        ref.read(planFamilyProvider(planId)).valueOrNull?.plan.bookmark;
     resetTopDayIndex(bookmark);
   }
 
@@ -35,17 +36,17 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
   @override
   Widget build(BuildContext context) {
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final planProvider = ref.watch(planFamily(planId)).valueOrNull;
+    final planProvider = ref.watch(planFamilyProvider(planId)).valueOrNull;
     final plan = planProvider?.plan;
     final scheduleProvider = plan != null
-        ? ref.watch(scheduleFamily(plan.scheduleKey)).valueOrNull
+        ? ref.watch(scheduleFamilyProvider(plan.scheduleKey)).valueOrNull
         : null;
     final progress =
         plan != null ? scheduleProvider?.getProgress(plan.bookmark) : null;
     final schedule = scheduleProvider?.schedule;
     const Key centerKey = ValueKey<String>('today');
     final controller = ScrollController();
-    final deviationDays = planProvider?.deviationDays ?? 0;
+
     if (scheduleKey != plan?.scheduleKey) {
       scheduleKey = plan?.scheduleKey;
       resetTopDayIndex(plan?.bookmark);

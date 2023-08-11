@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,8 +15,9 @@ Future<IncompleteNotifierTester<Schedules>> getTester(
   final sharedPreferences = await SharedPreferences.getInstance();
 
   final tester =
-      IncompleteNotifierTester<Schedules>(schedulesNotifier, overrides: [
-    sharedPreferencesRepository.overrideWith((ref) => sharedPreferences),
+      IncompleteNotifierTester<Schedules>(schedulesProvider, overrides: [
+    sharedPreferencesRepositoryProvider
+        .overrideWith((ref) => sharedPreferences),
   ]);
   addTearDown(tester.container.dispose);
 
@@ -51,8 +52,8 @@ void main() async {
 
   test('Resolves to the asset', () async {
     final tester = await getTester();
-    tester.container.read(schedulesRepository);
-    final result = await tester.container.read(schedulesNotifier.future);
+    tester.container.read(schedulesRepositoryProvider);
+    final result = await tester.container.read(schedulesProvider.future);
 
     expect(result.schedules.length, greaterThanOrEqualTo(3));
     expect(

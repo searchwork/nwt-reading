@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/bible_languages/repositories/bible_languages_repository.dart';
 import 'package:nwt_reading/src/logs/repositories/provider_logger.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
@@ -18,15 +18,15 @@ Future<UncontrolledProviderScope> main() async {
   final container = ProviderContainer(
     observers: [ProviderLogger()],
     overrides: [
-      sharedPreferencesRepository.overrideWithValue(preferences),
+      sharedPreferencesRepositoryProvider.overrideWithValue(preferences),
     ],
   );
-  container.read(plansRepository);
-  container.read(locationsRepository);
-  container.read(eventsRepository);
-  container.read(schedulesRepository);
-  container.read(bibleLanguagesRepository);
-  container.read(themeModeRepository);
+  container.read(plansRepositoryProvider);
+  container.read(locationsRepositoryProvider);
+  container.read(eventsRepositoryProvider);
+  container.read(schedulesRepositoryProvider);
+  container.read(bibleLanguagesRepositoryProvider);
+  container.read(themeModeRepositoryProvider);
 
   final uncontrolledProviderScope = UncontrolledProviderScope(
     container: container,

@@ -10,7 +10,7 @@ import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-final plansNotifier = AsyncNotifierProvider<PlansNotifier, Plans>(
+final plansProvider = AsyncNotifierProvider<PlansNotifier, Plans>(
     PlansNotifier.new,
     name: "plans");
 

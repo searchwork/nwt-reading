@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
-final bibleLanguagesNotifier =
+final bibleLanguagesProvider =
     AsyncNotifierProvider<IncompleteNotifier<BibleLanguages>, BibleLanguages>(
         IncompleteNotifier.new,
-        name: 'bibleLanguages');
+        name: 'bibleLanguagesProvider');
 
 @immutable
 class BibleLanguages {

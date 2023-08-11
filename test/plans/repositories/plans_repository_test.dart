@@ -2,7 +2,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,8 +15,9 @@ Future<IncompleteNotifierTester<Plans>> getTester(
   SharedPreferences.setMockInitialValues(preferences);
   final sharedPreferences = await SharedPreferences.getInstance();
 
-  final tester = IncompleteNotifierTester<Plans>(plansNotifier, overrides: [
-    sharedPreferencesRepository.overrideWith((ref) => sharedPreferences),
+  final tester = IncompleteNotifierTester<Plans>(plansProvider, overrides: [
+    sharedPreferencesRepositoryProvider
+        .overrideWith((ref) => sharedPreferences),
   ]);
   addTearDown(tester.container.dispose);
 
@@ -40,8 +41,8 @@ void main() async {
 
   test('Defaults to the empty entity', () async {
     final tester = await getTester();
-    tester.container.read(plansRepository);
-    final result = await tester.container.read(plansNotifier.future);
+    tester.container.read(plansRepositoryProvider);
+    final result = await tester.container.read(plansProvider.future);
 
     expect(deepCollectionEquals(result.plans, emptyPlans.plans), true);
     verifyInOrder([
@@ -54,8 +55,8 @@ void main() async {
   test('Imports legacy settings', () async {
     for (var testLegacyExport in testLegacyExports) {
       final tester = await getTester(testLegacyExport.preferences);
-      tester.container.read(plansRepository);
-      final result = await tester.container.read(plansNotifier.future);
+      tester.container.read(plansRepositoryProvider);
+      final result = await tester.container.read(plansProvider.future);
 
       expect(deepCollectionEquals(result.plans, testLegacyExport.plans.plans),
           true);
@@ -69,8 +70,8 @@ void main() async {
 
   test('Resolves to Shared Preferences', () async {
     final tester = await getTester(testPlansPreferences);
-    tester.container.read(plansRepository);
-    final result = await tester.container.read(plansNotifier.future);
+    tester.container.read(plansRepositoryProvider);
+    final result = await tester.container.read(plansProvider.future);
 
     expect(deepCollectionEquals(result.plans, testPlans.plans), true);
     verifyInOrder([
@@ -82,11 +83,11 @@ void main() async {
 
   test('Resolves to updated value', () async {
     final tester = await getTester();
-    tester.container.read(plansRepository);
-    List<Plans> results = [await tester.container.read(plansNotifier.future)];
+    tester.container.read(plansRepositoryProvider);
+    List<Plans> results = [await tester.container.read(plansProvider.future)];
     for (var plan in testPlans.plans) {
-      await tester.container.read(plansNotifier.notifier).addPlan(plan);
-      results.add(await tester.container.read(plansNotifier.future));
+      await tester.container.read(plansProvider.notifier).addPlan(plan);
+      results.add(await tester.container.read(plansProvider.future));
     }
 
     expect(deepCollectionEquals(results[4].plans, testPlans.plans), true);
@@ -107,12 +108,12 @@ void main() async {
 
   test('Shared Preferences are set to updated value', () async {
     final tester = await getTester();
-    tester.container.read(plansRepository);
+    tester.container.read(plansRepositoryProvider);
     for (var plan in testPlans.plans) {
-      await tester.container.read(plansNotifier.notifier).addPlan(plan);
+      await tester.container.read(plansProvider.notifier).addPlan(plan);
     }
     final actualPlansSerialized = tester.container
-        .read(sharedPreferencesRepository)
+        .read(sharedPreferencesRepositoryProvider)
         .getStringList(plansPreferenceKey);
 
     expect(actualPlansSerialized, testPlansSerialized);

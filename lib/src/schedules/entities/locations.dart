@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 
-final locationsNotifier =
+final locationsProvider =
     AsyncNotifierProvider<IncompleteNotifier<Locations>, Locations>(
         IncompleteNotifier.new,
-        name: 'locations');
+        name: 'locationsProvider');
 
 @immutable
 class Locations {

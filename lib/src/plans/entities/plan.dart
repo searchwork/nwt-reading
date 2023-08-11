@@ -4,15 +4,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
-final planFamily =
-    FutureProvider.family<PlanFamily?, String>((ref, planId) async {
-  ref.watch(plansNotifier);
+final planFamilyProvider =
+    FutureProviderFamily<PlanFamily?, String>((ref, planId) async {
+  ref.watch(plansProvider);
 
-  final plans = await ref.read(plansNotifier.notifier).future;
+  final plans = await ref.read(plansProvider.notifier).future;
   final plan = plans.plans.firstWhere((plan) => plan.id == planId);
 
   return PlanFamily(ref,
-      plansNotifier: await ref.read(plansNotifier.notifier), plan: plan);
+      plansNotifier: await ref.read(plansProvider.notifier), plan: plan);
 }, name: "planFamily");
 
 class PlanFamily {
@@ -38,7 +38,7 @@ class PlanFamily {
   DateTime? _calcTargetDate(Bookmark bookmark) {
     if (plan.withTargetDate) {
       final scheduleProvider =
-          ref.read(scheduleFamily(plan.scheduleKey)).valueOrNull;
+          ref.read(scheduleFamilyProvider(plan.scheduleKey)).valueOrNull;
 
       return scheduleProvider?.calcTargetDate(bookmark);
     } else {

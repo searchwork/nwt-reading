@@ -12,7 +12,7 @@ class PlanEditDialog extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
+    final planEdit = ref.watch(planEditFamilyProvider(planId).notifier);
 
     return Dialog.fullscreen(
       child: Column(
@@ -68,8 +68,8 @@ class PlanTypeSegmentedButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyNotifier(planId));
-    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
+    final plan = ref.watch(planEditFamilyProvider(planId));
+    final planEdit = ref.watch(planEditFamilyProvider(planId).notifier);
 
     return SegmentedButton<ScheduleType>(
       segments: const <ButtonSegment<ScheduleType>>[
@@ -101,8 +101,8 @@ class PlanDurationSegmentedButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyNotifier(planId));
-    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
+    final plan = ref.watch(planEditFamilyProvider(planId));
+    final planEdit = ref.watch(planEditFamilyProvider(planId).notifier);
 
     return SegmentedButton<ScheduleDuration>(
       segments: const <ButtonSegment<ScheduleDuration>>[
@@ -132,9 +132,9 @@ class PlanLanguageDropdownButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(planEditFamilyNotifier(planId));
-    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
-    final bibleLanguages = ref.watch(bibleLanguagesNotifier).valueOrNull;
+    ref.watch(planEditFamilyProvider(planId));
+    final planEdit = ref.watch(planEditFamilyProvider(planId).notifier);
+    final bibleLanguages = ref.watch(bibleLanguagesProvider).valueOrNull;
 
     return DropdownButton<String>(
       key: const Key('language'),
@@ -165,8 +165,8 @@ class PlanWithTargetDateSwitch extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyNotifier(planId));
-    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
+    final plan = ref.watch(planEditFamilyProvider(planId));
+    final planEdit = ref.watch(planEditFamilyProvider(planId).notifier);
 
     return Switch(
       key: const Key('with-end-date'),

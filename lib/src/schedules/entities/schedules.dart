@@ -4,15 +4,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 
-final schedulesNotifier =
+final schedulesProvider =
     AsyncNotifierProvider<IncompleteNotifier<Schedules>, Schedules>(
         IncompleteNotifier.new,
-        name: 'schedules');
+        name: 'schedulesProvider');
 
-final scheduleFamily = FutureProvider.family<ScheduleFamily?, ScheduleKey>(
-    (ref, scheduleKey) async {
-  ref.watch(schedulesNotifier);
-  final schedules = await ref.read(schedulesNotifier.notifier).future;
+final scheduleFamilyProvider =
+    FutureProviderFamily<ScheduleFamily?, ScheduleKey>(
+        (ref, scheduleKey) async {
+  ref.watch(schedulesProvider);
+  final schedules = await ref.read(schedulesProvider.notifier).future;
   final schedule = schedules.schedules[scheduleKey];
 
   return schedule == null ? null : ScheduleFamily(ref, schedule: schedule);

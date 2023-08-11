@@ -9,7 +9,7 @@ class SettingsPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final themeMode = ref.watch(themeModeNotifier).value ?? ThemeMode.system;
+    final themeMode = ref.watch(themeModeProvider).value ?? ThemeMode.system;
 
     return Scaffold(
       appBar: AppBar(
@@ -20,7 +20,7 @@ class SettingsPage extends ConsumerWidget {
         child: DropdownButton<ThemeMode>(
           value: themeMode,
           onChanged: (value) => ref
-              .read(themeModeNotifier.notifier)
+              .read(themeModeProvider.notifier)
               .updateThemeMode(value ?? ThemeMode.system),
           items: const [
             DropdownMenuItem(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_provider.dart';
+import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,8 +15,9 @@ Future<IncompleteNotifierTester<ThemeMode>> getTester(
   final sharedPreferences = await SharedPreferences.getInstance();
 
   final tester =
-      IncompleteNotifierTester<ThemeMode>(themeModeNotifier, overrides: [
-    sharedPreferencesRepository.overrideWith((ref) => sharedPreferences),
+      IncompleteNotifierTester<ThemeMode>(themeModeProvider, overrides: [
+    sharedPreferencesRepositoryProvider
+        .overrideWith((ref) => sharedPreferences),
   ]);
   addTearDown(tester.container.dispose);
 
@@ -38,8 +39,8 @@ void main() async {
 
   test('Defaults to ThemeMode.system', () async {
     final tester = await getTester();
-    tester.container.read(themeModeRepository);
-    final result = await tester.container.read(themeModeNotifier.future);
+    tester.container.read(themeModeRepositoryProvider);
+    final result = await tester.container.read(themeModeProvider.future);
 
     expect(result, ThemeMode.system);
     verifyInOrder([
@@ -51,8 +52,8 @@ void main() async {
 
   test('Resolves to Shared Preferences', () async {
     final tester = await getTester({preferenceKey: ThemeMode.dark.index});
-    tester.container.read(themeModeRepository);
-    final result = await tester.container.read(themeModeNotifier.future);
+    tester.container.read(themeModeRepositoryProvider);
+    final result = await tester.container.read(themeModeProvider.future);
 
     expect(result, ThemeMode.dark);
     verifyInOrder([
@@ -64,15 +65,15 @@ void main() async {
 
   test('Resolves to updated value', () async {
     final tester = await getTester();
-    tester.container.read(themeModeRepository);
+    tester.container.read(themeModeRepositoryProvider);
     List<ThemeMode> results = [
-      await tester.container.read(themeModeNotifier.future)
+      await tester.container.read(themeModeProvider.future)
     ];
     for (var themeMode in ThemeMode.values) {
       tester.container
-          .read(themeModeNotifier.notifier)
+          .read(themeModeProvider.notifier)
           .updateThemeMode(themeMode);
-      results.add(await tester.container.read(themeModeNotifier.future));
+      results.add(await tester.container.read(themeModeProvider.future));
     }
 
     expect(results, [ThemeMode.system, ...ThemeMode.values]);
@@ -92,13 +93,13 @@ void main() async {
 
   test('Shared Preferences are set to updated value', () async {
     final tester = await getTester();
-    tester.container.read(themeModeRepository);
+    tester.container.read(themeModeRepositoryProvider);
     for (var themeMode in ThemeMode.values) {
       tester.container
-          .read(themeModeNotifier.notifier)
+          .read(themeModeProvider.notifier)
           .updateThemeMode(themeMode);
       final actualThemeIndex = tester.container
-          .read(sharedPreferencesRepository)
+          .read(sharedPreferencesRepositoryProvider)
           .getInt(preferenceKey);
 
       expect(ThemeMode.values[actualThemeIndex!], themeMode);
