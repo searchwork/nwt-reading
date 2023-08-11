@@ -52,7 +52,7 @@ class SectionWidget extends ConsumerWidget {
               onPressed: () => _launchUrl(Uri.parse(
                   'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${plan?.language}&prefer=lang&bible=${section.url}')),
               child: Text(
-                  "${bibleLanguage?.books[section.bookIndex].name} ${section.ref}",
+                  '${bibleLanguage?.books[section.bookIndex].name} ${section.ref}',
                   style: const TextStyle(color: Color(0xff007bff)))),
           ...section.events
               .map((eventKey) => events?.events[eventKey] != null

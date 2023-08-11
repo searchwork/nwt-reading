@@ -41,7 +41,7 @@ final List<ScheduleKey> scheduleKeys = ScheduleType.values.fold(
         scheduleKeys +
         [
           for (var duration in ScheduleDuration.values)
-            ScheduleKey(type: type, duration: duration, version: "1.0")
+            ScheduleKey(type: type, duration: duration, version: '1.0')
         ]);
 
 typedef Version = String;

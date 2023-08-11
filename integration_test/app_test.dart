@@ -400,7 +400,7 @@ void main() async {
     await tester.pumpAndSettle();
 
     final plans = providerContainer.read(plansProvider).valueOrNull?.plans;
-    expect(plans?.last.id, "2dab49f3-aecf-4aba-9e91-d75c297d4b7e");
+    expect(plans?.last.id, '2dab49f3-aecf-4aba-9e91-d75c297d4b7e');
     expect(plans?.length, 3);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
     expect(find.byType(PlanCard), findsNWidgets(3));
