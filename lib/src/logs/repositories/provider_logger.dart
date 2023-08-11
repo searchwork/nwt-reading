@@ -9,7 +9,7 @@ class ProviderLogger extends ProviderObserver {
     ProviderContainer container,
   ) {
     debugPrint(
-        'didAddProvider: ${provider.name ?? provider.runtimeType} -- value: ${value.toString()}');
+        'didAddProvider: ${provider.name ?? provider.runtimeType} -- value: ${value.toString().characters.take(70)}');
   }
 
   @override
@@ -35,6 +35,6 @@ class ProviderLogger extends ProviderObserver {
     ProviderContainer container,
   ) {
     debugPrint(
-        'didAddProvider: ${provider.name ?? provider.runtimeType} -- newValue: $newValue');
+        'didAddProvider: ${provider.name ?? provider.runtimeType} -- newValue: ${newValue.toString().characters.take(70)}');
   }
 }
