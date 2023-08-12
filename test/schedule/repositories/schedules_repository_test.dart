@@ -7,7 +7,7 @@ import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../incomplete_notifier_tester.dart';
+import '../../notifier_tester.dart';
 
 Future<IncompleteNotifierTester<Schedules>> getTester(
     [Map<String, Object> preferences = const {}]) async {

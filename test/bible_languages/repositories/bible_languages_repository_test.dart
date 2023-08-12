@@ -7,7 +7,7 @@ import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/bible_languages/repositories/bible_languages_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../incomplete_notifier_tester.dart';
+import '../../notifier_tester.dart';
 
 Future<IncompleteNotifierTester<BibleLanguages>> getTester(
     [Map<String, Object> preferences = const {}]) async {

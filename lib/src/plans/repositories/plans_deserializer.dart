@@ -28,8 +28,12 @@ class PlansDeserializer {
     final schedule = convertMapToScheduleKey(planMap['scheduleKey']);
     final language = planMap['language'] as String;
     final bookmark = _convertMapToBookmark(planMap['bookmark']);
-    final startDate = planMap['startDate'] as DateTime?;
-    final targetDate = planMap['targetDate'] as DateTime?;
+    final startDate = planMap['startDate'] == null
+        ? null
+        : DateTime.parse(planMap['startDate']);
+    final targetDate = planMap['targetDate'] == null
+        ? null
+        : DateTime.parse(planMap['targetDate']);
     final withTargetDate = planMap['withTargetDate'] as bool;
     final showEvents = planMap['showEvents'] as bool;
     final showLocations = planMap['showLocations'] as bool;

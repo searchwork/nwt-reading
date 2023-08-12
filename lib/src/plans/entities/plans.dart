@@ -1,58 +1,53 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-final plansProvider = AsyncNotifierProvider<PlansNotifier, Plans>(
-    PlansNotifier.new,
+final plansProvider = NotifierProvider<PlansNotifier, Plans>(PlansNotifier.new,
     name: 'plansProvider');
 
-class PlansNotifier extends IncompleteNotifier<Plans> {
+class PlansNotifier extends Notifier<Plans> {
+  @override
+  build() => Plans(const []);
+
   bool existPlan(String planId) => getPlan(planId) != null;
 
   Plan? getPlan(String planId) =>
-      state.valueOrNull?.plans.firstWhere((plan) => plan.id == planId);
+      state.plans.firstWhere((plan) => plan.id == planId);
 
-  Future<void> newPlan() async {
-    await update((plans) {
-      final scheduleKey = ScheduleKey(
-          type: ScheduleType.values[plans.plans.length % 3],
-          duration: ScheduleDuration.y1,
-          version: '1.0');
-      const bookmark = Bookmark(dayIndex: 0, sectionIndex: -1);
-      final plan = Plan(
-          id: _uuid.v4(),
-          name: toBeginningOfSentenceCase(scheduleKey.type.name)!,
-          scheduleKey: scheduleKey,
-          language: 'en',
-          bookmark: bookmark,
-          withTargetDate: true,
-          showEvents: true,
-          showLocations: true);
+  void newPlan() {
+    final scheduleKey = ScheduleKey(
+        type: ScheduleType.values[state.plans.length % 3],
+        duration: ScheduleDuration.y1,
+        version: '1.0');
+    const bookmark = Bookmark(dayIndex: 0, sectionIndex: -1);
+    final plan = Plan(
+        id: _uuid.v4(),
+        name: toBeginningOfSentenceCase(scheduleKey.type.name)!,
+        scheduleKey: scheduleKey,
+        language: 'en',
+        bookmark: bookmark,
+        withTargetDate: true,
+        showEvents: true,
+        showLocations: true);
 
-      return Plans([...plans.plans, plan]);
-    });
+    state = Plans([...state.plans, plan]);
   }
 
-  Future<void> addPlan(Plan plan) async {
-    await update((plans) => Plans([...plans.plans, plan]));
+  void addPlan(Plan plan) {
+    state = Plans([...state.plans, plan]);
   }
 
-  Future<void> removePlan(String planId) async {
-    await update((plans) =>
-        Plans(plans.plans.where((plan) => plan.id != planId).toList()));
+  void removePlan(String planId) {
+    state = Plans(state.plans.where((plan) => plan.id != planId).toList());
   }
 
-  Future<void> updatePlan(Plan plan) async {
-    await update((plans) =>
-        Plans(plans.plans.map((p) => p.id == plan.id ? plan : p).toList()));
+  void updatePlan(Plan plan) {
+    state = Plans(state.plans.map((p) => p.id == plan.id ? plan : p).toList());
   }
 }
 

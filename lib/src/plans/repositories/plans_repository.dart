@@ -9,76 +9,90 @@ import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_deserializer.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_serializer.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
 const _legacyExportPreferenceKey = 'legacyExport';
 const _preferenceKey = 'plans';
 const _uuid = Uuid();
 
-final plansRepositoryProvider = Provider<void>((ref) {
+final plansRepositoryProvider = Provider<PlansRepository>((ref) {
   final preferences = ref.watch(sharedPreferencesRepositoryProvider);
-  final plansSerialized = preferences.getStringList(_preferenceKey);
-  final legacyExportSerialized =
-      preferences.getString(_legacyExportPreferenceKey);
 
-  Plans plans = Plans(const []);
+  ref.listen(plansProvider, (previousPlans, currentPlans) {
+    final plansSerialized =
+        PlansSerializer().convertPlansToStringList(currentPlans);
+    preferences.setStringList(_preferenceKey, plansSerialized);
+  });
 
-  try {
-    if (plansSerialized != null || legacyExportSerialized == null) {
-      plans = PlansDeserializer().convertStringListToPlans(plansSerialized);
-    } else {
-      final Map<String, dynamic> legacyExport =
-          jsonDecode(legacyExportSerialized);
-      final currentSchedule = legacyExport['currentSchedule'] as String?;
-
-      if (currentSchedule != null) {
-        final schedules = legacyExport['schedules'] as Map<String, dynamic>?;
-        final language = legacyExport['language'] as String?;
-        final readingLanguage = legacyExport['readingLanguage'] as String?;
-        final withTargetDate = legacyExport['withEndDate'] as bool? ?? true;
-        final showEvents = legacyExport['showEvents'] as bool? ?? true;
-        final showLocations = legacyExport['showLocations'] as bool? ?? true;
-
-        final schedule =
-            (schedules ?? {})[currentSchedule] as Map<String, dynamic>? ?? {};
-        final scheduleKey = ScheduleKey(
-            type: ScheduleType.values.byName(currentSchedule),
-            duration: ScheduleDuration.values.byName(
-                (schedule['duration'] ?? '1y').split('').reversed.join('')),
-            version: '1.0');
-        final bookmark = Bookmark(
-            dayIndex: int.tryParse(schedule['readIndex'] ?? '0') ?? 0,
-            sectionIndex: -1);
-        final DateTime? targetDate =
-            withTargetDate && schedule['endDate'] != null
-                ? DateTime.tryParse(schedule['endDate'])
-                : null;
-
-        plans = Plans([
-          Plan(
-            id: _uuid.v4(),
-            name: toBeginningOfSentenceCase(currentSchedule)!,
-            scheduleKey: scheduleKey,
-            language: readingLanguage ?? language ?? 'en',
-            bookmark: bookmark,
-            targetDate: targetDate,
-            withTargetDate: withTargetDate,
-            showEvents: showEvents,
-            showLocations: showLocations,
-          )
-        ]);
-      }
-    }
-  } catch (e) {
-    debugPrint('Import from legacy failed with error $e');
-  }
-  ref.read(plansProvider.notifier).init(plans);
-
-  ref.listen(
-      plansProvider,
-      (previousPlans, currentPlans) => currentPlans.whenData((plans) {
-            final plansSerialized =
-                PlansSerializer().convertPlansToStringList(plans);
-            preferences.setStringList(_preferenceKey, plansSerialized);
-          }));
+  return PlansRepository(ref, preferences: preferences);
 }, name: 'plansRepositoryProvider');
+
+class PlansRepository {
+  PlansRepository(this.ref, {required this.preferences});
+
+  final SharedPreferences preferences;
+  final Ref ref;
+
+  void load() {
+    final plansSerialized = preferences.getStringList(_preferenceKey);
+    final legacyExportSerialized =
+        preferences.getString(_legacyExportPreferenceKey);
+
+    Plans plans = Plans(const []);
+
+    try {
+      if (plansSerialized != null || legacyExportSerialized == null) {
+        plans = PlansDeserializer().convertStringListToPlans(plansSerialized);
+      } else {
+        final Map<String, dynamic> legacyExport =
+            jsonDecode(legacyExportSerialized);
+        final currentSchedule = legacyExport['currentSchedule'] as String?;
+
+        if (currentSchedule != null) {
+          final schedules = legacyExport['schedules'] as Map<String, dynamic>?;
+          final language = legacyExport['language'] as String?;
+          final readingLanguage = legacyExport['readingLanguage'] as String?;
+          final withTargetDate = legacyExport['withEndDate'] as bool? ?? true;
+          final showEvents = legacyExport['showEvents'] as bool? ?? true;
+          final showLocations = legacyExport['showLocations'] as bool? ?? true;
+
+          final schedule =
+              (schedules ?? {})[currentSchedule] as Map<String, dynamic>? ?? {};
+          final scheduleKey = ScheduleKey(
+              type: ScheduleType.values.byName(currentSchedule),
+              duration: ScheduleDuration.values.byName(
+                  (schedule['duration'] ?? '1y').split('').reversed.join('')),
+              version: '1.0');
+          final bookmark = Bookmark(
+              dayIndex: int.tryParse(schedule['readIndex'] ?? '0') ?? 0,
+              sectionIndex: -1);
+          final DateTime? targetDate =
+              withTargetDate && schedule['endDate'] != null
+                  ? DateTime.tryParse(schedule['endDate'])
+                  : null;
+
+          plans = Plans([
+            Plan(
+              id: _uuid.v4(),
+              name: toBeginningOfSentenceCase(currentSchedule)!,
+              scheduleKey: scheduleKey,
+              language: readingLanguage ?? language ?? 'en',
+              bookmark: bookmark,
+              targetDate: targetDate,
+              withTargetDate: withTargetDate,
+              showEvents: showEvents,
+              showLocations: showLocations,
+            )
+          ]);
+        }
+      }
+    } catch (e) {
+      debugPrint('Import from legacy failed with error $e');
+    }
+    final plansNotifier = ref.read(plansProvider.notifier);
+    for (Plan plan in plans.plans) {
+      plansNotifier.addPlan(plan);
+    }
+  }
+}

@@ -21,7 +21,7 @@ Future<UncontrolledProviderScope> main() async {
       sharedPreferencesRepositoryProvider.overrideWithValue(preferences),
     ],
   );
-  container.read(plansRepositoryProvider);
+  container.read(plansRepositoryProvider).load();
   container.read(locationsRepositoryProvider);
   container.read(eventsRepositoryProvider);
   container.read(schedulesRepositoryProvider);

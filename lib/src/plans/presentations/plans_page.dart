@@ -26,25 +26,20 @@ class PlansPage extends ConsumerWidget {
           ),
         ],
       ),
-      body: plans.when(
-          data: (plans) => plans.plans.isEmpty
-              ? Center(
-                  key: const Key('no-plan-yet'),
-                  child: Text(AppLocalizations.of(context)!.noPlanYet),
-                )
-              : GridView.extent(
-                  childAspectRatio: 1.6,
-                  maxCrossAxisExtent: 600,
-                  padding: const EdgeInsets.all(20),
-                  crossAxisSpacing: 20,
-                  mainAxisSpacing: 20,
-                  restorationId: 'plansView',
-                  children: buildPlansGrid(plans),
-                ),
-          error: (error, stack) => Text(error.toString()),
-          loading: () => const Center(
-                child: CircularProgressIndicator(),
-              )),
+      body: plans.plans.isEmpty
+          ? Center(
+              key: const Key('no-plan-yet'),
+              child: Text(AppLocalizations.of(context)!.noPlanYet),
+            )
+          : GridView.extent(
+              childAspectRatio: 1.6,
+              maxCrossAxisExtent: 600,
+              padding: const EdgeInsets.all(20),
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20,
+              restorationId: 'plansView',
+              children: buildPlansGrid(plans),
+            ),
       floatingActionButton: FloatingActionButton(
         tooltip: AppLocalizations.of(context)!.addPlanTooltip,
         onPressed: () => ref.read(plansProvider.notifier).newPlan(),
