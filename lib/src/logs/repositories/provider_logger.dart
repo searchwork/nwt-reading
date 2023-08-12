@@ -16,7 +16,7 @@ class ProviderLogger extends ProviderObserver {
   void providerDidFail(ProviderBase provider, Object error,
       StackTrace stackTrace, ProviderContainer container) {
     debugPrint(
-        'didAddProvider: ${provider.name ?? provider.runtimeType} -- error: ${error.toString()}');
+        'providerDidFail: ${provider.name ?? provider.runtimeType} -- error: ${error.toString()}');
   }
 
   @override
@@ -24,7 +24,7 @@ class ProviderLogger extends ProviderObserver {
     ProviderBase provider,
     ProviderContainer container,
   ) {
-    debugPrint('didAddProvider: ${provider.name ?? provider.runtimeType}');
+    debugPrint('didDisposeProvider: ${provider.name ?? provider.runtimeType}');
   }
 
   @override
@@ -35,6 +35,6 @@ class ProviderLogger extends ProviderObserver {
     ProviderContainer container,
   ) {
     debugPrint(
-        'didAddProvider: ${provider.name ?? provider.runtimeType} -- newValue: ${newValue.toString().characters.take(70)}');
+        'didUpdateProvider: ${provider.name ?? provider.runtimeType} -- newValue: ${newValue.toString().characters.take(70)}');
   }
 }
