@@ -29,24 +29,28 @@ class PlanFamily {
   final PlansNotifier plansNotifier;
   final Schedule? schedule;
 
-  DateTime? _calcTargetDate(Bookmark bookmark) => plan.withTargetDate
-      ? DateUtils.dateOnly(DateTime.now())
-          .add(Duration(days: _getRemainingDays(bookmark)))
-      : null;
-
   void delete() => plansNotifier.removePlan(plan.id);
 
-  int get deviationDays => plan.targetDate == null
-      ? 0
-      : plan.targetDate!.difference(_calcTargetDate(plan.bookmark)!).inDays;
+  bool isRead({dayIndex, sectionIndex}) =>
+      plan.bookmark.compareTo(
+          Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex)) >=
+      0;
 
-  double getProgress() =>
-      schedule == null ? 0 : plan.bookmark.dayIndex / schedule!.length;
+  void setRead({required int dayIndex, required int sectionIndex}) {
+    final sections = schedule?.days[dayIndex].sections.length;
+    final newBookmark = sections != null && sectionIndex >= sections - 1
+        ? Bookmark(dayIndex: dayIndex + 1, sectionIndex: -1)
+        : Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
 
-  int _getRemainingDays(Bookmark bookmark) =>
-      schedule == null ? 0 : schedule!.length - bookmark.dayIndex;
+    plansNotifier.updatePlan(plan.copyWith(
+      bookmark: newBookmark,
+      startDate: _getStartDate(newBookmark),
+      targetDate: plan.targetDate ?? _calcTargetDate(newBookmark),
+    ));
+  }
 
-  int getRemainingDays() => _getRemainingDays(plan.bookmark);
+  void setUnread({required int dayIndex, required int sectionIndex}) =>
+      setRead(dayIndex: dayIndex, sectionIndex: sectionIndex - 1);
 
   void resetTargetDate() {
     if (plan.withTargetDate) {
@@ -55,22 +59,52 @@ class PlanFamily {
     }
   }
 
-  void setRead({required int dayIndex, required int sectionIndex}) {
-    final sections = schedule?.days[dayIndex].sections.length;
-    final newBookmark = sections != null && sectionIndex >= sections - 1
-        ? Bookmark(dayIndex: dayIndex + 1, sectionIndex: -1)
-        : Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
-    final startDate = plan.startDate ?? DateUtils.dateOnly(DateTime.now());
+  double getProgress() =>
+      schedule == null ? 0 : plan.bookmark.dayIndex / schedule!.length;
 
-    plansNotifier.updatePlan(plan.copyWith(
-      bookmark: newBookmark,
-      startDate: startDate,
-      targetDate: plan.targetDate ?? _calcTargetDate(newBookmark),
-    ));
+  int get deviationDays {
+    if (plan.withTargetDate && targetDate != null) {
+      final deviationDays = targetDate!.difference(_calcTargetDate()!).inDays;
+
+      // If ahead, don't count the current day.
+      return deviationDays <= 0 ? deviationDays : deviationDays - 1;
+    } else {
+      return 0;
+    }
   }
 
-  void setUnread({required int dayIndex, required int sectionIndex}) =>
-      setRead(dayIndex: dayIndex, sectionIndex: sectionIndex - 1);
+  int get remainingDays => _getRemainingDays();
+
+  DateTime? get startDate => _getStartDate();
+
+  DateTime? get targetDate => plan.targetDate ?? _calcTargetDate();
+
+  int? get todayTargetIndex {
+    if (plan.withTargetDate) {
+      final startDate = _getStartDate();
+
+      return startDate == null
+          ? null
+          : DateUtils.dateOnly(DateTime.now()).difference(startDate).inDays;
+    } else {
+      return null;
+    }
+  }
+
+  DateTime? _getStartDate([Bookmark? bookmark]) => plan.withTargetDate
+      ? plan.startDate ??
+          DateUtils.dateOnly(DateTime.now())
+              .add(Duration(days: -(bookmark ?? plan.bookmark).dayIndex))
+      : null;
+
+  DateTime? _calcTargetDate([Bookmark? bookmark]) => plan.withTargetDate
+      ? DateUtils.dateOnly(DateTime.now())
+          .add(Duration(days: _getRemainingDays(bookmark)))
+      : null;
+
+  int _getRemainingDays([Bookmark? bookmark]) => schedule == null
+      ? 0
+      : schedule!.length - (bookmark ?? plan.bookmark).dayIndex;
 }
 
 // @immutable
@@ -98,11 +132,6 @@ class Plan extends Equatable {
   final bool withTargetDate;
   final bool showEvents;
   final bool showLocations;
-
-  bool isRead({dayIndex, sectionIndex}) =>
-      bookmark.compareTo(
-          Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex)) >=
-      0;
 
   Plan copyWith(
           {String? id,
