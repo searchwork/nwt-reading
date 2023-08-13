@@ -44,27 +44,62 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     final progress = plan != null ? planProvider?.getProgress() : null;
     const Key centerKey = ValueKey<String>('today');
     final controller = ScrollController();
-
+    final deviationDays = planProvider?.deviationDays ?? 0;
+    final todayTargetIndex = planProvider?.todayTargetIndex;
+    final badgeColor = deviationDays >= 0 ? Colors.green : Colors.red;
     if (scheduleKey != plan?.scheduleKey) {
       scheduleKey = plan?.scheduleKey;
       resetTopDayIndex(plan?.bookmark);
     }
 
-    DayCard? scheduleListBuilder(index) {
+    Widget? scheduleListBuilder(index) {
       final day = schedule?.days[index];
-
-      return day == null
+      final isCurrentDay = plan?.bookmark.dayIndex == index;
+      final isTargetDay = todayTargetIndex == index;
+      final dividerColor = isCurrentDay ? Colors.blue : badgeColor;
+      final dayCard = day == null
           ? null
           : DayCard(
               key: Key('day-$index'),
               planId: planId,
               day: day,
               dayIndex: index);
+
+      return dayCard != null && (isCurrentDay || isTargetDay)
+          ? Column(
+              children: [
+                Container(
+                    padding: const EdgeInsets.only(left: 2, right: 10),
+                    child: Row(children: [
+                      Container(
+                        padding: const EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: dividerColor,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      Expanded(
+                          child: Divider(
+                        key: Key(isCurrentDay ? 'current-day' : 'target-day'),
+                        color: dividerColor,
+                        thickness: 3,
+                      ))
+                    ])),
+                dayCard,
+              ],
+            )
+          : dayCard;
     }
 
     return Scaffold(
         appBar: AppBar(
-          title: plan == null ? null : Text(plan.name),
+          title: deviationDays == 0
+              ? Text('${plan?.name}')
+              : Badge(
+                  label: Text('${deviationDays.abs()}'),
+                  backgroundColor: badgeColor,
+                  child: Text('${plan?.name}   '),
+                ),
           actions: [
             IconButton(
               icon: const Icon(Icons.edit),

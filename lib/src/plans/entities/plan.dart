@@ -10,7 +10,7 @@ final planFamilyProvider =
 
   final plan = ref.read(plansProvider.notifier).getPlan(planId);
   if (plan != null) {
-    ref.watch(scheduleFamilyProvider(plan.scheduleKey).future);
+    ref.watch(scheduleFamilyProvider(plan.scheduleKey));
 
     return PlanFamily(ref, plan: plan);
   } else {
@@ -79,17 +79,11 @@ class PlanFamily {
 
   DateTime? get targetDate => plan.targetDate ?? _calcTargetDate();
 
-  int? get todayTargetIndex {
-    if (plan.withTargetDate) {
-      final startDate = _getStartDate();
-
-      return startDate == null
-          ? null
-          : DateUtils.dateOnly(DateTime.now()).difference(startDate).inDays;
-    } else {
-      return null;
-    }
-  }
+  int? get todayTargetIndex =>
+      plan.withTargetDate && targetDate != null && schedule != null
+          ? schedule!.length -
+              targetDate!.difference(DateUtils.dateOnly(DateTime.now())).inDays
+          : null;
 
   DateTime? _getStartDate([Bookmark? bookmark]) => plan.withTargetDate
       ? plan.startDate ??
