@@ -101,6 +101,24 @@ void main() async {
     expect(find.byType(DayCard), findsWidgets);
   });
 
+  testWidgets('Return to plans page', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.tap(find.byType(Card).first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(DayCard), findsWidgets);
+
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+
+    expect(
+        find.byKey(
+            Key('plan-${providerContainer.read(plansProvider).plans.last.id}')),
+        findsOneWidget);
+  });
+
   testWidgets('Schedule starts at bookmark', (tester) async {
     final providerContainer =
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
@@ -194,6 +212,118 @@ void main() async {
         33);
     expect(find.byIcon(Icons.check_circle), findsNothing);
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
+  });
+
+  testWidgets('Show badges', (tester) async {
+    await SettledTester(tester, sharedPreferences: testPlansPreferences)
+        .providerContainer;
+
+    expect(find.byType(Badge), findsNothing);
+
+    await tester.tap(find.byType(PlanCard).first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsNothing);
+    expect(find.byType(Divider), findsOneWidget);
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
+    expect(find.byKey(const Key('target-day')), findsNothing);
+
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('day-81')),
+      500.0,
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsNothing);
+    expect(find.byType(Divider), findsNothing);
+    expect(find.byKey(const Key('current-day')), findsNothing);
+    expect(find.byKey(const Key('target-day')), findsNothing);
+
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-82')),
+            matching: find.byType(IconButton))
+        .first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsNothing);
+    expect(find.byType(Divider), findsOneWidget);
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
+    expect(find.byKey(const Key('target-day')), findsNothing);
+
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-82')),
+            matching: find.byType(IconButton))
+        .at(1));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsNothing);
+    expect(find.byType(Divider), findsNWidgets(2));
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
+    expect(find.byKey(const Key('target-day')), findsOneWidget);
+
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-82')),
+            matching: find.byType(IconButton))
+        .first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsNothing);
+    expect(find.byType(Divider), findsOneWidget);
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
+    expect(find.byKey(const Key('target-day')), findsNothing);
+
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-81')),
+            matching: find.byType(IconButton))
+        .first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsOneWidget);
+    expect(find.byType(Divider), findsNWidgets(2));
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
+    expect(find.byKey(const Key('target-day')), findsOneWidget);
+
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-83')),
+            matching: find.byType(IconButton))
+        .first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsOneWidget);
+    expect(find.byKey(const Key('target-day')), findsOneWidget);
+
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('day-89')),
+      500.0,
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsOneWidget);
+    expect(find.byType(Divider), findsNothing);
+    expect(find.byKey(const Key('current-day')), findsNothing);
+    expect(find.byKey(const Key('target-day')), findsNothing);
+
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-90')),
+            matching: find.byType(IconButton))
+        .first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsOneWidget);
+    expect(find.byType(Divider), findsOneWidget);
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
+    expect(find.byKey(const Key('target-day')), findsNothing);
+
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsOneWidget);
   });
 
   testWidgets('Bookmark button resets schedule view', (tester) async {
