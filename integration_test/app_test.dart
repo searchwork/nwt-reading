@@ -214,7 +214,7 @@ void main() async {
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
   });
 
-  testWidgets('Show badges', (tester) async {
+  testWidgets('Show deviations', (tester) async {
     await SettledTester(tester, sharedPreferences: testPlansPreferences)
         .providerContainer;
 
@@ -262,6 +262,10 @@ void main() async {
     expect(find.byType(Divider), findsNWidgets(2));
     expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(find.byKey(const Key('target-day')), findsOneWidget);
+    expect(
+        (tester.firstWidget(find.byKey(const Key('target-day'))) as Divider)
+            .color,
+        Colors.green);
 
     await tester.tap(find
         .descendant(
@@ -283,9 +287,18 @@ void main() async {
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsOneWidget);
+    expect(
+        ((tester.firstWidget(find.byType(Badge)) as Badge).label as Text).data,
+        '1');
+    expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
+        Colors.red);
     expect(find.byType(Divider), findsNWidgets(2));
     expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(find.byKey(const Key('target-day')), findsOneWidget);
+    expect(
+        (tester.firstWidget(find.byKey(const Key('target-day'))) as Divider)
+            .color,
+        Colors.red);
 
     await tester.tap(find
         .descendant(
@@ -295,7 +308,16 @@ void main() async {
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsOneWidget);
+    expect(
+        ((tester.firstWidget(find.byType(Badge)) as Badge).label as Text).data,
+        '1');
+    expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
+        Colors.green);
     expect(find.byKey(const Key('target-day')), findsOneWidget);
+    expect(
+        (tester.firstWidget(find.byKey(const Key('target-day'))) as Divider)
+            .color,
+        Colors.green);
 
     await tester.scrollUntilVisible(
       find.byKey(const Key('day-89')),
@@ -304,6 +326,11 @@ void main() async {
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsOneWidget);
+    expect(
+        ((tester.firstWidget(find.byType(Badge)) as Badge).label as Text).data,
+        '1');
+    expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
+        Colors.green);
     expect(find.byType(Divider), findsNothing);
     expect(find.byKey(const Key('current-day')), findsNothing);
     expect(find.byKey(const Key('target-day')), findsNothing);
@@ -316,6 +343,11 @@ void main() async {
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsOneWidget);
+    expect(
+        ((tester.firstWidget(find.byType(Badge)) as Badge).label as Text).data,
+        '7');
+    expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
+        Colors.green);
     expect(find.byType(Divider), findsOneWidget);
     expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(find.byKey(const Key('target-day')), findsNothing);
@@ -324,6 +356,11 @@ void main() async {
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsOneWidget);
+    expect(
+        ((tester.firstWidget(find.byType(Badge)) as Badge).label as Text).data,
+        '7');
+    expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
+        Colors.green);
   });
 
   testWidgets('Bookmark button resets schedule view', (tester) async {
