@@ -78,6 +78,12 @@ class PlanEdit extends FamilyNotifier<Plan, String?> {
     }
   }
 
+  void updateWithEndDate(bool withEndDate) {
+    if (withEndDate != state.withEndDate) {
+      state = state.copyWith(withEndDate: withEndDate);
+    }
+  }
+
   void reset() => state = build(state.id);
 
   void save() {

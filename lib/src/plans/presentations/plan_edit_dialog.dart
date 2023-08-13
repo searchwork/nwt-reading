@@ -35,8 +35,17 @@ class PlanEditDialog extends ConsumerWidget {
                 })
           ]),
           PlanTypeSegmentedButton(planId),
+          const SizedBox(height: 20),
           PlanDurationSegmentedButton(planId),
-          PlanLanguageDropdownButton(planId),
+          const SizedBox(height: 20),
+          ListTile(
+            title: const Text('Language'),
+            trailing: PlanLanguageDropdownButton(planId),
+          ),
+          ListTile(
+            title: const Text('With end date'),
+            trailing: PlanWithEndDateSwitch(planId),
+          ),
           ElevatedButton.icon(
               onPressed: () {
                 planEdit.delete();
@@ -144,6 +153,26 @@ class PlanLanguageDropdownButton extends ConsumerWidget {
                 ),
               ))
           .toList(),
+    );
+  }
+}
+
+class PlanWithEndDateSwitch extends ConsumerWidget {
+  const PlanWithEndDateSwitch(this.planId, {super.key});
+
+  final String planId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final plan = ref.watch(planEditFamilyNotifier(planId));
+    final planEdit = ref.watch(planEditFamilyNotifier(planId).notifier);
+
+    return Switch(
+      key: const Key('with-end-date'),
+      value: plan.withEndDate,
+      onChanged: (bool value) {
+        planEdit.updateWithEndDate(value);
+      },
     );
   }
 }
