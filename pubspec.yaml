@@ -23,7 +23,7 @@ dependencies:
   uuid: ^3.0.7
 
 dev_dependencies:
-  collection: ^1.16.0
+  collection: ^1.17.2
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
   flutter_test:
