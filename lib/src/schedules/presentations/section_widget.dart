@@ -51,7 +51,7 @@ class SectionWidget extends ConsumerWidget {
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           TextButton(
               onPressed: () => _launchUrl(Uri.parse(
-                  'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${plan?.language}&prefer=lang&bible=${section.url}')),
+                  'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${bibleLanguage?.wtCode}&prefer=lang&bible=${section.url}')),
               child: Text(
                   '${bibleLanguage?.books[section.bookIndex].name} ${section.ref}',
                   style: const TextStyle(color: Color(0xff007bff)))),
