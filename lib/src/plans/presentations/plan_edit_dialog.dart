@@ -136,17 +136,18 @@ class PlanLanguageDropdownButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(planEditFamilyProvider(planId));
-    final planEdit = ref.read(planEditFamilyProvider(planId).notifier);
+    final plan = ref.watch(planEditFamilyProvider(planId));
+    final planEditFamilyNotifier =
+        ref.read(planEditFamilyProvider(planId).notifier);
     final bibleLanguages = ref.watch(bibleLanguagesProvider).valueOrNull;
 
     return DropdownButton<String>(
       key: const Key('language'),
-      value: bibleLanguages?.bibleLanguages[planEdit.plan.language] == null
+      value: bibleLanguages?.bibleLanguages[plan.language] == null
           ? 'en'
-          : planEdit.plan.language,
+          : plan.language,
       onChanged: (String? value) {
-        if (value != null) planEdit.updateLanguage(value);
+        if (value != null) planEditFamilyNotifier.updateLanguage(value);
       },
       items: bibleLanguages?.bibleLanguages.entries
           .map((MapEntry<String, BibleLanguage> bibleLanguage) =>

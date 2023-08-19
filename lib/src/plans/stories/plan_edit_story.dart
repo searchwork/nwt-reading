@@ -15,8 +15,6 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   @override
   Plan build(arg) => _getPlan(arg ?? _uuid.v4());
 
-  Plan get plan => state;
-
   Plan _getNew(String planId) => Plan(
       id: planId,
       name: toBeginningOfSentenceCase(ScheduleType.chronological.name)!,
