@@ -14,10 +14,9 @@ class PlansNotifier extends Notifier<Plans> {
   @override
   build() => Plans(const []);
 
-  bool existPlan(String planId) => getPlan(planId) != null;
+  bool existPlan(String planId) => state.existPlan(planId);
 
-  Plan? getPlan(String planId) =>
-      state.plans.firstWhere((plan) => plan.id == planId);
+  Plan? getPlan(String planId) => state.getPlan(planId);
 
   void newPlan() {
     final scheduleKey = ScheduleKey(
@@ -57,4 +56,8 @@ class Plans {
   factory Plans(List<Plan> plans) => Plans._internal(List.unmodifiable(plans));
 
   final List<Plan> plans;
+
+  bool existPlan(String planId) => plans.any((plan) => plan.id == planId);
+
+  Plan? getPlan(String planId) => plans.firstWhere((plan) => plan.id == planId);
 }

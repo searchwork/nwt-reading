@@ -6,9 +6,8 @@ import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
 final planFamilyProvider =
     FutureProviderFamily<PlanFamily?, String>((ref, planId) async {
-  ref.watch(plansProvider);
+  final plan = ref.watch(plansProvider).getPlan(planId);
 
-  final plan = ref.read(plansProvider.notifier).getPlan(planId);
   if (plan != null) {
     ref.watch(scheduleFamilyProvider(plan.scheduleKey));
 
