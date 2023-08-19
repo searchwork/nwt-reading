@@ -24,6 +24,7 @@ dependencies:
 
 dev_dependencies:
   collection: ^1.17.2
+  custom_lint: ^0.5.2
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
   flutter_test:
@@ -31,6 +32,7 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   mocktail: ^1.0.0
+  riverpod_lint: ^2.0.1
 
 flutter:
   uses-material-design: true
