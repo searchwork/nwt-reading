@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_duration_segmented_button.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_language_tile.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_type_segmented_button.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_with_target_date_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plans_page.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
-import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
 class PlanEditDialog extends ConsumerWidget {
   const PlanEditDialog(this.planId, {super.key});
@@ -40,15 +42,8 @@ class PlanEditDialog extends ConsumerWidget {
           const SizedBox(height: 20),
           PlanDurationSegmentedButton(planId),
           const SizedBox(height: 20),
-          ListTile(
-            title: const Text('Language'),
-            trailing: PlanLanguageDropdownButton(planId),
-          ),
-          ListTile(
-            title: const Text('With Target Date'),
-            subtitle: const Text('Track daily reading with a target date.'),
-            trailing: PlanWithTargetDateSwitch(planId),
-          ),
+          PlanLanguageTile(planId),
+          PlanWithTargetDateTile(planId),
           ElevatedButton.icon(
               onPressed: () {
                 planEdit.delete();
@@ -59,127 +54,6 @@ class PlanEditDialog extends ConsumerWidget {
               label: const Text('Delete'))
         ],
       ),
-    );
-  }
-}
-
-class PlanTypeSegmentedButton extends ConsumerWidget {
-  const PlanTypeSegmentedButton(this.planId, {super.key});
-
-  final String planId;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyProvider(planId));
-    ref.watch(planEditFamilyProvider(planId));
-    final planEdit = ref.read(planEditFamilyProvider(planId).notifier);
-
-    return SegmentedButton<ScheduleType>(
-      segments: const <ButtonSegment<ScheduleType>>[
-        ButtonSegment<ScheduleType>(
-            value: ScheduleType.chronological,
-            label: Text('chronological'),
-            icon: Icon(Icons.hourglass_empty)),
-        ButtonSegment<ScheduleType>(
-            value: ScheduleType.sequential,
-            label: Text('sequential'),
-            icon: Icon(Icons.menu_book)),
-        ButtonSegment<ScheduleType>(
-            value: ScheduleType.written,
-            label: Text('as written'),
-            icon: Icon(Icons.edit_note)),
-      ],
-      selected: {plan.scheduleKey.type},
-      onSelectionChanged: (Set<ScheduleType> newSelection) {
-        planEdit.updateScheduleType(newSelection.single);
-      },
-    );
-  }
-}
-
-class PlanDurationSegmentedButton extends ConsumerWidget {
-  const PlanDurationSegmentedButton(this.planId, {super.key});
-
-  final String planId;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyProvider(planId));
-    ref.watch(planEditFamilyProvider(planId));
-    final planEdit = ref.read(planEditFamilyProvider(planId).notifier);
-
-    return SegmentedButton<ScheduleDuration>(
-      segments: const <ButtonSegment<ScheduleDuration>>[
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.m3, label: Text('3 months')),
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.m6, label: Text('6 months')),
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.y1, label: Text('1 year')),
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.y2, label: Text('2 years')),
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.y4, label: Text('4 years')),
-      ],
-      selected: {plan.scheduleKey.duration},
-      onSelectionChanged: (Set<ScheduleDuration> newSelection) {
-        planEdit.updateScheduleDuration(newSelection.single);
-      },
-    );
-  }
-}
-
-class PlanLanguageDropdownButton extends ConsumerWidget {
-  const PlanLanguageDropdownButton(this.planId, {super.key});
-
-  final String planId;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyProvider(planId));
-    final planEditFamilyNotifier =
-        ref.read(planEditFamilyProvider(planId).notifier);
-    final bibleLanguages = ref.watch(bibleLanguagesProvider).valueOrNull;
-
-    return DropdownButton<String>(
-      key: const Key('language'),
-      value: bibleLanguages?.bibleLanguages[plan.language] == null
-          ? 'en'
-          : plan.language,
-      onChanged: (String? value) {
-        if (value != null) planEditFamilyNotifier.updateLanguage(value);
-      },
-      items: bibleLanguages?.bibleLanguages.entries
-          .map((MapEntry<String, BibleLanguage> bibleLanguage) =>
-              DropdownMenuItem<String>(
-                value: bibleLanguage.key,
-                child: Text(
-                  bibleLanguage.value.name,
-                  key: Key('language-${bibleLanguage.key}'),
-                ),
-              ))
-          .toList(),
-    );
-  }
-}
-
-class PlanWithTargetDateSwitch extends ConsumerWidget {
-  const PlanWithTargetDateSwitch(this.planId, {super.key});
-
-  final String planId;
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyProvider(planId));
-    ref.watch(planEditFamilyProvider(planId));
-    final planEdit = ref.read(planEditFamilyProvider(planId).notifier);
-
-    return Switch(
-      key: const Key('with-end-date'),
-      value: plan.withTargetDate,
-      onChanged: (bool value) {
-        planEdit.updateWithTargetDate(value);
-      },
     );
   }
 }

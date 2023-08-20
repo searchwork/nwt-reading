@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
+import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
+
+class PlanLanguageTile extends ConsumerWidget {
+  const PlanLanguageTile(this.planId, {super.key});
+
+  final String planId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final plan = ref.watch(planEditFamilyProvider(planId));
+    final planEditFamilyNotifier =
+        ref.read(planEditFamilyProvider(planId).notifier);
+    final bibleLanguages = ref.watch(bibleLanguagesProvider).valueOrNull;
+
+    return ListTile(
+      title: const Text('Language'),
+      trailing: DropdownButton<String>(
+        key: const Key('language'),
+        value: bibleLanguages?.bibleLanguages[plan.language] == null
+            ? 'en'
+            : plan.language,
+        onChanged: (String? value) {
+          if (value != null) planEditFamilyNotifier.updateLanguage(value);
+        },
+        items: bibleLanguages?.bibleLanguages.entries
+            .map((MapEntry<String, BibleLanguage> bibleLanguage) =>
+                DropdownMenuItem<String>(
+                  value: bibleLanguage.key,
+                  child: Text(
+                    bibleLanguage.value.name,
+                    key: Key('language-${bibleLanguage.key}'),
+                  ),
+                ))
+            .toList(),
+      ),
+    );
+  }
+}
