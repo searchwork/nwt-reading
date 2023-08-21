@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:uuid/uuid.dart';
+import 'package:collection/collection.dart';
 
 const _uuid = Uuid();
 
@@ -59,5 +60,6 @@ class Plans {
 
   bool existPlan(String planId) => plans.any((plan) => plan.id == planId);
 
-  Plan? getPlan(String planId) => plans.firstWhere((plan) => plan.id == planId);
+  Plan? getPlan(String planId) =>
+      plans.firstWhereOrNull((plan) => plan.id == planId);
 }
