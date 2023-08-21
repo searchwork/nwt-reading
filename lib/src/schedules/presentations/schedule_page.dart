@@ -30,8 +30,14 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     resetTopDayIndex(bookmark);
   }
 
-  void resetTopDayIndex(bookmark) => setState(() => topDayIndex = max(0,
-      bookmark.sectionIndex < 0 ? bookmark.dayIndex - 1 : bookmark.dayIndex));
+  void resetTopDayIndex(Bookmark? bookmark) =>
+      setState(() => topDayIndex = bookmark == null
+          ? 0
+          : max(
+              0,
+              bookmark.sectionIndex < 0
+                  ? bookmark.dayIndex - 1
+                  : bookmark.dayIndex));
 
   @override
   Widget build(BuildContext context) {
