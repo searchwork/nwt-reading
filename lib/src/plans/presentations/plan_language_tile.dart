@@ -10,9 +10,8 @@ class PlanLanguageTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyProvider(planId));
-    final planEditFamilyNotifier =
-        ref.read(planEditFamilyProvider(planId).notifier);
+    final plan = ref.watch(planEditProviderFamily(planId));
+    final planEdit = ref.read(planEditProviderFamily(planId).notifier);
     final bibleLanguages = ref.watch(bibleLanguagesProvider).valueOrNull;
 
     return ListTile(
@@ -23,7 +22,7 @@ class PlanLanguageTile extends ConsumerWidget {
             ? 'en'
             : plan.language,
         onChanged: (String? value) {
-          if (value != null) planEditFamilyNotifier.updateLanguage(value);
+          if (value != null) planEdit.updateLanguage(value);
         },
         items: bibleLanguages?.bibleLanguages.entries
             .map((MapEntry<String, BibleLanguage> bibleLanguage) =>

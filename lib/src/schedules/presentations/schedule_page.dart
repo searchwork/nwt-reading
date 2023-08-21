@@ -26,7 +26,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     super.didChangeDependencies();
     final planId = ModalRoute.of(context)!.settings.arguments as String;
     final bookmark =
-        ref.read(planFamilyProvider(planId)).valueOrNull?.plan.bookmark;
+        ref.read(planNotifierProviderFamily(planId))?.getPlan().bookmark;
     resetTopDayIndex(bookmark);
   }
 
@@ -36,16 +36,16 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
   @override
   Widget build(BuildContext context) {
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final planProvider = ref.watch(planFamilyProvider(planId)).valueOrNull;
-    final plan = planProvider?.plan;
+    final planNotifier = ref.watch(planNotifierProviderFamily(planId));
+    final plan = planNotifier?.getPlan();
     final schedule = plan != null
-        ? ref.watch(scheduleFamilyProvider(plan.scheduleKey)).valueOrNull
+        ? ref.watch(scheduleProviderFamily(plan.scheduleKey)).valueOrNull
         : null;
-    final progress = plan != null ? planProvider?.getProgress() : null;
+    final progress = plan != null ? planNotifier?.getProgress() : null;
     const Key centerKey = ValueKey<String>('today');
     final controller = ScrollController();
-    final deviationDays = planProvider?.deviationDays ?? 0;
-    final todayTargetIndex = planProvider?.todayTargetIndex;
+    final deviationDays = planNotifier?.getDeviationDays() ?? 0;
+    final todayTargetIndex = planNotifier?.todayTargetIndex();
     final badgeColor = deviationDays >= 0 ? Colors.green : Colors.red;
     if (scheduleKey != plan?.scheduleKey) {
       scheduleKey = plan?.scheduleKey;

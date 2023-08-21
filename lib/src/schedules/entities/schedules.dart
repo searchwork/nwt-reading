@@ -8,13 +8,13 @@ final schedulesProvider =
         IncompleteNotifier.new,
         name: 'schedulesProvider');
 
-final scheduleFamilyProvider =
+final scheduleProviderFamily =
     FutureProviderFamily<Schedule?, ScheduleKey>((ref, scheduleKey) async {
   ref.watch(schedulesProvider);
   final schedules = await ref.read(schedulesProvider.notifier).future;
 
   return schedules.schedules[scheduleKey];
-}, name: 'scheduleFamilyProvider');
+}, name: 'scheduleProviderFamily');
 
 @immutable
 class Schedules {

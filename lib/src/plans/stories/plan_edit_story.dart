@@ -7,9 +7,9 @@ import 'package:uuid/uuid.dart';
 
 const _uuid = Uuid();
 
-final planEditFamilyProvider =
+final planEditProviderFamily =
     AutoDisposeNotifierProviderFamily<PlanEdit, Plan, String?>(PlanEdit.new,
-        name: 'planEditFamilyProvider');
+        name: 'planEditProviderFamily');
 
 class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   @override

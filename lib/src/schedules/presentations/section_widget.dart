@@ -25,10 +25,10 @@ class SectionWidget extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final events = ref.watch(eventsProvider).valueOrNull;
     final locations = ref.watch(locationsProvider).valueOrNull;
-    final planProvider = ref.watch(planFamilyProvider(planId)).valueOrNull;
-    final plan = planProvider?.plan;
+    final planNotifier = ref.watch(planNotifierProviderFamily(planId));
+    final plan = planNotifier?.getPlan();
     final isRead =
-        planProvider?.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
+        planNotifier?.isRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
     final bibleLanguage = ref.watch(bibleLanguagesProvider.select(
         (bibleLanguages) =>
             bibleLanguages.valueOrNull?.bibleLanguages[plan?.language]));
@@ -41,9 +41,9 @@ class SectionWidget extends ConsumerWidget {
           icon: const Icon(Icons.check_circle_outline),
           selectedIcon: const Icon(Icons.check_circle),
           onPressed: () => isRead == true
-              ? planProvider?.setUnread(
+              ? planNotifier?.setUnread(
                   dayIndex: dayIndex, sectionIndex: sectionIndex)
-              : planProvider?.setRead(
+              : planNotifier?.setRead(
                   dayIndex: dayIndex, sectionIndex: sectionIndex),
         ),
         Expanded(

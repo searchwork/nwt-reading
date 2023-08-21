@@ -4,47 +4,53 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
-final planFamilyProvider =
-    FutureProviderFamily<PlanFamily?, String>((ref, planId) async {
+final planNotifierProviderFamily =
+    ProviderFamily<PlanNotifier?, String>((ref, planId) {
   final plan = ref.watch(plansProvider).getPlan(planId);
 
   if (plan != null) {
-    ref.watch(scheduleFamilyProvider(plan.scheduleKey));
+    ref.watch(scheduleProviderFamily(plan.scheduleKey));
 
-    return PlanFamily(ref, plan: plan);
+    return PlanNotifier(ref, plan: plan);
   } else {
     return null;
   }
-}, name: 'planFamilyProvider');
+}, name: 'planNotifierProviderFamily');
 
-class PlanFamily {
-  PlanFamily(this.ref, {required this.plan})
-      : plansNotifier = ref.read(plansProvider.notifier),
-        schedule =
-            ref.read(scheduleFamilyProvider(plan.scheduleKey)).valueOrNull;
+class PlanNotifier extends Notifier<Plan> {
+  PlanNotifier(this._ref, {required Plan plan})
+      : _plan = plan,
+        _plansNotifier = _ref.read(plansProvider.notifier),
+        _schedule =
+            _ref.read(scheduleProviderFamily(plan.scheduleKey)).valueOrNull;
 
-  final Ref ref;
-  final Plan plan;
-  final PlansNotifier plansNotifier;
-  final Schedule? schedule;
+  final Ref _ref;
+  final Plan _plan;
+  final PlansNotifier _plansNotifier;
+  final Schedule? _schedule;
 
-  void delete() => plansNotifier.removePlan(plan.id);
+  @override
+  build() => _plan;
+
+  Plan getPlan() => _plan;
+
+  void delete() => _plansNotifier.removePlan(_plan.id);
 
   bool isRead({dayIndex, sectionIndex}) =>
-      plan.bookmark.compareTo(
+      _plan.bookmark.compareTo(
           Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex)) >=
       0;
 
   void setRead({required int dayIndex, required int sectionIndex}) {
-    final sections = schedule?.days[dayIndex].sections.length;
+    final sections = _schedule?.days[dayIndex].sections.length;
     final newBookmark = sections != null && sectionIndex >= sections - 1
         ? Bookmark(dayIndex: dayIndex + 1, sectionIndex: -1)
         : Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
 
-    plansNotifier.updatePlan(plan.copyWith(
+    _plansNotifier.updatePlan(_plan.copyWith(
       bookmark: newBookmark,
       startDate: _getStartDate(newBookmark),
-      targetDate: plan.targetDate ?? _calcTargetDate(newBookmark),
+      targetDate: _plan.targetDate ?? _calcTargetDate(newBookmark),
     ));
   }
 
@@ -52,18 +58,19 @@ class PlanFamily {
       setRead(dayIndex: dayIndex, sectionIndex: sectionIndex - 1);
 
   void resetTargetDate() {
-    if (plan.withTargetDate) {
-      plansNotifier.updatePlan(
-          plan.copyWith(targetDate: _calcTargetDate(plan.bookmark)));
+    if (_plan.withTargetDate) {
+      _plansNotifier.updatePlan(
+          _plan.copyWith(targetDate: _calcTargetDate(_plan.bookmark)));
     }
   }
 
   double getProgress() =>
-      schedule == null ? 0 : plan.bookmark.dayIndex / schedule!.length;
+      _schedule == null ? 0 : _plan.bookmark.dayIndex / _schedule!.length;
 
-  int get deviationDays {
-    if (plan.withTargetDate && targetDate != null) {
-      final deviationDays = targetDate!.difference(_calcTargetDate()!).inDays;
+  int getDeviationDays() {
+    if (_plan.withTargetDate && getTargetDate() != null) {
+      final deviationDays =
+          getTargetDate()!.difference(_calcTargetDate()!).inDays;
 
       // If ahead, don't count the current day.
       return deviationDays <= 0 ? deviationDays : deviationDays - 1;
@@ -72,32 +79,33 @@ class PlanFamily {
     }
   }
 
-  int get remainingDays => _getRemainingDays();
+  int getRemainingDays() => _getRemainingDays();
 
-  DateTime? get startDate => _getStartDate();
+  DateTime? getStartDate() => _getStartDate();
 
-  DateTime? get targetDate => plan.targetDate ?? _calcTargetDate();
+  DateTime? getTargetDate() => _plan.targetDate ?? _calcTargetDate();
 
-  int? get todayTargetIndex =>
-      plan.withTargetDate && targetDate != null && schedule != null
-          ? schedule!.length -
-              targetDate!.difference(DateUtils.dateOnly(DateTime.now())).inDays
-          : null;
-
-  DateTime? _getStartDate([Bookmark? bookmark]) => plan.withTargetDate
-      ? plan.startDate ??
-          DateUtils.dateOnly(DateTime.now())
-              .add(Duration(days: -(bookmark ?? plan.bookmark).dayIndex))
+  int? todayTargetIndex() => _plan.withTargetDate &&
+          getTargetDate() != null &&
+          _schedule != null
+      ? _schedule!.length -
+          getTargetDate()!.difference(DateUtils.dateOnly(DateTime.now())).inDays
       : null;
 
-  DateTime? _calcTargetDate([Bookmark? bookmark]) => plan.withTargetDate
+  DateTime? _getStartDate([Bookmark? bookmark]) => _plan.withTargetDate
+      ? _plan.startDate ??
+          DateUtils.dateOnly(DateTime.now())
+              .add(Duration(days: -(bookmark ?? _plan.bookmark).dayIndex))
+      : null;
+
+  DateTime? _calcTargetDate([Bookmark? bookmark]) => _plan.withTargetDate
       ? DateUtils.dateOnly(DateTime.now())
           .add(Duration(days: _getRemainingDays(bookmark)))
       : null;
 
-  int _getRemainingDays([Bookmark? bookmark]) => schedule == null
+  int _getRemainingDays([Bookmark? bookmark]) => _schedule == null
       ? 0
-      : schedule!.length - (bookmark ?? plan.bookmark).dayIndex;
+      : _schedule!.length - (bookmark ?? _plan.bookmark).dayIndex;
 }
 
 // @immutable

@@ -14,9 +14,9 @@ class PlanEditDialog extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(planEditFamilyProvider(planId));
+    ref.watch(planEditProviderFamily(planId));
 
-    final planEdit = ref.read(planEditFamilyProvider(planId).notifier);
+    final planEdit = ref.read(planEditProviderFamily(planId).notifier);
 
     return Dialog.fullscreen(
       child: Column(

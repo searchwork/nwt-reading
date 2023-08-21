@@ -11,11 +11,11 @@ class PlanCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final planProvider = ref.watch(planFamilyProvider(planId)).valueOrNull;
-    final plan = planProvider?.plan;
-    final deviationDays = planProvider?.deviationDays ?? 0;
-    final remainingDays = planProvider?.remainingDays ?? 0;
-    final progress = planProvider?.getProgress();
+    final planNotifier = ref.watch(planNotifierProviderFamily(planId));
+    final plan = planNotifier?.getPlan();
+    final deviationDays = planNotifier?.getDeviationDays() ?? 0;
+    final remainingDays = planNotifier?.getRemainingDays() ?? 0;
+    final progress = planNotifier?.getProgress();
     const planTypeIcons = {
       ScheduleType.chronological: Icons.hourglass_empty,
       ScheduleType.sequential: Icons.menu_book,

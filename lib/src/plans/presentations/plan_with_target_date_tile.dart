@@ -9,9 +9,9 @@ class PlanWithTargetDateTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final plan = ref.watch(planEditFamilyProvider(planId));
-    ref.watch(planEditFamilyProvider(planId));
-    final planEdit = ref.read(planEditFamilyProvider(planId).notifier);
+    final plan = ref.watch(planEditProviderFamily(planId));
+    ref.watch(planEditProviderFamily(planId));
+    final planEdit = ref.read(planEditProviderFamily(planId).notifier);
 
     return ListTile(
       title: const Text('With Target Date'),
