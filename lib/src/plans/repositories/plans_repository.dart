@@ -45,8 +45,8 @@ class PlansRepository {
       if (plansSerialized != null || legacyExportSerialized == null) {
         plans = PlansDeserializer().convertStringListToPlans(plansSerialized);
       } else {
-        final Map<String, dynamic> legacyExport =
-            jsonDecode(legacyExportSerialized);
+        final legacyExport =
+            jsonDecode(legacyExportSerialized) as Map<String, dynamic>;
         final currentSchedule = legacyExport['currentSchedule'] as String?;
 
         if (currentSchedule != null) {
@@ -62,14 +62,14 @@ class PlansRepository {
           final scheduleKey = ScheduleKey(
               type: ScheduleType.values.byName(currentSchedule),
               duration: ScheduleDuration.values.byName(
-                  (schedule['duration'] ?? '1y').split('').reversed.join('')),
+                  (schedule['duration'] as String? ?? '1y').split('').reversed.join('')),
               version: '1.0');
           final bookmark = Bookmark(
-              dayIndex: int.tryParse(schedule['readIndex'] ?? '0') ?? 0,
+              dayIndex: int.tryParse(schedule['readIndex'] as String? ?? '0') ?? 0,
               sectionIndex: -1);
           final DateTime? targetDate =
               withTargetDate && schedule['endDate'] != null
-                  ? DateTime.tryParse(schedule['endDate'])
+                  ? DateTime.tryParse(schedule['endDate'] as String)
                   : null;
 
           plans = Plans([

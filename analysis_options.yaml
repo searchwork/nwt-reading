@@ -2,8 +2,14 @@ include: package:flutter_lints/flutter.yaml
 
 linter:
   rules:
+    avoid_dynamic_calls: true
     prefer_single_quotes: true
 
 analyzer:
+  language:
+    strict-raw-types: true
+    strict-inference: true
+    strict-casts: true
   plugins:
-    - custom_lint
+    # Disable riverpod_lint for now as it makes the analyzer extremely slow.
+    # - custom_lint

@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:uuid/uuid.dart';
+// ignore: depend_on_referenced_packages
 import 'package:collection/collection.dart';
 
 const _uuid = Uuid();

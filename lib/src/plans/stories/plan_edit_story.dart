@@ -28,7 +28,7 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
       showEvents: true,
       showLocations: true);
 
-  Plan _getPlan(planId) => ref
+  Plan _getPlan(String planId) => ref
       .read(plansProvider)
       .plans
       .firstWhere((plan) => plan.id == planId, orElse: () => _getNew(planId));

@@ -10,6 +10,7 @@ void main() {
     final container = ProviderContainer();
     final result = await Future.any([
       Future.value(container.read(incompleteNotifierProvider.future)),
+      // ignore: inference_failure_on_instance_creation
       Future.delayed(const Duration(seconds: 1))
     ]);
 

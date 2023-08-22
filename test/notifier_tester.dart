@@ -8,7 +8,7 @@ class Listener<T> extends mocktail.Mock {
 }
 
 class NotifierTester<T> {
-  NotifierTester(this.provider, {overrides = const []}) {
+  NotifierTester(this.provider, {List<Override> overrides = const []}) {
     container = ProviderContainer(
       overrides: overrides,
       observers: [ProviderLogger()],
@@ -20,13 +20,14 @@ class NotifierTester<T> {
     );
   }
 
-  final NotifierProvider<Notifier, T> provider;
+  final NotifierProvider<Notifier<dynamic>, T> provider;
   final listener = Listener<T>();
   ProviderContainer container = ProviderContainer();
 }
 
 class IncompleteNotifierTester<T> {
-  IncompleteNotifierTester(this.provider, {overrides = const []}) {
+  IncompleteNotifierTester(this.provider,
+      {List<Override> overrides = const []}) {
     container = ProviderContainer(
       overrides: overrides,
       observers: [ProviderLogger()],
@@ -38,7 +39,7 @@ class IncompleteNotifierTester<T> {
     );
   }
 
-  final AsyncNotifierProvider<IncompleteNotifier, T> provider;
+  final AsyncNotifierProvider<IncompleteNotifier<dynamic>, T> provider;
   final listener = Listener<AsyncValue<T>>();
   ProviderContainer container = ProviderContainer();
 }

@@ -4,18 +4,15 @@ import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
 class ScheduleDeserializer {
   Schedule convertJsonToSchedule(String json) {
-    final dayList = jsonDecode(json);
-    final days = List<Day>.from(dayList.map((dayMap) {
-      final day = _convertMapToDay(dayMap);
-      return day;
-    }));
+    final dayList = jsonDecode(json) as List<dynamic>;
+    final days = List<Day>.from(dayList.map((dayMap) => _convertMapToDay(dayMap as List<dynamic>)));
 
     return Schedule(days);
   }
 
   Day _convertMapToDay(List<dynamic> dayMap) {
     final sections =
-        dayMap.map((sectionMap) => _convertMapToSection(sectionMap)).toList();
+        dayMap.map((sectionMap) => _convertMapToSection(sectionMap as Map<String, dynamic>)).toList();
 
     return Day(List<Section>.from(sections));
   }
@@ -28,8 +25,8 @@ class ScheduleDeserializer {
     final startIndex = sectionMap['startIndex'] as int;
     final endIndex = sectionMap['endIndex'] as int;
     final url = sectionMap['url'] as String;
-    final events = List<String>.from(sectionMap['events']);
-    final locations = List<String>.from(sectionMap['locations']);
+    final events = List<String>.from(sectionMap['events'] as List<dynamic>);
+    final locations = List<String>.from(sectionMap['locations'] as List<dynamic>);
 
     return Section(
       bookIndex: bookIndex,

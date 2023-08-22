@@ -24,6 +24,7 @@ class PlanNotifier extends Notifier<Plan> {
         _schedule =
             _ref.read(scheduleProviderFamily(plan.scheduleKey)).valueOrNull;
 
+  // ignore: unused_field
   final Ref _ref;
   final Plan _plan;
   final PlansNotifier _plansNotifier;
@@ -36,7 +37,7 @@ class PlanNotifier extends Notifier<Plan> {
 
   void delete() => _plansNotifier.removePlan(_plan.id);
 
-  bool isRead({dayIndex, sectionIndex}) =>
+  bool isRead({required int dayIndex, required int sectionIndex}) =>
       _plan.bookmark.compareTo(
           Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex)) >=
       0;
