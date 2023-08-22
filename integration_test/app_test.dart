@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 
@@ -67,21 +68,88 @@ void main() async {
     expect(find.byType(PlanCard), findsNothing);
   });
 
-  testWidgets('Adding plans', (tester) async {
+  testWidgets('Add new plans', (tester) async {
     final providerContainer = await SettledTester(tester).providerContainer;
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
+    await takeScreenshot(tester: tester, binding: binding, filename: 'new');
 
+    expect(providerContainer.read(plansProvider).plans.length, 0);
+
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    var plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.name, toBeginningOfSentenceCase(plan.scheduleKey.type.name));
+    expect(plan.scheduleKey.type, ScheduleType.chronological);
+    expect(plan.scheduleKey.duration, ScheduleDuration.y1);
+    expect(plan.scheduleKey.version, '1.0');
+    expect(plan.language, 'en');
+    expect(plan.withTargetDate, true);
+    expect(plan.showEvents, true);
+    expect(plan.showLocations, true);
+    expect(plan.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
     expect(providerContainer.read(plansProvider).plans.length, 1);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
     expect(find.byType(PlanCard), findsOneWidget);
 
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.edit_note));
+    await tester.pumpAndSettle();
+    await tester.tap(find
+        .descendant(
+            of: find.byType(SegmentedButton<ScheduleDuration>),
+            matching: find.byType(Text))
+        .first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('language')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('language-es')).last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
 
+    plan = providerContainer.read(plansProvider).plans.last;
+    expect(plan.name, toBeginningOfSentenceCase(plan.scheduleKey.type.name));
+    expect(plan.scheduleKey.type, ScheduleType.written);
+    expect(plan.scheduleKey.duration, ScheduleDuration.m3);
+    expect(plan.scheduleKey.version, '1.0');
+    expect(plan.language, 'es');
+    expect(plan.withTargetDate, false);
+    expect(plan.showEvents, true);
+    expect(plan.showLocations, true);
+    expect(plan.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
     expect(providerContainer.read(plansProvider).plans.length, 2);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
     expect(find.byType(PlanCard), findsNWidgets(2));
+  });
+
+  testWidgets('Cancel new plan', (tester) async {
+    final providerContainer = await SettledTester(tester).providerContainer;
+    final plans = providerContainer.read(plansProvider).plans;
+    await tester.tap(find.byType(FloatingActionButton));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.edit_note));
+    await tester.pumpAndSettle();
+    await tester.tap(find
+        .descendant(
+            of: find.byType(SegmentedButton<ScheduleDuration>),
+            matching: find.byType(Text))
+        .first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('language')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('language-es')).last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.close));
+    await tester.pumpAndSettle();
+
+    expect(providerContainer.read(plansProvider).plans, plans);
   });
 
   testWidgets('Show schedule of last plan', (tester) async {
