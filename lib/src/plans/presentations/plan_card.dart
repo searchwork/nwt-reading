@@ -11,11 +11,11 @@ class PlanCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final planNotifier = ref.watch(planNotifierProviderFamily(planId));
-    final plan = planNotifier?.getPlan();
-    final deviationDays = planNotifier?.getDeviationDays() ?? 0;
-    final remainingDays = planNotifier?.getRemainingDays() ?? 0;
-    final progress = planNotifier?.getProgress();
+    final plan = ref.watch(planProviderFamily(planId));
+    final planNotifier = ref.read(planProviderFamily(planId).notifier);
+    final deviationDays = planNotifier.getDeviationDays();
+    final remainingDays = planNotifier.getRemainingDays();
+    final progress = planNotifier.getProgress();
     const planTypeIcons = {
       ScheduleType.chronological: Icons.hourglass_empty,
       ScheduleType.sequential: Icons.menu_book,
@@ -26,44 +26,42 @@ class PlanCard extends ConsumerWidget {
         key: Key('plan-$planId'),
         child: Stack(
           children: [
-            if (plan != null)
-              Positioned(
-                  left: 10,
-                  top: 10,
-                  child: Row(children: [
-                    Icon(
-                      planTypeIcons[plan.scheduleKey.type],
-                      color: Colors.black54,
-                      size: 56,
-                      shadows: const [
-                        Shadow(
-                            offset: Offset(-1, -1),
-                            color: Colors.black26,
-                            blurRadius: 2),
-                        Shadow(
-                            offset: Offset(1, 1),
-                            color: Colors.white,
-                            blurRadius: 2)
-                      ],
-                    ),
-                    Text(
-                      plan.name,
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    )
-                  ])),
+            Positioned(
+                left: 10,
+                top: 10,
+                child: Row(children: [
+                  Icon(
+                    planTypeIcons[plan.scheduleKey.type],
+                    color: Colors.black54,
+                    size: 56,
+                    shadows: const [
+                      Shadow(
+                          offset: Offset(-1, -1),
+                          color: Colors.black26,
+                          blurRadius: 2),
+                      Shadow(
+                          offset: Offset(1, 1),
+                          color: Colors.white,
+                          blurRadius: 2)
+                    ],
+                  ),
+                  Text(
+                    plan.name,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  )
+                ])),
             Positioned(
                 right: 15,
                 bottom: 15,
                 child: Stack(alignment: Alignment.center, children: [
                   Text('${remainingDays}d'),
-                  if (progress != null)
-                    SizedBox(
-                        width: 60,
-                        height: 60,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 6,
-                          value: progress,
-                        ))
+                  SizedBox(
+                      width: 60,
+                      height: 60,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 6,
+                        value: progress,
+                      ))
                 ])),
           ],
         ));

@@ -26,7 +26,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     super.didChangeDependencies();
     final planId = ModalRoute.of(context)!.settings.arguments as String;
     final bookmark =
-        ref.read(planNotifierProviderFamily(planId))?.getPlan().bookmark;
+        ref.read(planProviderFamily(planId).notifier).getPlan()?.bookmark;
     resetTopDayIndex(bookmark);
   }
 
@@ -42,25 +42,24 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
   @override
   Widget build(BuildContext context) {
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final planNotifier = ref.watch(planNotifierProviderFamily(planId));
-    final plan = planNotifier?.getPlan();
-    final schedule = plan != null
-        ? ref.watch(scheduleProviderFamily(plan.scheduleKey)).valueOrNull
-        : null;
-    final progress = plan != null ? planNotifier?.getProgress() : null;
+    final plan = ref.watch(planProviderFamily(planId));
+    final planNotifier = ref.read(planProviderFamily(planId).notifier);
+    final schedule =
+        ref.watch(scheduleProviderFamily(plan.scheduleKey)).valueOrNull;
+    final progress = planNotifier.getProgress();
     const Key centerKey = ValueKey<String>('today');
     final controller = ScrollController();
-    final deviationDays = planNotifier?.getDeviationDays() ?? 0;
-    final todayTargetIndex = planNotifier?.todayTargetIndex();
+    final deviationDays = planNotifier.getDeviationDays();
+    final todayTargetIndex = planNotifier.todayTargetIndex();
     final badgeColor = deviationDays >= 0 ? Colors.green : Colors.red;
-    if (scheduleKey != plan?.scheduleKey) {
-      scheduleKey = plan?.scheduleKey;
-      resetTopDayIndex(plan?.bookmark);
+    if (scheduleKey != plan.scheduleKey) {
+      scheduleKey = plan.scheduleKey;
+      resetTopDayIndex(plan.bookmark);
     }
 
     Widget? scheduleListBuilder(int index) {
       final day = schedule?.days[index];
-      final isCurrentDay = plan?.bookmark.dayIndex == index;
+      final isCurrentDay = plan.bookmark.dayIndex == index;
       final isTargetDay = todayTargetIndex == index;
       final dividerColor = isCurrentDay ? Colors.blue : badgeColor;
       final dayCard = day == null
@@ -100,11 +99,11 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     return Scaffold(
         appBar: AppBar(
           title: deviationDays == 0
-              ? Text('${plan?.name}')
+              ? Text(plan.name)
               : Badge(
                   label: Text('${deviationDays.abs()}'),
                   backgroundColor: badgeColor,
-                  child: Text('${plan?.name}   '),
+                  child: Text('${plan.name}   '),
                 ),
           actions: [
             IconButton(
@@ -120,8 +119,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
             ? null
             : Column(
                 children: [
-                  if (progress != null)
-                    LinearProgressIndicator(value: progress),
+                  LinearProgressIndicator(value: progress),
                   Flexible(
                     child: CustomScrollView(
                       controller: controller,
@@ -149,7 +147,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
         floatingActionButton: FloatingActionButton(
           tooltip: AppLocalizations.of(context)!.goToBookmarkTooltip,
           onPressed: () {
-            resetTopDayIndex(plan?.bookmark);
+            resetTopDayIndex(plan.bookmark);
             controller.jumpTo(0.0);
           },
           child: const Icon(Icons.bookmark),

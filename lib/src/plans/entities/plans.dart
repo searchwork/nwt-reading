@@ -20,24 +20,20 @@ class PlansNotifier extends Notifier<Plans> {
 
   Plan? getPlan(String planId) => state.getPlan(planId);
 
-  void newPlan() {
-    final scheduleKey = ScheduleKey(
-        type: ScheduleType.values[state.plans.length % 3],
-        duration: ScheduleDuration.y1,
-        version: '1.0');
-    const bookmark = Bookmark(dayIndex: 0, sectionIndex: -1);
-    final plan = Plan(
-        id: _uuid.v4(),
-        name: toBeginningOfSentenceCase(scheduleKey.type.name)!,
-        scheduleKey: scheduleKey,
-        language: 'en',
-        bookmark: bookmark,
-        withTargetDate: true,
-        showEvents: true,
-        showLocations: true);
+  String getNewPlanId() => _uuid.v4();
 
-    state = Plans([...state.plans, plan]);
-  }
+  Plan getNewPlan(String planId) => Plan(
+      id: planId,
+      name: toBeginningOfSentenceCase(ScheduleType.chronological.name)!,
+      scheduleKey: const ScheduleKey(
+          type: ScheduleType.chronological,
+          duration: ScheduleDuration.y1,
+          version: '1.0'),
+      language: 'en',
+      bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),
+      withTargetDate: true,
+      showEvents: true,
+      showLocations: true);
 
   void addPlan(Plan plan) {
     state = Plans([...state.plans, plan]);

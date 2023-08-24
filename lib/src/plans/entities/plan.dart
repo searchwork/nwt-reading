@@ -4,54 +4,54 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
-final planNotifierProviderFamily =
-    ProviderFamily<PlanNotifier?, String>((ref, planId) {
-  final plan = ref.watch(plansProvider).getPlan(planId);
+final planProviderFamily =
+    AutoDisposeNotifierProviderFamily<PlanNotifier, Plan, String>(
+        PlanNotifier.new,
+        dependencies: [plansProvider],
+        name: 'planProviderFamily');
 
-  if (plan != null) {
-    ref.watch(scheduleProviderFamily(plan.scheduleKey));
-
-    return PlanNotifier(ref, plan: plan);
-  } else {
-    return null;
-  }
-}, name: 'planNotifierProviderFamily');
-
-class PlanNotifier extends Notifier<Plan> {
-  PlanNotifier(this._ref, {required Plan plan})
-      : _plan = plan,
-        _plansNotifier = _ref.read(plansProvider.notifier),
-        _schedule =
-            _ref.read(scheduleProviderFamily(plan.scheduleKey)).valueOrNull;
-
-  // ignore: unused_field
-  final Ref _ref;
-  final Plan _plan;
-  final PlansNotifier _plansNotifier;
-  final Schedule? _schedule;
+class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
+  PlansNotifier? plansNotifier;
+  Schedule? schedule;
 
   @override
-  build() => _plan;
+  Plan build(arg) {
+    final planId = arg;
 
-  Plan getPlan() => _plan;
+    plansNotifier = ref.read(plansProvider.notifier);
+    if (plansNotifier!.existPlan(planId)) {
+      ref.watch(plansProvider);
+    }
 
-  void delete() => _plansNotifier.removePlan(_plan.id);
+    return plansNotifier!.getPlan(planId) ?? plansNotifier!.getNewPlan(planId);
+  }
+
+  Plan? getPlan() {
+    return state;
+  }
+
+  Schedule? getSchedule() =>
+      ref.read(scheduleProviderFamily(state.scheduleKey)).valueOrNull;
+
+  void delete() {
+    plansNotifier?.removePlan(state.id);
+  }
 
   bool isRead({required int dayIndex, required int sectionIndex}) =>
-      _plan.bookmark.compareTo(
+      state.bookmark.compareTo(
           Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex)) >=
       0;
 
   void setRead({required int dayIndex, required int sectionIndex}) {
-    final sections = _schedule?.days[dayIndex].sections.length;
+    final sections = getSchedule()?.days[dayIndex].sections.length;
     final newBookmark = sections != null && sectionIndex >= sections - 1
         ? Bookmark(dayIndex: dayIndex + 1, sectionIndex: -1)
         : Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
 
-    _plansNotifier.updatePlan(_plan.copyWith(
+    plansNotifier?.updatePlan(state.copyWith(
       bookmark: newBookmark,
       startDate: _getStartDate(newBookmark),
-      targetDate: _plan.targetDate ?? _calcTargetDate(newBookmark),
+      targetDate: state.targetDate ?? _calcTargetDate(newBookmark),
     ));
   }
 
@@ -59,17 +59,18 @@ class PlanNotifier extends Notifier<Plan> {
       setRead(dayIndex: dayIndex, sectionIndex: sectionIndex - 1);
 
   void resetTargetDate() {
-    if (_plan.withTargetDate) {
-      _plansNotifier.updatePlan(
-          _plan.copyWith(targetDate: _calcTargetDate(_plan.bookmark)));
+    if (state.withTargetDate) {
+      plansNotifier?.updatePlan(
+          state.copyWith(targetDate: _calcTargetDate(state.bookmark)));
     }
   }
 
-  double getProgress() =>
-      _schedule == null ? 0 : _plan.bookmark.dayIndex / _schedule!.length;
+  double getProgress() => getSchedule() == null
+      ? 0
+      : state.bookmark.dayIndex / getSchedule()!.length;
 
   int getDeviationDays() {
-    if (_plan.withTargetDate && getTargetDate() != null) {
+    if (state.withTargetDate && getTargetDate() != null) {
       final deviationDays =
           getTargetDate()!.difference(_calcTargetDate()!).inDays;
 
@@ -84,29 +85,29 @@ class PlanNotifier extends Notifier<Plan> {
 
   DateTime? getStartDate() => _getStartDate();
 
-  DateTime? getTargetDate() => _plan.targetDate ?? _calcTargetDate();
+  DateTime? getTargetDate() => state.targetDate ?? _calcTargetDate();
 
-  int? todayTargetIndex() => _plan.withTargetDate &&
+  int? todayTargetIndex() => state.withTargetDate &&
           getTargetDate() != null &&
-          _schedule != null
-      ? _schedule!.length -
+          getSchedule() != null
+      ? getSchedule()!.length -
           getTargetDate()!.difference(DateUtils.dateOnly(DateTime.now())).inDays
       : null;
 
-  DateTime? _getStartDate([Bookmark? bookmark]) => _plan.withTargetDate
-      ? _plan.startDate ??
+  DateTime? _getStartDate([Bookmark? bookmark]) => state.withTargetDate
+      ? state.startDate ??
           DateUtils.dateOnly(DateTime.now())
-              .add(Duration(days: -(bookmark ?? _plan.bookmark).dayIndex))
+              .add(Duration(days: -(bookmark ?? state.bookmark).dayIndex))
       : null;
 
-  DateTime? _calcTargetDate([Bookmark? bookmark]) => _plan.withTargetDate
+  DateTime? _calcTargetDate([Bookmark? bookmark]) => state.withTargetDate
       ? DateUtils.dateOnly(DateTime.now())
           .add(Duration(days: _getRemainingDays(bookmark)))
       : null;
 
-  int _getRemainingDays([Bookmark? bookmark]) => _schedule == null
+  int _getRemainingDays([Bookmark? bookmark]) => getSchedule() == null
       ? 0
-      : _schedule!.length - (bookmark ?? _plan.bookmark).dayIndex;
+      : getSchedule()!.length - (bookmark ?? state.bookmark).dayIndex;
 }
 
 // @immutable

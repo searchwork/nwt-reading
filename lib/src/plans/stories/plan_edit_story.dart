@@ -15,23 +15,9 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   @override
   Plan build(arg) => _getPlan(arg ?? _uuid.v4());
 
-  Plan _getNew(String planId) => Plan(
-      id: planId,
-      name: toBeginningOfSentenceCase(ScheduleType.chronological.name)!,
-      scheduleKey: const ScheduleKey(
-          type: ScheduleType.chronological,
-          duration: ScheduleDuration.y1,
-          version: '1.0'),
-      language: 'en',
-      bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),
-      withTargetDate: true,
-      showEvents: true,
-      showLocations: true);
-
-  Plan _getPlan(String planId) => ref
-      .read(plansProvider)
-      .plans
-      .firstWhere((plan) => plan.id == planId, orElse: () => _getNew(planId));
+  Plan _getPlan(String planId) =>
+      ref.read(plansProvider).getPlan(planId) ??
+      ref.read(plansProvider.notifier).getNewPlan(planId);
 
   void updateLanguage(String language) {
     if (language != state.language) {
