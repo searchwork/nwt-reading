@@ -6,7 +6,7 @@ import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 class PlanTypeSegmentedButton extends ConsumerWidget {
   const PlanTypeSegmentedButton(this.planId, {super.key});
 
-  final String planId;
+  final String? planId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

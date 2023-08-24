@@ -6,7 +6,7 @@ import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 class PlanLanguageTile extends ConsumerWidget {
   const PlanLanguageTile(this.planId, {super.key});
 
-  final String planId;
+  final String? planId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
