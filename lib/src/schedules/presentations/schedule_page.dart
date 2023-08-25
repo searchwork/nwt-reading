@@ -25,8 +25,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final bookmark =
-        ref.read(planProviderFamily(planId).notifier).getPlan()?.bookmark;
+    final bookmark = ref.read(planProviderFamily(planId)).bookmark;
     resetTopDayIndex(bookmark);
   }
 
