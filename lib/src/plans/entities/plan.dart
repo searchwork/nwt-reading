@@ -18,10 +18,8 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
   Plan build(arg) {
     final planId = arg;
 
+    ref.watch(plansProvider);
     plansNotifier = ref.read(plansProvider.notifier);
-    if (plansNotifier!.existPlan(planId)) {
-      ref.watch(plansProvider);
-    }
 
     return plansNotifier!.getPlan(planId) ?? plansNotifier!.getNewPlan(planId);
   }
