@@ -130,25 +130,28 @@ class Plan extends Equatable {
   final bool showEvents;
   final bool showLocations;
 
-  Plan copyWith(
-          {String? id,
-          String? name,
-          ScheduleKey? scheduleKey,
-          String? language,
-          Bookmark? bookmark,
-          DateTime? startDate,
-          DateTime? targetDate,
-          bool? withTargetDate,
-          bool? showEvents,
-          bool? showLocations}) =>
+  Plan copyWith({
+    String? id,
+    String? name,
+    ScheduleKey? scheduleKey,
+    String? language,
+    Bookmark? bookmark,
+    DateTime? startDate,
+    DateTime? targetDate,
+    bool? withTargetDate,
+    bool? showEvents,
+    bool? showLocations,
+    bool? nullStartDate,
+    bool? nullTargetDate,
+  }) =>
       Plan(
         id: id ?? this.id,
         name: name ?? this.name,
         scheduleKey: scheduleKey ?? this.scheduleKey,
         language: language ?? this.language,
         bookmark: bookmark ?? this.bookmark,
-        startDate: startDate ?? this.startDate,
-        targetDate: targetDate ?? this.targetDate,
+        startDate: nullStartDate == true ? null : startDate ?? this.startDate,
+        targetDate: nullTargetDate == true ? null : targetDate ?? this.targetDate,
         withTargetDate: withTargetDate ?? this.withTargetDate,
         showEvents: showEvents ?? this.showEvents,
         showLocations: showLocations ?? this.showLocations,

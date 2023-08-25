@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_duration_segmented_button.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_language_tile.dart';
-import 'package:nwt_reading/src/plans/presentations/plan_type_segmented_button.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_with_target_date_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plans_page.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
@@ -38,8 +37,6 @@ class PlanEditDialog extends ConsumerWidget {
                       .addPostFrameCallback((_) => Navigator.pop(context));
                 })
           ]),
-          PlanTypeSegmentedButton(planId),
-          const SizedBox(height: 20),
           PlanDurationSegmentedButton(planId),
           const SizedBox(height: 20),
           PlanLanguageTile(planId),
