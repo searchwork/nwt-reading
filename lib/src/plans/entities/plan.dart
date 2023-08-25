@@ -24,10 +24,6 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
     return plansNotifier!.getPlan(planId) ?? plansNotifier!.getNewPlan(planId);
   }
 
-  Plan? getPlan() {
-    return state;
-  }
-
   Schedule? getSchedule() =>
       ref.read(scheduleProviderFamily(state.scheduleKey)).valueOrNull;
 
