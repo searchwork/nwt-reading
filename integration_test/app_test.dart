@@ -247,6 +247,24 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
+    await tester.tap(find
+        .byKey(const Key('reject-toggle-read')));
+    await tester.pumpAndSettle();
+
+    expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
+        75);
+    expect(find.byIcon(Icons.check_circle), findsNothing);
+    expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
+
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-115')),
+            matching: find.byType(IconButton))
+        .first);
+    await tester.pumpAndSettle();
+    await tester.tap(find
+        .byKey(const Key('confirm-toggle-read')));
+    await tester.pumpAndSettle();
 
     expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
         115);
@@ -274,6 +292,24 @@ void main() async {
             of: find.byKey(const Key('day-33')),
             matching: find.byType(IconButton))
         .first);
+    await tester.pumpAndSettle();
+    await tester.tap(find
+        .byKey(const Key('reject-toggle-read')));
+    await tester.pumpAndSettle();
+
+    expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
+        75);
+    expect(find.byIcon(Icons.check_circle), findsWidgets);
+    expect(find.byIcon(Icons.check_circle_outline), findsNothing);
+
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-33')),
+            matching: find.byType(IconButton))
+        .first);
+    await tester.pumpAndSettle();
+    await tester.tap(find
+        .byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
 
     expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
@@ -312,6 +348,9 @@ void main() async {
             of: find.byKey(const Key('day-82')),
             matching: find.byType(IconButton))
         .first);
+    await tester.pumpAndSettle();
+    await tester.tap(find
+        .byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsNothing);
@@ -409,6 +448,9 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
+    await tester.tap(find
+        .byKey(const Key('confirm-toggle-read')));
+    await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsOneWidget);
     expect(
@@ -446,6 +488,9 @@ void main() async {
             of: find.byKey(const Key('day-34')),
             matching: find.byType(IconButton))
         .first);
+    await tester.pumpAndSettle();
+        await tester.tap(find
+        .byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(
       find.byKey(const Key('day-70')),
