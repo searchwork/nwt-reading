@@ -33,19 +33,44 @@ class SectionWidget extends ConsumerWidget {
         (bibleLanguages) =>
             bibleLanguages.valueOrNull?.bibleLanguages[plan.language]));
 
+    void toggleRead() {
+      try {
+        planNotifier.toggleRead(dayIndex: dayIndex, sectionIndex: sectionIndex);
+      } on TogglingTooManyDaysException {
+        showDialog<String>(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+            title: const Text('Confirm toggling read'),
+            content: const Text('Do you want to set all prior sections as been read and all following to unread?'),
+            actions: <Widget>[
+              TextButton(
+                key: const Key('reject-toggle-read'),
+                onPressed: () => Navigator.pop(context, 'Cancel'),
+                child: const Text('Cancel'),
+              ),
+              TextButton(
+                key: const Key('confirm-toggle-read'),
+                onPressed: () {
+                  planNotifier.toggleRead(
+                      dayIndex: dayIndex, sectionIndex: sectionIndex, force: true);
+                  Navigator.pop(context, 'OK');
+                },
+                child: const Text('OK'),
+              ),
+            ],
+          ),
+        );
+      }
+    }
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         IconButton(
-          isSelected: isRead == true,
-          icon: const Icon(Icons.check_circle_outline),
-          selectedIcon: const Icon(Icons.check_circle),
-          onPressed: () => isRead == true
-              ? planNotifier.setUnread(
-                  dayIndex: dayIndex, sectionIndex: sectionIndex)
-              : planNotifier.setRead(
-                  dayIndex: dayIndex, sectionIndex: sectionIndex),
-        ),
+            isSelected: isRead == true,
+            icon: const Icon(Icons.check_circle_outline),
+            selectedIcon: const Icon(Icons.check_circle),
+            onPressed: toggleRead),
         Expanded(
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

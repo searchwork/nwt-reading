@@ -36,11 +36,26 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
           Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex)) >=
       0;
 
-  void setRead({required int dayIndex, required int sectionIndex}) {
+  void toggleRead(
+          {required int dayIndex,
+          required int sectionIndex,
+          bool force = false}) =>
+      isRead(dayIndex: dayIndex, sectionIndex: sectionIndex)
+          ? setUnread(
+              dayIndex: dayIndex, sectionIndex: sectionIndex, force: force)
+          : setRead(
+              dayIndex: dayIndex, sectionIndex: sectionIndex, force: force);
+
+  void setRead(
+      {required int dayIndex, required int sectionIndex, bool force = false}) {
     final sections = getSchedule()?.days[dayIndex].sections.length;
     final newBookmark = sections != null && sectionIndex >= sections - 1
         ? Bookmark(dayIndex: dayIndex + 1, sectionIndex: -1)
         : Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
+
+    if (!force && (newBookmark.dayIndex - state.bookmark.dayIndex).abs() > 3) {
+      throw TogglingTooManyDaysException();
+    }
 
     plansNotifier?.updatePlan(state.copyWith(
       bookmark: newBookmark,
@@ -49,8 +64,11 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
     ));
   }
 
-  void setUnread({required int dayIndex, required int sectionIndex}) =>
-      setRead(dayIndex: dayIndex, sectionIndex: sectionIndex - 1);
+  void setUnread(
+          {required int dayIndex,
+          required int sectionIndex,
+          bool force = false}) =>
+      setRead(dayIndex: dayIndex, sectionIndex: sectionIndex - 1, force: force);
 
   void resetTargetDate() {
     if (state.withTargetDate) {
@@ -104,6 +122,8 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
       : getSchedule()!.length - (bookmark ?? state.bookmark).dayIndex;
 }
 
+class TogglingTooManyDaysException implements Exception {}
+
 // @immutable
 class Plan extends Equatable {
   const Plan({
@@ -151,7 +171,8 @@ class Plan extends Equatable {
         language: language ?? this.language,
         bookmark: bookmark ?? this.bookmark,
         startDate: nullStartDate == true ? null : startDate ?? this.startDate,
-        targetDate: nullTargetDate == true ? null : targetDate ?? this.targetDate,
+        targetDate:
+            nullTargetDate == true ? null : targetDate ?? this.targetDate,
         withTargetDate: withTargetDate ?? this.withTargetDate,
         showEvents: showEvents ?? this.showEvents,
         showLocations: showLocations ?? this.showLocations,
