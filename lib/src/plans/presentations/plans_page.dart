@@ -3,7 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_card.dart';
-import 'package:nwt_reading/src/plans/presentations/plan_new_dialog.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
 
 import '../../settings/presentations/settings_page.dart';
 
@@ -45,7 +45,7 @@ class PlansPage extends ConsumerWidget {
         tooltip: AppLocalizations.of(context)!.addPlanTooltip,
         onPressed: () => showDialog<String>(
           context: context,
-          builder: (BuildContext context) => const PlanNewDialog(),
+          builder: (BuildContext context) => const PlanEditDialog(),
         ),
         child: const Icon(Icons.add),
       ),
