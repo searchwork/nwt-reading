@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
@@ -9,13 +8,31 @@ final planEditProviderFamily =
         name: 'planEditProviderFamily');
 
 class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
-  @override
-  Plan build(arg) => ref.watch(planProviderFamily(
-      arg ?? ref.read(plansProvider.notifier).getNewPlanId()));
+  String? planId;
+  String? _name;
 
+  @override
+  Plan build(arg) {
+    if (arg == null && planId == null) {
+      planId = ref.read(plansProvider.notifier).getNewPlanId();
+    }
+    return ref.watch(planProviderFamily(arg ?? planId!));
+  }
 
   Schedule? getSchedule() =>
       ref.read(scheduleProviderFamily(state.scheduleKey)).valueOrNull;
+
+  void changeName(String name) => _name = name;
+
+  void updateDefaultName(ScheduleKey scheduleKey) {
+      final plansNotifier = ref.read(plansProvider.notifier);
+      final isDefaultName = _name == null ||
+          _name == plansNotifier.getDefaultName(state.scheduleKey);
+
+      if (isDefaultName) {
+        _name = plansNotifier.getDefaultName(scheduleKey);
+      }
+  }
 
   void updateLanguage(String language) {
     if (language != state.language) {
@@ -27,12 +44,20 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
     final oldScheduleDuration = state.scheduleKey.duration;
 
     if (scheduleDuration != oldScheduleDuration) {
-      final newScheduleKey = state.scheduleKey.copyWith(duration: scheduleDuration);
-      final newScheduleLength = (await ref.read(scheduleProviderFamily(newScheduleKey).future))?.length ?? 1;
+      final newScheduleKey =
+          state.scheduleKey.copyWith(duration: scheduleDuration);
+      final newScheduleLength =
+          (await ref.read(scheduleProviderFamily(newScheduleKey).future))
+                  ?.length ??
+              1;
       final oldScheduleLength = getSchedule()?.length ?? 1;
-      final newDayIndex = (state.bookmark.dayIndex * newScheduleLength / oldScheduleLength).round();
+      final newDayIndex =
+          (state.bookmark.dayIndex * newScheduleLength / oldScheduleLength)
+              .round();
+      updateDefaultName(newScheduleKey);
 
       state = state.copyWith(
+        name: _name,
         scheduleKey: newScheduleKey,
         bookmark: Bookmark(dayIndex: newDayIndex, sectionIndex: -1),
         nullStartDate: true,
@@ -42,12 +67,13 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   }
 
   void updateScheduleType(ScheduleType scheduleType) {
-    final isDefaultName = state.name == toBeginningOfSentenceCase(state.scheduleKey.type.name);
-
     if (scheduleType != state.scheduleKey.type) {
+      final newScheduleKey = state.scheduleKey.copyWith(type: scheduleType);
+      updateDefaultName(newScheduleKey);
+
       state = state.copyWith(
-        name: isDefaultName ? toBeginningOfSentenceCase(scheduleType.name) : state.name,
-        scheduleKey: state.scheduleKey.copyWith(type: scheduleType),
+        name: _name,
+        scheduleKey: newScheduleKey,
         bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),
       );
     }
@@ -62,6 +88,7 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   void reset() => state = build(state.id);
 
   void save() {
+    state = state.copyWith(name: _name);
     final notifier = ref.read(plansProvider.notifier);
     notifier.existPlan(state.id)
         ? notifier.updatePlan(state)

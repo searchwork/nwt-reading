@@ -22,18 +22,25 @@ class PlansNotifier extends Notifier<Plans> {
 
   String getNewPlanId() => _uuid.v4();
 
-  Plan getNewPlan(String planId) => Plan(
-      id: planId,
-      name: toBeginningOfSentenceCase(ScheduleType.chronological.name)!,
-      scheduleKey: const ScheduleKey(
+  String getDefaultName(ScheduleKey scheduleKey) => '${toBeginningOfSentenceCase(scheduleKey.type.name)} ${scheduleKey.duration.name}';
+
+  Plan getNewPlan(String planId) {
+    const scheduleKey = ScheduleKey(
           type: ScheduleType.chronological,
           duration: ScheduleDuration.y1,
-          version: '1.0'),
+          version: '1.0');
+    final name = getDefaultName(scheduleKey);
+
+    return Plan(
+      id: planId,
+      name: name,
+      scheduleKey: scheduleKey,
       language: 'en',
       bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),
       withTargetDate: true,
       showEvents: true,
       showLocations: true);
+  }
 
   void addPlan(Plan plan) {
     state = Plans([...state.plans, plan]);

@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
@@ -38,6 +37,7 @@ class PlansRepository {
     final plansSerialized = preferences.getStringList(_preferenceKey);
     final legacyExportSerialized =
         preferences.getString(_legacyExportPreferenceKey);
+    final plansNotifier = ref.read(plansProvider.notifier);
 
     Plans plans = Plans(const []);
 
@@ -75,7 +75,7 @@ class PlansRepository {
           plans = Plans([
             Plan(
               id: _uuid.v4(),
-              name: toBeginningOfSentenceCase(currentSchedule)!,
+              name: plansNotifier.getDefaultName(scheduleKey),
               scheduleKey: scheduleKey,
               language: readingLanguage ?? language ?? 'en',
               bookmark: bookmark,
@@ -90,7 +90,6 @@ class PlansRepository {
     } catch (e) {
       debugPrint('Import from legacy failed with error $e');
     }
-    final plansNotifier = ref.read(plansProvider.notifier);
     for (Plan plan in plans.plans) {
       plansNotifier.addPlan(plan);
     }
