@@ -45,7 +45,7 @@ class PlansPage extends ConsumerWidget {
         tooltip: AppLocalizations.of(context)!.addPlanTooltip,
         onPressed: () => showDialog<String>(
           context: context,
-          builder: (BuildContext context) => const PlanEditDialog(),
+          builder: (BuildContext context) => PlanEditDialog(),
         ),
         child: const Icon(Icons.add),
       ),

@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_duration_segmented_button.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_language_tile.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_name_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_type_segmented_button.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_with_target_date_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plans_page.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 
 class PlanEditDialog extends ConsumerWidget {
-  const PlanEditDialog([this.planId, Key? key]) : super(key: key);
+  PlanEditDialog([this.planId, Key? key]) : super(key: key);
 
   final String? planId;
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -20,6 +22,8 @@ class PlanEditDialog extends ConsumerWidget {
     final isNewPlan = planId == null;
 
     return Dialog.fullscreen(
+        child: Form(
+      key: _formKey,
       child: Column(
         children: [
           Row(children: [
@@ -34,13 +38,17 @@ class PlanEditDialog extends ConsumerWidget {
             IconButton(
                 icon: const Icon(Icons.done),
                 onPressed: () {
-                  planEdit.save();
-                  WidgetsBinding.instance
-                      .addPostFrameCallback((_) => Navigator.pop(context));
+                  if (_formKey.currentState!.validate()) {
+                    planEdit.save();
+                    WidgetsBinding.instance
+                        .addPostFrameCallback((_) => Navigator.pop(context));
+                  }
                 })
           ]),
-          if (isNewPlan) PlanTypeSegmentedButton(planId),
+          PlanNameTile(planId),
           const SizedBox(height: 20),
+          if (isNewPlan) PlanTypeSegmentedButton(planId),
+          if (isNewPlan) const SizedBox(height: 20),
           PlanDurationSegmentedButton(planId),
           const SizedBox(height: 20),
           PlanLanguageTile(planId),
@@ -55,6 +63,6 @@ class PlanEditDialog extends ConsumerWidget {
               label: const Text('Delete'))
         ],
       ),
-    );
+    ));
   }
 }

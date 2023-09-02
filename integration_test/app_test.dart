@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 
@@ -70,17 +69,24 @@ void main() async {
 
   testWidgets('Add new plans', (tester) async {
     final providerContainer = await SettledTester(tester).providerContainer;
+
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
     await takeScreenshot(tester: tester, binding: binding, filename: 'new');
 
     expect(providerContainer.read(plansProvider).plans.length, 0);
+    expect(
+        (tester.firstWidget(find.byKey(const Key('plan-name')))
+                as TextFormField)
+            .controller
+            ?.text,
+        'Chronological y1');
 
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
     var plan = providerContainer.read(plansProvider).plans.first;
-    expect(plan.name, toBeginningOfSentenceCase(plan.scheduleKey.type.name));
+    expect(plan.name, 'Chronological y1');
     expect(plan.scheduleKey.type, ScheduleType.chronological);
     expect(plan.scheduleKey.duration, ScheduleDuration.y1);
     expect(plan.scheduleKey.version, '1.0');
@@ -94,6 +100,24 @@ void main() async {
     expect(find.byType(PlanCard), findsOneWidget);
 
     await tester.tap(find.byType(FloatingActionButton));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.menu_book));
+    await tester.tap(find
+        .descendant(
+            of: find.byType(SegmentedButton<ScheduleDuration>),
+            matching: find.byType(Text))
+        .last);
+    await tester.pumpAndSettle();
+
+    expect(
+        (tester.firstWidget(find.byKey(const Key('plan-name')))
+                as TextFormField)
+            .controller
+            ?.text,
+        'Sequential y4');
+
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byKey(const Key('plan-name')), 'Test 😃');
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit_note));
     await tester.pumpAndSettle();
@@ -113,7 +137,7 @@ void main() async {
     await tester.pumpAndSettle();
 
     plan = providerContainer.read(plansProvider).plans.last;
-    expect(plan.name, toBeginningOfSentenceCase(plan.scheduleKey.type.name));
+    expect(plan.name, 'Test 😃');
     expect(plan.scheduleKey.type, ScheduleType.written);
     expect(plan.scheduleKey.duration, ScheduleDuration.m3);
     expect(plan.scheduleKey.version, '1.0');
@@ -133,6 +157,8 @@ void main() async {
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit_note));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byKey(const Key('plan-name')), 'Test 😃');
     await tester.pumpAndSettle();
     await tester.tap(find
         .descendant(
@@ -247,8 +273,7 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
-    await tester.tap(find
-        .byKey(const Key('reject-toggle-read')));
+    await tester.tap(find.byKey(const Key('reject-toggle-read')));
     await tester.pumpAndSettle();
 
     expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
@@ -262,8 +287,7 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
-    await tester.tap(find
-        .byKey(const Key('confirm-toggle-read')));
+    await tester.tap(find.byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
 
     expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
@@ -293,8 +317,7 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
-    await tester.tap(find
-        .byKey(const Key('reject-toggle-read')));
+    await tester.tap(find.byKey(const Key('reject-toggle-read')));
     await tester.pumpAndSettle();
 
     expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
@@ -308,8 +331,7 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
-    await tester.tap(find
-        .byKey(const Key('confirm-toggle-read')));
+    await tester.tap(find.byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
 
     expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
@@ -349,8 +371,7 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
-    await tester.tap(find
-        .byKey(const Key('confirm-toggle-read')));
+    await tester.tap(find.byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsNothing);
@@ -448,8 +469,7 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
-    await tester.tap(find
-        .byKey(const Key('confirm-toggle-read')));
+    await tester.tap(find.byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsOneWidget);
@@ -489,8 +509,7 @@ void main() async {
             matching: find.byType(IconButton))
         .first);
     await tester.pumpAndSettle();
-        await tester.tap(find
-        .byKey(const Key('confirm-toggle-read')));
+    await tester.tap(find.byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(
       find.byKey(const Key('day-70')),
@@ -509,6 +528,50 @@ void main() async {
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
     await takeScreenshot(
         tester: tester, binding: binding, filename: 'schedule');
+  });
+
+  testWidgets('Change plan name', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.tap(find.byType(PlanCard).first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await takeScreenshot(tester: tester, binding: binding, filename: 'edit');
+
+    expect(
+        (tester.firstWidget(find.byKey(const Key('plan-name')))
+                as TextFormField)
+            .controller
+            ?.text,
+        'Chronological y1');
+
+    await tester.tap(find
+        .descendant(
+            of: find.byType(SegmentedButton<ScheduleDuration>),
+            matching: find.byType(Text))
+        .last);
+    await tester.pumpAndSettle();
+
+    expect(
+        (tester.firstWidget(find.byKey(const Key('plan-name')))
+                as TextFormField)
+            .controller
+            ?.text,
+        'Chronological y4');
+
+    await tester.enterText(find.byKey(const Key('plan-name')), 'Test 😃');
+    await tester.pumpAndSettle();
+
+    var plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.name, 'Chronological y1');
+
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.name, 'Test 😃');
   });
 
   testWidgets('Change plan duration', (tester) async {
@@ -552,7 +615,7 @@ void main() async {
 
       plan = providerContainer.read(plansProvider).plans.first;
       expect(plan.scheduleKey.duration, ScheduleDuration.values[index]);
-      expect(plan.bookmark, expectedBookmarks[index+1]);
+      expect(plan.bookmark, expectedBookmarks[index + 1]);
     }
   });
 
