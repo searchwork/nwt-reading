@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 final lightTheme = ThemeData(
-  useMaterial3: true,
   colorSchemeSeed: const Color(0xff007bff),
   brightness: Brightness.light,
   appBarTheme: const AppBarTheme(
@@ -19,7 +18,6 @@ final lightTheme = ThemeData(
 );
 
 final darkTheme = ThemeData(
-  useMaterial3: true,
   colorSchemeSeed: const Color(0xff007bff),
   brightness: Brightness.dark,
   appBarTheme: const AppBarTheme(

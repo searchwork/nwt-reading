@@ -93,7 +93,7 @@ BEGIN
             VALUE "FileDescription", "NWT Reading" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "nwt_reading" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 Searchwork.org. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 Searchwork.org. All rights reserved." "\0"
             VALUE "OriginalFilename", "NWT Reading.exe" "\0"
             VALUE "ProductName", "NWT Reading" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
