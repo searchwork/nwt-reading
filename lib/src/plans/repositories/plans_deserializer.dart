@@ -7,7 +7,8 @@ import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 class PlansDeserializer {
   Plans convertStringListToPlans(List<String>? plansStringList) =>
       Plans((plansStringList ?? [])
-          .map((planJson) => _convertMapToPlan(jsonDecode(planJson) as Map<String, dynamic>))
+          .map((planJson) =>
+              _convertMapToPlan(jsonDecode(planJson) as Map<String, dynamic>))
           .toList());
 
   ScheduleKey convertMapToScheduleKey(Map<String, dynamic> scheduleKeyMap) {
@@ -25,9 +26,11 @@ class PlansDeserializer {
   Plan _convertMapToPlan(Map<String, dynamic> planMap) {
     final id = planMap['id'] as String;
     final name = planMap['name'] as String;
-    final schedule = convertMapToScheduleKey(planMap['scheduleKey'] as Map<String, dynamic>);
+    final schedule =
+        convertMapToScheduleKey(planMap['scheduleKey'] as Map<String, dynamic>);
     final language = planMap['language'] as String;
-    final bookmark = _convertMapToBookmark(planMap['bookmark'] as Map<String, dynamic>);
+    final bookmark =
+        _convertMapToBookmark(planMap['bookmark'] as Map<String, dynamic>);
     final startDate = planMap['startDate'] == null
         ? null
         : DateTime.parse(planMap['startDate'] as String);

@@ -5,10 +5,11 @@ import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 class BibleLanguagesDeserializer {
   BibleLanguages convertJsonToBibleLanguages(String json) {
     final bibleLanguagesMap = jsonDecode(json) as Map<String, dynamic>;
-    final bibleLanguages = Map<String, BibleLanguage>.from(bibleLanguagesMap
-        .map((bibleLanguageKey, bibleLanguageMap) =>
-            MapEntry(bibleLanguageKey,
-                _convertMapToBibleLanguage(bibleLanguageMap as Map<String, dynamic>))));
+    final bibleLanguages = Map<String, BibleLanguage>.from(
+        bibleLanguagesMap.map((bibleLanguageKey, bibleLanguageMap) => MapEntry(
+            bibleLanguageKey,
+            _convertMapToBibleLanguage(
+                bibleLanguageMap as Map<String, dynamic>))));
 
     return BibleLanguages(bibleLanguages);
   }

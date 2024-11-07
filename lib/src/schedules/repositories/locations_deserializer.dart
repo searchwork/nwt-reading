@@ -6,8 +6,8 @@ class LocationsDeserializer {
   Locations convertJsonToLocations(String json) {
     final locationsMap = jsonDecode(json) as Map<String, dynamic>;
     final locations = Map<String, Location>.from(locationsMap.map(
-        (locationKey, locationMap) =>
-            MapEntry(locationKey, _convertMapToLocation(locationMap as Map<String, dynamic>))));
+        (locationKey, locationMap) => MapEntry(locationKey,
+            _convertMapToLocation(locationMap as Map<String, dynamic>))));
 
     return Locations(locations);
   }
