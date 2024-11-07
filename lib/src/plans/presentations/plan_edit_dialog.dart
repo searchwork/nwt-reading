@@ -53,14 +53,15 @@ class PlanEditDialog extends ConsumerWidget {
           const SizedBox(height: 20),
           PlanLanguageTile(planId),
           PlanWithTargetDateTile(planId),
-          if (!isNewPlan) ElevatedButton.icon(
-              onPressed: () {
-                planEdit.delete();
-                Navigator.popUntil(
-                    context, ModalRoute.withName(PlansPage.routeName));
-              },
-              icon: const Icon(Icons.delete),
-              label: const Text('Delete'))
+          if (!isNewPlan)
+            ElevatedButton.icon(
+                onPressed: () {
+                  planEdit.delete();
+                  Navigator.popUntil(
+                      context, ModalRoute.withName(PlansPage.routeName));
+                },
+                icon: const Icon(Icons.delete),
+                label: const Text('Delete'))
         ],
       ),
     ));

@@ -41,7 +41,8 @@ class SectionWidget extends ConsumerWidget {
           context: context,
           builder: (BuildContext context) => AlertDialog(
             title: const Text('Confirm toggling read'),
-            content: const Text('Do you want to set all prior sections as been read and all following to unread?'),
+            content: const Text(
+                'Do you want to set all prior sections as been read and all following to unread?'),
             actions: <Widget>[
               TextButton(
                 key: const Key('reject-toggle-read'),
@@ -52,7 +53,9 @@ class SectionWidget extends ConsumerWidget {
                 key: const Key('confirm-toggle-read'),
                 onPressed: () {
                   planNotifier.toggleRead(
-                      dayIndex: dayIndex, sectionIndex: sectionIndex, force: true);
+                      dayIndex: dayIndex,
+                      sectionIndex: sectionIndex,
+                      force: true);
                   Navigator.pop(context, 'OK');
                 },
                 child: const Text('OK'),

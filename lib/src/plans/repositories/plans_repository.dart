@@ -62,10 +62,14 @@ class PlansRepository {
           final scheduleKey = ScheduleKey(
               type: ScheduleType.values.byName(currentSchedule),
               duration: ScheduleDuration.values.byName(
-                  (schedule['duration'] as String? ?? '1y').split('').reversed.join('')),
+                  (schedule['duration'] as String? ?? '1y')
+                      .split('')
+                      .reversed
+                      .join('')),
               version: '1.0');
           final bookmark = Bookmark(
-              dayIndex: int.tryParse(schedule['readIndex'] as String? ?? '0') ?? 0,
+              dayIndex:
+                  int.tryParse(schedule['readIndex'] as String? ?? '0') ?? 0,
               sectionIndex: -1);
           final DateTime? targetDate =
               withTargetDate && schedule['endDate'] != null
