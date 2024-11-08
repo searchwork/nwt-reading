@@ -21,14 +21,6 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
   int topDayIndex = 0;
   ScheduleKey? scheduleKey;
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    final planId = ModalRoute.of(context)!.settings.arguments as String;
-    final bookmark = ref.read(planProviderFamily(planId)).bookmark;
-    resetTopDayIndex(bookmark);
-  }
-
   void resetTopDayIndex(Bookmark? bookmark) =>
       setState(() => topDayIndex = bookmark == null
           ? 0
