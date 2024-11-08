@@ -11,6 +11,8 @@ final schedulesProvider =
 final scheduleProviderFamily =
     FutureProviderFamily<Schedule?, ScheduleKey>((ref, scheduleKey) async {
   ref.watch(schedulesProvider);
+
+  // ignore: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member
   final schedules = await ref.read(schedulesProvider.notifier).future;
 
   return schedules.schedules[scheduleKey];

@@ -15,7 +15,7 @@ class NotifierTester<T> {
     );
     container.listen(
       provider,
-      listener,
+      listener.call,
       fireImmediately: true,
     );
   }
@@ -34,7 +34,7 @@ class IncompleteNotifierTester<T> {
     );
     container.listen(
       provider,
-      listener,
+      listener.call,
       fireImmediately: true,
     );
   }
