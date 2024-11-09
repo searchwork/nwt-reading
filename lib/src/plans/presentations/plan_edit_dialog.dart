@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_duration_segmented_button.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_language_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_name_tile.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_show_events_tile.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_show_locations_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_type_segmented_button.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_with_target_date_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plans_page.dart';
@@ -53,6 +55,8 @@ class PlanEditDialog extends ConsumerWidget {
           const SizedBox(height: 20),
           PlanLanguageTile(planId),
           PlanWithTargetDateTile(planId),
+          PlanShowEventsTile(planId),
+          PlanShowLocationsTile(planId),
           if (!isNewPlan)
             ElevatedButton.icon(
                 onPressed: () {
