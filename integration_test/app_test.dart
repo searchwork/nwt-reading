@@ -174,6 +174,10 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('with-end-date')));
     await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('show-events')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('show-locations')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.close));
     await tester.pumpAndSettle();
 
@@ -211,7 +215,7 @@ void main() async {
 
     expect(
         find.byKey(
-            Key('plan-${providerContainer.read(plansProvider).plans.last.id}')),
+            Key('plan-${providerContainer.read(plansProvider).plans[1].id}')),
         findsOneWidget);
   });
 
