@@ -1,6 +1,6 @@
 flutter --version
 flutter pub get
-dart format --output=none --set-exit-if-changed .
+dart format .
 dart analyze --fatal-infos
 flutter test
 
