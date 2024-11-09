@@ -15,6 +15,8 @@ import 'package:nwt_reading/src/schedules/entities/events.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:nwt_reading/src/schedules/presentations/day_card.dart';
+import 'package:nwt_reading/src/schedules/presentations/event_widget.dart';
+import 'package:nwt_reading/src/schedules/presentations/locations_widget.dart';
 import 'package:nwt_reading/src/schedules/repositories/events_repository.dart';
 import 'package:nwt_reading/src/schedules/repositories/locations_repository.dart';
 import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart';
@@ -675,6 +677,80 @@ void main() async {
     expect(plan.withTargetDate, true);
   });
 
+  testWidgets('Change plan show events setting', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.tap(find.byType(PlanCard).first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(EventWidget), findsAny);
+
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('show-events')));
+    await tester.pumpAndSettle();
+
+    var plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.showEvents, true);
+
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.showEvents, false);
+    expect(find.byType(EventWidget), findsNothing);
+
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('show-events')));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.showEvents, true);
+    expect(find.byType(EventWidget), findsAny);
+  });
+
+  testWidgets('Change plan show locations setting', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.tap(find.byType(PlanCard).first);
+    await tester.pumpAndSettle();
+
+    expect(find.byType(LocationsWidget), findsAny);
+
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('show-locations')));
+    await tester.pumpAndSettle();
+
+    var plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.showLocations, true);
+
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.showLocations, false);
+    expect(find.byType(LocationsWidget), findsNothing);
+
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('show-locations')));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byIcon(Icons.done));
+    await tester.pumpAndSettle();
+
+    plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.showLocations, true);
+    expect(find.byType(LocationsWidget), findsAny);
+  });
+
   testWidgets('Cancel edit plan', (tester) async {
     final providerContainer =
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
@@ -695,6 +771,10 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('with-end-date')));
     await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('show-events')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('show-locations')));
+    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.close));
     await tester.pumpAndSettle();
 
@@ -704,6 +784,8 @@ void main() async {
     expect(plan.scheduleKey.duration, ScheduleDuration.y1);
     expect(plan.language, 'en');
     expect(plan.withTargetDate, true);
+    expect(plan.showEvents, true);
+    expect(plan.showLocations, true);
   });
 
   testWidgets('Delete plan', (tester) async {

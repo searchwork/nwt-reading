@@ -83,13 +83,14 @@ class SectionWidget extends ConsumerWidget {
               child: Text(
                   '${bibleLanguage?.books[section.bookIndex].name} ${section.ref}',
                   style: const TextStyle(color: Color(0xff007bff)))),
-          ...section.events
-              .map((eventKey) => events?.events[eventKey] != null
-                  ? EventWidget(events!.events[eventKey]!)
-                  : null)
-              .toList()
-              .whereType<Widget>(),
-          if (section.locations.isNotEmpty)
+          if (plan.showEvents)
+            ...section.events
+                .map((eventKey) => events?.events[eventKey] != null
+                    ? EventWidget(events!.events[eventKey]!)
+                    : null)
+                .toList()
+                .whereType<Widget>(),
+          if (plan.showLocations && section.locations.isNotEmpty)
             LocationsWidget(section.locations
                 .map((locationKey) => locations?.locations[locationKey])
                 .whereType<Location>()
