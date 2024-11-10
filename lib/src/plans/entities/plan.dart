@@ -60,7 +60,7 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
     plansNotifier?.updatePlan(state.copyWith(
       bookmark: newBookmark,
       startDate: _getStartDate(newBookmark),
-      targetDate: state.targetDate ?? _calcTargetDate(newBookmark),
+      targetDate: state.targetDate ?? calcTargetDate(newBookmark),
     ));
   }
 
@@ -73,7 +73,7 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
   void resetTargetDate() {
     if (state.withTargetDate) {
       plansNotifier?.updatePlan(
-          state.copyWith(targetDate: _calcTargetDate(state.bookmark)));
+          state.copyWith(targetDate: calcTargetDate(state.bookmark)));
     }
   }
 
@@ -84,7 +84,7 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
   int getDeviationDays() {
     if (state.withTargetDate && getTargetDate() != null) {
       final deviationDays =
-          getTargetDate()!.difference(_calcTargetDate()!).inDays;
+          getTargetDate()!.difference(calcTargetDate()!).inDays;
 
       // If ahead, don't count the current day.
       return deviationDays <= 0 ? deviationDays : deviationDays - 1;
@@ -97,7 +97,12 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
 
   DateTime? getStartDate() => _getStartDate();
 
-  DateTime? getTargetDate() => state.targetDate ?? _calcTargetDate();
+  DateTime? getTargetDate() => state.targetDate ?? calcTargetDate();
+
+  DateTime? calcTargetDate([Bookmark? bookmark]) => state.withTargetDate
+      ? DateUtils.dateOnly(DateTime.now())
+          .add(Duration(days: _getRemainingDays(bookmark)))
+      : null;
 
   int? todayTargetIndex() => state.withTargetDate &&
           getTargetDate() != null &&
@@ -110,11 +115,6 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
       ? state.startDate ??
           DateUtils.dateOnly(DateTime.now())
               .add(Duration(days: -(bookmark ?? state.bookmark).dayIndex))
-      : null;
-
-  DateTime? _calcTargetDate([Bookmark? bookmark]) => state.withTargetDate
-      ? DateUtils.dateOnly(DateTime.now())
-          .add(Duration(days: _getRemainingDays(bookmark)))
       : null;
 
   int _getRemainingDays([Bookmark? bookmark]) => getSchedule() == null

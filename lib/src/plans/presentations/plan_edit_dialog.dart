@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_duration_segmented_button.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_language_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_name_tile.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_reset_target_date_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_show_events_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_show_locations_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_type_segmented_button.dart';
@@ -18,9 +19,10 @@ class PlanEditDialog extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final plan = ref.watch(planEditProviderFamily(planId));
     ref.watch(planEditProviderFamily(planId));
-
     final planEdit = ref.read(planEditProviderFamily(planId).notifier);
+    final adjustedTargetDate = planEdit.calcTargetDate();
     final isNewPlan = planId == null;
 
     return Dialog.fullscreen(
@@ -55,6 +57,8 @@ class PlanEditDialog extends ConsumerWidget {
           const SizedBox(height: 20),
           PlanLanguageTile(planId),
           PlanWithTargetDateTile(planId),
+          if (plan.withTargetDate && plan.targetDate != adjustedTargetDate)
+            PlanResetTargetDateTile(planId),
           PlanShowEventsTile(planId),
           PlanShowLocationsTile(planId),
           if (!isNewPlan)
