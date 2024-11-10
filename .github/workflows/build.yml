@@ -21,6 +21,18 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Save the store key properties to android/key.properties
+        env:
+          ANDROID_STORE_KEY_PROPERTIES: ${{ secrets.ANDROID_STORE_KEY_PROPERTIES }}
+        run: |
+          echo $ANDROID_STORE_KEY_PROPERTIES > android/key.properties
+
+      - name: Decode the store key to android/GooglePlaystore.jks
+        env:
+          GOOGLE_PLAYSTORE_JKS_BASE64: ${{ secrets.GOOGLE_PLAYSTORE_JKS_BASE64 }}
+        run: |
+          echo $GOOGLE_PLAYSTORE_JKS_BASE64 | base64 --decode > android/GooglePlaystore.jks
+
       - run: flutter --version
       - run: flutter pub get
       - run: flutter build apk
