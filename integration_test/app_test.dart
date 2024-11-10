@@ -83,6 +83,7 @@ void main() async {
             .controller
             ?.text,
         'Chronological y1');
+    expect(find.byKey(const Key('target-status')), findsNothing);
 
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
@@ -133,7 +134,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('language-es')).last);
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
@@ -172,7 +173,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('language-es')).last);
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('show-events')));
     await tester.pumpAndSettle();
@@ -497,6 +498,55 @@ void main() async {
         '7');
     expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
         Colors.green);
+
+    await tester.tap(find.byType(PlanCard).first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const Key('target-status')), findsOneWidget);
+
+    await tester.tap(find.byKey(const Key('reset-target-date')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('reject-reset-target-date')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.close));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsOneWidget);
+    expect(
+        ((tester.firstWidget(find.byType(Badge)) as Badge).label as Text).data,
+        '7');
+    expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
+        Colors.green);
+
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('with-target-date')));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const Key('reset-target-date')), findsNothing);
+    expect(find.byKey(const Key('target-status')), findsNothing);
+
+    await tester.tap(find.byKey(const Key('with-target-date')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('reset-target-date')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('confirm-reset-target-date')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.close));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Badge), findsNothing);
+    expect(find.byType(Divider), findsOneWidget);
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
+    expect(find.byKey(const Key('target-day')), findsNothing);
+
+    await tester.tap(find.byIcon(Icons.edit));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const Key('reset-target-date')), findsNothing);
+    expect(find.byKey(const Key('target-status')), findsOneWidget);
   });
 
   testWidgets('Bookmark button resets schedule view', (tester) async {
@@ -649,7 +699,7 @@ void main() async {
     expect(plan.language, 'es');
   });
 
-  testWidgets('Change plan with end date setting', (tester) async {
+  testWidgets('Change plan with target date setting', (tester) async {
     final providerContainer =
         await SettledTester(tester, sharedPreferences: testPlansPreferences)
             .providerContainer;
@@ -657,7 +707,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
 
     var plan = providerContainer.read(plansProvider).plans.first;
@@ -671,7 +721,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
 
     await tester.tap(find.byIcon(Icons.done));
@@ -773,7 +823,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('language-es')).last);
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('with-end-date')));
+    await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('show-events')));
     await tester.pumpAndSettle();
