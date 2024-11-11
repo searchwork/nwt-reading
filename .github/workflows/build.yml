@@ -34,8 +34,8 @@ jobs:
           echo $GOOGLE_PLAYSTORE_JKS_BASE64 | base64 --decode > android/GooglePlaystore.jks
 
       - run: pwd
-      - run: grep storeFile android/key.properties
-      - run: echo $GOOGLE_PLAYSTORE_JKS_BASE64 | tail -c 20 
+      - run: TEST=$(grep storeFile android/key.properties)
+      - run: echo $TEST
       - run: ls -R
       - run: flutter --version
       - run: flutter pub get
