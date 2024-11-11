@@ -21,8 +21,16 @@ jobs:
         with:
           channel: 'stable'
 
-      - run: echo -en "${{ secrets.ANDROID_STORE_KEY_PROPERTIES }}" > android/key.properties
-      - run: echo -en "${{ secrets.GOOGLE_PLAYSTORE_JKS_BASE64 }}" | base64 --decode > android/GooglePlaystore.jks
+      - env:
+          ANDROID_STORE_KEY_PROPERTIES: |
+            ${{ secrets.ANDROID_STORE_KEY_PROPERTIES }}
+        run: echo -ne "$ANDROID_STORE_KEY_PROPERTIES" > android/key.properties
+
+      - env:
+          GOOGLE_PLAYSTORE_JKS_BASE64: |
+            ${{ secrets.GOOGLE_PLAYSTORE_JKS_BASE64 }}
+        run: echo -ne "$GOOGLE_PLAYSTORE_JKS_BASE64" | base64 --decode > android/GooglePlaystore.jks
+
       - run: pwd
       - run: wc android/key.properties 
       - run: TEST=$(grep storeFile android/key.properties)
