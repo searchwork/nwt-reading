@@ -879,6 +879,7 @@ void main() async {
     await tester.tap(find.byIcon(Icons.settings));
     await tester.pumpAndSettle();
 
+    expect(find.byKey(const Key('version')), findsOneWidget);
     expect(find.byKey(const Key('copyright')), findsOneWidget);
 
     await tester.pageBack();
