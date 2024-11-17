@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class SettingsPage extends ConsumerWidget {
   const SettingsPage({super.key});
@@ -15,7 +16,7 @@ class SettingsPage extends ConsumerWidget {
       appBar: AppBar(
         title: const Text('Settings'),
       ),
-      body: Column(children: [
+      body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
           padding: const EdgeInsets.all(16),
           child: DropdownButton<ThemeMode>(
@@ -40,11 +41,31 @@ class SettingsPage extends ConsumerWidget {
           ),
         ),
         ListTile(
-          subtitle: const Text(
-            'Copyright © 2024 searchwork.org',
-            key: Key('copyright'),
-          ),
-        )
+            subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            FutureBuilder<PackageInfo>(
+              future: PackageInfo.fromPlatform(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return CircularProgressIndicator();
+                } else if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
+                } else {
+                  return Text(
+                    'Version: ${snapshot.data?.version}',
+                    key: Key('version'),
+                  );
+                }
+              },
+            ),
+            const Text(
+              'Copyright © 2024 searchwork.org',
+              style: TextStyle(height: 3),
+              key: Key('copyright'),
+            ),
+          ],
+        )),
       ]),
     );
   }
