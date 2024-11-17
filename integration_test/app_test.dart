@@ -871,4 +871,22 @@ void main() async {
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
     expect(find.byType(PlanCard), findsNWidgets(3));
   });
+
+  testWidgets('Settings', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.tap(find.byIcon(Icons.settings));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const Key('copyright')), findsOneWidget);
+
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+
+    expect(
+        find.byKey(
+            Key('plan-${providerContainer.read(plansProvider).plans[1].id}')),
+        findsOneWidget);
+  });
 }
