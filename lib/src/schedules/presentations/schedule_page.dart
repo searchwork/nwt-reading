@@ -94,7 +94,8 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
               : Badge(
                   label: Text('${deviationDays.abs()}'),
                   backgroundColor: badgeColor,
-                  child: Text('${plan.name}   '),
+                  offset: Offset(23, -5),
+                  child: Text(plan.name),
                 ),
           actions: [
             IconButton(
@@ -136,7 +137,8 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
                 ],
               ),
         floatingActionButton: FloatingActionButton(
-          tooltip: AppLocalizations.of(context)!.goToBookmarkTooltip,
+          tooltip:
+              AppLocalizations.of(context).schedulePageJumpToBookmarkTooltip,
           onPressed: () {
             resetTopDayIndex(plan.bookmark);
             controller.jumpTo(0.0);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 
 class PlanResetTargetDateTile extends ConsumerWidget {
@@ -14,28 +14,31 @@ class PlanResetTargetDateTile extends ConsumerWidget {
     final planEdit = ref.read(planEditProviderFamily(planId).notifier);
     final adjustedTargetDate = planEdit.calcTargetDate();
     final formattedAdjustedTargetDate = adjustedTargetDate != null
-        ? DateFormat.yMd(Localizations.localeOf(context).toLanguageTag())
-            .format(adjustedTargetDate)
+        ? MaterialLocalizations.of(context)
+            .formatCompactDate(adjustedTargetDate)
         : '';
 
     return ListTile(
       key: const Key('reset-target-date'),
-      title: const Text('Reset Target Date'),
-      subtitle: Text(
-          'Change target date to $formattedAdjustedTargetDate to be on time with reading.'),
+      title:
+          Text(AppLocalizations.of(context).planEditPageResetTargetDateTitle),
+      subtitle: Text(AppLocalizations.of(context)
+          .planEditPageResetTargetDateSubtitle(formattedAdjustedTargetDate)),
       trailing: Icon(Icons.arrow_forward),
       onTap: () {
         showDialog<String>(
           context: context,
           builder: (BuildContext context) => AlertDialog(
-            title: const Text('Confirm resetting target date'),
-            content: const Text(
-                'Do you want to change the target date to be on time with reading?'),
+            title: Text(AppLocalizations.of(context)
+                .planEditPageResetTargetDateDialogTitle),
+            content: Text(AppLocalizations.of(context)
+                .planEditPageResetTargetDateDialogText),
             actions: <Widget>[
               TextButton(
                 key: const Key('reject-reset-target-date'),
                 onPressed: () => Navigator.pop(context, 'Cancel'),
-                child: const Text('Cancel'),
+                child:
+                    Text(MaterialLocalizations.of(context).cancelButtonLabel),
               ),
               TextButton(
                 key: const Key('confirm-reset-target-date'),
@@ -43,7 +46,7 @@ class PlanResetTargetDateTile extends ConsumerWidget {
                   planEdit.resetTargetDate();
                   Navigator.pop(context, 'OK');
                 },
-                child: const Text('OK'),
+                child: Text(MaterialLocalizations.of(context).okButtonLabel),
               ),
             ],
           ),
