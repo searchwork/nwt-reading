@@ -16,6 +16,7 @@ class PlansSerializer {
         'bookmark': _convertBookmarkToMap(plan.bookmark),
         if (plan.startDate != null)
           'startDate': plan.startDate!.toIso8601String(),
+        if (plan.lastDate != null) 'lastDate': plan.lastDate!.toIso8601String(),
         if (plan.targetDate != null)
           'targetDate': plan.targetDate!.toIso8601String(),
         'withTargetDate': plan.withTargetDate,
