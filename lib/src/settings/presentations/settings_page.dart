@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -14,30 +15,33 @@ class SettingsPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: Text(AppLocalizations.of(context).settingsPageTitle),
       ),
-      body: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      body: Column(children: [
         Padding(
           padding: const EdgeInsets.all(16),
-          child: DropdownButton<ThemeMode>(
-            value: themeMode,
-            onChanged: (value) => ref
-                .read(themeModeProvider.notifier)
-                .updateThemeMode(value ?? ThemeMode.system),
-            items: const [
-              DropdownMenuItem(
-                value: ThemeMode.system,
-                child: Text('System Theme'),
-              ),
-              DropdownMenuItem(
-                value: ThemeMode.light,
-                child: Text('Light Theme'),
-              ),
-              DropdownMenuItem(
-                value: ThemeMode.dark,
-                child: Text('Dark Theme'),
-              )
+          child: SegmentedButton<ThemeMode>(
+            segments: <ButtonSegment<ThemeMode>>[
+              ButtonSegment<ThemeMode>(
+                  value: ThemeMode.system,
+                  label: Text(
+                      AppLocalizations.of(context).settingsPageSystemLabel),
+                  icon: Icon(Icons.auto_mode)),
+              ButtonSegment<ThemeMode>(
+                  value: ThemeMode.light,
+                  label:
+                      Text(AppLocalizations.of(context).settingsPageLightLabel),
+                  icon: Icon(Icons.light_mode)),
+              ButtonSegment<ThemeMode>(
+                  value: ThemeMode.dark,
+                  label:
+                      Text(AppLocalizations.of(context).settingsPageDarkLabel),
+                  icon: Icon(Icons.dark_mode)),
             ],
+            selected: {themeMode},
+            onSelectionChanged: (Set<ThemeMode> newSelection) => ref
+                .read(themeModeProvider.notifier)
+                .updateThemeMode(newSelection.single),
           ),
         ),
         ListTile(
@@ -49,18 +53,16 @@ class SettingsPage extends ConsumerWidget {
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return CircularProgressIndicator();
-                } else if (snapshot.hasError) {
-                  return Text('Error: ${snapshot.error}');
                 } else {
                   return Text(
-                    'Version: ${snapshot.data?.version}',
+                    '${AppLocalizations.of(context).settingsPageVersionLabel}: ${snapshot.data?.version}',
                     key: Key('version'),
                   );
                 }
               },
             ),
-            const Text(
-              'Copyright © 2024 searchwork.org',
+            Text(
+              '${AppLocalizations.of(context).settingsPageCopyrightLabel} © 2024 searchwork.org',
               style: TextStyle(height: 3),
               key: Key('copyright'),
             ),

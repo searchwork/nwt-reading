@@ -17,7 +17,7 @@ class PlansPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.plansPageTitle),
+        title: Text(AppLocalizations.of(context).plansPageTitle),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -30,7 +30,7 @@ class PlansPage extends ConsumerWidget {
       body: plans.plans.isEmpty
           ? Center(
               key: const Key('no-plan-yet'),
-              child: Text(AppLocalizations.of(context)!.noPlanYet),
+              child: Text(AppLocalizations.of(context).plansPageNoPlanYet),
             )
           : GridView.extent(
               childAspectRatio: 1.6,
@@ -42,7 +42,7 @@ class PlansPage extends ConsumerWidget {
               children: buildPlansGrid(plans),
             ),
       floatingActionButton: FloatingActionButton(
-        tooltip: AppLocalizations.of(context)!.addPlanTooltip,
+        tooltip: AppLocalizations.of(context).plansPageAddPlanTooltip,
         onPressed: () => showDialog<String>(
           context: context,
           builder: (BuildContext context) => PlanEditDialog(),

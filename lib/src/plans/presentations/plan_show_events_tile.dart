@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 
@@ -14,9 +15,9 @@ class PlanShowEventsTile extends ConsumerWidget {
     final planEdit = ref.read(planEditProviderFamily(planId).notifier);
 
     return ListTile(
-      title: const Text('Show Events'),
-      subtitle: const Text(
-          'Show events in the sections with dates, when they happened.'),
+      title: Text(AppLocalizations.of(context).planEditPageShowEventsTitle),
+      subtitle:
+          Text(AppLocalizations.of(context).planEditPageShowEventsSubtitle),
       trailing: Switch(
         key: const Key('show-events'),
         value: plan.showEvents,

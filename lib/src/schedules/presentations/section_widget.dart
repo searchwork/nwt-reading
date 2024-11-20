@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
@@ -40,14 +41,16 @@ class SectionWidget extends ConsumerWidget {
         showDialog<String>(
           context: context,
           builder: (BuildContext context) => AlertDialog(
-            title: const Text('Confirm toggling read'),
-            content: const Text(
-                'Do you want to set all prior sections as been read and all following to unread?'),
+            title: Text(
+                AppLocalizations.of(context).schedulePageToggleReadDialogTitle),
+            content: Text(
+                AppLocalizations.of(context).schedulePageToggleReadDialogText),
             actions: <Widget>[
               TextButton(
                 key: const Key('reject-toggle-read'),
                 onPressed: () => Navigator.pop(context, 'Cancel'),
-                child: const Text('Cancel'),
+                child:
+                    Text(MaterialLocalizations.of(context).cancelButtonLabel),
               ),
               TextButton(
                 key: const Key('confirm-toggle-read'),
@@ -58,7 +61,7 @@ class SectionWidget extends ConsumerWidget {
                       force: true);
                   Navigator.pop(context, 'OK');
                 },
-                child: const Text('OK'),
+                child: Text(MaterialLocalizations.of(context).okButtonLabel),
               ),
             ],
           ),

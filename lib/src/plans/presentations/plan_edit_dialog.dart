@@ -69,7 +69,8 @@ class PlanEditDialog extends ConsumerWidget {
                       context, ModalRoute.withName(PlansPage.routeName));
                 },
                 icon: const Icon(Icons.delete),
-                label: const Text('Delete'))
+                label:
+                    Text(MaterialLocalizations.of(context).deleteButtonTooltip))
         ],
       ),
     ));

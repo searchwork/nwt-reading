@@ -1,3 +1,6 @@
 arb-dir: lib/src/localization
-template-arb-file: app_en.arb
+nullable-getter: false
 output-localization-file: app_localizations.dart
+template-arb-file: app_en.arb
+untranslated-messages-file: i18n_untranslated.json
+use-escaping: true

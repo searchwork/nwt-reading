@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
@@ -15,7 +16,7 @@ class PlanLanguageTile extends ConsumerWidget {
     final bibleLanguages = ref.watch(bibleLanguagesProvider).valueOrNull;
 
     return ListTile(
-      title: const Text('Language'),
+      title: Text(AppLocalizations.of(context).planEditPageLanguageLabel),
       trailing: DropdownButton<String>(
         key: const Key('language'),
         value: bibleLanguages?.bibleLanguages[plan.language] == null

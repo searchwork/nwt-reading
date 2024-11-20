@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
@@ -54,7 +55,8 @@ class PlanCard extends ConsumerWidget {
                 right: 15,
                 bottom: 15,
                 child: Stack(alignment: Alignment.center, children: [
-                  Text('${remainingDays}d'),
+                  Text(AppLocalizations.of(context)
+                      .plansPageCardRemainingDays(remainingDays)),
                   SizedBox(
                       width: 60,
                       height: 60,
