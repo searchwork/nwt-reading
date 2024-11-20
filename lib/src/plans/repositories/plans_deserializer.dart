@@ -34,6 +34,9 @@ class PlansDeserializer {
     final startDate = planMap['startDate'] == null
         ? null
         : DateTime.parse(planMap['startDate'] as String);
+    final lastDate = planMap['lastDate'] == null
+        ? null
+        : DateTime.parse(planMap['lastDate'] as String);
     final targetDate = planMap['targetDate'] == null
         ? null
         : DateTime.parse(planMap['targetDate'] as String);
@@ -48,6 +51,7 @@ class PlansDeserializer {
         language: language,
         bookmark: bookmark,
         startDate: startDate,
+        lastDate: lastDate,
         targetDate: targetDate,
         withTargetDate: withTargetDate,
         showEvents: showEvents,

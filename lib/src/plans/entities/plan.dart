@@ -60,6 +60,7 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
     plansNotifier?.updatePlan(state.copyWith(
       bookmark: newBookmark,
       startDate: _getStartDate(newBookmark),
+      lastDate: DateUtils.dateOnly(DateTime.now()),
       targetDate: state.targetDate ?? calcTargetDate(newBookmark),
     ));
   }
@@ -133,6 +134,7 @@ class Plan extends Equatable {
     required this.language,
     required this.bookmark,
     this.startDate,
+    this.lastDate,
     this.targetDate,
     required this.withTargetDate,
     required this.showEvents,
@@ -145,6 +147,7 @@ class Plan extends Equatable {
   final String language;
   final Bookmark bookmark;
   final DateTime? startDate;
+  final DateTime? lastDate;
   final DateTime? targetDate;
   final bool withTargetDate;
   final bool showEvents;
@@ -157,11 +160,13 @@ class Plan extends Equatable {
     String? language,
     Bookmark? bookmark,
     DateTime? startDate,
+    DateTime? lastDate,
     DateTime? targetDate,
     bool? withTargetDate,
     bool? showEvents,
     bool? showLocations,
     bool? nullStartDate,
+    bool? nullLastDate,
     bool? nullTargetDate,
   }) =>
       Plan(
@@ -171,6 +176,7 @@ class Plan extends Equatable {
         language: language ?? this.language,
         bookmark: bookmark ?? this.bookmark,
         startDate: nullStartDate == true ? null : startDate ?? this.startDate,
+        lastDate: nullLastDate == true ? null : lastDate ?? this.lastDate,
         targetDate:
             nullTargetDate == true ? null : targetDate ?? this.targetDate,
         withTargetDate: withTargetDate ?? this.withTargetDate,
@@ -185,6 +191,7 @@ class Plan extends Equatable {
         language,
         bookmark,
         startDate,
+        lastDate,
         targetDate,
         withTargetDate,
         showEvents,

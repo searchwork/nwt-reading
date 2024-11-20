@@ -61,6 +61,7 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
         scheduleKey: newScheduleKey,
         bookmark: Bookmark(dayIndex: newDayIndex, sectionIndex: -1),
         nullStartDate: true,
+        nullLastDate: true,
         nullTargetDate: true,
       );
     }
