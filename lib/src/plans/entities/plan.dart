@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
-import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 
 final planProviderFamily =
     AutoDisposeNotifierProviderFamily<PlanNotifier, Plan, String>(

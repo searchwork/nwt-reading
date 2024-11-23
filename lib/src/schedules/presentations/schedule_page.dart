@@ -5,7 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
-import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:nwt_reading/src/schedules/presentations/day_card.dart';
 
 class SchedulePage extends ConsumerStatefulWidget {

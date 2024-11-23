@@ -7,7 +7,7 @@ import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_deserializer.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_serializer.dart';
-import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 

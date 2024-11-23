@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
+import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
