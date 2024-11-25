@@ -7,7 +7,6 @@ import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 final planProviderFamily =
     AutoDisposeNotifierProviderFamily<PlanNotifier, Plan, String>(
         PlanNotifier.new,
-        dependencies: [plansProvider],
         name: 'planProviderFamily');
 
 class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
@@ -19,13 +18,14 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
     final planId = arg;
 
     ref.watch(plansProvider);
-    plansNotifier = ref.read(plansProvider.notifier);
+    plansNotifier = ref.watch(plansProvider.notifier);
 
-    return plansNotifier!.getPlan(planId) ?? plansNotifier!.getNewPlan(planId);
+    final plan =
+        (plansNotifier!.getPlan(planId) ?? plansNotifier!.getNewPlan(planId));
+    schedule = ref.watch(scheduleProviderFamily(plan.scheduleKey)).valueOrNull;
+
+    return plan.copyWith();
   }
-
-  Schedule? getSchedule() =>
-      ref.read(scheduleProviderFamily(state.scheduleKey)).valueOrNull;
 
   void delete() {
     plansNotifier?.removePlan(state.id);
@@ -48,7 +48,7 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
 
   void setRead(
       {required int dayIndex, required int sectionIndex, bool force = false}) {
-    final sections = getSchedule()?.days[dayIndex].sections.length;
+    final sections = schedule?.days[dayIndex].sections.length;
     final newBookmark = sections != null && sectionIndex >= sections - 1
         ? Bookmark(dayIndex: dayIndex + 1, sectionIndex: -1)
         : Bookmark(dayIndex: dayIndex, sectionIndex: sectionIndex);
@@ -59,7 +59,7 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
 
     plansNotifier?.updatePlan(state.copyWith(
       bookmark: newBookmark,
-      startDate: _getStartDate(newBookmark),
+      startDate: getStartDate(newBookmark),
       lastDate: DateUtils.dateOnly(DateTime.now()),
       targetDate: state.targetDate ?? calcTargetDate(newBookmark),
     ));
@@ -78,14 +78,17 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
     }
   }
 
-  double getProgress() => getSchedule() == null
-      ? 0
-      : state.bookmark.dayIndex / getSchedule()!.length;
+  double getProgress() =>
+      schedule == null ? 0 : state.bookmark.dayIndex / schedule!.length;
 
   int getDeviationDays() {
-    if (state.withTargetDate && getTargetDate() != null) {
-      final deviationDays =
-          getTargetDate()!.difference(calcTargetDate()!).inDays;
+    final targetDate = getTargetDate();
+    final calculatedTargetDate = calcTargetDate();
+
+    if (state.withTargetDate &&
+        targetDate != null &&
+        calculatedTargetDate != null) {
+      final deviationDays = targetDate.difference(calculatedTargetDate).inDays;
 
       // If ahead, don't count the current day.
       return deviationDays <= 0 ? deviationDays : deviationDays - 1;
@@ -94,33 +97,34 @@ class PlanNotifier extends AutoDisposeFamilyNotifier<Plan, String> {
     }
   }
 
-  int getRemainingDays() => _getRemainingDays();
-
-  DateTime? getStartDate() => _getStartDate();
+  bool isFinished() => getRemainingDays() == 0;
 
   DateTime? getTargetDate() => state.targetDate ?? calcTargetDate();
 
-  DateTime? calcTargetDate([Bookmark? bookmark]) => state.withTargetDate
-      ? DateUtils.dateOnly(DateTime.now())
-          .add(Duration(days: _getRemainingDays(bookmark)))
-      : null;
+  DateTime? calcTargetDate([Bookmark? bookmark]) {
+    final remainingDays = getRemainingDays(bookmark);
+
+    return state.withTargetDate && remainingDays != null
+        ? DateUtils.dateOnly(DateTime.now()).add(Duration(days: remainingDays))
+        : null;
+  }
 
   int? todayTargetIndex() => state.withTargetDate &&
           getTargetDate() != null &&
-          getSchedule() != null
-      ? getSchedule()!.length -
+          schedule != null
+      ? schedule!.length -
           getTargetDate()!.difference(DateUtils.dateOnly(DateTime.now())).inDays
       : null;
 
-  DateTime? _getStartDate([Bookmark? bookmark]) => state.withTargetDate
+  DateTime? getStartDate([Bookmark? bookmark]) => state.withTargetDate
       ? state.startDate ??
           DateUtils.dateOnly(DateTime.now())
               .add(Duration(days: -(bookmark ?? state.bookmark).dayIndex))
       : null;
 
-  int _getRemainingDays([Bookmark? bookmark]) => getSchedule() == null
-      ? 0
-      : getSchedule()!.length - (bookmark ?? state.bookmark).dayIndex;
+  int? getRemainingDays([Bookmark? bookmark]) => schedule == null
+      ? null
+      : schedule!.length - (bookmark ?? state.bookmark).dayIndex;
 }
 
 class TogglingTooManyDaysException implements Exception {}

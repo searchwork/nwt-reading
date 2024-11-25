@@ -5,7 +5,7 @@ import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 const legacyExportPreferenceKey = 'legacyExport';
 const plansPreferenceKey = 'plans';
 
-final Plans testPlans = Plans(const [
+final Plans testPlans = Plans([
   Plan(
       id: '5aa4de9e-036b-42cd-8bcb-a92cae46db27',
       name: 'Chronological y1',
@@ -39,6 +39,7 @@ final Plans testPlans = Plans(const [
           version: '1.0'),
       language: 'ro',
       bookmark: Bookmark(dayIndex: 364, sectionIndex: 1),
+      lastDate: DateTime(2024, 11, 21),
       withTargetDate: true,
       showEvents: true,
       showLocations: true),
@@ -59,7 +60,7 @@ final Plans testPlans = Plans(const [
 const List<String> testPlansSerialized = [
   '{"id":"5aa4de9e-036b-42cd-8bcb-a92cae46db27","name":"Chronological y1","scheduleKey":{"type":0,"duration":2,"version":"1.0"},"language":"en","bookmark":{"dayIndex":75,"sectionIndex":0},"withTargetDate":true,"showEvents":true,"showLocations":true}',
   '{"id":"0da6b8a7-ccd4-4270-8058-9e30a3f55ceb","name":"Written","scheduleKey":{"type":2,"duration":2,"version":"1.0"},"language":"de","bookmark":{"dayIndex":0,"sectionIndex":-1},"withTargetDate":true,"showEvents":true,"showLocations":true}',
-  '{"id":"2dab49f3-aecf-4aba-9e91-d75c297d4b7e","name":"Sequential","scheduleKey":{"type":1,"duration":2,"version":"1.0"},"language":"ro","bookmark":{"dayIndex":364,"sectionIndex":1},"withTargetDate":true,"showEvents":true,"showLocations":true}',
+  '{"id":"2dab49f3-aecf-4aba-9e91-d75c297d4b7e","name":"Sequential","scheduleKey":{"type":1,"duration":2,"version":"1.0"},"language":"ro","bookmark":{"dayIndex":364,"sectionIndex":1},"lastDate":"2024-11-21T00:00:00.000","withTargetDate":true,"showEvents":true,"showLocations":true}',
   '{"id":"e37bf9df-077a-49db-adcb-d56384906103","name":"Chronological","scheduleKey":{"type":0,"duration":1,"version":"1.0"},"language":"en","bookmark":{"dayIndex":182,"sectionIndex":1},"withTargetDate":true,"showEvents":true,"showLocations":true}'
 ];
 
