@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
-import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 
 final planEditProviderFamily =
     AutoDisposeNotifierProviderFamily<PlanEdit, Plan, String?>(PlanEdit.new,

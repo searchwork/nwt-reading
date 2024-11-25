@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
-import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 
 class PlansDeserializer {
   Plans convertStringListToPlans(List<String>? plansStringList) =>

@@ -13,6 +13,7 @@ import 'package:nwt_reading/src/plans/presentations/plan_card.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
 import 'package:nwt_reading/src/schedules/entities/events.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
+import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 import 'package:nwt_reading/src/schedules/presentations/day_card.dart';
 import 'package:nwt_reading/src/schedules/presentations/event_widget.dart';

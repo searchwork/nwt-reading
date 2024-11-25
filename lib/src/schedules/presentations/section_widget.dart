@@ -5,7 +5,7 @@ import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/events.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
-import 'package:nwt_reading/src/schedules/entities/schedules.dart';
+import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:nwt_reading/src/schedules/presentations/event_widget.dart';
 import 'package:nwt_reading/src/schedules/presentations/locations_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
