@@ -33,7 +33,7 @@ jobs:
         run: "xcrun xctrace list devices"
       - name: Start simulator
         run: |
-          UDID=$(xcrun xctrace list devices | grep "^iPhone 15 Plus Simulator (18.1)" | awk '{gsub(/[()]/,""); print $NF}')
+          UDID=$(xcrun xctrace list devices | grep "^iPhone 15 Simulator (18.1)" | awk '{gsub(/[()]/,""); print $NF}')
           echo $UDID
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
       - uses: actions/checkout@v3

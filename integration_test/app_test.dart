@@ -436,6 +436,11 @@ void main() async {
             .color,
         Colors.red);
 
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('day-82')),
+      50.0,
+    );
+    await tester.pumpAndSettle();
     await tester.tap(find
         .descendant(
             of: find.byKey(const Key('day-83')),
@@ -548,6 +553,45 @@ void main() async {
 
     expect(find.byKey(const Key('reset-target-date')), findsNothing);
     expect(find.byKey(const Key('target-status')), findsOneWidget);
+  });
+
+  testWidgets('Plans showing if finished', (tester) async {
+    final providerContainer =
+        await SettledTester(tester, sharedPreferences: testPlansPreferences)
+            .providerContainer;
+    await tester.pumpAndSettle();
+
+    expect(find.byIcon(Icons.verified), findsOneWidget);
+
+    await tester.tap(find.byType(PlanCard).first);
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('day-365')),
+      500.0,
+      maxScrolls: 200,
+    );
+    await tester.pumpAndSettle();
+    await Future<void>.delayed(Duration(seconds: 2));
+    await tester.tap(find
+        .descendant(
+            of: find.byKey(const Key('day-365')),
+            matching: find.byType(IconButton))
+        .last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('confirm-toggle-read')));
+    await tester.pumpAndSettle();
+
+    expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
+        366);
+    expect(providerContainer.read(plansProvider).plans.first.lastDate,
+        DateUtils.dateOnly(DateTime.now()));
+    expect(find.byIcon(Icons.check_circle), findsWidgets);
+    expect(find.byIcon(Icons.check_circle_outline), findsNothing);
+
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+
+    expect(find.byIcon(Icons.verified), findsExactly(2));
   });
 
   testWidgets('Bookmark button resets schedule view', (tester) async {

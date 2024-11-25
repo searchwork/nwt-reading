@@ -16,6 +16,7 @@ class PlanCard extends ConsumerWidget {
     final planNotifier = ref.read(planProviderFamily(planId).notifier);
     final deviationDays = planNotifier.getDeviationDays();
     final remainingDays = planNotifier.getRemainingDays();
+    final isFinished = planNotifier.isFinished();
     final progress = planNotifier.getProgress();
     const planTypeIcons = {
       ScheduleType.chronological: Icons.hourglass_empty,
@@ -23,56 +24,73 @@ class PlanCard extends ConsumerWidget {
       ScheduleType.written: Icons.edit_note,
     };
 
+    buildNameTitle() => Row(children: [
+          Icon(
+            planTypeIcons[plan.scheduleKey.type],
+            color: Theme.of(context).colorScheme.surface,
+            size: 56,
+            shadows: [
+              Shadow(
+                  offset: Offset(-1, -1),
+                  color: Theme.of(context).colorScheme.primary,
+                  blurRadius: 2),
+              Shadow(
+                  offset: Offset(1, 1),
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  blurRadius: 2)
+            ],
+          ),
+          Text(
+            plan.name,
+            style: Theme.of(context)
+                .textTheme
+                .headlineMedium
+                ?.copyWith(color: Theme.of(context).colorScheme.secondary),
+          )
+        ]);
+
+    buildYearText() => Text(
+          plan.lastDate == null
+              ? ''
+              : MaterialLocalizations.of(context).formatYear(plan.lastDate!),
+          style: TextStyle(
+              fontSize: 80, color: Theme.of(context).colorScheme.primary),
+        );
+
+    buildRemainingDaysStatus() => isFinished
+        ? Icon(Icons.verified, color: Colors.green, size: 72)
+        : Stack(alignment: Alignment.center, children: [
+            Text(
+                style:
+                    TextStyle(color: Theme.of(context).colorScheme.secondary),
+                remainingDays == null
+                    ? ''
+                    : AppLocalizations.of(context)
+                        .plansPageCardRemainingDays(remainingDays)),
+            SizedBox(
+                width: 60,
+                height: 60,
+                child:
+                    CircularProgressIndicator(strokeWidth: 6, value: progress)),
+          ]);
+
     final card = Card(
-        key: Key('plan-$planId'),
-        child: Stack(
-          children: [
-            Positioned(
-                left: 10,
-                top: 10,
-                child: Row(children: [
-                  Icon(
-                    planTypeIcons[plan.scheduleKey.type],
-                    color: Colors.black54,
-                    size: 56,
-                    shadows: const [
-                      Shadow(
-                          offset: Offset(-1, -1),
-                          color: Colors.black26,
-                          blurRadius: 2),
-                      Shadow(
-                          offset: Offset(1, 1),
-                          color: Colors.white,
-                          blurRadius: 2)
-                    ],
-                  ),
-                  Text(
-                    plan.name,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  )
-                ])),
-            Positioned(
-                right: 15,
-                bottom: 15,
-                child: Stack(alignment: Alignment.center, children: [
-                  Text(AppLocalizations.of(context)
-                      .plansPageCardRemainingDays(remainingDays)),
-                  SizedBox(
-                      width: 60,
-                      height: 60,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 6,
-                        value: progress,
-                      ))
-                ])),
-          ],
-        ));
+      key: Key('plan-$planId'),
+      child: Stack(
+        children: [
+          Positioned(left: 10, top: 10, child: buildNameTitle()),
+          Positioned(right: 15, bottom: 15, child: buildRemainingDaysStatus()),
+          Positioned(left: 20, bottom: 0, child: buildYearText()),
+        ],
+      ),
+    );
+
     return GestureDetector(
         onTap: () {
           Navigator.restorablePushNamed(context, SchedulePage.routeName,
               arguments: planId);
         },
-        child: deviationDays == 0
+        child: deviationDays == 0 || isFinished
             ? card
             : Badge(
                 key: Key('badge-$planId'),
