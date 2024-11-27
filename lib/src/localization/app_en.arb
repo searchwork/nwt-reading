@@ -26,6 +26,16 @@
       }
     }
   },
+  "schedulePageCardWeekday": "{date}",
+  "@schedulePageCardWeekday": {
+    "description": "Displaying the weekday on the day card on the schedule page.",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "E"
+      }
+    }
+  },
   "schedulePageJumpToBookmarkTooltip": "Jump to bookmark",
   "@schedulePageJumpToBookmarkTooltip": {
     "description": "The tooltip on the jump to bookmark button on the schedule page"

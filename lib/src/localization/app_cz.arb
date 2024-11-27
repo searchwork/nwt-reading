@@ -6,6 +6,7 @@
   "plansPageNoPlanYet": "Zatím žádný plán čtení Bible. Přidej jeden.",
   "plansPageAddPlanTooltip": "Přidat",
   "plansPageCardRemainingDays": "{remainingDays}d",
+  "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Přejít na záložku",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{n. l.} other{př. n. l.}}",
   "schedulePageToggleReadDialogTitle": "Přepínání čtení",

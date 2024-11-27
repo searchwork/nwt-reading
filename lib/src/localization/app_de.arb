@@ -6,6 +6,7 @@
   "plansPageNoPlanYet": "Noch kein Bibel-Leseplan. Füge einen hinzu.",
   "plansPageAddPlanTooltip": "Hinzufügen",
   "plansPageCardRemainingDays": "{remainingDays}T",
+  "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Springe zum Lesezeichen",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{u. Z.} other{v. u. Z.}}",
   "schedulePageToggleReadDialogTitle": "Lesestatus ändern",

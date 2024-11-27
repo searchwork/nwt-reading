@@ -6,6 +6,7 @@
   "plansPageNoPlanYet": "Még nincs bibliaolvasási terv. Adj hozzá egyet.",
   "plansPageAddPlanTooltip": "Hozzáadás",
   "plansPageCardRemainingDays": "{remainingDays}n",
+  "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Ugrás a könyvjelzőhöz",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{i.sz.} other{i.e.}}",
   "schedulePageToggleReadDialogTitle": "Olvasás váltása",
