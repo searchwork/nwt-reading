@@ -57,8 +57,10 @@ class PlanEditDialog extends ConsumerWidget {
           const SizedBox(height: 20),
           PlanLanguageTile(planId),
           PlanWithTargetDateTile(planId),
-          if (plan.withTargetDate && plan.targetDate != adjustedTargetDate)
-            PlanResetTargetDateTile(planId),
+          if (plan.withTargetDate &&
+              adjustedTargetDate != null &&
+              plan.targetDate != adjustedTargetDate)
+            PlanResetTargetDateTile(planId, adjustedTargetDate),
           PlanShowEventsTile(planId),
           PlanShowLocationsTile(planId),
           if (!isNewPlan)

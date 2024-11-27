@@ -100,7 +100,8 @@
     "description": "The with target date status subtitle on the plan edit page",
     "placeholders": {
       "targetDate": {
-        "type": "String"
+        "type": "DateTime",
+        "format": "yMd"
       },
       "direction": {
         "type": "String"
@@ -119,7 +120,8 @@
     "description": "The reset target date subtitle on the plan edit page",
     "placeholders": {
       "targetDate": {
-        "type": "String"
+        "type": "DateTime",
+        "format": "yMd"
       }
     }
   },
