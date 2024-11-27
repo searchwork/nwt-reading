@@ -35,8 +35,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     final planId = ModalRoute.of(context)!.settings.arguments as String;
     final plan = ref.watch(planProviderFamily(planId));
     final planNotifier = ref.read(planProviderFamily(planId).notifier);
-    final schedule =
-        ref.watch(scheduleProviderFamily(plan.scheduleKey)).valueOrNull;
+    final asyncSchedule = ref.watch(scheduleProviderFamily(plan.scheduleKey));
     final progress = planNotifier.getProgress();
     const Key centerKey = ValueKey<String>('today');
     final controller = ScrollController();
@@ -48,20 +47,24 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
       resetTopDayIndex(plan.bookmark);
     }
 
-    Widget? scheduleListBuilder(int index) {
-      final day = schedule?.days[index];
+    Widget? scheduleListBuilder(Schedule schedule, int index) {
+      final day = schedule.days[index];
       final isCurrentDay = plan.bookmark.dayIndex == index;
       final isTargetDay = todayTargetIndex == index;
       final dividerColor = isCurrentDay ? Colors.blue : badgeColor;
-      final dayCard = day == null
-          ? null
-          : DayCard(
-              key: Key('day-$index'),
-              planId: planId,
-              day: day,
-              dayIndex: index);
-
-      return dayCard != null && (isCurrentDay || isTargetDay)
+      final remainingDays = planNotifier
+          .getRemainingDays(Bookmark(dayIndex: index, sectionIndex: 0));
+      final date = plan.withTargetDate && remainingDays != null
+          ? plan.targetDate?.subtract(Duration(days: remainingDays))
+          : null;
+      final isBeginningOfMonth = date?.day == 1;
+      final dayCard = DayCard(
+          date: date,
+          key: Key('day-$index'),
+          planId: planId,
+          day: day,
+          dayIndex: index);
+      final dayCardWithDivider = (isCurrentDay || isTargetDay)
           ? Column(
               children: [
                 Container(
@@ -85,6 +88,20 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
               ],
             )
           : dayCard;
+
+      return date != null && plan.withTargetDate && isBeginningOfMonth
+          ? Column(
+              // crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  MaterialLocalizations.of(context).formatMonthYear(date),
+                  key: const Key('month'),
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+                dayCardWithDivider,
+              ],
+            )
+          : dayCardWithDivider;
     }
 
     return Scaffold(
@@ -107,35 +124,39 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
             ),
           ],
         ),
-        body: schedule == null
-            ? null
-            : Column(
-                children: [
-                  LinearProgressIndicator(value: progress),
-                  Flexible(
-                    child: CustomScrollView(
-                      controller: controller,
-                      center: centerKey,
-                      slivers: <Widget>[
-                        SliverList(
-                          delegate: SliverChildBuilderDelegate(
-                              (BuildContext context, int index) =>
-                                  scheduleListBuilder(topDayIndex - 1 - index),
-                              childCount: topDayIndex),
-                        ),
-                        SliverList(
-                          key: centerKey,
-                          delegate: SliverChildBuilderDelegate(
+        body: switch (asyncSchedule) {
+          AsyncValue(:final valueOrNull?) => Column(
+              children: [
+                LinearProgressIndicator(value: progress),
+                Flexible(
+                  child: CustomScrollView(
+                    controller: controller,
+                    center: centerKey,
+                    slivers: <Widget>[
+                      SliverList(
+                        delegate: SliverChildBuilderDelegate(
                             (BuildContext context, int index) =>
-                                scheduleListBuilder(topDayIndex + index),
-                            childCount: schedule.days.length - topDayIndex,
-                          ),
+                                scheduleListBuilder(
+                                    valueOrNull, topDayIndex - 1 - index),
+                            childCount: topDayIndex),
+                      ),
+                      SliverList(
+                        key: centerKey,
+                        delegate: SliverChildBuilderDelegate(
+                          (BuildContext context, int index) =>
+                              scheduleListBuilder(
+                                  valueOrNull, topDayIndex + index),
+                          childCount: valueOrNull.days.length - topDayIndex,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
+            ),
+          AsyncValue(:final error?) => Text('Error: $error'),
+          _ => const Center(child: CircularProgressIndicator()),
+        },
         floatingActionButton: FloatingActionButton(
           tooltip:
               AppLocalizations.of(context).schedulePageJumpToBookmarkTooltip,

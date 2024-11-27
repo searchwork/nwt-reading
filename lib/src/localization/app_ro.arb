@@ -6,6 +6,7 @@
   "plansPageNoPlanYet": "Încă nu există un plan de citire a Bibliei. Adaugă unul.",
   "plansPageAddPlanTooltip": "Adaugă",
   "plansPageCardRemainingDays": "{remainingDays}z",
+  "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Sari la marcaj",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{e.n.} other{î.e.n.}}",
   "schedulePageToggleReadDialogTitle": "Comutare citire",

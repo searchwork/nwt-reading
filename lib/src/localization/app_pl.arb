@@ -6,6 +6,7 @@
   "plansPageNoPlanYet": "Brak planu czytania Biblii. Dodaj jeden.",
   "plansPageAddPlanTooltip": "Dodaj",
   "plansPageCardRemainingDays": "{remainingDays}d",
+  "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Przejdź do zakładki",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{n.e.} other{p.n.e.}}",
   "schedulePageToggleReadDialogTitle": "Przełączanie czytania",

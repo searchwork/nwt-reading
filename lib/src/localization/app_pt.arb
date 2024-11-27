@@ -6,6 +6,7 @@
   "plansPageNoPlanYet": "Ainda não há um plano de leitura da Bíblia. Adicione um.",
   "plansPageAddPlanTooltip": "Adicionar",
   "plansPageCardRemainingDays": "{remainingDays}d",
+  "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Ir para o marcador",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{d.C.} other{a.C.}}",
   "schedulePageToggleReadDialogTitle": "Alternar leitura",

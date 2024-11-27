@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:nwt_reading/src/schedules/presentations/section_widget.dart';
@@ -6,9 +7,11 @@ import 'package:nwt_reading/src/schedules/presentations/section_widget.dart';
 class DayCard extends ConsumerWidget {
   const DayCard(
       {super.key,
+      required this.date,
       required this.planId,
       required this.day,
       required this.dayIndex});
+  final DateTime? date;
   final String planId;
   final Day day;
   final int dayIndex;
@@ -34,9 +37,26 @@ class DayCard extends ConsumerWidget {
             )),
             Container(
                 padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
-                width: 25,
-                child: Text((dayIndex + 1).toString(),
-                    style: Theme.of(context).textTheme.bodySmall)),
+                width: 40,
+                child: date == null
+                    ? Text((dayIndex + 1).toString(),
+                        key: const Key('day-index'),
+                        style: Theme.of(context).textTheme.bodySmall)
+                    : Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            date!.day.toString(),
+                            key: const Key('date'),
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                          Text(
+                            AppLocalizations.of(context)
+                                .schedulePageCardWeekday(date!),
+                            style: Theme.of(context).textTheme.bodySmall,
+                          )
+                        ],
+                      )),
           ],
         ),
       ),

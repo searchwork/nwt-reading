@@ -6,6 +6,7 @@
   "plansPageNoPlanYet": "Pas encore de plan de lecture de la Bible. Ajoute-en un.",
   "plansPageAddPlanTooltip": "Ajouter",
   "plansPageCardRemainingDays": "{remainingDays}j",
+  "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Aller au marque-page",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{de notre ère} other{avant notre ère}}",
   "schedulePageToggleReadDialogTitle": "Basculer la lecture",
