@@ -4,26 +4,23 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 
 class PlanResetTargetDateTile extends ConsumerWidget {
-  const PlanResetTargetDateTile(this.planId, {super.key});
+  const PlanResetTargetDateTile(this.planId, this.adjustedTargetDate,
+      {super.key});
 
   final String? planId;
+  final DateTime adjustedTargetDate;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref.watch(planEditProviderFamily(planId));
     final planEdit = ref.read(planEditProviderFamily(planId).notifier);
-    final adjustedTargetDate = planEdit.calcTargetDate();
-    final formattedAdjustedTargetDate = adjustedTargetDate != null
-        ? MaterialLocalizations.of(context)
-            .formatCompactDate(adjustedTargetDate)
-        : '';
 
     return ListTile(
       key: const Key('reset-target-date'),
       title:
           Text(AppLocalizations.of(context).planEditPageResetTargetDateTitle),
       subtitle: Text(AppLocalizations.of(context)
-          .planEditPageResetTargetDateSubtitle(formattedAdjustedTargetDate)),
+          .planEditPageResetTargetDateSubtitle(adjustedTargetDate)),
       trailing: Icon(Icons.arrow_forward),
       onTap: () {
         showDialog<String>(

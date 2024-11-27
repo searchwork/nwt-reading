@@ -14,9 +14,6 @@ class PlanWithTargetDateTile extends ConsumerWidget {
     final plan = ref.watch(planEditProviderFamily(planId));
     ref.watch(planEditProviderFamily(planId));
     final planEdit = ref.read(planEditProviderFamily(planId).notifier);
-    final formattedTargetDate = plan.targetDate != null
-        ? MaterialLocalizations.of(context).formatCompactDate(plan.targetDate!)
-        : '';
     final planNotifier =
         planId != null ? ref.read(planProviderFamily(planId!).notifier) : null;
     final deviationDays = planNotifier?.getDeviationDays() ?? 0;
@@ -27,12 +24,12 @@ class PlanWithTargetDateTile extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(AppLocalizations.of(context).planEditPageWithTargetDateSubtitle),
-          if (planId != null && plan.withTargetDate)
+          if (planId != null && plan.withTargetDate && plan.targetDate != null)
             Text(
                 key: const Key('target-status'),
                 AppLocalizations.of(context)
                     .planEditPageWithTargetDateStatusSubtitle(
-                        formattedTargetDate,
+                        plan.targetDate!,
                         deviationDays > 0
                             ? 'ahead'
                             : deviationDays < 0
