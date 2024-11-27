@@ -3,10 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/schedules/entities/schedules.dart';
 
-final scheduleProviderFamily = FutureProviderFamily<Schedule?, ScheduleKey>(
-    (ref, scheduleKey) async =>
-        (await ref.watch(schedulesProvider.future)).schedules[scheduleKey],
-    name: 'scheduleProviderFamily');
+final scheduleProviderFamily =
+    FutureProviderFamily<Schedule?, ScheduleKey>((ref, scheduleKey) async {
+  final schedules = await ref.watch(schedulesProvider.future);
+  final schedule = schedules.schedules[scheduleKey];
+
+  if (schedule == null) {
+    throw Exception('Schedule does not exist');
+  }
+
+  return schedule;
+}, name: 'scheduleProviderFamily');
 
 enum ScheduleType {
   chronological,
