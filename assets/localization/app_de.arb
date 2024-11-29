@@ -8,6 +8,7 @@
   "plansPageCardRemainingDays": "{remainingDays}T",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Springe zum Lesezeichen",
+  "schedulePageEventPrefixTerm": "{prefix, select, a{n.} b{v.} other{um}}",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{u. Z.} other{v. u. Z.}}",
   "schedulePageToggleReadDialogTitle": "Lesestatus ändern",
   "schedulePageToggleReadDialogText": "Möchtest du alle vorherigen Abschnitte als gelesen und alle folgenden als ungelesen markieren?",

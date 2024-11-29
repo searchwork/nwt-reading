@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_card.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
@@ -17,7 +17,7 @@ class PlansPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context).plansPageTitle),
+        title: Text(context.loc.plansPageTitle),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -30,7 +30,7 @@ class PlansPage extends ConsumerWidget {
       body: plans.plans.isEmpty
           ? Center(
               key: const Key('no-plan-yet'),
-              child: Text(AppLocalizations.of(context).plansPageNoPlanYet),
+              child: Text(context.loc.plansPageNoPlanYet),
             )
           : GridView.extent(
               childAspectRatio: 1.6,
@@ -42,7 +42,7 @@ class PlansPage extends ConsumerWidget {
               children: buildPlansGrid(plans),
             ),
       floatingActionButton: FloatingActionButton(
-        tooltip: AppLocalizations.of(context).plansPageAddPlanTooltip,
+        tooltip: context.loc.plansPageAddPlanTooltip,
         onPressed: () => showDialog<String>(
           context: context,
           builder: (BuildContext context) => PlanEditDialog(),

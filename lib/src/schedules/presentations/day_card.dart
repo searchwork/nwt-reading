@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:nwt_reading/src/schedules/presentations/section_widget.dart';
 
@@ -51,8 +51,7 @@ class DayCard extends ConsumerWidget {
                             style: Theme.of(context).textTheme.bodySmall,
                           ),
                           Text(
-                            AppLocalizations.of(context)
-                                .schedulePageCardWeekday(date!),
+                            context.loc.schedulePageCardWeekday(date!),
                             style: Theme.of(context).textTheme.bodySmall,
                           )
                         ],

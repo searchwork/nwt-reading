@@ -8,6 +8,7 @@
   "plansPageCardRemainingDays": "{remainingDays}n",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Ugrás a könyvjelzőhöz",
+  "schedulePageEventPrefixTerm": "{prefix, select, a{a.} b{b.} other{c.}}",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{i.sz.} other{i.e.}}",
   "schedulePageToggleReadDialogTitle": "Olvasás váltása",
   "schedulePageToggleReadDialogText": "Szeretnéd az összes korábbi szakaszt olvasottnak, és az összes következőt olvasatlannak jelölni?",

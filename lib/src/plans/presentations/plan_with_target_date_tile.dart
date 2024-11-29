@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 
@@ -19,23 +19,22 @@ class PlanWithTargetDateTile extends ConsumerWidget {
     final deviationDays = planNotifier?.getDeviationDays() ?? 0;
 
     return ListTile(
-      title: Text(AppLocalizations.of(context).planEditPageWithTargetDateTitle),
+      title: Text(context.loc.planEditPageWithTargetDateTitle),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(AppLocalizations.of(context).planEditPageWithTargetDateSubtitle),
+          Text(context.loc.planEditPageWithTargetDateSubtitle),
           if (planId != null && plan.withTargetDate && plan.targetDate != null)
             Text(
                 key: const Key('target-status'),
-                AppLocalizations.of(context)
-                    .planEditPageWithTargetDateStatusSubtitle(
-                        plan.targetDate!,
-                        deviationDays > 0
-                            ? 'ahead'
-                            : deviationDays < 0
-                                ? 'behind'
-                                : 'on time',
-                        deviationDays.abs())),
+                context.loc.planEditPageWithTargetDateStatusSubtitle(
+                    plan.targetDate!,
+                    deviationDays > 0
+                        ? 'ahead'
+                        : deviationDays < 0
+                            ? 'behind'
+                            : 'on time',
+                    deviationDays.abs())),
         ],
       ),
       trailing: Switch(

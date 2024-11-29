@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 
@@ -19,18 +19,15 @@ class PlanTypeSegmentedButton extends ConsumerWidget {
       segments: <ButtonSegment<ScheduleType>>[
         ButtonSegment<ScheduleType>(
             value: ScheduleType.chronological,
-            label: Text(
-                AppLocalizations.of(context).planEditPageChronologicalLabel),
+            label: Text(context.loc.planEditPageChronologicalLabel),
             icon: Icon(Icons.hourglass_empty)),
         ButtonSegment<ScheduleType>(
             value: ScheduleType.sequential,
-            label:
-                Text(AppLocalizations.of(context).planEditPageSequentialLabel),
+            label: Text(context.loc.planEditPageSequentialLabel),
             icon: Icon(Icons.menu_book)),
         ButtonSegment<ScheduleType>(
             value: ScheduleType.written,
-            label:
-                Text(AppLocalizations.of(context).planEditPageAsWrittenLabel),
+            label: Text(context.loc.planEditPageAsWrittenLabel),
             icon: Icon(Icons.edit_note)),
       ],
       selected: {plan.scheduleKey.type},

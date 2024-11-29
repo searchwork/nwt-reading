@@ -1,0 +1,461 @@
+{
+  "@@locale": "en",
+  "@@comment": "(c) searchwork.org",
+  "appTitle": "NWT Reading",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "plansPageTitle": "Bible Reading Plans",
+  "@plansPageTitle": {
+    "description": "The title of the plans page"
+  },
+  "plansPageNoPlanYet": "No Bible reading plan yet. Add one.",
+  "@plansPageNoPlanYet": {
+    "description": "The message on the plans page when there is no plan yet"
+  },
+  "plansPageAddPlanTooltip": "Add",
+  "@plansPageAddPlanTooltip": {
+    "description": "The tooltip on the add plan button on the plans page"
+  },
+  "plansPageCardRemainingDays": "{remainingDays}d",
+  "@plansPageCardRemainingDays": {
+    "description": "Displaying the remaining days on the card (number of days with a suffix d as abbreviation for days)",
+    "placeholders": {
+      "remainingDays": {
+        "type": "num"
+      }
+    }
+  },
+  "schedulePageCardWeekday": "{date}",
+  "@schedulePageCardWeekday": {
+    "description": "Displaying the weekday on the day card on the schedule page.",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "E"
+      }
+    }
+  },
+  "schedulePageJumpToBookmarkTooltip": "Jump to bookmark",
+  "@schedulePageJumpToBookmarkTooltip": {
+    "description": "The tooltip on the jump to bookmark button on the schedule page"
+  },
+  "schedulePageEventPrefixTerm": "{prefix, select, a{a.} b{b.} other{c.}}",
+  "@schedulePageEventPrefixTerm": {
+    "description": "The prefix in the events on the schedule page (a. for “after”; b. for “before”; c. for “circa”, or “about”).",
+    "placeholders": {
+      "prefix": {
+        "type": "String"
+      }
+    }
+  },
+  "schedulePageEventCommonEraTerm": "{isCE, select, true{C.E.} other{B.C.E}}",
+  "@schedulePageEventCommonEraTerm": {
+    "description": "The common era term in the events on the schedule page.",
+    "placeholders": {
+      "isCE": {
+        "type": "String"
+      }
+    }
+  },
+  "schedulePageToggleReadDialogTitle": "Toggling read",
+  "@schedulePageToggleReadDialogTitle": {
+    "description": "The title on the toggle read confirmation dialog on the schedule page"
+  },
+  "schedulePageToggleReadDialogText": "Do you want to set all prior sections as been read and all following to unread?",
+  "@schedulePageToggleReadDialogText": {
+    "description": "The text on the toggle read confirmation dialog on the schedule page"
+  },
+  "planEditPageTitle": "Edit Plan",
+  "@planEditPageTitle": {
+    "description": "The title of the plan edit page"
+  },
+  "planEditPageChronologicalLabel": "chronological",
+  "@planEditPageChronologicalLabel": {
+    "description": "The chronological segment label on the plan edit page"
+  },
+  "planEditPageSequentialLabel": "sequential",
+  "@planEditPageSequentialLabel": {
+    "description": "The sequential segment label on the plan edit page"
+  },
+  "planEditPageAsWrittenLabel": "as written",
+  "@planEditPageAsWrittenLabel": {
+    "description": "The as written segment label on the plan edit page"
+  },
+  "planEditPageThreeMonthsLabel": "3 months",
+  "@planEditPageThreeMonthsLabel": {
+    "description": "The three months segment label on the plan edit page"
+  },
+  "planEditPageSixMonthsLabel": "6 months",
+  "@planEditPageSixMonthsLabel": {
+    "description": "The six months segment label on the plan edit page"
+  },
+  "planEditPageOneYearLabel": "1 year",
+  "@planEditPageOneYearLabel": {
+    "description": "The one year segment label on the plan edit page"
+  },
+  "planEditPageTwoYearsLabel": "2 years",
+  "@planEditPageTwoYearsLabel": {
+    "description": "The two years segment label on the plan edit page"
+  },
+  "planEditPageFourYearsLabel": "4 years",
+  "@planEditPageFourYearsLabel": {
+    "description": "The four years segment label on the plan edit page"
+  },
+  "planEditPageLanguageLabel": "Language",
+  "@planEditPageLanguageLabel": {
+    "description": "The language label on the plan edit page"
+  },
+  "planEditPageWithTargetDateTitle": "With Target Date",
+  "@planEditPageWithTargetDateTitle": {
+    "description": "The with target date title on the plan edit page"
+  },
+  "planEditPageWithTargetDateSubtitle": "Track daily reading with a target date.",
+  "@planEditPageWithTargetDateSubtitle": {
+    "description": "The with target date subtitle on the plan edit page"
+  },
+  "planEditPageWithTargetDateStatusSubtitle": "The target date is {targetDate}. You are {direction, select, other{on time} ahead{{deviationDays} days ahead} behind{{deviationDays} days behind}} with reading.",
+  "@planEditPageWithTargetDateStatusSubtitle": {
+    "description": "The with target date status subtitle on the plan edit page",
+    "placeholders": {
+      "targetDate": {
+        "type": "DateTime",
+        "format": "yMd"
+      },
+      "direction": {
+        "type": "String"
+      },
+      "deviationDays": {
+        "type": "num"
+      }
+    }
+  },
+  "planEditPageResetTargetDateTitle": "Reset Target Date",
+  "@planEditPageResetTargetDateTitle": {
+    "description": "The reset target date title on the plan edit page"
+  },
+  "planEditPageResetTargetDateSubtitle": "Change target date to {targetDate} to be on time with reading.",
+  "@planEditPageResetTargetDateSubtitle": {
+    "description": "The reset target date subtitle on the plan edit page",
+    "placeholders": {
+      "targetDate": {
+        "type": "DateTime",
+        "format": "yMd"
+      }
+    }
+  },
+  "planEditPageResetTargetDateDialogTitle": "Confirm resetting target date",
+  "@planEditPageResetTargetDateDialogTitle": {
+    "description": "The title on the reset target date confirmation dialog on the plan edit page"
+  },
+  "planEditPageResetTargetDateDialogText": "Do you want to change the target date to be on time with reading?",
+  "@planEditPageResetTargetDateDialogText": {
+    "description": "The text on the reset target date confirmation dialog on the plan edit page"
+  },
+  "planEditPageShowEventsTitle": "Show Events",
+  "@planEditPageShowEventsTitle": {
+    "description": "The show events title on the plan edit page"
+  },
+  "planEditPageShowEventsSubtitle": "Show in the sections events with dates, when they happened.",
+  "@planEditPageShowEventsSubtitle": {
+    "description": "The show events subtitle on the plan edit page"
+  },
+  "planEditPageShowLocationsTitle": "Show Locations",
+  "@planEditPageShowLocationsTitle": {
+    "description": "The show locations title on the plan edit page"
+  },
+  "planEditPageShowLocationsSubtitle": "Show in the sections the referred locations.",
+  "@planEditPageShowLocationsSubtitle": {
+    "description": "The show locations subtitle on the plan edit page"
+  },
+  "settingsPageTitle": "Settings",
+  "@settingsPageTitle": {
+    "description": "The title of the settings page"
+  },
+  "settingsPageSystemLabel": "system",
+  "@settingsPageSystemLabel": {
+    "description": "The system segment label on the settings page"
+  },
+  "settingsPageLightLabel": "light",
+  "@settingsPageLightLabel": {
+    "description": "The light segment label on the settings page"
+  },
+  "settingsPageDarkLabel": "dark",
+  "@settingsPageDarkLabel": {
+    "description": "The dark segment label on the settings page"
+  },
+  "settingsPageVersionLabel": "Version",
+  "@settingsPageVersionLabel": {
+    "description": "The version label on the settings page"
+  },
+  "settingsPageCopyrightLabel": "Copyright",
+  "@settingsPageCopyrightLabel": {
+    "description": "The copyright label on the settings page"
+  },
+  "event_4026_BCE": "Adam’s creation",
+  "event_a_4026_BCE": "Edenic covenant made, first prophecy",
+  "event_b_3896_BCE": "Cain slays Abel",
+  "event_3896_BCE": "Birth of Seth",
+  "event_3404_BCE": "Birth of righteous Enoch",
+  "event_3339_BCE": "Birth of Methuselah",
+  "event_3152_BCE": "Birth of Lamech",
+  "event_3096_BCE": "Death of Adam",
+  "event_3039_BCE": "Transference of Enoch; ends his period of prophesying",
+  "event_2970_BCE": "Birth of Noah",
+  "event_2490_BCE": "God’s pronouncement as to mankind",
+  "event_2470_BCE": "Birth of Japheth",
+  "event_2468_BCE": "Birth of Shem",
+  "event_2370_BCE": "Death of Methuselah",
+  "event_2370_BCE_a": "Floodwaters fall (in autumn)",
+  "event_2369_BCE": "Making of the covenant after the Flood",
+  "event_2368_BCE": "Birth of Arpachshad",
+  "event_a_2269_BCE": "Building of the Tower of Babel",
+  "event_2020_BCE": "Death of Noah",
+  "event_2018_BCE": "Birth of Abraham",
+  "event_1943_BCE": "Abraham crosses Euphrates on his way to Canaan; Abrahamic covenant validated; beginning of the 430-year period to Law covenant",
+  "event_b_1933_BCE": "Lot rescued; Abraham visits Melchizedek",
+  "event_1932_BCE": "Ishmael born",
+  "event_1919_BCE": "Covenant of circumcision made",
+  "event_1919_BCE_a": "Judgment of Sodom and Gomorrah",
+  "event_1918_BCE": "Birth of Isaac, the true heir; beginning of the ‘about 450 years’",
+  "event_1913_BCE": "Weaning of Isaac; Ishmael sent away; beginning of the 400-year affliction",
+  "event_1881_BCE": "Death of Sarah",
+  "event_1878_BCE": "Marriage of Isaac and Rebekah",
+  "event_1868_BCE": "Death of Shem",
+  "event_1858_BCE": "Birth of Esau and Jacob",
+  "event_1843_BCE": "Death of Abraham",
+  "event_1818_BCE": "Esau marries first two wives",
+  "event_1795_BCE": "Death of Ishmael",
+  "event_1781_BCE": "Jacob flees to Haran; his vision at Bethel",
+  "event_1774_BCE": "Jacob marries Leah and Rachel",
+  "event_1767_BCE": "Birth of Joseph",
+  "event_1761_BCE": "Jacob returns to Canaan from Haran",
+  "event_c_1761_BCE": "Jacob wrestles angel; is named Israel",
+  "event_1750_BCE": "Joseph sold as a slave by his brothers",
+  "event_1738_BCE": "Death of Isaac",
+  "event_1737_BCE": "Joseph made prime minister of Egypt",
+  "event_1728_BCE": "Jacob with his whole family enters Egypt",
+  "event_1711_BCE": "Death of Jacob",
+  "event_1657_BCE": "Death of Joseph",
+  "event_b_1613_BCE": "Job’s trial",
+  "event_a_1600_BCE": "Egypt attains prominence as first world power",
+  "event_1593_BCE": "Birth of Moses",
+  "event_1553_BCE": "Moses offers himself as a deliverer; flees to Midian",
+  "event_c_1514_BCE": "Moses at the burning thornbush",
+  "event_1513_BCE_a": "Passover; Israelites leave Egypt",
+  "event_1513_BCE_d": "End of the 430-year period from validating of Abrahamic covenant",
+  "event_1513_BCE_b": "Red Sea deliverance; Egypt’s power shaken; end of 400-year period of affliction",
+  "event_1513_BCE_e": "Moses compiles Genesis in the wilderness; Bible writing begins",
+  "event_1513_BCE_c": "Law covenant made at Mt. Sinai (Horeb)",
+  "event_1512_BCE_a": "Tabernacle construction completed",
+  "event_1512_BCE_b": "Installation of the Aaronic priesthood",
+  "event_1512_BCE_c": "Moses completes Exodus and Leviticus",
+  "event_1473_BCE_a": "Moses completes Numbers on Plains of Moab",
+  "event_c_1473_BCE": "Moses completes the book of Job",
+  "event_1473_BCE_c": "Moses writes Deuteronomy",
+  "event_1473_BCE_b": "Covenant with Israel at Moab",
+  "event_1473_BCE_d": "Moses dies on Mt. Nebo in Moab",
+  "event_1473_BCE_e": "Israel enters Canaan under Joshua",
+  "event_1467_BCE": "Major conquest of the land completed; end of the ‘about 450 years’ of Acts 13:17-20",
+  "event_c_1450_BCE_a": "Book of Joshua completed",
+  "event_c_1450_BCE_b": "Death of Joshua",
+  "event_1117_BCE": "Samuel anoints Saul as king of Israel",
+  "event_1107_BCE": "Birth of David at Bethlehem",
+  "event_c_1100_BCE": "Samuel completes the book of Judges",
+  "event_c_1090_BCE": "Samuel completes the book of Ruth",
+  "event_c_1078_BCE": "Book of 1 Samuel completed",
+  "event_1077_BCE": "David becomes king of Judah at Hebron",
+  "event_1070_BCE": "David becomes king over all Israel; makes Jerusalem his capital",
+  "event_a_1070_BCE": "The Ark brought into Jerusalem; covenant for a kingdom made with David",
+  "event_c_1040_BCE": "Gad and Nathan complete 2 Samuel",
+  "event_1037_BCE": "Solomon succeeds David as king of Israel",
+  "event_1034_BCE": "Construction of temple by Solomon begun",
+  "event_1027_BCE": "Temple in Jerusalem completed",
+  "event_c_1020_BCE": "Solomon completes The Song of Solomon",
+  "event_b_1000_BCE": "Solomon completes the book of Ecclesiastes",
+  "event_997_BCE": "Rehoboam succeeds Solomon; kingdom split; Jeroboam begins reign as king of Israel",
+  "event_993_BCE": "Shishak invades Judah and takes treasures from temple",
+  "event_980_BCE": "Abijam (Abijah) succeeds Rehoboam as king of Judah",
+  "event_977_BCE": "Asa succeeds Abijam as king of Judah",
+  "event_c_976_BCE": "Nadab succeeds Jeroboam as king of Israel",
+  "event_c_975_BCE": "Baasha succeeds Nadab as king of Israel",
+  "event_c_952_BCE": "Elah succeeds Baasha as king of Israel",
+  "event_c_951_BCE_a": "Zimri succeeds Elah as king of Israel",
+  "event_c_951_BCE_b": "Omri and Tibni succeed Zimri as kings of Israel",
+  "event_c_947_BCE": "Omri rules as king of Israel alone",
+  "event_c_940_BCE": "Ahab succeeds Omri as king of Israel",
+  "event_936_BCE": "Jehoshaphat succeeds Asa as king of Judah",
+  "event_c_919_BCE": "Ahaziah succeeds Ahab as sole king of Israel",
+  "event_c_917_BCE": "Jehoram of Israel succeeds Ahaziah as sole king",
+  "event_913_BCE": "Jehoram of Judah ‘becomes king,’ with Jehoshaphat",
+  "event_c_906_BCE": "Ahaziah succeeds Jehoram as king of Judah",
+  "event_c_905_BCE_a": "Queen Athaliah usurps throne of Judah",
+  "event_c_905_BCE_b": "Jehu succeeds Jehoram as king of Israel",
+  "event_898_BCE": "Jehoash succeeds Ahaziah as king of Judah",
+  "event_876_BCE": "Jehoahaz succeeds Jehu as king of Israel",
+  "event_c_859_BCE": "Jehoash succeeds Jehoahaz as sole king of Israel",
+  "event_858_BCE": "Amaziah succeeds Jehoash as king of Judah",
+  "event_c_844_BCE_a": "Jeroboam II succeeds Jehoash as king of Israel",
+  "event_c_844_BCE_b": "Jonah completes the book of Jonah",
+  "event_829_BCE": "Uzziah (Azariah) succeeds Amaziah as king of Judah",
+  "event_c_820_BCE": "Book of Joel perhaps written",
+  "event_c_804_BCE": "Amos completes the book of Amos",
+  "event_c_792_BCE": "Zechariah rules as king of Israel (6 months)",
+  "event_c_791_BCE": "Shallum succeeds Zechariah as king of Israel; Menahem succeeds Shallum as king of Israel",
+  "event_c_780_BCE": "Pekahiah succeeds Menahem as king of Israel",
+  "event_c_778_BCE": "Isaiah begins to prophesy",
+  "event_777_BCE": "Jotham succeeds Uzziah (Azariah) as king of Judah",
+  "event_c_761_BCE": "Ahaz succeeds Jotham as king of Judah",
+  "event_c_758_BCE": "Hoshea ‘begins to reign’ as king of Israel",
+  "event_745_BCE": "Hezekiah succeeds Ahaz as king of Judah",
+  "event_a_745_BCE": "Hosea completes the book of Hosea",
+  "event_740_BCE": "Assyria subjugates Israel, takes Samaria",
+  "event_732_BCE": "Sennacherib invades Judah",
+  "event_a_732_BCE": "Isaiah completes the book of Isaiah",
+  "event_b_717_BCE": "Micah completes the book of Micah",
+  "event_c_717_BCE": "Compiling of Proverbs completed",
+  "event_716_BCE": "Manasseh succeeds Hezekiah as king of Judah",
+  "event_661_BCE": "Amon succeeds Manasseh as king of Judah",
+  "event_659_BCE": "Josiah succeeds Amon as king of Judah",
+  "event_b_648_BCE": "Zephaniah completes the book of Zephaniah",
+  "event_647_BCE": "Jeremiah commissioned as prophet",
+  "event_b_632_BCE": "Nahum completes the book of Nahum",
+  "event_632_BCE": "Nineveh falls to Chaldeans and Medes; Babylon now in line to become third world power",
+  "event_628_BCE_a": "Jehoahaz, successor of Josiah, rules as king of Judah",
+  "event_628_BCE_b": "Jehoiakim succeeds Jehoahaz as king of Judah",
+  "event_c_628_BCE": "Habakkuk completes the book of Habakkuk",
+  "event_625_BCE": "Nebuchadnezzar (II) becomes king of Babylon; first regnal year counts from Nisan of 624 B.C.E.",
+  "event_620_BCE": "Nebuchadnezzar makes Jehoiakim tributary king",
+  "event_618_BCE": "Jehoiachin becomes king after Jehoiakim in Judah",
+  "event_617_BCE": "Nebuchadnezzar takes first Jewish captives to Babylon Zedekiah is made king of Judah",
+  "event_613_BCE": "Ezekiel begins prophesying",
+  "event_609_BCE": "Nebuchadnezzar comes against Judah a third time; begins sieGenesis of Jerusalem",
+  "event_607_BCE_a": "Fifth month (Ab), temple razed and Jerusalem destroyed",
+  "event_607_BCE_b": "Seventh month, Jews abandon Judah; “appointed times of the nations” begin to count",
+  "event_607_BCE_c": "Jeremiah writes Lamentations",
+  "event_c_607_BCE": "Obadiah writes the book of Obadiah",
+  "event_c_591_BCE": "Ezekiel completes the book of Ezekiel",
+  "event_580_BCE": "Books of 1 and 2 Kings and Jeremiah completed",
+  "event_539_BCE": "Babylon falls to the Medes and Persians; Medo-Persia becomes the fourth world power",
+  "event_537_BCE": "Decree of Cyrus the Persian permitting Jews to return to Jerusalem takes effect; Jerusalem’s 70-year desolation ends",
+  "event_c_536_BCE": "Daniel completes the book of Daniel",
+  "event_536_BCE": "Foundation of temple laid by Zerubbabel",
+  "event_522_BCE": "Ban put on temple-building work",
+  "event_520_BCE": "Haggai completes the book of Haggai",
+  "event_518_BCE": "Zechariah completes the book of Zechariah",
+  "event_515_BCE": "Zerubbabel completes second temple",
+  "event_c_475_BCE": "Mordecai completes the book of Esther",
+  "event_468_BCE": "Ezra and priests return to Jerusalem",
+  "event_c_460_BCE": "Ezra completes the books of 1 and 2 Chronicles and Ezra; final compilation of Psalms",
+  "event_455_BCE_a": "Jerusalem’s walls rebuilt by Nehemiah",
+  "event_455_BCE_b": "prophecy of 70 weeks begins fulfillment",
+  "event_a_443_BCE_a": "Nehemiah completes the book of Nehemiah",
+  "event_a_443_BCE_b": "Malachi completes the book of Malachi",
+  "event_406_BCE": "Rebuilding of Jerusalem is evidently completed",
+  "event_332_BCE": "Greece, fifth world power, rules Judea",
+  "event_c_280_BCE": "The Greek Septuagint begun",
+  "event_165_BCE": "Rededication of temple after desecration by Greek idolatry; Festival of Dedication",
+  "event_63_BCE": "Rome, sixth world power, rules Jerusalem",
+  "event_c_37_BCE": "Herod (appointed king by Rome) takes Jerusalem by storm",
+  "event_2_BCE": "Birth of John the Baptizer and of Jesus",
+  "event_29_CE": "John and Jesus begin their ministries",
+  "event_33_CE_a": "Nisan 14: Jesus becomes sacrifice providing basis for the new covenant; is impaled",
+  "event_33_CE_b": "Nisan 16: the resurrection of Jesus",
+  "event_33_CE_c": "Sivan 6, Pentecost: outpouring of spirit; Peter opens the way for Jews to Christian congregation",
+  "event_36_CE": "End of the 70 weeks of years; Peter visits Cornelius, the first one of the uncircumcised people of the nations to enter the Christian congregation",
+  "event_c_41_CE": "Matthew writes the Gospel entitled “Matthew”",
+  "event_c_47_48_CE": "Paul begins first missionary tour",
+  "event_c_49_CE": "Governing body rules against requiring circumcision for the believers from the nations",
+  "event_c_49_52_CE": "Paul’s second missionary tour",
+  "event_c_50_CE": "Paul writes 1 Thessalonians from Corinth",
+  "event_c_51_CE": "Paul writes 2 Thessalonians from Corinth",
+  "event_c_50_52_CE": "Paul writes his letter to the Galatians from Corinth or Syrian Antioch",
+  "event_c_52_56_CE": "Paul’s third missionary tour",
+  "event_c_55_CE": "Paul writes 1 Corinthians from Ephesus and 2 Corinthians from Macedonia",
+  "event_c_56_CE": "Paul writes the letter to the Romans from Corinth",
+  "event_c_56_58_CE": "Luke writes the Gospel entitled “Luke”",
+  "event_c_60_61_CE_a": "From Rome Paul writes: Ephesians",
+  "event_c_60_61_CE_b": "From Rome Paul writes: Philippians",
+  "event_c_60_61_CE_c": "From Rome Paul writes: Colossians",
+  "event_c_60_61_CE_d": "From Rome Paul writes: Philemon",
+  "event_c_61_CE": "Paul writes the letter to the Hebrews from Rome Luke completes the book of Acts in Rome",
+  "event_b_62_CE": "James, Jesus’ brother, writes the letter entitled “James” from Jerusalem",
+  "event_c_60_65_CE": "Mark writes the Gospel entitled “Mark”",
+  "event_c_61_64_CE_a": "Paul writes 1 Timothy from Macedonia",
+  "event_c_61_64_CE_b": "Paul writes Titus from Macedonia (?)",
+  "event_c_62_64_CE": "Peter writes 1 Peter from Babylon",
+  "event_c_64_CE": "Peter writes 2 Peter from Babylon (?)",
+  "event_c_65_CE_a": "Paul writes 2 Timothy from Rome",
+  "event_c_65_CE_b": "Jude, Jesus’ brother, writes “Jude”",
+  "event_70_CE": "Jerusalem and its temple destroyed by the Romans",
+  "event_c_96_CE": "John, on Patmos, writes Revelation",
+  "event_c_98_CE_a": "John writes the Gospel entitled “John” and his letters 1, 2, and 3",
+  "event_c_98_CE_c": "Bible writing completed",
+  "event_c_100_CE": "John, the last of the apostles, dies",
+  "event_1513_BCE_z": "Moses finished writing the book of Genesis in the wilderness covering “In the beginning” to 1657",
+  "event_1512_BCE_z": "Moses finished writing the book of Exodus in the wilderness covering 1657-1512",
+  "event_1512_BCE_y": "Moses finished writing the book of Leviticus in the wilderness covering 1 month (1512)",
+  "event_1473_BCE_z": "Moses finished writing the book of Numbers in the wilderness and plains of Moab covering 1512-1473",
+  "event_1473_BCE_y": "Moses finished writing the book of Deuteronomy in plains of Moab covering 2 months (1473)",
+  "event_c_1450_BCE_z": "Joshua finished writing the book of Joshua in Canaan covering 1473–c. 1450",
+  "event_c_1100_BCE_z": "Samuel finished writing the book of Judges in Israel covering c. 1450–c. 1120",
+  "event_c_1090_BCE_z": "Samuel finished writing the book of Ruth in Israel covering 11 years of Judges’ rule",
+  "event_c_1078_BCE_z": "Samuel, Gad and Nathan finished writing the book of 1 Samuel in Israel covering c. 1180-1078",
+  "event_c_1040_BCE_z": "Gad and Nathan finished writing the book of 2 Samuel in Israel covering 1077–c. 1040",
+  "event_580_BCE_z": "Jeremiah finished writing the book of 1 Kings in Judah covering c. 1040-911",
+  "event_580_BCE_y": "Jeremiah finished writing the book of 2 Kings in Judah and Egypt covering c. 920-580",
+  "event_c_460_BCE_z": "Ezra finished writing the book of 1 Chronicles in Jerusalem (?) covering (after 1 Chronicles 9:44) c. 1077-1037",
+  "event_c_460_BCE_y": "Ezra finished writing the book of 2 Chronicles in Jerusalem (?) covering c. 1037-537",
+  "event_c_460_BCE_x": "Ezra finished writing the book of Ezra in Jerusalem covering 537–c. 467",
+  "event_a_443_BCE_z": "Nehemiah finished writing the book of Nehemiah in Jerusalem covering 456–a. 443",
+  "event_c_475_BCE_z": "Mordecai finished writing the book of Esther in Shushan, Elam covering 493–c. 475",
+  "event_c_1473_BCE_z": "Moses finished writing the book of Job in the wilderness covering over 140 years between 1657 and 1473",
+  "event_c_460_BCE_w": "David and others finished writing the book of Psalms",
+  "event_c_717_BCE_z": "Solomon, Agur and Lemuel finished writing the book of Proverbs in Jerusalem",
+  "event_b_1000_BCE_z": "Solomon finished writing the book of Ecclesiastes in Jerusalem",
+  "event_c_1020_BCE_z": "Solomon finished writing the book of Song of Solomon in Jerusalem",
+  "event_a_732_BCE_z": "Isaiah finished writing the book of Isaiah in Jerusalem covering c. 778–a. 732",
+  "event_580_BCE_x": "Jeremiah finished writing the book of Jeremiah in Judah and Egypt covering 647-580",
+  "event_607_BCE_z": "Jeremiah finished writing the book of Lamentations near Jerusalem",
+  "event_c_591_BCE_z": "Ezekiel finished writing the book of Ezekiel in Babylon covering 613–c. 591",
+  "event_c_536_BCE_z": "Daniel finished writing the book of Daniel in Babylon covering 618–c. 536",
+  "event_a_745_BCE_z": "Hosea finished writing the book of Hosea in the district of Samaria covering b. 804–a. 745",
+  "event_c_820_BCE_z": "Joel finished writing the book of Joel in Judah",
+  "event_c_804_BCE_z": "Amos finished writing the book of Amos in Judah",
+  "event_c_607_BCE_z": "Obadiah finished writing the book of Obadiah",
+  "event_c_844_BCE_z": "Jonah finished writing the book of Jonah",
+  "event_b_717_BCE_z": "Micah finished writing the book of Micah in Judah covering c. 777-717",
+  "event_b_632_BCE_z": "Nahum finished writing the book of Nahum in Judah",
+  "event_c_628_BCE_z": "Habakkuk finished writing the book of Habakkuk in Judah",
+  "event_b_648_BCE_z": "Zephaniah finished writing the book of Zephaniah in Judah",
+  "event_520_BCE_z": "Haggai finished writing the book of Haggai in rebuilt Jerusalem covering 112 days (520)",
+  "event_518_BCE_z": "Zechariah finished writing the book of Zechariah in rebuilt Jerusalem covering 520-518",
+  "event_a_443_BCE_y": "Malachi finished writing the book of Malachi in rebuilt Jerusalem",
+  "event_c_41_CE_z": "Matthew finished writing the book of Matthew in Israel covering 2 B.C.E.-z–33 C.E.-z",
+  "event_c_60_65_CE_z": "Mark finished writing the book of Mark in Rome covering 29-33 C.E.-z",
+  "event_c_56_58_CE_z": "Luke finished writing the book of Luke in Caesarea covering 3 B.C.E.-z–33 C.E.-z",
+  "event_c_98_CE_z": "Apostle John finished writing the book of John in Ephesus, or near covering (after prologue) 29-33 C.E.-z",
+  "event_c_61_CE_z": "Luke finished writing the book of Acts in Rome covering 33–c. 61 C.E.-z",
+  "event_c_56_CE_z": "Paul finished writing the book of Romans in Corinth",
+  "event_c_55_CE_z": "Paul finished writing the book of 1 Corinthians in Ephesus",
+  "event_c_55_CE_y": "Paul finished writing the book of 2 Corinthians in Macedonia",
+  "event_c_50_52_CE_z": "Paul finished writing the book of Galatians in Corinth or Syrian Antioch",
+  "event_c_60_61_CE_z": "Paul finished writing the book of Ephesians in Rome",
+  "event_c_60_61_CE_y": "Paul finished writing the book of Philippians in Rome",
+  "event_c_60_61_CE_x": "Paul finished writing the book of Colossians in Rome",
+  "event_c_50_CE_z": "Paul finished writing the book of 1 Thessalonians in Corinth",
+  "event_c_51_CE_z": "Paul finished writing the book of 2 Thessalonians in Corinth",
+  "event_c_61_64_CE_z": "Paul finished writing the book of 1 Timothy in Macedonia",
+  "event_c_65_CE_z": "Paul finished writing the book of 2 Timothy in Rome",
+  "event_c_61_64_CE_y": "Paul finished writing the book of Titus in Macedonia (?)",
+  "event_c_60_61_CE_w": "Paul finished writing the book of Philemon in Rome",
+  "event_c_61_CE_y": "Paul finished writing the book of Hebrews in Rome",
+  "event_b_62_CE_z": "James (Jesus’ brother) finished writing the book of James in Jerusalem",
+  "event_c_62_64_CE_z": "Peter finished writing the book of 1 Peter in Babylon",
+  "event_c_64_CE_z": "Peter finished writing the book of 2 Peter in Babylon (?)",
+  "event_c_98_CE_y": "Apostle John finished writing the book of 1 John in or near Ephesus",
+  "event_c_98_CE_x": "Apostle John finished writing the book of 2 John in or near Ephesus",
+  "event_c_98_CE_w": "Apostle John finished writing the book of 3 John in or near Ephesus",
+  "event_c_65_CE_y": "Jude (Jesus’ brother) finished writing the book of Jude in Israel (?)",
+  "event_c_96_CE_z": "Apostle John finished writing the book of Revelation in Patmos"
+}
