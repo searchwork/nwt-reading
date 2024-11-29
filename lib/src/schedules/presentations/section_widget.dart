@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/events.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
@@ -41,10 +41,8 @@ class SectionWidget extends ConsumerWidget {
         showDialog<String>(
           context: context,
           builder: (BuildContext context) => AlertDialog(
-            title: Text(
-                AppLocalizations.of(context).schedulePageToggleReadDialogTitle),
-            content: Text(
-                AppLocalizations.of(context).schedulePageToggleReadDialogText),
+            title: Text(context.loc.schedulePageToggleReadDialogTitle),
+            content: Text(context.loc.schedulePageToggleReadDialogText),
             actions: <Widget>[
               TextButton(
                 key: const Key('reject-toggle-read'),
@@ -89,7 +87,7 @@ class SectionWidget extends ConsumerWidget {
           if (plan.showEvents)
             ...section.events
                 .map((eventKey) => events?.events[eventKey] != null
-                    ? EventWidget(events!.events[eventKey]!)
+                    ? EventWidget(eventKey, events!.events[eventKey]!)
                     : null)
                 .toList()
                 .whereType<Widget>(),

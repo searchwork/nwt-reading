@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 
@@ -19,23 +19,19 @@ class PlanDurationSegmentedButton extends ConsumerWidget {
       segments: <ButtonSegment<ScheduleDuration>>[
         ButtonSegment<ScheduleDuration>(
             value: ScheduleDuration.m3,
-            label: Text(
-                AppLocalizations.of(context).planEditPageThreeMonthsLabel)),
+            label: Text(context.loc.planEditPageThreeMonthsLabel)),
         ButtonSegment<ScheduleDuration>(
             value: ScheduleDuration.m6,
-            label:
-                Text(AppLocalizations.of(context).planEditPageSixMonthsLabel)),
+            label: Text(context.loc.planEditPageSixMonthsLabel)),
         ButtonSegment<ScheduleDuration>(
             value: ScheduleDuration.y1,
-            label: Text(AppLocalizations.of(context).planEditPageOneYearLabel)),
+            label: Text(context.loc.planEditPageOneYearLabel)),
         ButtonSegment<ScheduleDuration>(
             value: ScheduleDuration.y2,
-            label:
-                Text(AppLocalizations.of(context).planEditPageTwoYearsLabel)),
+            label: Text(context.loc.planEditPageTwoYearsLabel)),
         ButtonSegment<ScheduleDuration>(
             value: ScheduleDuration.y4,
-            label:
-                Text(AppLocalizations.of(context).planEditPageFourYearsLabel)),
+            label: Text(context.loc.planEditPageFourYearsLabel)),
       ],
       selected: {plan.scheduleKey.duration},
       onSelectionChanged: (Set<ScheduleDuration> newSelection) {

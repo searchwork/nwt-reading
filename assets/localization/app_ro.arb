@@ -8,6 +8,7 @@
   "plansPageCardRemainingDays": "{remainingDays}z",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Sari la marcaj",
+  "schedulePageEventPrefixTerm": "{prefix, select, a{d.} b{î.} other{a.}}",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{e.n.} other{î.e.n.}}",
   "schedulePageToggleReadDialogTitle": "Comutare citire",
   "schedulePageToggleReadDialogText": "Vrei să marchezi toate secțiunile anterioare ca citite și toate următoarele ca necitite?",

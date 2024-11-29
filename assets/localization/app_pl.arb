@@ -8,6 +8,7 @@
   "plansPageCardRemainingDays": "{remainingDays}d",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Przejdź do zakładki",
+  "schedulePageEventPrefixTerm": "{prefix, select, a{po.} b{przed.} other{ok.}}",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{n.e.} other{p.n.e.}}",
   "schedulePageToggleReadDialogTitle": "Przełączanie czytania",
   "schedulePageToggleReadDialogText": "Czy chcesz oznaczyć wszystkie poprzednie sekcje jako przeczytane, a wszystkie następne jako nieprzeczytane?",

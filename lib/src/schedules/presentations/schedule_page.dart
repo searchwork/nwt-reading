@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
@@ -158,8 +158,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
           _ => const Center(child: CircularProgressIndicator()),
         },
         floatingActionButton: FloatingActionButton(
-          tooltip:
-              AppLocalizations.of(context).schedulePageJumpToBookmarkTooltip,
+          tooltip: context.loc.schedulePageJumpToBookmarkTooltip,
           onPressed: () {
             resetTopDayIndex(plan.bookmark);
             controller.jumpTo(0.0);

@@ -8,6 +8,7 @@
   "plansPageCardRemainingDays": "{remainingDays}d",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Přejít na záložku",
+  "schedulePageEventPrefixTerm": "{prefix, select, a{po} b{př.} other{asi}}",
   "schedulePageEventCommonEraTerm": "{isCE, select, true{n. l.} other{př. n. l.}}",
   "schedulePageToggleReadDialogTitle": "Přepínání čtení",
   "schedulePageToggleReadDialogText": "Chceš označit všechny předchozí sekce jako přečtené a všechny následující jako nepřečtené?",

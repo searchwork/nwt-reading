@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:nwt_reading/src/schedules/presentations/schedule_page.dart';
@@ -65,8 +65,7 @@ class PlanCard extends ConsumerWidget {
                     TextStyle(color: Theme.of(context).colorScheme.secondary),
                 remainingDays == null
                     ? ''
-                    : AppLocalizations.of(context)
-                        .plansPageCardRemainingDays(remainingDays)),
+                    : context.loc.plansPageCardRemainingDays(remainingDays)),
             SizedBox(
                 width: 60,
                 height: 60,

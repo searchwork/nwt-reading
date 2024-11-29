@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
@@ -15,7 +15,7 @@ class SettingsPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context).settingsPageTitle),
+        title: Text(context.loc.settingsPageTitle),
       ),
       body: Column(children: [
         Padding(
@@ -24,18 +24,15 @@ class SettingsPage extends ConsumerWidget {
             segments: <ButtonSegment<ThemeMode>>[
               ButtonSegment<ThemeMode>(
                   value: ThemeMode.system,
-                  label: Text(
-                      AppLocalizations.of(context).settingsPageSystemLabel),
+                  label: Text(context.loc.settingsPageSystemLabel),
                   icon: Icon(Icons.auto_mode)),
               ButtonSegment<ThemeMode>(
                   value: ThemeMode.light,
-                  label:
-                      Text(AppLocalizations.of(context).settingsPageLightLabel),
+                  label: Text(context.loc.settingsPageLightLabel),
                   icon: Icon(Icons.light_mode)),
               ButtonSegment<ThemeMode>(
                   value: ThemeMode.dark,
-                  label:
-                      Text(AppLocalizations.of(context).settingsPageDarkLabel),
+                  label: Text(context.loc.settingsPageDarkLabel),
                   icon: Icon(Icons.dark_mode)),
             ],
             selected: {themeMode},
@@ -55,14 +52,14 @@ class SettingsPage extends ConsumerWidget {
                   return CircularProgressIndicator();
                 } else {
                   return Text(
-                    '${AppLocalizations.of(context).settingsPageVersionLabel}: ${snapshot.data?.version}',
+                    '${context.loc.settingsPageVersionLabel}: ${snapshot.data?.version}',
                     key: Key('version'),
                   );
                 }
               },
             ),
             Text(
-              '${AppLocalizations.of(context).settingsPageCopyrightLabel} © 2024 searchwork.org',
+              '${context.loc.settingsPageCopyrightLabel} © 2024 searchwork.org',
               style: TextStyle(height: 3),
               key: Key('copyright'),
             ),

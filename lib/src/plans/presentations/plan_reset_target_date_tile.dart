@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 
 class PlanResetTargetDateTile extends ConsumerWidget {
@@ -17,19 +17,16 @@ class PlanResetTargetDateTile extends ConsumerWidget {
 
     return ListTile(
       key: const Key('reset-target-date'),
-      title:
-          Text(AppLocalizations.of(context).planEditPageResetTargetDateTitle),
-      subtitle: Text(AppLocalizations.of(context)
-          .planEditPageResetTargetDateSubtitle(adjustedTargetDate)),
+      title: Text(context.loc.planEditPageResetTargetDateTitle),
+      subtitle: Text(
+          context.loc.planEditPageResetTargetDateSubtitle(adjustedTargetDate)),
       trailing: Icon(Icons.arrow_forward),
       onTap: () {
         showDialog<String>(
           context: context,
           builder: (BuildContext context) => AlertDialog(
-            title: Text(AppLocalizations.of(context)
-                .planEditPageResetTargetDateDialogTitle),
-            content: Text(AppLocalizations.of(context)
-                .planEditPageResetTargetDateDialogText),
+            title: Text(context.loc.planEditPageResetTargetDateDialogTitle),
+            content: Text(context.loc.planEditPageResetTargetDateDialogText),
             actions: <Widget>[
               TextButton(
                 key: const Key('reject-reset-target-date'),
