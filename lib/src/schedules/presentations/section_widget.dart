@@ -79,11 +79,19 @@ class SectionWidget extends ConsumerWidget {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           TextButton(
-              onPressed: () => _launchUrl(Uri.parse(
-                  'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${bibleLanguage?.wtCode}&prefer=lang&bible=${section.url}')),
+              onPressed: () async {
+                final url = Uri.parse(
+                    'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${bibleLanguage?.wtCode}&prefer=lang&bible=${section.url}');
+
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                }
+              },
               child: Text(
                   '${bibleLanguage?.books[section.bookIndex].name} ${section.ref}',
-                  style: const TextStyle(color: Color(0xff007bff)))),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ))),
           if (plan.showEvents)
             ...section.events
                 .map((eventKey) => events?.events[eventKey] != null
@@ -99,11 +107,5 @@ class SectionWidget extends ConsumerWidget {
         ])),
       ],
     );
-  }
-}
-
-Future<void> _launchUrl(Uri url) async {
-  if (!await launchUrl(url)) {
-    throw Exception('Could not launch $url');
   }
 }
