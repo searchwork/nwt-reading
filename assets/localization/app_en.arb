@@ -5,6 +5,22 @@
   "@appTitle": {
     "description": "The title of the application"
   },
+  "whatsNewDialogPlans": "You can use multiple Bible reading plans in parallel.",
+  "@whatsNewDialogPlans": {
+    "description": "The description on the what's new page"
+  },
+  "whatsNewDialogOpenSource": "NWT Reading is now open source. Find us on GitHub and contribute.",
+  "@whatsNewDialogOpenSource": {
+    "description": "The description on the what's new page. Must contain the word GitHub, which will be rendered as a link"
+  },
+  "whatsNewDialogLaterButtonText": "Later",
+  "@whatsNewDialogLaterButtonText": {
+    "description": "The label of the button on the what's new page"
+  },
+  "whatsNewDialogGotItButtonText": "Got It",
+  "@whatsNewDialogGotItButtonText": {
+    "description": "The label of the button on the what's new page"
+  },
   "plansPageTitle": "Bible Reading Plans",
   "@plansPageTitle": {
     "description": "The title of the plans page"

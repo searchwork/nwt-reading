@@ -16,15 +16,15 @@ const _preferenceKey = 'plans';
 const _uuid = Uuid();
 
 final plansRepositoryProvider = Provider<PlansRepository>((ref) {
-  final preferences = ref.watch(sharedPreferencesRepositoryProvider);
+  final sharedPreferences = ref.watch(sharedPreferencesRepositoryProvider);
 
   ref.listen(plansProvider, (previousPlans, currentPlans) {
     final plansSerialized =
         PlansSerializer().convertPlansToStringList(currentPlans);
-    preferences.setStringList(_preferenceKey, plansSerialized);
+    sharedPreferences.setStringList(_preferenceKey, plansSerialized);
   });
 
-  return PlansRepository(ref, preferences: preferences);
+  return PlansRepository(ref, preferences: sharedPreferences);
 }, name: 'plansRepositoryProvider');
 
 class PlansRepository {

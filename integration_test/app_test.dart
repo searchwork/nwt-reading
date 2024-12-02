@@ -21,12 +21,21 @@ import 'package:nwt_reading/src/schedules/presentations/locations_widget.dart';
 import 'package:nwt_reading/src/schedules/repositories/events_repository.dart';
 import 'package:nwt_reading/src/schedules/repositories/locations_repository.dart';
 import 'package:nwt_reading/src/schedules/repositories/schedules_repository.dart';
-import 'package:nwt_reading/src/settings/repositories/theme_mode_repository.dart';
-import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
+import 'package:nwt_reading/src/settings/repositories/settings_repository.dart';
+import 'package:nwt_reading/src/settings/stories/settings_story.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+import '../test/test_data.dart';
 import 'settled_tester.dart';
 import 'take_screenshot.dart';
-import 'test_plans.dart';
+
+Future<ProviderContainer> getDefaultProviderContainer(
+        WidgetTester tester) async =>
+    SettledTester(tester, sharedPreferences: {
+      ...testPlansPreferences,
+      ...await getWhatsNewSeenPreference()
+    }).providerContainer;
 
 void main() async {
   final deepCollectionEquals = const DeepCollectionEquality().equals;
@@ -47,8 +56,8 @@ void main() async {
         true);
     expect(await providerContainer.read(schedulesProvider.future),
         isA<Schedules>());
-    expect(await providerContainer.read(themeModeProvider.future),
-        ThemeMode.system);
+    expect(await providerContainer.read(settingsProvider.future),
+        Settings(themeMode: ThemeMode.system));
 
     for (ProviderBase<Object?> provider in [
       bibleLanguagesRepositoryProvider,
@@ -57,7 +66,7 @@ void main() async {
       plansRepositoryProvider,
       schedulesRepositoryProvider,
       sharedPreferencesRepositoryProvider,
-      themeModeRepositoryProvider,
+      settingsRepositoryProvider,
     ]) {
       expect(providerContainer.exists(provider), true);
     }
@@ -70,8 +79,50 @@ void main() async {
     expect(find.byType(PlanCard), findsNothing);
   });
 
-  testWidgets('Add new plans', (tester) async {
+  testWidgets('Later on What\'s New dialog does not change settings',
+      (tester) async {
     final providerContainer = await SettledTester(tester).providerContainer;
+
+    expect(find.byKey(const Key('whats-new-dialog')), findsOneWidget);
+
+    await tester.tap(find.byKey(const Key('later')));
+    await tester.pumpAndSettle();
+
+    final seenWhatsNewVersion = (await SharedPreferences.getInstance())
+        .getString(seenWhatsNewVersionPreferenceKey);
+    expect(seenWhatsNewVersion, null);
+    expect(await providerContainer.read(settingsProvider.future),
+        Settings(themeMode: ThemeMode.system));
+    expect(find.byKey(const Key('whats-new-dialog')), findsNothing);
+
+    await tester.tap(find.byType(FloatingActionButton));
+    await tester.pumpAndSettle();
+  });
+
+  testWidgets('Got It on What\'s New dialog changes settings', (tester) async {
+    final providerContainer = await SettledTester(tester).providerContainer;
+
+    expect(find.byKey(const Key('whats-new-dialog')), findsOneWidget);
+
+    await tester.tap(find.byKey(const Key('got-it')));
+    await tester.pumpAndSettle();
+
+    final version = (await PackageInfo.fromPlatform()).version;
+    final seenWhatsNewVersion = (await SharedPreferences.getInstance())
+        .getString(seenWhatsNewVersionPreferenceKey);
+    expect(seenWhatsNewVersion, version);
+    expect(await providerContainer.read(settingsProvider.future),
+        Settings(themeMode: ThemeMode.system, seenWhatsNewVersion: version));
+    expect(find.byKey(const Key('whats-new-dialog')), findsNothing);
+
+    await tester.tap(find.byType(FloatingActionButton));
+    await tester.pumpAndSettle();
+  });
+
+  testWidgets('Add new plans', (tester) async {
+    final providerContainer = await SettledTester(tester,
+            sharedPreferences: await getWhatsNewSeenPreference())
+        .providerContainer;
 
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
@@ -156,7 +207,9 @@ void main() async {
   });
 
   testWidgets('Cancel new plan', (tester) async {
-    final providerContainer = await SettledTester(tester).providerContainer;
+    final providerContainer = await SettledTester(tester,
+            sharedPreferences: await getWhatsNewSeenPreference())
+        .providerContainer;
     final plans = providerContainer.read(plansProvider).plans;
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
@@ -187,9 +240,7 @@ void main() async {
   });
 
   testWidgets('Show schedule of last plan', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     final lastPlanCardFinder = find.byKey(
         Key('plan-${providerContainer.read(plansProvider).plans.last.id}'));
     await tester.scrollUntilVisible(lastPlanCardFinder, 500.0);
@@ -204,9 +255,7 @@ void main() async {
   });
 
   testWidgets('Return to plans page', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(Card).first);
     await tester.pumpAndSettle();
 
@@ -222,9 +271,7 @@ void main() async {
   });
 
   testWidgets('Schedule starts at bookmark', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     final lastPlanCardFinder = find.byKey(
         Key('plan-${providerContainer.read(plansProvider).plans.last.id}'));
     await takeScreenshot(tester: tester, binding: binding, filename: 'plans');
@@ -261,9 +308,7 @@ void main() async {
   });
 
   testWidgets('Check day', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(
@@ -305,9 +350,7 @@ void main() async {
   });
 
   testWidgets('Uncheck day', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(
@@ -349,8 +392,7 @@ void main() async {
   });
 
   testWidgets('Show deviations', (tester) async {
-    await SettledTester(tester, sharedPreferences: testPlansPreferences)
-        .providerContainer;
+    await getDefaultProviderContainer(tester);
 
     expect(find.byType(Badge), findsNothing);
 
@@ -556,9 +598,7 @@ void main() async {
   });
 
   testWidgets('Plans showing if finished', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.pumpAndSettle();
 
     expect(find.byIcon(Icons.verified), findsOneWidget);
@@ -595,8 +635,7 @@ void main() async {
   });
 
   testWidgets('Bookmark button resets schedule view', (tester) async {
-    await SettledTester(tester, sharedPreferences: testPlansPreferences)
-        .providerContainer;
+    await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(
@@ -632,9 +671,7 @@ void main() async {
   });
 
   testWidgets('Change plan name', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
@@ -684,9 +721,7 @@ void main() async {
       Bookmark(dayIndex: 152, sectionIndex: -1),
       Bookmark(dayIndex: 304, sectionIndex: -1),
     ];
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
 
@@ -721,9 +756,7 @@ void main() async {
   });
 
   testWidgets('Change plan language', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
@@ -745,9 +778,7 @@ void main() async {
   });
 
   testWidgets('Change plan with target date setting', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(
@@ -822,9 +853,7 @@ void main() async {
   });
 
   testWidgets('Change plan show events setting', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
 
@@ -859,9 +888,7 @@ void main() async {
   });
 
   testWidgets('Change plan show locations setting', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
 
@@ -896,9 +923,7 @@ void main() async {
   });
 
   testWidgets('Cancel edit plan', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
@@ -933,9 +958,7 @@ void main() async {
   });
 
   testWidgets('Delete plan', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.scrollUntilVisible(
       find.byKey(
           Key('plan-${providerContainer.read(plansProvider).plans.last.id}')),
@@ -963,9 +986,7 @@ void main() async {
   });
 
   testWidgets('Settings', (tester) async {
-    final providerContainer =
-        await SettledTester(tester, sharedPreferences: testPlansPreferences)
-            .providerContainer;
+    final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byIcon(Icons.settings));
     await tester.pumpAndSettle();
 
