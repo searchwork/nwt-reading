@@ -7,7 +7,7 @@ import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../notifier_tester.dart';
-import '../../test_plans.dart';
+import '../../test_data.dart';
 
 Future<NotifierTester<Plans>> getTester(
     [Map<String, Object> preferences = const {}]) async {

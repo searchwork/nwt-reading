@@ -1,9 +1,17 @@
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
+const seenWhatsNewVersionPreferenceKey = 'seenWhatsNewVersionSetting';
+const themeModePreferenceKey = 'themeModeSetting';
 const legacyExportPreferenceKey = 'legacyExport';
 const plansPreferenceKey = 'plans';
+
+Future<Map<String, String>> getWhatsNewSeenPreference() async => {
+      seenWhatsNewVersionPreferenceKey:
+          (await PackageInfo.fromPlatform()).version
+    };
 
 final Plans testPlans = Plans([
   Plan(

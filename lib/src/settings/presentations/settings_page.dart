@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
-import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
+import 'package:nwt_reading/src/settings/stories/settings_story.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 class SettingsPage extends ConsumerWidget {
@@ -11,7 +11,8 @@ class SettingsPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final themeMode = ref.watch(themeModeProvider).value ?? ThemeMode.system;
+    final themeMode =
+        ref.watch(settingsProvider).value?.themeMode ?? ThemeMode.system;
 
     return Scaffold(
       appBar: AppBar(
@@ -37,7 +38,7 @@ class SettingsPage extends ConsumerWidget {
             ],
             selected: {themeMode},
             onSelectionChanged: (Set<ThemeMode> newSelection) => ref
-                .read(themeModeProvider.notifier)
+                .read(settingsProvider.notifier)
                 .updateThemeMode(newSelection.single),
           ),
         ),

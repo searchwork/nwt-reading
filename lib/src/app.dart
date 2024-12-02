@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
-import 'package:nwt_reading/src/settings/stories/theme_mode_story.dart';
+import 'package:nwt_reading/src/settings/stories/settings_story.dart';
 import 'package:nwt_reading/src/theme.dart';
 
 import 'schedules/presentations/schedule_page.dart';
@@ -14,7 +14,7 @@ class App extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final themeMode = ref.watch(themeModeProvider).valueOrNull;
+    final themeMode = ref.watch(settingsProvider).valueOrNull?.themeMode;
 
     return MaterialApp(
         debugShowCheckedModeBanner: false,
