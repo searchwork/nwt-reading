@@ -10,6 +10,7 @@
   "plansPageNoPlanYet": "План чтения Библии пока не добавлен. Добавь один.",
   "plansPageAddPlanTooltip": "Добавить",
   "plansPageCardRemainingDays": "{remainingDays}д",
+  "schedulePageContinueNotice": "Ты успешно создал новый план чтения Библии! Чтобы продолжить с планом, который ты уже начал, просто выбери последний прочитанный раздел.",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Перейти к закладке",
   "schedulePageEventPrefixTerm": "{prefix, select, a{a.} b{b.} other{c.}}",

@@ -10,6 +10,7 @@
   "plansPageNoPlanYet": "Încă nu există un plan de citire a Bibliei. Adaugă unul.",
   "plansPageAddPlanTooltip": "Adaugă",
   "plansPageCardRemainingDays": "{remainingDays}z",
+  "schedulePageContinueNotice": "Ai creat cu succes un nou plan de citire a Bibliei! Pentru a continua cu un plan pe care l-ai început deja, selectează pur și simplu ultima secțiune pe care ai citit-o.",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Sari la marcaj",
   "schedulePageEventPrefixTerm": "{prefix, select, a{d.} b{î.} other{a.}}",

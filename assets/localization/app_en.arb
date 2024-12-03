@@ -42,6 +42,10 @@
       }
     }
   },
+  "schedulePageContinueNotice": "You have successfully created a new Bible reading plan! To continue with a schedule you have already started, simply select the last section you read.",
+  "@schedulePageContinueNotice": {
+    "description": "The notice displayed at the top of the schedule page for a new plan."
+  },
   "schedulePageCardWeekday": "{date}",
   "@schedulePageCardWeekday": {
     "description": "Displaying the weekday on the day card on the schedule page.",

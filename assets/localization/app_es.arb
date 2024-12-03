@@ -10,6 +10,7 @@
   "plansPageNoPlanYet": "Aún no hay un plan de lectura de la Biblia. Añade uno.",
   "plansPageAddPlanTooltip": "Añadir",
   "plansPageCardRemainingDays": "{remainingDays}d",
+  "schedulePageContinueNotice": "Has creado con éxito un nuevo plan de lectura de la Biblia. Para continuar con un plan que ya has comenzado, simplemente selecciona la última sección que has leído.",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Saltar al marcador",
   "schedulePageEventPrefixTerm": "{prefix, select, a{a.} b{d.} other{c.}}",

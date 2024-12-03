@@ -129,6 +129,15 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
           AsyncValue(:final valueOrNull?) => Column(
               children: [
                 LinearProgressIndicator(value: progress),
+                if (plan.lastDate == null)
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(
+                      context.loc.schedulePageContinueNotice,
+                      key: const Key('continue-notice'),
+                      style: TextStyle(color: Theme.of(context).primaryColor),
+                    ),
+                  ),
                 Flexible(
                   child: CustomScrollView(
                     controller: controller,
