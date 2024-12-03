@@ -10,6 +10,7 @@
   "plansPageNoPlanYet": "Még nincs bibliaolvasási terv. Adj hozzá egyet.",
   "plansPageAddPlanTooltip": "Hozzáadás",
   "plansPageCardRemainingDays": "{remainingDays}n",
+  "schedulePageContinueNotice": "Sikeresen létrehoztál egy új Bibliaolvasási tervet! Ha folytatni szeretnéd a már megkezdett ütemtervet, egyszerűen válaszd ki az utolsó részt, amit olvastál.",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Ugrás a könyvjelzőhöz",
   "schedulePageEventPrefixTerm": "{prefix, select, a{a.} b{b.} other{c.}}",

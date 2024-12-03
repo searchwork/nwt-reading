@@ -10,6 +10,7 @@
   "plansPageNoPlanYet": "Noch kein Bibel-Leseplan. Füge einen hinzu.",
   "plansPageAddPlanTooltip": "Hinzufügen",
   "plansPageCardRemainingDays": "{remainingDays}T",
+  "schedulePageContinueNotice": "Du hast erfolgreich einen neuen Bibelleseplan erstellt! Um mit einem bereits begonnenen Leseprogramm fortzufahren, wähle einfach den letzten Abschnitt aus, den du gelesen hast.",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Springe zum Lesezeichen",
   "schedulePageEventPrefixTerm": "{prefix, select, a{n.} b{v.} other{um}}",

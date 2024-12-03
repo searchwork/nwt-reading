@@ -10,6 +10,7 @@
   "plansPageNoPlanYet": "Zatím žádný plán čtení Bible. Přidej jeden.",
   "plansPageAddPlanTooltip": "Přidat",
   "plansPageCardRemainingDays": "{remainingDays}d",
+  "schedulePageContinueNotice": "Úspěšně jsi vytvořil nový plán čtení Bible! Chceš-li pokračovat v rozvrhu, který jsi již začal, jednoduše vyber poslední část, kterou jsi četl.",
   "schedulePageCardWeekday": "{date}",
   "schedulePageJumpToBookmarkTooltip": "Přejít na záložku",
   "schedulePageEventPrefixTerm": "{prefix, select, a{po} b{př.} other{asi}}",
