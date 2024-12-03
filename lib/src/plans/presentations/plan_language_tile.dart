@@ -17,7 +17,7 @@ class PlanLanguageTile extends ConsumerWidget {
 
     return ListTile(
       title: Text(context.loc.planEditPageLanguageLabel),
-      trailing: DropdownButton<String>(
+      subtitle: DropdownButton<String>(
         key: const Key('language'),
         value: bibleLanguages?.bibleLanguages[plan.language] == null
             ? 'en'

@@ -28,52 +28,54 @@ class PlanEditDialog extends ConsumerWidget {
     return Dialog.fullscreen(
         child: Form(
       key: _formKey,
-      child: Column(
-        children: [
-          Row(children: [
-            IconButton(
-                icon: const Icon(Icons.close),
-                onPressed: () {
-                  planEdit.reset();
-                  WidgetsBinding.instance
-                      .addPostFrameCallback((_) => Navigator.pop(context));
-                }),
-            const Spacer(),
-            IconButton(
-                icon: const Icon(Icons.done),
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    planEdit.save();
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(children: [
+              IconButton(
+                  icon: const Icon(Icons.close),
+                  onPressed: () {
+                    planEdit.reset();
                     WidgetsBinding.instance
                         .addPostFrameCallback((_) => Navigator.pop(context));
-                  }
-                })
-          ]),
-          PlanNameTile(planId),
-          const SizedBox(height: 20),
-          if (isNewPlan) PlanTypeSegmentedButton(planId),
-          if (isNewPlan) const SizedBox(height: 20),
-          PlanDurationSegmentedButton(planId),
-          const SizedBox(height: 20),
-          PlanLanguageTile(planId),
-          PlanWithTargetDateTile(planId),
-          if (plan.withTargetDate &&
-              adjustedTargetDate != null &&
-              plan.targetDate != adjustedTargetDate)
-            PlanResetTargetDateTile(planId, adjustedTargetDate),
-          PlanShowEventsTile(planId),
-          PlanShowLocationsTile(planId),
-          if (!isNewPlan)
-            ElevatedButton.icon(
-                onPressed: () {
-                  planEdit.delete();
-                  Navigator.popUntil(
-                      context, ModalRoute.withName(PlansPage.routeName));
-                },
-                icon: const Icon(Icons.delete),
-                label:
-                    Text(MaterialLocalizations.of(context).deleteButtonTooltip))
-        ],
+                  }),
+              const Spacer(),
+              IconButton(
+                  icon: const Icon(Icons.done),
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      planEdit.save();
+                      WidgetsBinding.instance
+                          .addPostFrameCallback((_) => Navigator.pop(context));
+                    }
+                  })
+            ]),
+            PlanNameTile(planId),
+            const SizedBox(height: 20),
+            if (isNewPlan) PlanTypeSegmentedButton(planId),
+            if (isNewPlan) const SizedBox(height: 20),
+            PlanDurationSegmentedButton(planId),
+            const SizedBox(height: 20),
+            PlanLanguageTile(planId),
+            PlanWithTargetDateTile(planId),
+            if (plan.withTargetDate &&
+                adjustedTargetDate != null &&
+                plan.targetDate != adjustedTargetDate)
+              PlanResetTargetDateTile(planId, adjustedTargetDate),
+            PlanShowEventsTile(planId),
+            PlanShowLocationsTile(planId),
+            if (!isNewPlan)
+              ElevatedButton.icon(
+                  onPressed: () {
+                    planEdit.delete();
+                    Navigator.popUntil(
+                        context, ModalRoute.withName(PlansPage.routeName));
+                  },
+                  icon: const Icon(Icons.delete),
+                  label: Text(
+                      MaterialLocalizations.of(context).deleteButtonTooltip))
+          ],
+        ),
       ),
     ));
   }
