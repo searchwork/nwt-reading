@@ -1,8 +1,4 @@
-flutter --version
-flutter pub get
-dart format .
-dart analyze --fatal-infos
-flutter test
+./check.sh
 
 if [[ $(uname) == 'Darwin' ]]; then
     flutter test integration_test -d macos

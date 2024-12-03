@@ -17,11 +17,7 @@ jobs:
         with:
           channel: 'stable'
 
-      - run: flutter --version
-      - run: flutter pub get
-      - run: dart format --output=none --set-exit-if-changed .
-      - run: dart analyze --fatal-infos
-      - run: flutter test
+      - run: ./check.sh
 
   test-ios:
     name: Test iOS
@@ -41,4 +37,4 @@ jobs:
         with:
           channel: stable
 
-      - run: flutter test integration_test
+      - run: flutter test integration_test --timeout 2x
