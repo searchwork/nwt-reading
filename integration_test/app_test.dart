@@ -458,14 +458,19 @@ void main() async {
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsNothing);
-    expect(find.byType(Divider), findsNWidgets(2));
-    expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(find.byKey(const Key('target-day')), findsOneWidget);
     expect(
         (tester.firstWidget(find.byKey(const Key('target-day'))) as Divider)
             .color,
         Colors.green);
 
+    await tester.scrollUntilVisible(find.byKey(const Key('current-day')), 50.0);
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
+
+    await tester.scrollUntilVisible(find.byKey(const Key('day-81')), -50.0);
+    await tester.pumpAndSettle();
     await tester.tap(find
         .descendant(
             of: find.byKey(const Key('day-82')),
@@ -626,11 +631,8 @@ void main() async {
 
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(
-      find.byKey(const Key('day-365')),
-      500.0,
-      maxScrolls: 200,
-    );
+    await tester.scrollUntilVisible(find.byKey(const Key('day-365')), 500.0,
+        maxScrolls: 300);
     await tester.pumpAndSettle();
     await Future<void>.delayed(Duration(seconds: 2));
     await tester.tap(find
@@ -882,12 +884,18 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(find.byKey(const Key('show-events')), 50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('show-events')));
     await tester.pumpAndSettle();
 
     var plan = providerContainer.read(plansProvider).plans.first;
     expect(plan.showEvents, true);
 
+    await tester.scrollUntilVisible(find.byIcon(Icons.done), -50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
@@ -897,9 +905,15 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(find.byKey(const Key('show-events')), 50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('show-events')));
     await tester.pumpAndSettle();
 
+    await tester.scrollUntilVisible(find.byIcon(Icons.done), -50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
@@ -917,12 +931,19 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+        find.byKey(const Key('show-locations')), 50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('show-locations')));
     await tester.pumpAndSettle();
 
     var plan = providerContainer.read(plansProvider).plans.first;
     expect(plan.showLocations, true);
 
+    await tester.scrollUntilVisible(find.byIcon(Icons.done), -50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
@@ -932,9 +953,16 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+        find.byKey(const Key('show-locations')), 50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('show-locations')));
     await tester.pumpAndSettle();
 
+    await tester.scrollUntilVisible(find.byIcon(Icons.done), -50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
@@ -995,6 +1023,9 @@ void main() async {
             of: find.byType(SegmentedButton<ScheduleDuration>),
             matching: find.byType(Text))
         .first);
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(find.byIcon(Icons.delete).first, 50.0,
+        scrollable: find.byType(Scrollable).last);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.delete));
     await tester.pumpAndSettle();
