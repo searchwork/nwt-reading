@@ -39,6 +39,8 @@
   "planEditPageShowEventsSubtitle": "Mutasd az eseményeket a szakaszokban, amikor történtek.",
   "planEditPageShowLocationsTitle": "Helyszínek megjelenítése",
   "planEditPageShowLocationsSubtitle": "Mutasd a hivatkozott helyszíneket a szakaszokban.",
+  "planEditDeleteDialogTitle": "Olvasási terv törlésének megerősítése",
+  "planEditDeleteDialogText": "Biztos vagy benne, hogy törölni akarod az olvasási tervet?",
   "settingsPageTitle": "Beállítások",
   "settingsPageSystemLabel": "rendszer",
   "settingsPageLightLabel": "világos",

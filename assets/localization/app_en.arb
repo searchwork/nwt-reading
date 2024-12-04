@@ -3,43 +3,43 @@
   "@@comment": "(c) searchwork.org",
   "appTitle": "NWT Reading",
   "@appTitle": {
-    "description": "The title of the application"
+    "description": "Title of the application"
   },
   "whatsNewDialogTitle": "What''s New in NWT Reading",
   "@whatsNewDialogTitle": {
-    "description": "The title of the what's new dialog"
+    "description": "Title of the what's new dialog"
   },
   "whatsNewDialogPlans": "You can use multiple Bible reading plans in parallel.",
   "@whatsNewDialogPlans": {
-    "description": "The description on the what's new dialog"
+    "description": "Description of the what's new dialog"
   },
   "whatsNewDialogOpenSource": "NWT Reading is now open source. Find us on GitHub and contribute.",
   "@whatsNewDialogOpenSource": {
-    "description": "The description on the what's new dialog. Must contain the word GitHub, which will be rendered as a link"
+    "description": "Description of the what's new dialog. Must contain the word GitHub, which will be rendered as a link"
   },
   "whatsNewDialogLaterButtonText": "Later",
   "@whatsNewDialogLaterButtonText": {
-    "description": "The label of the button on the what's new dialog"
+    "description": "Label of the button on the what's new dialog"
   },
   "whatsNewDialogGotItButtonText": "Got It",
   "@whatsNewDialogGotItButtonText": {
-    "description": "The label of the button on the what's new dialog"
+    "description": "Label of the button on the what's new dialog"
   },
   "plansPageTitle": "Bible Reading Plans",
   "@plansPageTitle": {
-    "description": "The title of the plans page"
+    "description": "Title of the plans page"
   },
   "plansPageNoPlanYet": "No Bible reading plan yet. Add one.",
   "@plansPageNoPlanYet": {
-    "description": "The message on the plans page when there is no plan yet"
+    "description": "Message of the plans page when there is no plan yet"
   },
   "plansPageAddPlanTooltip": "Add",
   "@plansPageAddPlanTooltip": {
-    "description": "The tooltip on the add plan button on the plans page"
+    "description": "Tooltip of the add plan button on the plans page"
   },
   "plansPageCardRemainingDays": "{remainingDays}d",
   "@plansPageCardRemainingDays": {
-    "description": "Displaying the remaining days on the card (number of days with a suffix d as abbreviation for days)",
+    "description": "Remaining days (number of days with a suffix d as abbreviation for days) of the cards on the plans page",
     "placeholders": {
       "remainingDays": {
         "type": "num"
@@ -48,11 +48,11 @@
   },
   "schedulePageContinueNotice": "You have successfully created a new Bible reading plan! To continue with a schedule you have already started, simply select the last section you read.",
   "@schedulePageContinueNotice": {
-    "description": "The notice displayed at the top of the schedule page for a new plan."
+    "description": "Notice displayed at the top of the schedule page for a new plan."
   },
   "schedulePageCardWeekday": "{date}",
   "@schedulePageCardWeekday": {
-    "description": "Displaying the weekday on the day card on the schedule page.",
+    "description": "Weekday of the day card on the schedule page.",
     "placeholders": {
       "date": {
         "type": "DateTime",
@@ -62,11 +62,11 @@
   },
   "schedulePageJumpToBookmarkTooltip": "Jump to bookmark",
   "@schedulePageJumpToBookmarkTooltip": {
-    "description": "The tooltip on the jump to bookmark button on the schedule page"
+    "description": "Tooltip of the jump to bookmark button on the schedule page"
   },
   "schedulePageEventPrefixTerm": "{prefix, select, a{a.} b{b.} other{c.}}",
   "@schedulePageEventPrefixTerm": {
-    "description": "The prefix in the events on the schedule page (a. for “after”; b. for “before”; c. for “circa”, or “about”).",
+    "description": "Prefix in the events on the schedule page (a. for “after”; b. for “before”; c. for “circa”, or “about”).",
     "placeholders": {
       "prefix": {
         "type": "String"
@@ -75,7 +75,7 @@
   },
   "schedulePageEventCommonEraTerm": "{isCE, select, true{C.E.} other{B.C.E}}",
   "@schedulePageEventCommonEraTerm": {
-    "description": "The common era term in the events on the schedule page.",
+    "description": "Common era term in the events on the schedule page.",
     "placeholders": {
       "isCE": {
         "type": "String"
@@ -84,63 +84,63 @@
   },
   "schedulePageToggleReadDialogTitle": "Toggling read",
   "@schedulePageToggleReadDialogTitle": {
-    "description": "The title on the toggle read confirmation dialog on the schedule page"
+    "description": "Title of the toggle read confirmation dialog on the schedule page"
   },
   "schedulePageToggleReadDialogText": "Do you want to set all prior sections as been read and all following to unread?",
   "@schedulePageToggleReadDialogText": {
-    "description": "The text on the toggle read confirmation dialog on the schedule page"
+    "description": "Text of the toggle read confirmation dialog on the schedule page"
   },
   "planEditPageTitle": "Edit Plan",
   "@planEditPageTitle": {
-    "description": "The title of the plan edit page"
+    "description": "Title of the plan edit page"
   },
   "planEditPageChronologicalLabel": "chronological",
   "@planEditPageChronologicalLabel": {
-    "description": "The chronological segment label on the plan edit page"
+    "description": "Chronological segment label on the plan edit page"
   },
   "planEditPageSequentialLabel": "sequential",
   "@planEditPageSequentialLabel": {
-    "description": "The sequential segment label on the plan edit page"
+    "description": "Sequential segment label on the plan edit page"
   },
   "planEditPageAsWrittenLabel": "as written",
   "@planEditPageAsWrittenLabel": {
-    "description": "The as written segment label on the plan edit page"
+    "description": "As written segment label on the plan edit page"
   },
   "planEditPageThreeMonthsLabel": "3 months",
   "@planEditPageThreeMonthsLabel": {
-    "description": "The three months segment label on the plan edit page"
+    "description": "Three months segment label on the plan edit page"
   },
   "planEditPageSixMonthsLabel": "6 months",
   "@planEditPageSixMonthsLabel": {
-    "description": "The six months segment label on the plan edit page"
+    "description": "Six months segment label on the plan edit page"
   },
   "planEditPageOneYearLabel": "1 year",
   "@planEditPageOneYearLabel": {
-    "description": "The one year segment label on the plan edit page"
+    "description": "One year segment label on the plan edit page"
   },
   "planEditPageTwoYearsLabel": "2 years",
   "@planEditPageTwoYearsLabel": {
-    "description": "The two years segment label on the plan edit page"
+    "description": "Two years segment label on the plan edit page"
   },
   "planEditPageFourYearsLabel": "4 years",
   "@planEditPageFourYearsLabel": {
-    "description": "The four years segment label on the plan edit page"
+    "description": "Four years segment label on the plan edit page"
   },
   "planEditPageLanguageLabel": "Language",
   "@planEditPageLanguageLabel": {
-    "description": "The language label on the plan edit page"
+    "description": "Language label on the plan edit page"
   },
   "planEditPageWithTargetDateTitle": "With Target Date",
   "@planEditPageWithTargetDateTitle": {
-    "description": "The with target date title on the plan edit page"
+    "description": "With target date title on the plan edit page"
   },
   "planEditPageWithTargetDateSubtitle": "Track daily reading with a target date.",
   "@planEditPageWithTargetDateSubtitle": {
-    "description": "The with target date subtitle on the plan edit page"
+    "description": "With target date subtitle on the plan edit page"
   },
   "planEditPageWithTargetDateStatusSubtitle": "The target date is {targetDate}. You are {direction, select, other{on time} ahead{{deviationDays} days ahead} behind{{deviationDays} days behind}} with reading.",
   "@planEditPageWithTargetDateStatusSubtitle": {
-    "description": "The with target date status subtitle on the plan edit page",
+    "description": "With target date status subtitle on the plan edit page",
     "placeholders": {
       "targetDate": {
         "type": "DateTime",
@@ -156,11 +156,11 @@
   },
   "planEditPageResetTargetDateTitle": "Reset Target Date",
   "@planEditPageResetTargetDateTitle": {
-    "description": "The reset target date title on the plan edit page"
+    "description": "Reset target date title on the plan edit page"
   },
   "planEditPageResetTargetDateSubtitle": "Change target date to {targetDate} to be on time with reading.",
   "@planEditPageResetTargetDateSubtitle": {
-    "description": "The reset target date subtitle on the plan edit page",
+    "description": "Reset target date subtitle on the plan edit page",
     "placeholders": {
       "targetDate": {
         "type": "DateTime",
@@ -170,51 +170,59 @@
   },
   "planEditPageResetTargetDateDialogTitle": "Confirm resetting target date",
   "@planEditPageResetTargetDateDialogTitle": {
-    "description": "The title on the reset target date confirmation dialog on the plan edit page"
+    "description": "Title of the reset target date confirmation dialog on the plan edit page"
   },
   "planEditPageResetTargetDateDialogText": "Do you want to change the target date to be on time with reading?",
   "@planEditPageResetTargetDateDialogText": {
-    "description": "The text on the reset target date confirmation dialog on the plan edit page"
+    "description": "Text of the reset target date confirmation dialog on the plan edit page"
   },
   "planEditPageShowEventsTitle": "Show Events",
   "@planEditPageShowEventsTitle": {
-    "description": "The show events title on the plan edit page"
+    "description": "Show events title on the plan edit page"
   },
   "planEditPageShowEventsSubtitle": "Show in the sections events with dates, when they happened.",
   "@planEditPageShowEventsSubtitle": {
-    "description": "The show events subtitle on the plan edit page"
+    "description": "Show events subtitle on the plan edit page"
   },
   "planEditPageShowLocationsTitle": "Show Locations",
   "@planEditPageShowLocationsTitle": {
-    "description": "The show locations title on the plan edit page"
+    "description": "Show locations title on the plan edit page"
   },
   "planEditPageShowLocationsSubtitle": "Show in the sections the referred locations.",
   "@planEditPageShowLocationsSubtitle": {
-    "description": "The show locations subtitle on the plan edit page"
+    "description": "Show locations subtitle on the plan edit page"
+  },
+  "planEditDeleteDialogTitle": "Confirm deleting the reading plan",
+  "@planEditDeleteDialogTitle": {
+    "description": "Title of the delete confirmation dialog on the plan edit page"
+  },
+  "planEditDeleteDialogText": "Are you sure you want to delete the reading plan?",
+  "@planEditDeleteDialogText": {
+    "description": "Text of the delete confirmation dialog on the plan edit page"
   },
   "settingsPageTitle": "Settings",
   "@settingsPageTitle": {
-    "description": "The title of the settings page"
+    "description": "Title of the settings page"
   },
   "settingsPageSystemLabel": "system",
   "@settingsPageSystemLabel": {
-    "description": "The system segment label on the settings page"
+    "description": "System theme segment label on the settings page"
   },
   "settingsPageLightLabel": "light",
   "@settingsPageLightLabel": {
-    "description": "The light segment label on the settings page"
+    "description": "Light theme segment label on the settings page"
   },
   "settingsPageDarkLabel": "dark",
   "@settingsPageDarkLabel": {
-    "description": "The dark segment label on the settings page"
+    "description": "Dark theme segment label on the settings page"
   },
   "settingsPageVersionLabel": "Version",
   "@settingsPageVersionLabel": {
-    "description": "The version label on the settings page"
+    "description": "Version label on the settings page"
   },
   "settingsPageCopyrightLabel": "Copyright",
   "@settingsPageCopyrightLabel": {
-    "description": "The copyright label on the settings page"
+    "description": "Copyright label on the settings page"
   },
   "event_4026_BCE": "Adam’s creation",
   "event_a_4026_BCE": "Edenic covenant made, first prophecy",
