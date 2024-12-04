@@ -2,6 +2,7 @@
   "@@locale": "ro",
   "@@comment": "(c) searchwork.org",
   "appTitle": "Citire NWT",
+  "whatsNewDialogTitle": "Ce e nou în NWT Reading",
   "whatsNewDialogPlans": "Poți folosi mai multe planuri de citire a Bibliei în paralel.",
   "whatsNewDialogOpenSource": "NWT Reading este acum open source. Găsește-ne pe GitHub și contribuie.",
   "whatsNewDialogLaterButtonText": "Mai târziu",

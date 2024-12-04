@@ -2,6 +2,7 @@
   "@@locale": "pt",
   "@@comment": "(c) searchwork.org",
   "appTitle": "Leitura NWT",
+  "whatsNewDialogTitle": "Novidades no NWT Reading",
   "whatsNewDialogPlans": "Você pode usar vários planos de leitura da Bíblia em paralelo.",
   "whatsNewDialogOpenSource": "NWT Reading agora é open source. Encontre-nos no GitHub e contribua.",
   "whatsNewDialogLaterButtonText": "Mais tarde",
