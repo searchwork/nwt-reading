@@ -1029,8 +1029,20 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.delete));
     await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('reject-delete-plan')));
+    await tester.pumpAndSettle();
 
-    final plans = providerContainer.read(plansProvider).plans;
+    var plans = providerContainer.read(plansProvider).plans;
+    expect(plans.last.id, 'e37bf9df-077a-49db-adcb-d56384906103');
+
+    await tester.scrollUntilVisible(find.byIcon(Icons.delete).first, 50.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.tap(find.byIcon(Icons.delete));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('confirm-delete-plan')));
+    await tester.pumpAndSettle();
+
+    plans = providerContainer.read(plansProvider).plans;
     expect(plans.last.id, '2dab49f3-aecf-4aba-9e91-d75c297d4b7e');
     expect(plans.length, 3);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);

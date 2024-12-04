@@ -39,6 +39,8 @@
   "planEditPageShowEventsSubtitle": "Zeige in den Abschnitten Ereignisse mit Daten an, wann sie passiert sind.",
   "planEditPageShowLocationsTitle": "Orte anzeigen",
   "planEditPageShowLocationsSubtitle": "Zeige in den Abschnitten die erwähnten Orte an.",
+  "planEditDeleteDialogTitle": "Löschen des Leseplans bestätigen",
+  "planEditDeleteDialogText": "Bist du sicher, dass du den Leseplan löschen möchtest?",
   "settingsPageTitle": "Einstellungen",
   "settingsPageSystemLabel": "System",
   "settingsPageLightLabel": "Hell",

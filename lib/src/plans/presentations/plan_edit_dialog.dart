@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_duration_segmented_button.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_language_tile.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_name_tile.dart';
@@ -67,9 +68,34 @@ class PlanEditDialog extends ConsumerWidget {
             if (!isNewPlan)
               ElevatedButton.icon(
                   onPressed: () {
-                    planEdit.delete();
-                    Navigator.popUntil(
-                        context, ModalRoute.withName(PlansPage.routeName));
+                    showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                        title: Text(context.loc.planEditDeleteDialogTitle),
+                        content: Text(context.loc.planEditDeleteDialogText),
+                        actions: <Widget>[
+                          TextButton(
+                            key: const Key('reject-delete-plan'),
+                            onPressed: () => Navigator.pop(context, 'Cancel'),
+                            child: Text(MaterialLocalizations.of(context)
+                                .cancelButtonLabel),
+                          ),
+                          TextButton(
+                            key: const Key('confirm-delete-plan'),
+                            style: ButtonStyle(
+                                foregroundColor: WidgetStatePropertyAll<Color>(
+                                    Theme.of(context).colorScheme.error)),
+                            onPressed: () {
+                              planEdit.delete();
+                              Navigator.popUntil(context,
+                                  ModalRoute.withName(PlansPage.routeName));
+                            },
+                            child: Text(MaterialLocalizations.of(context)
+                                .deleteButtonTooltip),
+                          ),
+                        ],
+                      ),
+                    );
                   },
                   icon: const Icon(Icons.delete),
                   label: Text(

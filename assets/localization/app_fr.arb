@@ -39,6 +39,8 @@
   "planEditPageShowEventsSubtitle": "Afficher dans les sections les événements avec les dates, quand ils ont eu lieu.",
   "planEditPageShowLocationsTitle": "Afficher les Lieux",
   "planEditPageShowLocationsSubtitle": "Afficher dans les sections les lieux mentionnés.",
+  "planEditDeleteDialogTitle": "Confirmer la suppression du plan de lecture",
+  "planEditDeleteDialogText": "Es-tu sûr de vouloir supprimer le plan de lecture?",
   "settingsPageTitle": "Paramètres",
   "settingsPageSystemLabel": "système",
   "settingsPageLightLabel": "clair",

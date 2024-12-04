@@ -39,6 +39,8 @@
   "planEditPageShowEventsSubtitle": "Afișează în secțiuni evenimentele cu datele când au avut loc.",
   "planEditPageShowLocationsTitle": "Afișează locații",
   "planEditPageShowLocationsSubtitle": "Afișează în secțiuni locațiile menționate.",
+  "planEditDeleteDialogTitle": "Confirmă ștergerea planului de lectură",
+  "planEditDeleteDialogText": "Ești sigur că vrei să ștergi planul de lectură?",
   "settingsPageTitle": "Setări",
   "settingsPageSystemLabel": "sistem",
   "settingsPageLightLabel": "luminos",

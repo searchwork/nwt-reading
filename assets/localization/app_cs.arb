@@ -39,6 +39,8 @@
   "planEditPageShowEventsSubtitle": "Zobraz v sekcích události s daty, kdy se staly.",
   "planEditPageShowLocationsTitle": "Zobrazit místa",
   "planEditPageShowLocationsSubtitle": "Zobraz v sekcích zmíněná místa.",
+  "planEditDeleteDialogTitle": "Potvrďte smazání plánu čtení",
+  "planEditDeleteDialogText": "Opravdu chceš smazat plán čtení?",
   "settingsPageTitle": "Nastavení",
   "settingsPageSystemLabel": "systém",
   "settingsPageLightLabel": "světlý",
