@@ -1067,7 +1067,8 @@ void main() async {
     await tester.tap(find.byIcon(Icons.auto_mode));
     await tester.pumpAndSettle();
 
-    expect(Theme.of(context).brightness, SchedulerBinding.instance.platformDispatcher.platformBrightness);
+    expect(Theme.of(context).brightness,
+        SchedulerBinding.instance.platformDispatcher.platformBrightness);
 
     await tester.tap(find.byIcon(Icons.dark_mode));
     await tester.pumpAndSettle();
@@ -1077,7 +1078,8 @@ void main() async {
     await tester.tap(find.byIcon(Icons.auto_mode));
     await tester.pumpAndSettle();
 
-    expect(Theme.of(context).brightness, SchedulerBinding.instance.platformDispatcher.platformBrightness);
+    expect(Theme.of(context).brightness,
+        SchedulerBinding.instance.platformDispatcher.platformBrightness);
 
     await tester.pageBack();
     await tester.pumpAndSettle();
