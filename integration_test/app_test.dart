@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
@@ -1056,6 +1057,27 @@ void main() async {
 
     expect(find.byKey(const Key('version')), findsOneWidget);
     expect(find.byKey(const Key('copyright')), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.light_mode));
+    await tester.pumpAndSettle();
+
+    final BuildContext context = tester.element(find.byType(Scaffold));
+    expect(Theme.of(context).brightness, Brightness.light);
+
+    await tester.tap(find.byIcon(Icons.auto_mode));
+    await tester.pumpAndSettle();
+
+    expect(Theme.of(context).brightness, SchedulerBinding.instance.platformDispatcher.platformBrightness);
+
+    await tester.tap(find.byIcon(Icons.dark_mode));
+    await tester.pumpAndSettle();
+
+    expect(Theme.of(context).brightness, Brightness.dark);
+
+    await tester.tap(find.byIcon(Icons.auto_mode));
+    await tester.pumpAndSettle();
+
+    expect(Theme.of(context).brightness, SchedulerBinding.instance.platformDispatcher.platformBrightness);
 
     await tester.pageBack();
     await tester.pumpAndSettle();
