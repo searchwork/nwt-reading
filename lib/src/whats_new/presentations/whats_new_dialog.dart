@@ -21,7 +21,7 @@ void showWhatsNewDialog(
       builder: (BuildContext context) {
         return AlertDialog(
           key: const Key('whats-new-dialog'),
-          title: Text("What's New in NWT Reading"),
+          title: Text(context.loc.whatsNewDialogTitle),
           content: SingleChildScrollView(
               child: Column(children: [
             Image(image: AssetImage('assets/images/whats_new/plans.png')),

@@ -2,6 +2,7 @@
   "@@locale": "hu",
   "@@comment": "(c) searchwork.org",
   "appTitle": "NWT Olvasás",
+  "whatsNewDialogTitle": "Újdonságok a NWT Reading-ben",
   "whatsNewDialogPlans": "Több bibliaolvasási tervet is használhatsz párhuzamosan.",
   "whatsNewDialogOpenSource": "A NWT Reading most már nyílt forráskódú. Találj meg minket a GitHubon és járulj hozzá.",
   "whatsNewDialogLaterButtonText": "Később",
