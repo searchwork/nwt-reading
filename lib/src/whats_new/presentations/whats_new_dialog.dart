@@ -25,9 +25,8 @@ void showWhatsNewDialog(
           content: SingleChildScrollView(
               child: Column(children: [
             Image(image: AssetImage('assets/images/whats_new/plans.png')),
-            SizedBox(height: 20),
-            RichText(
-                text: TextSpan(
+            SizedBox(height: 15),
+            Text.rich(TextSpan(
               text: context.loc.whatsNewDialogPlans,
             )),
             SizedBox(height: 30),
@@ -39,14 +38,15 @@ void showWhatsNewDialog(
               width: 30,
               height: 30,
             ),
-            SizedBox(height: 20),
-            RichText(
-              text: TextSpan(
+            SizedBox(height: 15),
+            Text.rich(
+              TextSpan(
                 text: whatsNewDialogOpenSourceText.split('GitHub')[0],
                 children: [
                   TextSpan(
                     text: 'GitHub',
                     style: TextStyle(
+                      fontWeight: FontWeight.bold,
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     recognizer: TapGestureRecognizer()
