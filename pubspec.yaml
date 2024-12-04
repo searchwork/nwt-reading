@@ -33,7 +33,7 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   mocktail: ^1.0.4
-  riverpod_lint: ^2.6.2
+  riverpod_lint: ^2.6.3
 
 flutter:
   uses-material-design: true
