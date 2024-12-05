@@ -82,10 +82,7 @@ class SectionWidget extends ConsumerWidget {
               onPressed: () async {
                 final url = Uri.parse(
                     'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${bibleLanguage?.wtCode}&prefer=lang&bible=${section.url}');
-
-                if (await canLaunchUrl(url)) {
-                  await launchUrl(url);
-                }
+                await launchUrl(url);
               },
               child: Text(
                   '${bibleLanguage?.books[section.bookIndex].name} ${section.ref}',

@@ -53,9 +53,7 @@ void showWhatsNewDialog(
                       ..onTap = () async {
                         final url = Uri.parse(
                             'https://github.com/searchwork/nwt-reading');
-                        if (await canLaunchUrl(url)) {
-                          await launchUrl(url);
-                        }
+                        await launchUrl(url);
                       },
                   ),
                   TextSpan(
