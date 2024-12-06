@@ -135,7 +135,8 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
                     child: Text(
                       context.loc.schedulePageContinueNotice,
                       key: const Key('continue-notice'),
-                      style: TextStyle(color: Theme.of(context).primaryColor),
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary),
                     ),
                   ),
                 Flexible(
