@@ -129,7 +129,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
           AsyncValue(:final valueOrNull?) => Column(
               children: [
                 LinearProgressIndicator(value: progress),
-                if (plan.lastDate == null)
+                if (plan.lastDate == null && plan.bookmark.dayIndex == 0)
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Text(
