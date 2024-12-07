@@ -13,11 +13,48 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
 
       - run: ./check.sh
+
+
+  test-android:
+    name: Test Android
+    runs-on: ubuntu-latest
+    needs: checks
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Create AVD
+        run: |
+          avdmanager list device
+          sdkmanager "system-images;android-30;google_apis;x86_64"
+          avdmanager create avd -n test -k "system-images;android-30;google_apis;x86_64"
+          $ANDROID_HOME/emulator/emulator -d pixel_5
+
+      - name: Start Android emulator
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lib32stdc++6 qemu-kvm
+          sudo $ANDROID_HOME/emulator/emulator -avd pixel_5 -no-window -no-audio -no-boot-anim -accel on &
+          sudo $ANDROID_HOME/platform-tools/adb wait-for-device
+          sudo $ANDROID_HOME/platform-tools/adb shell input keyevent 82
+
+      - name: Run integration tests
+        run: flutter test integration_test --timeout 2x
+
 
   test-ios:
     name: Test iOS
@@ -25,16 +62,21 @@ jobs:
     needs: checks
 
     steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
       - name: List all simulators
         run: "xcrun xctrace list devices"
+
       - name: Start simulator
         run: |
           UDID=$(xcrun xctrace list devices | grep "^iPhone 15 Simulator (18.1)" | awk '{gsub(/[()]/,""); print $NF}')
           echo $UDID
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: stable
 
-      - run: flutter test integration_test --timeout 2x
+      - name: Run integration tests
+        run: flutter test integration_test --timeout 2x
