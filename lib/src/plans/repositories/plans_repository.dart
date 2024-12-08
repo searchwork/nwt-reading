@@ -67,10 +67,20 @@ class PlansRepository {
                       .reversed
                       .join('')),
               version: '1.0');
-          final bookmark = Bookmark(
-              dayIndex:
-                  int.tryParse(schedule['readIndex'] as String? ?? '0') ?? 0,
-              sectionIndex: -1);
+
+          Bookmark bookmark;
+          try {
+            bookmark = Bookmark(
+                dayIndex:
+                    int.tryParse(schedule['readIndex'] as String? ?? '0') ?? 0,
+                sectionIndex: -1);
+          } catch (e) {
+            debugPrint(
+                'Import readIndex from legacy failed with error $e. Trying to import as int');
+            bookmark = Bookmark(
+                dayIndex: schedule['readIndex'] as int? ?? 0, sectionIndex: -1);
+          }
+
           final DateTime? targetDate =
               withTargetDate && schedule['endDate'] != null
                   ? DateTime.tryParse(schedule['endDate'] as String)
