@@ -4,7 +4,7 @@ description: "Bible reading schedule of the New World  Translation for Jehovah's
 # Prevent accidental publishing to pub.dev.
 publish_to: "none"
 
-version: 6.0.2+60002
+version: 6.1.0+60100
 
 environment:
   sdk: ^3.5.4
