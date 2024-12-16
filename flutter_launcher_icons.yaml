@@ -1,19 +1,19 @@
 flutter_icons:
   android: true
-  min_sdk_android: 16 # android min sdk min:16, default 21
-  adaptive_icon_background: #496CA6
-  adaptive_icon_foreground: assets/icons/ic_launcher_foreground.png
+  min_sdk_android: 16
+  adaptive_icon_background: "#4D70A4"
+  adaptive_icon_foreground: assets/launcher/icon-transparent.png
   ios: true
-  image_path: assets/icons/icon.png
+  image_path: assets/launcher/icon.png
   macos:
     generate: true
-    image_path: assets/icons/icon.png
+    image_path: assets/launcher/icon.png
   web:
     generate: true
-    image_path: assets/icons/icon.png
-    background_color: "#hexcode"
-    theme_color: "#hexcode"
+    image_path: assets/launcher/icon.png
+    background_color: "#4D70A4"
+    theme_color: "#4D70A4"
   windows:
     generate: true
-    image_path: assets/icons/icon.png
-    icon_size: 256 # min:48, max:256, default: 48
+    image_path: assets/launcher/icon.png
+    icon_size: 256
