@@ -3,6 +3,7 @@ flutter_icons:
   min_sdk_android: 16
   adaptive_icon_background: "#4D70A4"
   adaptive_icon_foreground: assets/launcher/icon-transparent.png
+  adaptive_icon_foreground_inset: 20
   ios: true
   image_path: assets/launcher/icon.png
   macos:
