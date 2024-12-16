@@ -50,10 +50,10 @@ void showWhatsNewDialog(
                       color: Theme.of(context).colorScheme.primary,
                     ),
                     recognizer: TapGestureRecognizer()
-                      ..onTap = () async {
+                      ..onTap = () {
                         final url = Uri.parse(
                             'https://github.com/searchwork/nwt-reading');
-                        await launchUrl(url);
+                        launchUrl(url);
                       },
                   ),
                   TextSpan(
