@@ -19,25 +19,12 @@ class DayCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) => Card(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          padding: const EdgeInsets.only(left: 2.0, right: 10.0, bottom: 10.0),
+          child: Stack(
             children: [
-              Expanded(
-                  child: Column(
-                children: [
-                  ...day.sections.asMap().entries.map((section) =>
-                      SectionWidget(
-                          key: Key('section-${section.key}'),
-                          planId: planId,
-                          section: section.value,
-                          dayIndex: dayIndex,
-                          sectionIndex: section.key)),
-                ],
-              )),
-              Container(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 4, 0),
-                  width: 40,
+              Positioned(
+                  right: 0,
+                  top: 5,
                   child: date == null
                       ? Text((dayIndex + 1).toString(),
                           key: const Key('day-index'),
@@ -56,6 +43,19 @@ class DayCard extends ConsumerWidget {
                             )
                           ],
                         )),
+              Positioned(
+                child: Column(
+                  children: [
+                    ...day.sections.asMap().entries.map((section) =>
+                        SectionWidget(
+                            key: Key('section-${section.key}'),
+                            planId: planId,
+                            section: section.value,
+                            dayIndex: dayIndex,
+                            sectionIndex: section.key)),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

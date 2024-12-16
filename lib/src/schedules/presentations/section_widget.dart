@@ -71,6 +71,7 @@ class SectionWidget extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         IconButton(
+            iconSize: 27.0,
             isSelected: isRead == true,
             icon: const Icon(Icons.check_circle_outline),
             selectedIcon: const Icon(Icons.check_circle),
@@ -78,12 +79,19 @@ class SectionWidget extends ConsumerWidget {
         Expanded(
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(
+            height: 5.0,
+          ),
           TextButton(
               onPressed: () {
                 final url = Uri.parse(
                     'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${bibleLanguage?.wtCode}&prefer=lang&bible=${section.url}');
                 launchUrl(url);
               },
+              style: TextButton.styleFrom(
+                  padding: EdgeInsets.zero,
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  alignment: Alignment.centerLeft),
               child: Text(
                   '${bibleLanguage?.books[section.bookIndex].name} ${section.ref}',
                   style: TextStyle(
