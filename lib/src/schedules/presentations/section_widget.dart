@@ -79,10 +79,10 @@ class SectionWidget extends ConsumerWidget {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           TextButton(
-              onPressed: () async {
+              onPressed: () {
                 final url = Uri.parse(
                     'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${bibleLanguage?.wtCode}&prefer=lang&bible=${section.url}');
-                await launchUrl(url);
+                launchUrl(url);
               },
               child: Text(
                   '${bibleLanguage?.books[section.bookIndex].name} ${section.ref}',
