@@ -52,7 +52,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
       final isCurrentDay = plan.bookmark.dayIndex == index;
       final isTargetDay = todayTargetIndex == index;
       final dividerColor =
-          isCurrentDay ? Theme.of(context).colorScheme.primary : badgeColor;
+          isCurrentDay ? badgeColor : Theme.of(context).colorScheme.primary;
       final remainingDays = planNotifier
           .getRemainingDays(Bookmark(dayIndex: index, sectionIndex: 0));
       final date = plan.withTargetDate && remainingDays != null

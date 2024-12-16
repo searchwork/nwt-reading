@@ -460,15 +460,15 @@ void main() async {
 
     expect(find.byType(Badge), findsNothing);
     expect(find.byKey(const Key('target-day')), findsOneWidget);
-    expect(
-        (tester.firstWidget(find.byKey(const Key('target-day'))) as Divider)
-            .color,
-        Colors.green);
 
     await tester.scrollUntilVisible(find.byKey(const Key('current-day')), 50.0);
     await tester.pumpAndSettle();
 
     expect(find.byKey(const Key('current-day')), findsOneWidget);
+    expect(
+        (tester.firstWidget(find.byKey(const Key('current-day'))) as Divider)
+            .color,
+        Colors.green);
 
     await tester.scrollUntilVisible(find.byKey(const Key('day-81')), -50.0);
     await tester.pumpAndSettle();
@@ -498,10 +498,10 @@ void main() async {
     expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
         Colors.red);
     expect(find.byType(Divider), findsNWidgets(2));
-    expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(find.byKey(const Key('target-day')), findsOneWidget);
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(
-        (tester.firstWidget(find.byKey(const Key('target-day'))) as Divider)
+        (tester.firstWidget(find.byKey(const Key('current-day'))) as Divider)
             .color,
         Colors.red);
 
@@ -523,9 +523,11 @@ void main() async {
         '1');
     expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
         Colors.green);
+    Future.delayed(Duration(seconds: 10));
     expect(find.byKey(const Key('target-day')), findsOneWidget);
+    expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(
-        (tester.firstWidget(find.byKey(const Key('target-day'))) as Divider)
+        (tester.firstWidget(find.byKey(const Key('current-day'))) as Divider)
             .color,
         Colors.green);
 
