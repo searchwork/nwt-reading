@@ -59,17 +59,20 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
           ? plan.targetDate?.subtract(Duration(days: remainingDays))
           : null;
       final isBeginningOfMonth = date?.day == 1;
-      final dayCard = DayCard(
-          date: date,
-          key: Key('day-$index'),
-          planId: planId,
-          day: day,
-          dayIndex: index);
+      final dayCard = Padding(
+        padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+        child: DayCard(
+            date: date,
+            key: Key('day-$index'),
+            planId: planId,
+            day: day,
+            dayIndex: index),
+      );
       final dayCardWithDivider = (isCurrentDay || isTargetDay)
           ? Column(
               children: [
                 Container(
-                    padding: const EdgeInsets.only(left: 2, right: 10),
+                    padding: const EdgeInsets.only(left: 7, right: 15),
                     child: Row(children: [
                       Container(
                         padding: const EdgeInsets.all(5),
@@ -94,6 +97,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
           ? Column(
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 20),
                 Text(
                   MaterialLocalizations.of(context).formatMonthYear(date),
                   key: const Key('month'),
