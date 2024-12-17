@@ -55,7 +55,7 @@ class PlansRepository {
           final readingLanguage = legacyExport['readingLanguage'] as String?;
           final withTargetDate = legacyExport['withEndDate'] as bool? ?? true;
           final showEvents = legacyExport['showEvents'] as bool? ?? true;
-          final showLocations = legacyExport['showLocations'] as bool? ?? true;
+          final showLocations = legacyExport['showLocations'] as bool? ?? false;
 
           final schedule =
               (schedules ?? {})[currentSchedule] as Map<String, dynamic>? ?? {};

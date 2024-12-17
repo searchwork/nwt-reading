@@ -40,7 +40,7 @@ class PlansNotifier extends Notifier<Plans> {
         bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),
         withTargetDate: true,
         showEvents: true,
-        showLocations: true);
+        showLocations: false);
   }
 
   void addPlan(Plan plan) {
