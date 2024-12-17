@@ -109,7 +109,7 @@ final List<LegacyExport> testLegacyExports = [
             bookmark: Bookmark(dayIndex: 0, sectionIndex: -1),
             withTargetDate: true,
             showEvents: true,
-            showLocations: true),
+            showLocations: false),
       ])),
   LegacyExport(
       preferences: {
@@ -129,7 +129,7 @@ final List<LegacyExport> testLegacyExports = [
             targetDate: DateTime.utc(2024, 1, 27),
             withTargetDate: true,
             showEvents: true,
-            showLocations: true),
+            showLocations: false),
       ])),
   LegacyExport(
       preferences: {
