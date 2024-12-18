@@ -523,7 +523,6 @@ void main() async {
         '1');
     expect((tester.firstWidget(find.byType(Badge)) as Badge).backgroundColor,
         Colors.green);
-    Future.delayed(Duration(seconds: 10));
     expect(find.byKey(const Key('target-day')), findsOneWidget);
     expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(
