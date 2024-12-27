@@ -20,7 +20,7 @@ class App extends ConsumerWidget {
         debugShowCheckedModeBanner: false,
         restorationScopeId: 'app',
         localizationsDelegates: AppLocalizations.localizationsDelegates,
-        supportedLocales: [Locale('en'), ...AppLocalizations.supportedLocales],
+        supportedLocales: AppLocalizations.supportedLocales,
         onGenerateTitle: (BuildContext context) => context.loc.appTitle,
         theme: lightTheme,
         darkTheme: darkTheme,
