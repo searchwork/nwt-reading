@@ -35,6 +35,7 @@ class PlanLanguageTile extends ConsumerWidget {
                   ),
                 ))
             .toList(),
+        isExpanded: true,
       ),
     );
   }
