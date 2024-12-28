@@ -47,7 +47,10 @@ class PlansRepository {
       } else {
         final legacyExport =
             jsonDecode(legacyExportSerialized) as Map<String, dynamic>;
-        final currentSchedule = legacyExport['currentSchedule'] as String?;
+        var currentSchedule = legacyExport['currentSchedule'] as String?;
+        if (currentSchedule == 'sequential') {
+          currentSchedule = 'canonical';
+        }
 
         if (currentSchedule != null) {
           final schedules = legacyExport['schedules'] as Map<String, dynamic>?;
