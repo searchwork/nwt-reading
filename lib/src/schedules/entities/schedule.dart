@@ -17,7 +17,7 @@ final scheduleProviderFamily =
 
 enum ScheduleType {
   chronological,
-  sequential,
+  canonical,
   written,
 }
 

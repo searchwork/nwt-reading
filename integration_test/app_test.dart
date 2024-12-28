@@ -170,7 +170,7 @@ void main() async {
                 as TextFormField)
             .controller
             ?.text,
-        'Sequential y4');
+        'Canonical y4');
 
     await tester.pumpAndSettle();
     await tester.enterText(find.byKey(const Key('plan-name')), 'Test 😃');

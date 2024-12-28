@@ -20,7 +20,7 @@ class PlanCard extends ConsumerWidget {
     final progress = planNotifier.getProgress();
     const planTypeIcons = {
       ScheduleType.chronological: Icons.hourglass_empty,
-      ScheduleType.sequential: Icons.menu_book,
+      ScheduleType.canonical: Icons.menu_book,
       ScheduleType.written: Icons.edit_note,
     };
 

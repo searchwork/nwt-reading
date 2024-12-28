@@ -15,28 +15,32 @@ class PlanDurationSegmentedButton extends ConsumerWidget {
     ref.watch(planEditProviderFamily(planId));
     final planEdit = ref.read(planEditProviderFamily(planId).notifier);
 
-    return SegmentedButton<ScheduleDuration>(
-      segments: <ButtonSegment<ScheduleDuration>>[
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.m3,
-            label: Text(context.loc.planEditPageThreeMonthsLabel)),
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.m6,
-            label: Text(context.loc.planEditPageSixMonthsLabel)),
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.y1,
-            label: Text(context.loc.planEditPageOneYearLabel)),
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.y2,
-            label: Text(context.loc.planEditPageTwoYearsLabel)),
-        ButtonSegment<ScheduleDuration>(
-            value: ScheduleDuration.y4,
-            label: Text(context.loc.planEditPageFourYearsLabel)),
-      ],
-      selected: {plan.scheduleKey.duration},
-      onSelectionChanged: (Set<ScheduleDuration> newSelection) {
-        planEdit.updateScheduleDuration(newSelection.single);
-      },
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: SegmentedButton<ScheduleDuration>(
+        showSelectedIcon: false,
+        segments: <ButtonSegment<ScheduleDuration>>[
+          ButtonSegment<ScheduleDuration>(
+              value: ScheduleDuration.m3,
+              label: Text(context.loc.planEditPageMonthsLabel(3))),
+          ButtonSegment<ScheduleDuration>(
+              value: ScheduleDuration.m6,
+              label: Text(context.loc.planEditPageMonthsLabel(6))),
+          ButtonSegment<ScheduleDuration>(
+              value: ScheduleDuration.y1,
+              label: Text(context.loc.planEditPageYearsLabel(1))),
+          ButtonSegment<ScheduleDuration>(
+              value: ScheduleDuration.y2,
+              label: Text(context.loc.planEditPageYearsLabel(2))),
+          ButtonSegment<ScheduleDuration>(
+              value: ScheduleDuration.y4,
+              label: Text(context.loc.planEditPageYearsLabel(4))),
+        ],
+        selected: {plan.scheduleKey.duration},
+        onSelectionChanged: (Set<ScheduleDuration> newSelection) {
+          planEdit.updateScheduleDuration(newSelection.single);
+        },
+      ),
     );
   }
 }
