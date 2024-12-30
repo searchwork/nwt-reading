@@ -1,0 +1,2536 @@
+{
+  "@@locale": "en",
+  "@@comment": "(c) searchwork.org",
+  "location_Abdon": "Abdon",
+  "@location_Abdon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Abel_beth_maacah": "Abel-beth-maacah",
+  "@location_Abel_beth_maacah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Abel_keramim": "Abel-keramim",
+  "@location_Abel_keramim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Abel_meholah": "Abel-meholah",
+  "@location_Abel_meholah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Abila": "Abila",
+  "@location_Abila": {
+    "description": "Location on the schedule page."
+  },
+  "location_Abilene": "Abilene",
+  "@location_Abilene": {
+    "description": "Location on the schedule page."
+  },
+  "location_Abronah": "Abronah",
+  "@location_Abronah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Acco": "Acco",
+  "@location_Acco": {
+    "description": "Location on the schedule page."
+  },
+  "location_Achaia": "Achaia",
+  "@location_Achaia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Achmetha_Ecbatana": "Achmetha (Ecbatana)",
+  "@location_Achmetha_Ecbatana": {
+    "description": "Location on the schedule page."
+  },
+  "location_Achzib": "Achzib",
+  "@location_Achzib": {
+    "description": "Location on the schedule page."
+  },
+  "location_Actium": "Actium",
+  "@location_Actium": {
+    "description": "Location on the schedule page."
+  },
+  "location_Adam": "Adam",
+  "@location_Adam": {
+    "description": "Location on the schedule page."
+  },
+  "location_Addar_Hazar_addar": "Addar (Hazar-addar)",
+  "@location_Addar_Hazar_addar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Adullam": "Adullam",
+  "@location_Adullam": {
+    "description": "Location on the schedule page."
+  },
+  "location_Aenon": "Aenon",
+  "@location_Aenon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ai": "Ai",
+  "@location_Ai": {
+    "description": "Location on the schedule page."
+  },
+  "location_Aijalon": "Aijalon",
+  "@location_Aijalon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ain_Ashan_Simeon_Levi": "Ain (Ashan) [Simeon/Levi]",
+  "@location_Ain_Ashan_Simeon_Levi": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ain_Simeon": "Ain [Simeon]",
+  "@location_Ain_Simeon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Akrabbim": "Akrabbim",
+  "@location_Akrabbim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Aleppo": "Aleppo",
+  "@location_Aleppo": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_Arachosiorum": "Alexandria Arachosiorum",
+  "@location_Alexandria_Arachosiorum": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_Areion": "Alexandria Areion",
+  "@location_Alexandria_Areion": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_Eschate": "Alexandria Eschate",
+  "@location_Alexandria_Eschate": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_Margiana": "Alexandria Margiana",
+  "@location_Alexandria_Margiana": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_Oxiana": "Alexandria Oxiana",
+  "@location_Alexandria_Oxiana": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_Prophthasia": "Alexandria Prophthasia",
+  "@location_Alexandria_Prophthasia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_Carmania": "Alexandria [Carmania]",
+  "@location_Alexandria_Carmania": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_Egypt": "Alexandria [Egypt]",
+  "@location_Alexandria_Egypt": {
+    "description": "Location on the schedule page."
+  },
+  "location_Alexandria_India": "Alexandria [India]",
+  "@location_Alexandria_India": {
+    "description": "Location on the schedule page."
+  },
+  "location_Almon": "Almon",
+  "@location_Almon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Almon_diblathaim": "Almon-diblathaim",
+  "@location_Almon_diblathaim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Amalekites": "Amalekites",
+  "@location_Amalekites": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ammon": "Ammon",
+  "@location_Ammon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Amorites": "Amorites",
+  "@location_Amorites": {
+    "description": "Location on the schedule page."
+  },
+  "location_Amphipolis": "Amphipolis",
+  "@location_Amphipolis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Anab": "Anab",
+  "@location_Anab": {
+    "description": "Location on the schedule page."
+  },
+  "location_Anathoth": "Anathoth",
+  "@location_Anathoth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ankara": "Ankara",
+  "@location_Ankara": {
+    "description": "Location on the schedule page."
+  },
+  "location_Antioch_Pisidia": "Antioch [Pisidia]",
+  "@location_Antioch_Pisidia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Antioch_Syria": "Antioch [Syria]",
+  "@location_Antioch_Syria": {
+    "description": "Location on the schedule page."
+  },
+  "location_Antipatris_Aphek": "Antipatris (Aphek)",
+  "@location_Antipatris_Aphek": {
+    "description": "Location on the schedule page."
+  },
+  "location_Aphek_Antipatris_Ephraim": "Aphek (Antipatris) [Ephraim]",
+  "@location_Aphek_Antipatris_Ephraim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Aphek_Asher": "Aphek [Asher]",
+  "@location_Aphek_Asher": {
+    "description": "Location on the schedule page."
+  },
+  "location_Aphek_Manasseh": "Aphek [Manasseh]",
+  "@location_Aphek_Manasseh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arabah": "Arabah",
+  "@location_Arabah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arabia": "Arabia",
+  "@location_Arabia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arabian_Desert": "Arabian Desert",
+  "@location_Arabian_Desert": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arachosia": "Arachosia",
+  "@location_Arachosia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arad_Canaanite": "Arad [Canaanite]",
+  "@location_Arad_Canaanite": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arad_Israelite": "Arad [Israelite]",
+  "@location_Arad_Israelite": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ararat": "Ararat",
+  "@location_Ararat": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arbel": "Arbel",
+  "@location_Arbel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Aria": "Aria",
+  "@location_Aria": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arimathea_Ramah": "Arimathea (Ramah)",
+  "@location_Arimathea_Ramah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Armenia": "Armenia",
+  "@location_Armenia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arnon": "Arnon",
+  "@location_Arnon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Aroer": "Aroer",
+  "@location_Aroer": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arpad": "Arpad",
+  "@location_Arpad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arubboth": "Arubboth",
+  "@location_Arubboth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Arumah": "Arumah",
+  "@location_Arumah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ashan_Ain": "Ashan (Ain)",
+  "@location_Ashan_Ain": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ashdod": "Ashdod",
+  "@location_Ashdod": {
+    "description": "Location on the schedule page."
+  },
+  "location_Asher": "Asher",
+  "@location_Asher": {
+    "description": "Location on the schedule page."
+  },
+  "location_Asher_tribe": "Asher [tribe]",
+  "@location_Asher_tribe": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ashkelon": "Ashkelon",
+  "@location_Ashkelon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ashtaroth_Beeshterah": "Ashtaroth (Beeshterah)",
+  "@location_Ashtaroth_Beeshterah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Asia_Minor": "Asia Minor",
+  "@location_Asia_Minor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Asia_Roman": "Asia [Roman]",
+  "@location_Asia_Roman": {
+    "description": "Location on the schedule page."
+  },
+  "location_Asshur": "Asshur",
+  "@location_Asshur": {
+    "description": "Location on the schedule page."
+  },
+  "location_Assos": "Assos",
+  "@location_Assos": {
+    "description": "Location on the schedule page."
+  },
+  "location_Assyria": "Assyria",
+  "@location_Assyria": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ataroth": "Ataroth",
+  "@location_Ataroth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Athens": "Athens",
+  "@location_Athens": {
+    "description": "Location on the schedule page."
+  },
+  "location_Attalia": "Attalia",
+  "@location_Attalia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Azekah": "Azekah",
+  "@location_Azekah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Azmaveth": "Azmaveth",
+  "@location_Azmaveth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Azmon": "Azmon",
+  "@location_Azmon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Baal_Ramah": "Baal (Ramah)",
+  "@location_Baal_Ramah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Baal_gad": "Baal-gad",
+  "@location_Baal_gad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Baal_hazor": "Baal-hazor",
+  "@location_Baal_hazor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Baal_meon": "Baal-meon",
+  "@location_Baal_meon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Baal_perazim": "Baal-perazim",
+  "@location_Baal_perazim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Baal_shalishah": "Baal-shalishah",
+  "@location_Baal_shalishah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Baalath_beer_Ramah": "Baalath-beer (Ramah)",
+  "@location_Baalath_beer_Ramah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Babylonia": "Babylon(ia)",
+  "@location_Babylonia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bactra": "Bactra",
+  "@location_Bactra": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bactria": "Bactria",
+  "@location_Bactria": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bahurim": "Bahurim",
+  "@location_Bahurim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bamoth_baal": "Bamoth-baal",
+  "@location_Bamoth_baal": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bashan": "Bashan",
+  "@location_Bashan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beer_lahai_roi": "Beer-lahai-roi",
+  "@location_Beer_lahai_roi": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beer_sheba": "Beer-sheba",
+  "@location_Beer_sheba": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beeshterah_Ashtaroth": "Beeshterah (Ashtaroth)",
+  "@location_Beeshterah_Ashtaroth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bene_jaakan": "Bene-jaakan",
+  "@location_Bene_jaakan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Benjamin": "Benjamin",
+  "@location_Benjamin": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beroea": "Beroea",
+  "@location_Beroea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Berothai_Cun": "Berothai (Cun)",
+  "@location_Berothai_Cun": {
+    "description": "Location on the schedule page."
+  },
+  "location_Besor": "Besor",
+  "@location_Besor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_anath": "Beth-anath",
+  "@location_Beth_anath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_arabah": "Beth-arabah",
+  "@location_Beth_arabah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_biri_Beth_lebaoth": "Beth-biri (Beth-lebaoth)",
+  "@location_Beth_biri_Beth_lebaoth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_dagon": "Beth-dagon",
+  "@location_Beth_dagon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_emek": "Beth-emek",
+  "@location_Beth_emek": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_ezel": "Beth-ezel",
+  "@location_Beth_ezel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_haran": "Beth-haran",
+  "@location_Beth_haran": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_hoglah": "Beth-hoglah",
+  "@location_Beth_hoglah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_horon": "Beth-horon",
+  "@location_Beth_horon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_jeshimoth": "Beth-jeshimoth",
+  "@location_Beth_jeshimoth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_lebaoth_Beth_biri": "Beth-lebaoth (Beth-biri)",
+  "@location_Beth_lebaoth_Beth_biri": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_marcaboth_Madmannah": "Beth-marcaboth (Madmannah)",
+  "@location_Beth_marcaboth_Madmannah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_nimrah": "Beth-nimrah",
+  "@location_Beth_nimrah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_peor": "Beth-peor",
+  "@location_Beth_peor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_shean_Beth_shan_Scythopolis": "Beth-shean (Beth-shan) (Scythopolis)",
+  "@location_Beth_shean_Beth_shan_Scythopolis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_shemesh_Issachar": "Beth-shemesh [Issachar]",
+  "@location_Beth_shemesh_Issachar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_shemesh_Judah": "Beth-shemesh [Judah]",
+  "@location_Beth_shemesh_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_shittah": "Beth-shittah",
+  "@location_Beth_shittah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Beth_zur": "Beth-zur",
+  "@location_Beth_zur": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethany": "Bethany",
+  "@location_Bethany": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethany_across_the_Jordan": "Bethany (across the Jordan)",
+  "@location_Bethany_across_the_Jordan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethel_Luz": "Bethel (Luz)",
+  "@location_Bethel_Luz": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethlehem_Ephrath_Judah": "Bethlehem (Ephrath) [Judah]",
+  "@location_Bethlehem_Ephrath_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethlehem_Zebulun": "Bethlehem [Zebulun]",
+  "@location_Bethlehem_Zebulun": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethphage": "Bethphage",
+  "@location_Bethphage": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethsaida": "Bethsaida",
+  "@location_Bethsaida": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethuel_Hazor": "Bethuel (Hazor)",
+  "@location_Bethuel_Hazor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bethzatha": "Bethzatha",
+  "@location_Bethzatha": {
+    "description": "Location on the schedule page."
+  },
+  "location_Betonim": "Betonim",
+  "@location_Betonim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bezek": "Bezek",
+  "@location_Bezek": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bezer": "Bezer",
+  "@location_Bezer": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bithynia": "Bithynia",
+  "@location_Bithynia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bozrah": "Bozrah",
+  "@location_Bozrah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Britain": "Britain",
+  "@location_Britain": {
+    "description": "Location on the schedule page."
+  },
+  "location_Bukhara": "Bukhara",
+  "@location_Bukhara": {
+    "description": "Location on the schedule page."
+  },
+  "location_Byzantium": "Byzantium",
+  "@location_Byzantium": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cabul": "Cabul",
+  "@location_Cabul": {
+    "description": "Location on the schedule page."
+  },
+  "location_Caesarea": "Caesarea",
+  "@location_Caesarea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Caesarea_Philippi": "Caesarea Philippi",
+  "@location_Caesarea_Philippi": {
+    "description": "Location on the schedule page."
+  },
+  "location_Calah": "Calah",
+  "@location_Calah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cana": "Cana",
+  "@location_Cana": {
+    "description": "Location on the schedule page."
+  },
+  "location_Canaan": "Canaan",
+  "@location_Canaan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Canatha": "Canatha",
+  "@location_Canatha": {
+    "description": "Location on the schedule page."
+  },
+  "location_Capernaum": "Capernaum",
+  "@location_Capernaum": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cappadocia": "Cappadocia",
+  "@location_Cappadocia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Carchemish": "Carchemish",
+  "@location_Carchemish": {
+    "description": "Location on the schedule page."
+  },
+  "location_Carmania": "Carmania",
+  "@location_Carmania": {
+    "description": "Location on the schedule page."
+  },
+  "location_Carmel": "Carmel",
+  "@location_Carmel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Carmel_Judah": "Carmel [Judah]",
+  "@location_Carmel_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Carthage": "Carthage",
+  "@location_Carthage": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cauda": "Cauda",
+  "@location_Cauda": {
+    "description": "Location on the schedule page."
+  },
+  "location_Chaldea": "Chaldea",
+  "@location_Chaldea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Chephirah": "Chephirah",
+  "@location_Chephirah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Chesil_Hazor_Bethuel": "Chesil (Hazor [Bethuel])",
+  "@location_Chesil_Hazor_Bethuel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Chesulloth": "Chesulloth",
+  "@location_Chesulloth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Chinnereth": "Chinnereth",
+  "@location_Chinnereth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Chios": "Chios",
+  "@location_Chios": {
+    "description": "Location on the schedule page."
+  },
+  "location_Chitlish": "Chitlish",
+  "@location_Chitlish": {
+    "description": "Location on the schedule page."
+  },
+  "location_Chorazin": "Chorazin",
+  "@location_Chorazin": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cilicia": "Cilicia",
+  "@location_Cilicia": {
+    "description": "Location on the schedule page."
+  },
+  "location_City_of_Salt": "City of Salt",
+  "@location_City_of_Salt": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cnidus": "Cnidus",
+  "@location_Cnidus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Colossae": "Colossae",
+  "@location_Colossae": {
+    "description": "Location on the schedule page."
+  },
+  "location_Constantinople_Byzantium": "Constantinople (Byzantium)",
+  "@location_Constantinople_Byzantium": {
+    "description": "Location on the schedule page."
+  },
+  "location_Corinth": "Corinth",
+  "@location_Corinth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cos": "Cos",
+  "@location_Cos": {
+    "description": "Location on the schedule page."
+  },
+  "location_Crete": "Crete",
+  "@location_Crete": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cun_Berothai": "Cun (Berothai)",
+  "@location_Cun_Berothai": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cyprus": "Cyprus",
+  "@location_Cyprus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Cyrene": "Cyrene",
+  "@location_Cyrene": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dabbesheth": "Dabbesheth",
+  "@location_Dabbesheth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Daberath": "Daberath",
+  "@location_Daberath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Damascus": "Damascus",
+  "@location_Damascus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dan_Laish_city": "Dan (Laish) [city]",
+  "@location_Dan_Laish_city": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dan_tribe": "Dan [tribe]",
+  "@location_Dan_tribe": {
+    "description": "Location on the schedule page."
+  },
+  "location_Debir_Lo_debar_Gad": "Debir (Lo-debar) [Gad]",
+  "@location_Debir_Lo_debar_Gad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Debir_Levi": "Debir [Levi]",
+  "@location_Debir_Levi": {
+    "description": "Location on the schedule page."
+  },
+  "location_Decapolis": "Decapolis",
+  "@location_Decapolis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Derbe": "Derbe",
+  "@location_Derbe": {
+    "description": "Location on the schedule page."
+  },
+  "location_Derbent": "Derbent",
+  "@location_Derbent": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dibon_Dibon_gad": "Dibon (Dibon-gad)",
+  "@location_Dibon_Dibon_gad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dimnah": "Dimnah",
+  "@location_Dimnah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dimon": "Dimon",
+  "@location_Dimon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dion": "Dion",
+  "@location_Dion": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dophkah": "Dophkah",
+  "@location_Dophkah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dor": "Dor",
+  "@location_Dor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Dothan": "Dothan",
+  "@location_Dothan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Drangiana": "Drangiana",
+  "@location_Drangiana": {
+    "description": "Location on the schedule page."
+  },
+  "location_Drapsaca": "Drapsaca",
+  "@location_Drapsaca": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ebal": "Ebal",
+  "@location_Ebal": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ebenezer": "Ebenezer",
+  "@location_Ebenezer": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ecbatana_Achmetha": "Ecbatana (Achmetha)",
+  "@location_Ecbatana_Achmetha": {
+    "description": "Location on the schedule page."
+  },
+  "location_Eden": "Eden",
+  "@location_Eden": {
+    "description": "Location on the schedule page."
+  },
+  "location_Edom": "Edom",
+  "@location_Edom": {
+    "description": "Location on the schedule page."
+  },
+  "location_Edrei_Manasseh": "Edrei [Manasseh]",
+  "@location_Edrei_Manasseh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Edrei_Naphtali": "Edrei [Naphtali]",
+  "@location_Edrei_Naphtali": {
+    "description": "Location on the schedule page."
+  },
+  "location_Eglaim": "Eglaim",
+  "@location_Eglaim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Eglon": "Eglon",
+  "@location_Eglon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Egypt": "Egypt",
+  "@location_Egypt": {
+    "description": "Location on the schedule page."
+  },
+  "location_Egypt__T_V_of": "Egypt, T. V. of",
+  "@location_Egypt__T_V_of": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ekron": "Ekron",
+  "@location_Ekron": {
+    "description": "Location on the schedule page."
+  },
+  "location_Elam": "Elam",
+  "@location_Elam": {
+    "description": "Location on the schedule page."
+  },
+  "location_Elath_Eloth": "Elath (Eloth)",
+  "@location_Elath_Eloth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Elburz": "Elburz",
+  "@location_Elburz": {
+    "description": "Location on the schedule page."
+  },
+  "location_Elealeh": "Elealeh",
+  "@location_Elealeh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Elim": "Elim",
+  "@location_Elim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Eloth_Elath": "Eloth (Elath)",
+  "@location_Eloth_Elath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Eltekeh": "Elteke(h)",
+  "@location_Eltekeh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Emmaus": "Emmaus",
+  "@location_Emmaus": {
+    "description": "Location on the schedule page."
+  },
+  "location_En_dor": "En-dor",
+  "@location_En_dor": {
+    "description": "Location on the schedule page."
+  },
+  "location_En_gannim": "En-gannim",
+  "@location_En_gannim": {
+    "description": "Location on the schedule page."
+  },
+  "location_En_gedi": "En-gedi",
+  "@location_En_gedi": {
+    "description": "Location on the schedule page."
+  },
+  "location_En_rimmon_Ain_Simeon": "En-rimmon (Ain [Simeon])",
+  "@location_En_rimmon_Ain_Simeon": {
+    "description": "Location on the schedule page."
+  },
+  "location_En_rogel": "En-rogel",
+  "@location_En_rogel": {
+    "description": "Location on the schedule page."
+  },
+  "location_En_shemesh": "En-shemesh",
+  "@location_En_shemesh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ephesus": "Ephesus",
+  "@location_Ephesus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ephraim_Ophrah": "Ephraim (Ophrah)",
+  "@location_Ephraim_Ophrah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ephraim_tribe": "Ephraim [tribe]",
+  "@location_Ephraim_tribe": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ephrath_Bethlehem_Judah": "Ephrath (Bethlehem [Judah])",
+  "@location_Ephrath_Bethlehem_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Erech": "Erech",
+  "@location_Erech": {
+    "description": "Location on the schedule page."
+  },
+  "location_Eshtaol": "Eshtaol",
+  "@location_Eshtaol": {
+    "description": "Location on the schedule page."
+  },
+  "location_Eshtemoa": "Eshtemoa",
+  "@location_Eshtemoa": {
+    "description": "Location on the schedule page."
+  },
+  "location_Etam_Judah": "Etam [Judah]",
+  "@location_Etam_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Etam_Simeon": "Etam [Simeon]",
+  "@location_Etam_Simeon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Etham": "Etham",
+  "@location_Etham": {
+    "description": "Location on the schedule page."
+  },
+  "location_Etham_campsite": "Etham [campsite]",
+  "@location_Etham_campsite": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ether_Tochen": "Ether (Tochen)",
+  "@location_Ether_Tochen": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ethiopia": "Ethiopia",
+  "@location_Ethiopia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Euphrates": "Euphrates",
+  "@location_Euphrates": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ezem": "Ezem",
+  "@location_Ezem": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ezion_geber": "Ezion-geber",
+  "@location_Ezion_geber": {
+    "description": "Location on the schedule page."
+  },
+  "location_Farah": "Farʽah",
+  "@location_Farah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Fertile_Crescent": "Fertile Crescent",
+  "@location_Fertile_Crescent": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gad": "Gad",
+  "@location_Gad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gadara": "Gadara",
+  "@location_Gadara": {
+    "description": "Location on the schedule page."
+  },
+  "location_Galatia": "Galatia",
+  "@location_Galatia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Galilee": "Galilee",
+  "@location_Galilee": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gallim": "Gallim",
+  "@location_Gallim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gamala": "Gamala",
+  "@location_Gamala": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gath": "Gath",
+  "@location_Gath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gath_hepher": "Gath-hepher",
+  "@location_Gath_hepher": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gath_rimmon_Ibleam_Manasseh": "Gath-rimmon (Ibleam) [Manasseh]",
+  "@location_Gath_rimmon_Ibleam_Manasseh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gath_rimmon_Dan": "Gath-rimmon [Dan]",
+  "@location_Gath_rimmon_Dan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gaugamela": "Gaugamela",
+  "@location_Gaugamela": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gaul": "Gaul",
+  "@location_Gaul": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gaza": "Gaza",
+  "@location_Gaza": {
+    "description": "Location on the schedule page."
+  },
+  "location_Geba": "Geba",
+  "@location_Geba": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gederah": "Gederah",
+  "@location_Gederah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gedrosia": "Gedrosia",
+  "@location_Gedrosia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gehenna_Hinnom": "Gehenna (Hinnom)",
+  "@location_Gehenna_Hinnom": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gerar": "Gerar",
+  "@location_Gerar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gerar_city": "Gerar [city]",
+  "@location_Gerar_city": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gerasa": "Gerasa",
+  "@location_Gerasa": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gerizim": "Gerizim",
+  "@location_Gerizim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Germania": "Germania",
+  "@location_Germania": {
+    "description": "Location on the schedule page."
+  },
+  "location_Geshur": "Geshur",
+  "@location_Geshur": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gethsemane": "Gethsemane",
+  "@location_Gethsemane": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gezer": "Gezer",
+  "@location_Gezer": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gibbethon": "Gibbethon",
+  "@location_Gibbethon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gibeah_Benjamin": "Gibeah [Benjamin]",
+  "@location_Gibeah_Benjamin": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gibeah_Judah": "Gibeah [Judah]",
+  "@location_Gibeah_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gibeon": "Gibeon",
+  "@location_Gibeon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gihon": "Gihon",
+  "@location_Gihon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gilboa": "Gilboa",
+  "@location_Gilboa": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gilead": "Gilead",
+  "@location_Gilead": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gilgal_Ephraim": "Gilgal [Ephraim]",
+  "@location_Gilgal_Ephraim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gilgal_by_Jordan": "Gilgal [by Jordan]",
+  "@location_Gilgal_by_Jordan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Giloh": "Giloh",
+  "@location_Giloh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gimzo": "Gimzo",
+  "@location_Gimzo": {
+    "description": "Location on the schedule page."
+  },
+  "location_Girgashites": "Girgashites",
+  "@location_Girgashites": {
+    "description": "Location on the schedule page."
+  },
+  "location_Golan": "Golan",
+  "@location_Golan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Golgotha": "Golgotha",
+  "@location_Golgotha": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gordium": "Gordium",
+  "@location_Gordium": {
+    "description": "Location on the schedule page."
+  },
+  "location_Goshen_Egypt": "Goshen [Egypt]",
+  "@location_Goshen_Egypt": {
+    "description": "Location on the schedule page."
+  },
+  "location_Goshen_Judah": "Goshen [Judah]",
+  "@location_Goshen_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Gozan": "Gozan",
+  "@location_Gozan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Greece": "Greece",
+  "@location_Greece": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hadadrimmon": "Hadadrimmon",
+  "@location_Hadadrimmon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hadid": "Hadid",
+  "@location_Hadid": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hali": "Hali",
+  "@location_Hali": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ham": "Ham",
+  "@location_Ham": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hamath": "Hamath",
+  "@location_Hamath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hammath_Hammoth_dor": "Hammath (Hammoth-dor)",
+  "@location_Hammath_Hammoth_dor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hammon": "Hammon",
+  "@location_Hammon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hammoth_dor_Hammath": "Hammoth-dor (Hammath)",
+  "@location_Hammoth_dor_Hammath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Haran": "Haran",
+  "@location_Haran": {
+    "description": "Location on the schedule page."
+  },
+  "location_Harod": "Harod",
+  "@location_Harod": {
+    "description": "Location on the schedule page."
+  },
+  "location_Harosheth": "Harosheth",
+  "@location_Harosheth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hazar_addar_Addar": "Hazar-addar (Addar)",
+  "@location_Hazar_addar_Addar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hazar_shual": "Hazar-shual",
+  "@location_Hazar_shual": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hazar_susah_Sansannah": "Hazar-susah (Sansannah)",
+  "@location_Hazar_susah_Sansannah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hazar_susim_Sansannah": "Hazar-susim (Sansannah)",
+  "@location_Hazar_susim_Sansannah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hazeroth": "Hazeroth",
+  "@location_Hazeroth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hazor_Bethuel": "Hazor (Bethuel)",
+  "@location_Hazor_Bethuel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hazor_Benjamin": "Hazor [Benjamin]",
+  "@location_Hazor_Benjamin": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hazor_Naphtali": "Hazor [Naphtali]",
+  "@location_Hazor_Naphtali": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hebron_Kiriath_arba": "Hebron (Kiriath-arba)",
+  "@location_Hebron_Kiriath_arba": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hecatompylos": "Hecatompylos",
+  "@location_Hecatompylos": {
+    "description": "Location on the schedule page."
+  },
+  "location_Helam": "Helam",
+  "@location_Helam": {
+    "description": "Location on the schedule page."
+  },
+  "location_Helbah": "Helbah",
+  "@location_Helbah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Helkath": "Helkath",
+  "@location_Helkath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hepher": "Hepher",
+  "@location_Hepher": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hermon": "Hermon",
+  "@location_Hermon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Herodium": "Herodium",
+  "@location_Herodium": {
+    "description": "Location on the schedule page."
+  },
+  "location_Heshbon": "Heshbon",
+  "@location_Heshbon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hinnom": "Hinnom",
+  "@location_Hinnom": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hippos": "Hippo(s)",
+  "@location_Hippos": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hittites": "Hittites",
+  "@location_Hittites": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hivites": "Hivites",
+  "@location_Hivites": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hobah": "Hobah",
+  "@location_Hobah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Holon": "Holon",
+  "@location_Holon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hor": "Hor",
+  "@location_Hor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hor_haggidgad": "Hor-haggidgad",
+  "@location_Hor_haggidgad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Horeb_Sinai": "Horeb (Sinai)",
+  "@location_Horeb_Sinai": {
+    "description": "Location on the schedule page."
+  },
+  "location_Horesh": "Horesh",
+  "@location_Horesh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hula": "Hula",
+  "@location_Hula": {
+    "description": "Location on the schedule page."
+  },
+  "location_Hyrcania": "Hyrcania",
+  "@location_Hyrcania": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ibleam_Gath_rimmon": "Ibleam (Gath-rimmon)",
+  "@location_Ibleam_Gath_rimmon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Iconium": "Iconium",
+  "@location_Iconium": {
+    "description": "Location on the schedule page."
+  },
+  "location_Idumea": "Idumea",
+  "@location_Idumea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ijon": "Ijon",
+  "@location_Ijon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Illyricum": "Illyricum",
+  "@location_Illyricum": {
+    "description": "Location on the schedule page."
+  },
+  "location_India": "India",
+  "@location_India": {
+    "description": "Location on the schedule page."
+  },
+  "location_Indus": "Indus",
+  "@location_Indus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Issachar": "Issachar",
+  "@location_Issachar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Issus": "Issus",
+  "@location_Issus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Italy": "Italy",
+  "@location_Italy": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ituraea": "Ituraea",
+  "@location_Ituraea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Iye_abarim": "Iye-abarim",
+  "@location_Iye_abarim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jabbok": "Jabbok",
+  "@location_Jabbok": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jabesh_gilead": "Jabesh-gilead",
+  "@location_Jabesh_gilead": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jabneel_Judah": "Jabneel [Judah]",
+  "@location_Jabneel_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jabneel_Naphtali": "Jabneel [Naphtali]",
+  "@location_Jabneel_Naphtali": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jacobs_Fountain": "Jacob’s Fountain",
+  "@location_Jacobs_Fountain": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jagur": "Jagur",
+  "@location_Jagur": {
+    "description": "Location on the schedule page."
+  },
+  "location_Janoah": "Janoah",
+  "@location_Janoah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jarash_Gerasa": "Jarash (Gerasa)",
+  "@location_Jarash_Gerasa": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jarmuth_Ramoth_Issachar": "Jarmuth (Ramoth) [Issachar]",
+  "@location_Jarmuth_Ramoth_Issachar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jarmuth_Judah": "Jarmuth [Judah]",
+  "@location_Jarmuth_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jattir": "Jattir",
+  "@location_Jattir": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jebusites": "Jebusites",
+  "@location_Jebusites": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jehud": "Jehud",
+  "@location_Jehud": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jericho": "Jericho",
+  "@location_Jericho": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jerusalem": "Jerusalem",
+  "@location_Jerusalem": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jeshanah": "Jeshanah",
+  "@location_Jeshanah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jeshua_Sheba": "Jeshua (Sheba)",
+  "@location_Jeshua_Sheba": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jezreel": "Jezreel",
+  "@location_Jezreel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jogbehah": "Jogbehah",
+  "@location_Jogbehah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jokneam_Jokmeam": "Jokneam (Jokmeam)",
+  "@location_Jokneam_Jokmeam": {
+    "description": "Location on the schedule page."
+  },
+  "location_Joppa": "Joppa",
+  "@location_Joppa": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jordan": "Jordan",
+  "@location_Jordan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jotbah": "Jotbah",
+  "@location_Jotbah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Jotbathah": "Jotbathah",
+  "@location_Jotbathah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Judah_Judea": "Judah (Judea)",
+  "@location_Judah_Judea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Judah_tribe": "Judah [tribe]",
+  "@location_Judah_tribe": {
+    "description": "Location on the schedule page."
+  },
+  "location_Juttah": "Juttah",
+  "@location_Juttah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kabul": "Kabul",
+  "@location_Kabul": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kadesh_Kadesh_barnea": "Kadesh (Kadesh-barnea)",
+  "@location_Kadesh_Kadesh_barnea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kain": "Kain",
+  "@location_Kain": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kanah": "Kanah",
+  "@location_Kanah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kedemoth": "Kedemoth",
+  "@location_Kedemoth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kedesh_Issachar": "Kedesh [Issachar]",
+  "@location_Kedesh_Issachar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kedesh_Naphtali": "Kedesh [Naphtali]",
+  "@location_Kedesh_Naphtali": {
+    "description": "Location on the schedule page."
+  },
+  "location_Keilah": "Keilah",
+  "@location_Keilah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kenites": "Kenites",
+  "@location_Kenites": {
+    "description": "Location on the schedule page."
+  },
+  "location_Khorsabad": "Khorsabad",
+  "@location_Khorsabad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kibroth_hattaavah": "Kibroth-hattaavah",
+  "@location_Kibroth_hattaavah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kidron": "Kidron",
+  "@location_Kidron": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kings_Road": "King’s Road",
+  "@location_Kings_Road": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kir_of_Moab_Kir_hareseth": "Kir of Moab (Kir-hareseth)",
+  "@location_Kir_of_Moab_Kir_hareseth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kiriath_arba_Hebron": "Kiriath-arba (Hebron)",
+  "@location_Kiriath_arba_Hebron": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kiriath_jearim": "Kiriath-jearim",
+  "@location_Kiriath_jearim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kiriathaim": "Kiriathaim",
+  "@location_Kiriathaim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kishion_Kedesh_Issachar": "Kishion (Kedesh [Issachar])",
+  "@location_Kishion_Kedesh_Issachar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kishon": "Kishon",
+  "@location_Kishon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Kittim_Cyprus": "Kittim (Cyprus)",
+  "@location_Kittim_Cyprus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lachish": "Lachish",
+  "@location_Lachish": {
+    "description": "Location on the schedule page."
+  },
+  "location_Laish_Dan_city": "Laish (Dan [city])",
+  "@location_Laish_Dan_city": {
+    "description": "Location on the schedule page."
+  },
+  "location_Laodicea": "Laodicea",
+  "@location_Laodicea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lassharon": "Lassharon",
+  "@location_Lassharon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lebanon": "Lebanon",
+  "@location_Lebanon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lebonah": "Lebonah",
+  "@location_Lebonah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lehi": "Lehi",
+  "@location_Lehi": {
+    "description": "Location on the schedule page."
+  },
+  "location_Libnah": "Libnah",
+  "@location_Libnah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Libya": "Libya",
+  "@location_Libya": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lo_debar_Debir": "Lo-debar (Debir)",
+  "@location_Lo_debar_Debir": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lod_Lydda": "Lod (Lydda)",
+  "@location_Lod_Lydda": {
+    "description": "Location on the schedule page."
+  },
+  "location_Luz_Bethel": "Luz (Bethel)",
+  "@location_Luz_Bethel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lycaonia": "Lycaonia",
+  "@location_Lycaonia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lycia": "Lycia",
+  "@location_Lycia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lydda_Lod": "Lydda (Lod)",
+  "@location_Lydda_Lod": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lydia": "Lydia",
+  "@location_Lydia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Lystra": "Lystra",
+  "@location_Lystra": {
+    "description": "Location on the schedule page."
+  },
+  "location_Maacah": "Maacah",
+  "@location_Maacah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Macedonia": "Macedonia",
+  "@location_Macedonia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Machpelah_See_also_Hebron": "Machpelah (See also Hebron)",
+  "@location_Machpelah_See_also_Hebron": {
+    "description": "Location on the schedule page."
+  },
+  "location_Madmannah_Beth_marcaboth": "Madmannah (Beth-marcaboth)",
+  "@location_Madmannah_Beth_marcaboth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Madon": "Madon",
+  "@location_Madon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Magadan": "Magadan",
+  "@location_Magadan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mahanaim": "Mahanaim",
+  "@location_Mahanaim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Makaz": "Makaz",
+  "@location_Makaz": {
+    "description": "Location on the schedule page."
+  },
+  "location_Makkedah": "Makkedah",
+  "@location_Makkedah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Malta": "Malta",
+  "@location_Malta": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mamre": "Mamre",
+  "@location_Mamre": {
+    "description": "Location on the schedule page."
+  },
+  "location_Manahath": "Manahath",
+  "@location_Manahath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Manasseh": "Manasseh",
+  "@location_Manasseh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Maon": "Maon",
+  "@location_Maon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Maracanda_Samarkand": "Maracanda (Samarkand)",
+  "@location_Maracanda_Samarkand": {
+    "description": "Location on the schedule page."
+  },
+  "location_Marah": "Marah",
+  "@location_Marah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Marathon": "Marathon",
+  "@location_Marathon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mareshah": "Maresha(h)",
+  "@location_Mareshah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Masada": "Masada",
+  "@location_Masada": {
+    "description": "Location on the schedule page."
+  },
+  "location_Medeba": "Medeba",
+  "@location_Medeba": {
+    "description": "Location on the schedule page."
+  },
+  "location_Media": "Media",
+  "@location_Media": {
+    "description": "Location on the schedule page."
+  },
+  "location_Megiddo": "Megiddo",
+  "@location_Megiddo": {
+    "description": "Location on the schedule page."
+  },
+  "location_Memphis_Noph": "Memphis (Noph)",
+  "@location_Memphis_Noph": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mephaath": "Mephaath",
+  "@location_Mephaath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Merom": "Merom",
+  "@location_Merom": {
+    "description": "Location on the schedule page."
+  },
+  "location_Meroz": "Meroz",
+  "@location_Meroz": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mesopotamia": "Mesopotamia",
+  "@location_Mesopotamia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Michmash": "Michmas(h)",
+  "@location_Michmash": {
+    "description": "Location on the schedule page."
+  },
+  "location_Michmethath": "Michmethath",
+  "@location_Michmethath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Midian": "Midian",
+  "@location_Midian": {
+    "description": "Location on the schedule page."
+  },
+  "location_Migdal_el": "Migdal-el",
+  "@location_Migdal_el": {
+    "description": "Location on the schedule page."
+  },
+  "location_Migdol": "Migdol",
+  "@location_Migdol": {
+    "description": "Location on the schedule page."
+  },
+  "location_Migron": "Migron",
+  "@location_Migron": {
+    "description": "Location on the schedule page."
+  },
+  "location_Miletus": "Miletus",
+  "@location_Miletus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Minni": "Minni",
+  "@location_Minni": {
+    "description": "Location on the schedule page."
+  },
+  "location_Minnith": "Minnith",
+  "@location_Minnith": {
+    "description": "Location on the schedule page."
+  },
+  "location_Misrephoth_maim": "Misrephoth-maim",
+  "@location_Misrephoth_maim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mitylene": "Mitylene",
+  "@location_Mitylene": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mizpah_Mizpeh_Benjamin": "Mizpah (Mizpeh) [Benjamin]",
+  "@location_Mizpah_Mizpeh_Benjamin": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mizpah_Mizpeh_Gad": "Mizpah (Mizpeh) [Gad]",
+  "@location_Mizpah_Mizpeh_Gad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Moab": "Moab",
+  "@location_Moab": {
+    "description": "Location on the schedule page."
+  },
+  "location_Moreh": "Moreh",
+  "@location_Moreh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Moresheth": "Moresheth",
+  "@location_Moresheth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Moriah": "Moriah",
+  "@location_Moriah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mount_of_Olives": "Mount of Olives",
+  "@location_Mount_of_Olives": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mozah": "Mozah",
+  "@location_Mozah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Myra": "Myra",
+  "@location_Myra": {
+    "description": "Location on the schedule page."
+  },
+  "location_Mysia": "Mysia",
+  "@location_Mysia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Naarah": "Naarah",
+  "@location_Naarah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nain": "Nain",
+  "@location_Nain": {
+    "description": "Location on the schedule page."
+  },
+  "location_Naphtali": "Naphtali",
+  "@location_Naphtali": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nazareth": "Nazareth",
+  "@location_Nazareth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Neapolis": "Neapolis",
+  "@location_Neapolis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Neballat": "Neballat",
+  "@location_Neballat": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nebo_Pisgah": "Nebo (Pisgah)",
+  "@location_Nebo_Pisgah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nebo_city": "Nebo [city]",
+  "@location_Nebo_city": {
+    "description": "Location on the schedule page."
+  },
+  "location_Negeb": "Negeb",
+  "@location_Negeb": {
+    "description": "Location on the schedule page."
+  },
+  "location_Neiel": "Neiel",
+  "@location_Neiel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nephtoah": "Nephtoah",
+  "@location_Nephtoah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Netophah": "Netophah",
+  "@location_Netophah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nibshan": "Nibshan",
+  "@location_Nibshan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nile": "Nile",
+  "@location_Nile": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nineveh": "Nineveh",
+  "@location_Nineveh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nisibis": "Nisibis",
+  "@location_Nisibis": {
+    "description": "Location on the schedule page."
+  },
+  "location_No_amon_Thebes": "No-amon (Thebes)",
+  "@location_No_amon_Thebes": {
+    "description": "Location on the schedule page."
+  },
+  "location_Nob": "Nob",
+  "@location_Nob": {
+    "description": "Location on the schedule page."
+  },
+  "location_Noph_Memphis": "Noph (Memphis)",
+  "@location_Noph_Memphis": {
+    "description": "Location on the schedule page."
+  },
+  "location_On": "On",
+  "@location_On": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ono": "Ono",
+  "@location_Ono": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ophel": "Ophel",
+  "@location_Ophel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ophni": "Ophni",
+  "@location_Ophni": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ophrah_Ephraim": "Ophrah (Ephraim)",
+  "@location_Ophrah_Ephraim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ophrah_in_Issachar": "Ophrah [in Issachar]",
+  "@location_Ophrah_in_Issachar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Paddan_aram": "Paddan-aram",
+  "@location_Paddan_aram": {
+    "description": "Location on the schedule page."
+  },
+  "location_Palmyra_Tadmor": "Palmyra (Tadmor)",
+  "@location_Palmyra_Tadmor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pamphylia": "Pamphylia",
+  "@location_Pamphylia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Paphos": "Paphos",
+  "@location_Paphos": {
+    "description": "Location on the schedule page."
+  },
+  "location_Parah": "Parah",
+  "@location_Parah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Paran": "Paran",
+  "@location_Paran": {
+    "description": "Location on the schedule page."
+  },
+  "location_Parthia": "Parthia",
+  "@location_Parthia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pasargadae": "Pasargadae",
+  "@location_Pasargadae": {
+    "description": "Location on the schedule page."
+  },
+  "location_Patara": "Patara",
+  "@location_Patara": {
+    "description": "Location on the schedule page."
+  },
+  "location_Patmos": "Patmos",
+  "@location_Patmos": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pella_Decapolis": "Pella [Decapolis]",
+  "@location_Pella_Decapolis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pella_Macedonia": "Pella [Macedonia]",
+  "@location_Pella_Macedonia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Penuel": "Penuel",
+  "@location_Penuel": {
+    "description": "Location on the schedule page."
+  },
+  "location_Perea": "Perea",
+  "@location_Perea": {
+    "description": "Location on the schedule page."
+  },
+  "location_Perga": "Perga",
+  "@location_Perga": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pergamum": "Pergamum",
+  "@location_Pergamum": {
+    "description": "Location on the schedule page."
+  },
+  "location_Perizzites": "Perizzites",
+  "@location_Perizzites": {
+    "description": "Location on the schedule page."
+  },
+  "location_Persepolis": "Persepolis",
+  "@location_Persepolis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Persia": "Persia",
+  "@location_Persia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Phasis": "Phasis",
+  "@location_Phasis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Philadelphia_Rabbah": "Philadelphia (Rabbah)",
+  "@location_Philadelphia_Rabbah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Philadelphia_Asia_Minor": "Philadelphia [Asia Minor]",
+  "@location_Philadelphia_Asia_Minor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Philippi": "Philippi",
+  "@location_Philippi": {
+    "description": "Location on the schedule page."
+  },
+  "location_Philistia": "Philistia",
+  "@location_Philistia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Phoenicia": "Phoenicia",
+  "@location_Phoenicia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Phrygia": "Phrygia",
+  "@location_Phrygia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pihahiroth": "Pihahiroth",
+  "@location_Pihahiroth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pirathon": "Pirathon",
+  "@location_Pirathon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pisgah_Nebo": "Pisgah (Nebo)",
+  "@location_Pisgah_Nebo": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pisidia": "Pisidia",
+  "@location_Pisidia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pontus": "Pontus",
+  "@location_Pontus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Promised_Land": "Promised Land",
+  "@location_Promised_Land": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ptolemais": "Ptolemais",
+  "@location_Ptolemais": {
+    "description": "Location on the schedule page."
+  },
+  "location_Punon": "Punon",
+  "@location_Punon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Pura": "Pura",
+  "@location_Pura": {
+    "description": "Location on the schedule page."
+  },
+  "location_Puteoli": "Puteoli",
+  "@location_Puteoli": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rabbah_Philadelphia": "Rabbah (Philadelphia)",
+  "@location_Rabbah_Philadelphia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rakkath": "Rakkath",
+  "@location_Rakkath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ramah_Arimathea_Ephraim": "Ramah (Arimathea) [Ephraim]",
+  "@location_Ramah_Arimathea_Ephraim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ramah_Baal_Baalath_beer_Simeon": "Ramah (Baal) (Baalath-beer) [Simeon]",
+  "@location_Ramah_Baal_Baalath_beer_Simeon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ramah_Benjamin": "Ramah [Benjamin]",
+  "@location_Ramah_Benjamin": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ramah_Naphtali": "Ramah [Naphtali]",
+  "@location_Ramah_Naphtali": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rameses": "Rameses",
+  "@location_Rameses": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ramoth_Jarmuth": "Ramoth (Jarmuth)",
+  "@location_Ramoth_Jarmuth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ramoth_gilead": "Ramoth-gilead",
+  "@location_Ramoth_gilead": {
+    "description": "Location on the schedule page."
+  },
+  "location_Raphana": "Raphana",
+  "@location_Raphana": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rehob": "Rehob",
+  "@location_Rehob": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rehoboth": "Rehoboth",
+  "@location_Rehoboth": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rephidim": "Rephidim",
+  "@location_Rephidim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Reuben": "Reuben",
+  "@location_Reuben": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rhagae": "Rhagae",
+  "@location_Rhagae": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rhegium": "Rhegium",
+  "@location_Rhegium": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rhodes": "Rhodes",
+  "@location_Rhodes": {
+    "description": "Location on the schedule page."
+  },
+  "location_Riblah": "Riblah",
+  "@location_Riblah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rimmon_Ain_Simeon": "Rimmon (Ain [Simeon])",
+  "@location_Rimmon_Ain_Simeon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rimmon_perez": "Rimmon-perez",
+  "@location_Rimmon_perez": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rissah": "Rissah",
+  "@location_Rissah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rogelim": "Rogelim",
+  "@location_Rogelim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rome": "Rome",
+  "@location_Rome": {
+    "description": "Location on the schedule page."
+  },
+  "location_Rumah": "Rumah",
+  "@location_Rumah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Salamis_Cyprus": "Salamis [Cyprus]",
+  "@location_Salamis_Cyprus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Salamis_Greece": "Salamis [Greece]",
+  "@location_Salamis_Greece": {
+    "description": "Location on the schedule page."
+  },
+  "location_Salem_Jerusalem": "Salem (Jerusalem)",
+  "@location_Salem_Jerusalem": {
+    "description": "Location on the schedule page."
+  },
+  "location_Salim": "Salim",
+  "@location_Salim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Samaria": "Samaria",
+  "@location_Samaria": {
+    "description": "Location on the schedule page."
+  },
+  "location_Samaria_city": "Samaria [city]",
+  "@location_Samaria_city": {
+    "description": "Location on the schedule page."
+  },
+  "location_Samarkand_Maracanda": "Samarkand (Maracanda)",
+  "@location_Samarkand_Maracanda": {
+    "description": "Location on the schedule page."
+  },
+  "location_Samos": "Samos",
+  "@location_Samos": {
+    "description": "Location on the schedule page."
+  },
+  "location_Samothrace": "Samothrace",
+  "@location_Samothrace": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sansannah_Hazar_susah": "Sansannah (Hazar-susah)",
+  "@location_Sansannah_Hazar_susah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sardis": "Sardis",
+  "@location_Sardis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sarid": "Sarid",
+  "@location_Sarid": {
+    "description": "Location on the schedule page."
+  },
+  "location_Scythia": "Scythia",
+  "@location_Scythia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Scythopolis_Beth_shean": "Scythopolis (Beth-shean)",
+  "@location_Scythopolis_Beth_shean": {
+    "description": "Location on the schedule page."
+  },
+  "location_Secacah": "Secacah",
+  "@location_Secacah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Seir": "Seir",
+  "@location_Seir": {
+    "description": "Location on the schedule page."
+  },
+  "location_Seir_Judah": "Seir [Judah]",
+  "@location_Seir_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Seleucia": "Seleucia",
+  "@location_Seleucia": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sepphoris": "Sepphoris",
+  "@location_Sepphoris": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shaalbim": "Shaalbim",
+  "@location_Shaalbim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shaaraim_Sharuhen": "Shaaraim (Sharuhen)",
+  "@location_Shaaraim_Sharuhen": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shamir_Samaria_city": "Shamir (Samaria [city])",
+  "@location_Shamir_Samaria_city": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shaphir": "Shaphir",
+  "@location_Shaphir": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sharon": "Sharon",
+  "@location_Sharon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sharuhen": "Sharuhen",
+  "@location_Sharuhen": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sheba_Jeshua": "Sheba (Jeshua)",
+  "@location_Sheba_Jeshua": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sheba_kingdom": "Sheba [kingdom]",
+  "@location_Sheba_kingdom": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shechem": "Shechem",
+  "@location_Shechem": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shephelah": "Shephelah",
+  "@location_Shephelah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shilhim_Sharuhen": "Shilhim (Sharuhen)",
+  "@location_Shilhim_Sharuhen": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shiloh": "Shiloh",
+  "@location_Shiloh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shimron": "Shimron",
+  "@location_Shimron": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shittim": "Shittim",
+  "@location_Shittim": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shunem": "Shunem",
+  "@location_Shunem": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shur": "Shur",
+  "@location_Shur": {
+    "description": "Location on the schedule page."
+  },
+  "location_Shushan": "Shushan",
+  "@location_Shushan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sicily": "Sicily",
+  "@location_Sicily": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sidon": "Sidon",
+  "@location_Sidon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Siloam": "Siloam",
+  "@location_Siloam": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sin": "Sin",
+  "@location_Sin": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sinai_Horeb": "Sinai (Horeb)",
+  "@location_Sinai_Horeb": {
+    "description": "Location on the schedule page."
+  },
+  "location_Siwa__Oasis_of": "Siwa, Oasis of",
+  "@location_Siwa__Oasis_of": {
+    "description": "Location on the schedule page."
+  },
+  "location_Smyrna": "Smyrna",
+  "@location_Smyrna": {
+    "description": "Location on the schedule page."
+  },
+  "location_Socoh_Judah": "Soco(h) [Judah]",
+  "@location_Socoh_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Socoh_Manasseh": "Socoh [Manasseh]",
+  "@location_Socoh_Manasseh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sodom": "Sodom",
+  "@location_Sodom": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sogdiana": "Sogdiana",
+  "@location_Sogdiana": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sorek": "Sorek",
+  "@location_Sorek": {
+    "description": "Location on the schedule page."
+  },
+  "location_Spain_Tarshish": "Spain (Tarshish)",
+  "@location_Spain_Tarshish": {
+    "description": "Location on the schedule page."
+  },
+  "location_Succoth_Egypt": "Succoth [Egypt]",
+  "@location_Succoth_Egypt": {
+    "description": "Location on the schedule page."
+  },
+  "location_Succoth_Gad": "Succoth [Gad]",
+  "@location_Succoth_Gad": {
+    "description": "Location on the schedule page."
+  },
+  "location_Susa_Shushan": "Susa (Shushan)",
+  "@location_Susa_Shushan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Sychar": "Sychar",
+  "@location_Sychar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Syene": "Syene",
+  "@location_Syene": {
+    "description": "Location on the schedule page."
+  },
+  "location_Syracuse": "Syracuse",
+  "@location_Syracuse": {
+    "description": "Location on the schedule page."
+  },
+  "location_Syria": "Syria",
+  "@location_Syria": {
+    "description": "Location on the schedule page."
+  },
+  "location_Taanach": "Taanach",
+  "@location_Taanach": {
+    "description": "Location on the schedule page."
+  },
+  "location_Taanath_shiloh": "Taanath-shiloh",
+  "@location_Taanath_shiloh": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tabor": "Tabor",
+  "@location_Tabor": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tadmor_Palmyra": "Tadmor (Palmyra)",
+  "@location_Tadmor_Palmyra": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tahpanhes": "Tahpanhes",
+  "@location_Tahpanhes": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tamar": "Tamar",
+  "@location_Tamar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tappuah": "Tappuah",
+  "@location_Tappuah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tarshish_Spain": "Tarshish (Spain)",
+  "@location_Tarshish_Spain": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tarsus": "Tarsus",
+  "@location_Tarsus": {
+    "description": "Location on the schedule page."
+  },
+  "location_Taxila": "Taxila",
+  "@location_Taxila": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tekoa": "Tekoa",
+  "@location_Tekoa": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tema": "Tema",
+  "@location_Tema": {
+    "description": "Location on the schedule page."
+  },
+  "location_Thebes_No_amon": "Thebes (No-amon)",
+  "@location_Thebes_No_amon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Thebez": "Thebez",
+  "@location_Thebez": {
+    "description": "Location on the schedule page."
+  },
+  "location_Thessalonica": "Thessalonica",
+  "@location_Thessalonica": {
+    "description": "Location on the schedule page."
+  },
+  "location_Thrace": "Thrace",
+  "@location_Thrace": {
+    "description": "Location on the schedule page."
+  },
+  "location_Thyatira": "Thyatira",
+  "@location_Thyatira": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tiberias": "Tiberias",
+  "@location_Tiberias": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tigris": "Tigris",
+  "@location_Tigris": {
+    "description": "Location on the schedule page."
+  },
+  "location_Timnah_Judah_Dan": "Timnah [Judah/Dan]",
+  "@location_Timnah_Judah_Dan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Timnah_Judah": "Timnah [Judah]",
+  "@location_Timnah_Judah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Timnath_serah": "Timnath-serah",
+  "@location_Timnath_serah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tiphsah": "Tiphsah",
+  "@location_Tiphsah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tirzah": "Tirzah",
+  "@location_Tirzah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tochen_Ether": "Tochen (Ether)",
+  "@location_Tochen_Ether": {
+    "description": "Location on the schedule page."
+  },
+  "location_Trachonitis": "Trachonitis",
+  "@location_Trachonitis": {
+    "description": "Location on the schedule page."
+  },
+  "location_Troas": "Troas",
+  "@location_Troas": {
+    "description": "Location on the schedule page."
+  },
+  "location_Troy": "Troy",
+  "@location_Troy": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tyre": "Tyre",
+  "@location_Tyre": {
+    "description": "Location on the schedule page."
+  },
+  "location_Tyropoeon_Valley": "Tyropoeon Valley",
+  "@location_Tyropoeon_Valley": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ur": "Ur",
+  "@location_Ur": {
+    "description": "Location on the schedule page."
+  },
+  "location_Via_Maris": "Via Maris",
+  "@location_Via_Maris": {
+    "description": "Location on the schedule page."
+  },
+  "location_Yarkon": "Yarkon",
+  "@location_Yarkon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Yarmuk": "Yarmuk",
+  "@location_Yarmuk": {
+    "description": "Location on the schedule page."
+  },
+  "location_Yiron": "Yiron",
+  "@location_Yiron": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zagros": "Zagros",
+  "@location_Zagros": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zalmonah": "Zalmonah",
+  "@location_Zalmonah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zanoah": "Zanoah",
+  "@location_Zanoah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zaphon": "Zaphon",
+  "@location_Zaphon": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zarephath": "Zarephath",
+  "@location_Zarephath": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zarethan": "Zarethan",
+  "@location_Zarethan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zebulun": "Zebulun",
+  "@location_Zebulun": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zered": "Zered",
+  "@location_Zered": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zeredah": "Zeredah",
+  "@location_Zeredah": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zereth_shahar": "Zereth-shahar",
+  "@location_Zereth_shahar": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ziklag": "Ziklag",
+  "@location_Ziklag": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zin": "Zin",
+  "@location_Zin": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zion": "Zion",
+  "@location_Zion": {
+    "description": "Location on the schedule page."
+  },
+  "location_Ziph": "Ziph",
+  "@location_Ziph": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zoan": "Zoan",
+  "@location_Zoan": {
+    "description": "Location on the schedule page."
+  },
+  "location_Zorah": "Zorah",
+  "@location_Zorah": {
+    "description": "Location on the schedule page."
+  }
+}

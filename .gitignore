@@ -12,7 +12,7 @@
 .svn/
 .swiftpm/
 migrate_working_dir/
-i18n_untranslated.json
+i18n_untranslated*.json
 
 # IntelliJ related
 *.iml
