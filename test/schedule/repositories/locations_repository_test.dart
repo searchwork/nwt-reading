@@ -27,8 +27,9 @@ Future<IncompleteNotifierTester<Locations>> getTester(
 void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
   const asyncLoadingValue = AsyncLoading<Locations>();
-  const testLocation =
-      Location(name: 'Bethlehem', refs: '7; 15 E8; 17 E9; 18; 19 D10; 29 D10');
+  const testLocation = Location(
+      key: 'location_Bethlehem_Ephrath_Judah',
+      refs: '7; 15 E8; 17 E9; 18; 19 D10; 29 D10');
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
@@ -45,7 +46,7 @@ void main() async {
     tester.container.read(locationsRepositoryProvider);
     final result = await tester.container.read(locationsProvider.future);
 
-    expect(result.locations.length, greaterThanOrEqualTo(639));
+    expect(result.locations.length, greaterThanOrEqualTo(634));
     expect(
         deepCollectionEquals(
             result.locations['Bethlehem (Ephrath) [Judah]'], testLocation),

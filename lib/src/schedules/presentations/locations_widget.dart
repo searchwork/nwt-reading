@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/localization/locations_localizations_getter.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
 
 class LocationsWidget extends ConsumerWidget {
@@ -9,18 +10,17 @@ class LocationsWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final locationsText = locations
+        .asMap()
+        .entries
+        .map((location) =>
+            '${context.locationsLoc.getLocation(location.value.key)} ${location.value.refs}')
+        .toList()
+        .join(' — ');
+
     return Text.rich(
+      TextSpan(text: locationsText),
       style: Theme.of(context).textTheme.bodySmall,
-      TextSpan(
-        children: [
-          const TextSpan(
-              text: '📍', style: TextStyle(fontWeight: FontWeight.bold)),
-          ...locations.asMap().entries.map((location) =>
-              TextSpan(text: (location.key == 0) ? '' : ' — ', children: [
-                TextSpan(text: '${location.value.name} ${location.value.refs}'),
-              ])),
-        ],
-      ),
     );
   }
 }

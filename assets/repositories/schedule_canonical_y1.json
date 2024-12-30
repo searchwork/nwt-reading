@@ -167,7 +167,7 @@
         "Canaan",
         "Hebron (Kiriath-arba)",
         "Kiriath-arba (Hebron)",
-        "Machpelah (also Hebron)",
+        "Machpelah (See also Hebron)",
         "Mamre",
         "Mesopotamia",
         "Negeb"
@@ -193,7 +193,7 @@
         "Gerar",
         "Gerar [city]",
         "Haran",
-        "Machpelah (also Hebron)",
+        "Machpelah (See also Hebron)",
         "Mamre",
         "Midian",
         "Paddan-aram",
@@ -295,7 +295,7 @@
       "locations": [
         "Asher",
         "Asher [tribe]",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Bethel (Luz)",
         "Bethlehem (Ephrath) [Judah]",
@@ -449,7 +449,7 @@
         "Goshen [Judah]",
         "Issachar",
         "Jordan",
-        "Machpelah (also Hebron)",
+        "Machpelah (See also Hebron)",
         "Mamre",
         "Manasseh",
         "Naphtali",
@@ -563,7 +563,7 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Canaan",
         "Edom",
         "Elim",
@@ -1115,7 +1115,7 @@
       "locations": [
         "Asher",
         "Asher [tribe]",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Canaan",
         "Dan (Laish) [city]",
@@ -1218,7 +1218,7 @@
         "Asher",
         "Asher [tribe]",
         "Azmon",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Bene-jaakan",
         "Benjamin",
         "Beth-jeshimoth",
@@ -1333,7 +1333,7 @@
         "Arabah",
         "Arnon",
         "Aroer",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Bashan",
         "Beth-peor",
         "Bezer",
@@ -1896,7 +1896,7 @@
         "Makkedah",
         "Manasseh",
         "Maon",
-        "Mareshah",
+        "Maresha(h)",
         "Medeba",
         "Mephaath",
         "Misrephoth-maim",
@@ -1917,7 +1917,7 @@
         "Shamir (Samaria [city])",
         "Shephelah",
         "Shilhim (Sharuhen)",
-        "Socoh [Judah]",
+        "Soco(h) [Judah]",
         "Socoh [Manasseh]",
         "Succoth [Egypt]",
         "Succoth [Gad]",
@@ -2030,7 +2030,7 @@
         "Ashan (Ain)",
         "Asher",
         "Asher [tribe]",
-        "Baalath-beer (Ramah) [Simeon]",
+        "Baalath-beer (Ramah)",
         "Bashan",
         "Beer-sheba",
         "Beeshterah (Ashtaroth)",
@@ -2062,8 +2062,8 @@
         "Edrei [Manasseh]",
         "Edrei [Naphtali]",
         "Ekron",
-        "Elteke (Eltekeh)",
-        "Eltekeh (Elteke)",
+        "Elteke(h)",
+        "Elteke(h)",
         "En-gannim",
         "Ephraim (Ophrah)",
         "Ephraim [tribe]",
@@ -2211,7 +2211,7 @@
         "Asher",
         "Asher [tribe]",
         "Ashkelon",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Beth-anath",
         "Beth-shean (Beth-shan) (Scythopolis)",
         "Beth-shemesh [Issachar]",
@@ -2264,7 +2264,7 @@
         "Amorites",
         "Asher",
         "Asher [tribe]",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Bethel (Luz)",
         "Canaan",
@@ -2326,7 +2326,7 @@
         "Amorites",
         "Asher",
         "Asher [tribe]",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Beth-shittah",
         "Ephraim (Ophrah)",
         "Ephraim [tribe]",
@@ -2356,7 +2356,7 @@
       "events": [],
       "locations": [
         "Arumah",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Ephraim (Ophrah)",
         "Ephraim [tribe]",
         "Gerizim",
@@ -2510,7 +2510,7 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Beer-sheba",
         "Benjamin",
         "Bethel (Luz)",
@@ -2692,7 +2692,7 @@
         "Gilgal [Ephraim]",
         "Gilgal [by Jordan]",
         "Jordan",
-        "Michmash",
+        "Michmas(h)",
         "Migron",
         "Ophrah (Ephraim)",
         "Ophrah [in Issachar]",
@@ -2746,7 +2746,7 @@
         "Ekron",
         "Gath",
         "Shaaraim (Sharuhen)",
-        "Socoh [Judah]",
+        "Soco(h) [Judah]",
         "Socoh [Manasseh]"
       ],
       "bookIndex": 8,
@@ -3202,7 +3202,7 @@
         "Naphtali",
         "Ramoth-gilead",
         "Shaalbim",
-        "Socoh [Judah]",
+        "Soco(h) [Judah]",
         "Socoh [Manasseh]",
         "Taanach",
         "Tiphsah",
@@ -3347,7 +3347,7 @@
       "events": [],
       "locations": [
         "Abel-beth-maacah",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Chinnereth",
         "Damascus",
@@ -3390,7 +3390,7 @@
       "events": [],
       "locations": [
         "Abel-meholah",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Beer-sheba",
         "Carmel",
         "Carmel [Judah]",
@@ -3438,7 +3438,7 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Edom",
         "Ezion-geber",
         "Ramoth-gilead",
@@ -3462,7 +3462,7 @@
         "580 B.C.E.-y"
       ],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Bethel (Luz)",
         "Carmel",
         "Carmel [Judah]",
@@ -3549,7 +3549,7 @@
       "locations": [
         "Arnon",
         "Aroer",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Bashan",
         "Bethel (Luz)",
         "Dan (Laish) [city]",
@@ -3580,7 +3580,7 @@
         "Aphek (Antipatris) [Ephraim]",
         "Aphek [Asher]",
         "Aphek [Manasseh]",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Beer-sheba",
         "Gath",
         "Samaria",
@@ -3645,8 +3645,8 @@
       "events": [],
       "locations": [
         "Assyria",
-        "Baal (Ramah) [Simeon]",
-        "Babylon (Babylonia)",
+        "Baal (Ramah)",
+        "Babylon(ia)",
         "Bethel (Luz)",
         "Damascus",
         "Edom",
@@ -3704,8 +3704,8 @@
       "locations": [
         "Amorites",
         "Assyria",
-        "Baal (Ramah) [Simeon]",
-        "Babylon (Babylonia)",
+        "Baal (Ramah)",
+        "Babylon(ia)",
         "Jotbah",
         "Manasseh",
         "Samaria",
@@ -3726,8 +3726,8 @@
       "locations": [
         "Arabah",
         "Assyria",
-        "Baal (Ramah) [Simeon]",
-        "Babylon (Babylonia)",
+        "Baal (Ramah)",
+        "Babylon(ia)",
         "Beer-sheba",
         "Bethel (Luz)",
         "Euphrates",
@@ -3765,7 +3765,7 @@
         "Asher",
         "Asher [tribe]",
         "Asshur",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Beth-zur",
         "Bethlehem (Ephrath) [Judah]",
@@ -3792,7 +3792,7 @@
         "Madmannah (Beth-marcaboth)",
         "Manahath",
         "Maon",
-        "Mareshah",
+        "Maresha(h)",
         "Midian",
         "Moab",
         "Naphtali",
@@ -3831,7 +3831,7 @@
         "Aroer",
         "Ashan (Ain)",
         "Assyria",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Baal-meon",
         "Bashan",
         "Beer-sheba",
@@ -3859,7 +3859,7 @@
         "Keilah",
         "Maacah",
         "Manasseh",
-        "Mareshah",
+        "Maresha(h)",
         "Naarah",
         "Nebo (Pisgah)",
         "Nebo [city]",
@@ -3874,7 +3874,7 @@
         "Sharon",
         "Sheba (Jeshua)",
         "Sheba [kingdom]",
-        "Soco [Judah]",
+        "Soco(h) [Judah]",
         "Tamar",
         "Tekoa",
         "Tochen (Ether)",
@@ -3973,8 +3973,8 @@
         "Arad [Canaanite]",
         "Arad [Israelite]",
         "Azmaveth",
-        "Baal (Ramah) [Simeon]",
-        "Babylon (Babylonia)",
+        "Baal (Ramah)",
+        "Babylon(ia)",
         "Benjamin",
         "Elam",
         "Ephraim (Ophrah)",
@@ -4151,7 +4151,7 @@
       "events": [],
       "locations": [
         "Azmaveth",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Dan (Laish) [city]",
         "Dan [tribe]",
@@ -4277,9 +4277,9 @@
         "Jeshanah",
         "Lachish",
         "Maacah",
-        "Mareshah",
+        "Maresha(h)",
         "Shechem",
-        "Soco [Judah]",
+        "Soco(h) [Judah]",
         "Tekoa",
         "Ziph",
         "Zorah"
@@ -4342,7 +4342,7 @@
         "Ezion-geber",
         "Jezreel",
         "Libnah",
-        "Maresha",
+        "Maresha(h)",
         "Moab",
         "Ramah (Arimathea) [Ephraim]",
         "Ramah (Baal) (Baalath-beer) [Simeon]",
@@ -4370,7 +4370,7 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Beer-sheba",
         "Benjamin",
         "Beth-horon",
@@ -4418,7 +4418,7 @@
         "Samaria",
         "Samaria [city]",
         "Shephelah",
-        "Soco [Judah]",
+        "Soco(h) [Judah]",
         "Syria",
         "Timnah [Judah/Dan]",
         "Timnah [Judah]"
@@ -4465,7 +4465,7 @@
       "events": [],
       "locations": [
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Benjamin",
         "Eden",
         "Ephraim (Ophrah)",
@@ -4491,7 +4491,7 @@
       "events": [],
       "locations": [
         "Abdon",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Benjamin",
         "Carchemish",
         "Ephraim (Ophrah)",
@@ -4520,7 +4520,7 @@
         "Ai",
         "Anathoth",
         "Azmaveth",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Benjamin",
         "Bethel (Luz)",
         "Bethlehem (Ephrath) [Judah]",
@@ -4535,7 +4535,7 @@
         "Kiriath-jearim",
         "Lebanon",
         "Lod (Lydda)",
-        "Michmas",
+        "Michmas(h)",
         "Nebo (Pisgah)",
         "Nebo [city]",
         "Netophah",
@@ -4560,7 +4560,7 @@
       "events": [],
       "locations": [
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Benjamin",
         "Ecbatana (Achmetha)",
         "Erech",
@@ -4585,7 +4585,7 @@
       "events": [],
       "locations": [
         "Amorites",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Benjamin",
         "Elam",
         "Hittites",
@@ -4657,7 +4657,7 @@
       "locations": [
         "Ai",
         "Anathoth",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bethel (Luz)",
         "Bethlehem (Ephrath) [Judah]",
         "Bethlehem [Zebulun]",
@@ -4672,7 +4672,7 @@
         "Jeshua (Sheba)",
         "Kiriath-jearim",
         "Lod (Lydda)",
-        "Michmas",
+        "Michmas(h)",
         "Nebo (Pisgah)",
         "Nebo [city]",
         "Netophah",
@@ -4727,7 +4727,7 @@
         "Anathoth",
         "Azekah",
         "Azmaveth",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Beer-sheba",
         "Benjamin",
         "Bethel (Luz)",
@@ -4749,7 +4749,7 @@
         "Kiriath-arba (Hebron)",
         "Lachish",
         "Lod (Lydda)",
-        "Michmash",
+        "Michmas(h)",
         "Neballat",
         "Nob",
         "Ono",
@@ -4777,7 +4777,7 @@
         "c. 475 B.C.E.-z"
       ],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Ethiopia",
         "India",
         "Media",
@@ -5261,7 +5261,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Hermon",
         "Philistia",
         "Tabor",
@@ -5327,7 +5327,7 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Canaan",
         "Edom",
         "Ephraim (Ophrah)",
@@ -5427,7 +5427,7 @@
       "events": [],
       "locations": [
         "Amorites",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bashan",
         "Canaan",
         "Hermon",
@@ -5623,7 +5623,7 @@
         "c. 1020 B.C.E.-z"
       ],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Carmel",
         "Carmel [Judah]",
         "Damascus",
@@ -5707,7 +5707,7 @@
         "Jordan",
         "Lebanon",
         "Manasseh",
-        "Michmash",
+        "Michmas(h)",
         "Midian",
         "Migron",
         "Naphtali",
@@ -5736,7 +5736,7 @@
       "events": [],
       "locations": [
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Edom",
         "Elam",
         "Ephraim (Ophrah)",
@@ -5800,7 +5800,7 @@
       "locations": [
         "Ashdod",
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Elam",
         "Ethiopia",
         "Kittim (Cyprus)",
@@ -5919,7 +5919,7 @@
       "events": [],
       "locations": [
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Lebanon",
         "Zion"
       ],
@@ -5936,7 +5936,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Ethiopia",
         "Zion"
       ],
@@ -5953,7 +5953,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Ethiopia",
         "Nebo (Pisgah)",
         "Nebo [city]",
@@ -5972,7 +5972,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Zion"
       ],
       "bookIndex": 22,
@@ -6061,7 +6061,7 @@
       "locations": [
         "Anathoth",
         "Assyria",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Kittim (Cyprus)",
         "Noph (Memphis)",
@@ -6099,7 +6099,7 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Ephraim (Ophrah)",
         "Ephraim [tribe]",
@@ -6123,7 +6123,7 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Dan (Laish) [city]",
         "Dan [tribe]",
         "Edom",
@@ -6146,7 +6146,7 @@
       "events": [],
       "locations": [
         "Anathoth",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Euphrates",
         "Jordan"
       ],
@@ -6179,8 +6179,8 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
-        "Babylon (Babylonia)",
+        "Baal (Ramah)",
+        "Babylon(ia)",
         "Benjamin",
         "Hinnom",
         "Lebanon",
@@ -6199,8 +6199,8 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
-        "Babylon (Babylonia)",
+        "Baal (Ramah)",
+        "Babylon(ia)",
         "Bashan",
         "Gilead",
         "Lebanon",
@@ -6223,7 +6223,7 @@
       "locations": [
         "Ashdod",
         "Ashkelon",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Edom",
         "Ekron",
         "Elam",
@@ -6251,7 +6251,7 @@
       "events": [],
       "locations": [
         "Anathoth",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Edom",
         "Gibeon",
         "Moab",
@@ -6296,8 +6296,8 @@
       "events": [],
       "locations": [
         "Anathoth",
-        "Baal (Ramah) [Simeon]",
-        "Babylon (Babylonia)",
+        "Baal (Ramah)",
+        "Babylon(ia)",
         "Benjamin",
         "Hinnom"
       ],
@@ -6315,7 +6315,7 @@
       "events": [],
       "locations": [
         "Azekah",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Lachish"
       ],
       "bookIndex": 23,
@@ -6332,7 +6332,7 @@
       "events": [],
       "locations": [
         "Arabah",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Benjamin",
         "Hamath",
         "Jericho",
@@ -6354,7 +6354,7 @@
       "events": [],
       "locations": [
         "Ammon",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bethlehem (Ephrath) [Judah]",
         "Bethlehem [Zebulun]",
         "Edom",
@@ -6381,7 +6381,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Beth-shemesh (On)",
         "Migdol",
         "Noph (Memphis)",
@@ -6403,7 +6403,7 @@
         "Arnon",
         "Aroer",
         "Ashkelon",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bethel (Luz)",
         "Bozrah",
         "Carchemish",
@@ -6445,7 +6445,7 @@
         "Ai",
         "Arpad",
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bashan",
         "Bozrah",
         "Carmel",
@@ -6483,7 +6483,7 @@
       "locations": [
         "Arabah",
         "Ararat",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Chaldea",
         "Euphrates",
         "Hamath",
@@ -6584,7 +6584,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Chaldea"
       ],
       "bookIndex": 25,
@@ -6632,7 +6632,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Lebanon"
       ],
       "bookIndex": 25,
@@ -6648,7 +6648,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Rabbah (Philadelphia)"
       ],
       "bookIndex": 25,
@@ -6665,7 +6665,7 @@
       "events": [],
       "locations": [
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Chaldea",
         "Samaria",
         "Samaria [city]"
@@ -6684,7 +6684,7 @@
       "events": [],
       "locations": [
         "Baal-meon",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Beth-jeshimoth",
         "Edom",
         "Kiriathaim",
@@ -6736,7 +6736,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Eden",
         "Ethiopia",
         "Lebanon",
@@ -6762,7 +6762,7 @@
       "events": [],
       "locations": [
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Edom",
         "Elam"
       ],
@@ -6895,7 +6895,7 @@
         "c. 536 B.C.E.-z"
       ],
       "locations": [
-        "Babylon (Babylonia)"
+        "Babylon(ia)"
       ],
       "bookIndex": 26,
       "chapter": 1,
@@ -6910,7 +6910,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)"
+        "Babylon(ia)"
       ],
       "bookIndex": 26,
       "chapter": 3,
@@ -6925,7 +6925,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)"
+        "Babylon(ia)"
       ],
       "bookIndex": 26,
       "chapter": 5,
@@ -6982,7 +6982,7 @@
       ],
       "locations": [
         "Assyria",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Ephraim (Ophrah)",
         "Ephraim [tribe]",
@@ -7018,7 +7018,7 @@
       "locations": [
         "Arbel",
         "Assyria",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Bethel (Luz)",
         "Ephraim (Ophrah)",
         "Ephraim [tribe]",
@@ -7189,7 +7189,7 @@
         "Achzib",
         "Adullam",
         "Assyria",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bashan",
         "Beth-ezel",
         "Bethlehem (Ephrath) [Judah]",
@@ -7199,7 +7199,7 @@
         "Gilgal [Ephraim]",
         "Gilgal [by Jordan]",
         "Lachish",
-        "Mareshah",
+        "Maresha(h)",
         "Moab",
         "Moresheth",
         "Samaria",
@@ -7268,7 +7268,7 @@
         "Ashdod",
         "Ashkelon",
         "Assyria",
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Canaan",
         "Ekron",
         "Ethiopia",
@@ -7306,7 +7306,7 @@
         "518 B.C.E.-z"
       ],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bethel (Luz)",
         "Negeb",
         "Shephelah",
@@ -7398,7 +7398,7 @@
         "c. 41 C.E.-z"
       ],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bethlehem (Ephrath) [Judah]",
         "Bethlehem [Zebulun]",
         "Capernaum",
@@ -7576,7 +7576,7 @@
     {
       "events": [],
       "locations": [
-        "Arimathea (Ramah) [Ephraim]",
+        "Arimathea (Ramah)",
         "Cyrene",
         "Galilee",
         "Golgotha"
@@ -7689,7 +7689,7 @@
     {
       "events": [],
       "locations": [
-        "Arimathea (Ramah) [Ephraim]",
+        "Arimathea (Ramah)",
         "Bethany",
         "Bethany (across the Jordan)",
         "Cyrene",
@@ -7881,7 +7881,7 @@
     {
       "events": [],
       "locations": [
-        "Arimathea (Ramah) [Ephraim]",
+        "Arimathea (Ramah)",
         "Bethany",
         "Bethany (across the Jordan)",
         "Cyrene",
@@ -8033,7 +8033,7 @@
     {
       "events": [],
       "locations": [
-        "Arimathea (Ramah) [Ephraim]",
+        "Arimathea (Ramah)",
         "Cana",
         "Galilee",
         "Golgotha",
@@ -8101,7 +8101,7 @@
       "events": [],
       "locations": [
         "Ashdod",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Caesarea",
         "Canaan",
         "Gaza",
@@ -8302,7 +8302,7 @@
     {
       "events": [],
       "locations": [
-        "Antipatris (Aphek) [Ephraim]",
+        "Antipatris (Aphek)",
         "Caesarea",
         "Cilicia",
         "Damascus",
@@ -8403,7 +8403,7 @@
     {
       "events": [],
       "locations": [
-        "Baal (Ramah) [Simeon]",
+        "Baal (Ramah)",
         "Benjamin",
         "Sodom",
         "Zion"
@@ -8813,7 +8813,7 @@
       ],
       "locations": [
         "Asia [Roman]",
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Bithynia",
         "Cappadocia",
         "Galatia",
@@ -8958,7 +8958,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Sodom",
         "Zion"
       ],
@@ -8975,7 +8975,7 @@
     {
       "events": [],
       "locations": [
-        "Babylon (Babylonia)",
+        "Babylon(ia)",
         "Euphrates"
       ],
       "bookIndex": 65,

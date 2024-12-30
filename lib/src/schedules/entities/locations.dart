@@ -16,7 +16,7 @@ class Locations {
 
   final Map<LocationID, Location> locations;
 
-  int get length => locations.keys.length;
+  int get length => keys.length;
 
   Iterable<LocationID> get keys => locations.keys;
 }
@@ -25,11 +25,11 @@ typedef LocationID = String;
 
 @immutable
 class Location extends Equatable {
-  const Location({required this.name, required this.refs});
+  const Location({required this.key, required this.refs});
 
-  final String name;
+  final String key;
   final String refs;
 
   @override
-  List<Object> get props => [name, refs];
+  List<Object> get props => [key, refs];
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/locations_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/settings/stories/settings_story.dart';
@@ -19,7 +20,10 @@ class App extends ConsumerWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         restorationScopeId: 'app',
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        localizationsDelegates: [
+          ...AppLocalizations.localizationsDelegates,
+          LocationsLocalizations.delegate
+        ],
         supportedLocales: AppLocalizations.supportedLocales,
         onGenerateTitle: (BuildContext context) => context.loc.appTitle,
         theme: lightTheme,

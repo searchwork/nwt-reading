@@ -13,9 +13,9 @@ class LocationsDeserializer {
   }
 
   Location _convertMapToLocation(Map<String, dynamic> locationMap) {
-    final name = locationMap['name'] as String;
+    final key = locationMap['key'] as String;
     final refs = locationMap['refs'] as String;
 
-    return Location(name: name, refs: refs);
+    return Location(key: key, refs: refs);
   }
 }

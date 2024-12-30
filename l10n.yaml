@@ -1,7 +1,0 @@
-arb-dir: assets/localization
-nullable-getter: false
-output-localization-file: app_localizations.dart
-preferred-supported-locales: [en]
-template-arb-file: app_en.arb
-untranslated-messages-file: i18n_untranslated.json
-use-escaping: true

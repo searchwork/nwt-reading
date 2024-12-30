@@ -97,18 +97,42 @@ class SectionWidget extends ConsumerWidget {
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
                   ))),
-          if (plan.showEvents)
-            ...section.events
-                .map((eventKey) => events?.events[eventKey] != null
-                    ? EventWidget(eventKey, events!.events[eventKey]!)
-                    : null)
-                .toList()
-                .whereType<Widget>(),
+          if (plan.showEvents && section.events.isNotEmpty)
+            Stack(clipBehavior: Clip.none, children: [
+              Positioned(
+                left: -16,
+                top: 2,
+                child: Icon(
+                  Icons.calendar_month_outlined,
+                  size: 14,
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+              ),
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                ...section.events
+                    .map((eventKey) => events?.events[eventKey] != null
+                        ? EventWidget(eventKey, events!.events[eventKey]!)
+                        : null)
+                    .toList()
+                    .whereType<Widget>()
+              ]),
+            ]),
           if (plan.showLocations && section.locations.isNotEmpty)
-            LocationsWidget(section.locations
-                .map((locationKey) => locations?.locations[locationKey])
-                .whereType<Location>()
-                .toList()),
+            Stack(clipBehavior: Clip.none, children: [
+              Positioned(
+                left: -16,
+                top: 2,
+                child: Icon(
+                  Icons.place_outlined,
+                  size: 14,
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+              ),
+              LocationsWidget(section.locations
+                  .map((locationKey) => locations?.locations[locationKey])
+                  .whereType<Location>()
+                  .toList()),
+            ])
         ])),
       ],
     );
