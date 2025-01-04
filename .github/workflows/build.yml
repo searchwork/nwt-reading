@@ -37,7 +37,7 @@ jobs:
       - run: flutter build apk
       - run: flutter build appbundle
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Android
           path: |
@@ -60,7 +60,7 @@ jobs:
       - run: ./gen-i10n.sh
       - run: flutter build ios --release --no-codesign
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: iOS
           path: build/ios/iphoneos/Runner.app
@@ -79,7 +79,7 @@ jobs:
       - run: ./gen-i10n.sh
       - run: flutter build web
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Web
           path: build/web
@@ -99,7 +99,7 @@ jobs:
       - run: flutter config --enable-windows-desktop
       - run: flutter build windows
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Windows
           path: build\windows\x64\runner\Release\NWT_Reading.exe
@@ -123,7 +123,7 @@ jobs:
       - run: flutter config --enable-linux-desktop
       - run: flutter build linux
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Linux
           path: build/linux/x64/release/bundle/nwt_reading
@@ -145,7 +145,7 @@ jobs:
       - run: flutter config --enable-macos-desktop
       - run: flutter build macos
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: macOS
           path: build/macos/Build/Products/Release/NWT Reading.app
