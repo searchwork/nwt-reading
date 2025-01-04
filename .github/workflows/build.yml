@@ -33,6 +33,7 @@ jobs:
 
       - run: flutter --version
       - run: flutter pub get
+      - run: ./gen-i10n.sh
       - run: flutter build apk
       - run: flutter build appbundle
 
@@ -54,7 +55,9 @@ jobs:
           channel: 'stable'
           architecture: x64
 
+      - run: flutter --version
       - run: flutter pub get
+      - run: ./gen-i10n.sh
       - run: flutter build ios --release --no-codesign
 
       - uses: actions/upload-artifact@v3
@@ -71,8 +74,15 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+      - run: flutter --version
       - run: flutter pub get
+      - run: ./gen-i10n.sh
       - run: flutter build web
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Web
+          path: build/web
 
   build-windows:
     name: Build Windows
@@ -83,8 +93,16 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+      - run: flutter --version
+      - run: flutter pub get
+      - run: cmd /c win-gen-i10n.bat
       - run: flutter config --enable-windows-desktop
       - run: flutter build windows
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Windows
+          path: build\windows\x64\runner\Release\NWT_Reading.exe
 
   build-linux:
     name: Build Linux
@@ -99,8 +117,16 @@ jobs:
       - run: |
           sudo apt-get update -y
           sudo apt-get install -y ninja-build libgtk-3-dev
+      - run: flutter --version
+      - run: flutter pub get
+      - run: ./gen-i10n.sh
       - run: flutter config --enable-linux-desktop
       - run: flutter build linux
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Linux
+          path: build/linux/x64/release/bundle/nwt_reading
 
   build-macos:
     name: Build macOS
@@ -113,5 +139,13 @@ jobs:
           channel: 'stable'
           architecture: x64
 
+      - run: flutter --version
+      - run: flutter pub get
+      - run: ./gen-i10n.sh
       - run: flutter config --enable-macos-desktop
       - run: flutter build macos
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: macOS
+          path: build/macos/Build/Products/Release/NWT Reading.app
