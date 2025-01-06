@@ -159,7 +159,7 @@ void main() async {
     expect(plan.language, Localizations.localeOf(buildContext).languageCode);
     expect(plan.withTargetDate, true);
     expect(plan.showEvents, true);
-    expect(plan.showLocations, false);
+    expect(plan.showLocations, true);
     expect(plan.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
     expect(providerContainer.read(plansProvider).plans.length, 1);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
@@ -223,7 +223,7 @@ void main() async {
     expect(plan.language, firstBibleLanguageKey);
     expect(plan.withTargetDate, false);
     expect(plan.showEvents, true);
-    expect(plan.showLocations, false);
+    expect(plan.showLocations, true);
     expect(plan.bookmark, const Bookmark(dayIndex: 0, sectionIndex: -1));
     expect(providerContainer.read(plansProvider).plans.length, 2);
     expect(find.byKey(const Key('no-plan-yet')), findsNothing);
