@@ -4,6 +4,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:nwt_reading/src/base/presentation/plan.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 
@@ -11,7 +12,9 @@ import 'package:nwt_reading/src/bible_languages/repositories/bible_languages_rep
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_card.dart';
+import 'package:nwt_reading/src/plans/presentations/plan_name_tile.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
+import 'package:nwt_reading/src/plans/stories/plan_edit_story.dart';
 import 'package:nwt_reading/src/schedules/entities/events.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
@@ -129,20 +132,26 @@ void main() async {
     await tester.pumpAndSettle();
     await takeScreenshot(tester: tester, binding: binding, filename: 'new');
 
-    expect(providerContainer.read(plansProvider).plans.length, 0);
+    BuildContext buildContext =
+        tester.firstElement(find.byKey(const Key('plan-name')));
+    TextFormField nameTextFormField =
+        tester.firstWidget(find.byKey(const Key('plan-name')));
+    String? planId =
+        (tester.firstWidget(find.byKey(const Key('plan-name-tile')))
+                as PlanNameTile)
+            .planId;
     expect(
-        (tester.firstWidget(find.byKey(const Key('plan-name')))
-                as TextFormField)
-            .controller
-            ?.text,
-        'Chronological y1');
+        nameTextFormField.controller?.text,
+        getPlanName(buildContext,
+            providerContainer.read(planEditProviderFamily(planId))));
+    expect(providerContainer.read(plansProvider).plans.length, 0);
     expect(find.byKey(const Key('target-status')), findsNothing);
 
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();
 
-    var plan = providerContainer.read(plansProvider).plans.first;
-    expect(plan.name, 'Chronological y1');
+    Plan plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.name, null);
     expect(plan.scheduleKey.type, ScheduleType.chronological);
     expect(plan.scheduleKey.duration, ScheduleDuration.y1);
     expect(plan.scheduleKey.version, '1.0');
@@ -165,12 +174,16 @@ void main() async {
         .last);
     await tester.pumpAndSettle();
 
+    buildContext = tester.firstElement(find.byKey(const Key('plan-name')));
+    nameTextFormField =
+        tester.firstWidget(find.byKey(const Key('plan-name'))) as TextFormField;
+    planId = (tester.firstWidget(find.byKey(const Key('plan-name-tile')))
+            as PlanNameTile)
+        .planId;
     expect(
-        (tester.firstWidget(find.byKey(const Key('plan-name')))
-                as TextFormField)
-            .controller
-            ?.text,
-        'Canonical y4');
+        nameTextFormField.controller?.text,
+        getPlanName(buildContext,
+            providerContainer.read(planEditProviderFamily(planId))));
 
     final firstBibleLanguageKey = providerContainer
         .read(bibleLanguagesProvider)
@@ -721,12 +734,15 @@ void main() async {
     await tester.pumpAndSettle();
     await takeScreenshot(tester: tester, binding: binding, filename: 'edit');
 
+    Plan plan = providerContainer.read(plansProvider).plans.first;
+    BuildContext buildContext =
+        tester.firstElement(find.byKey(const Key('plan-name')));
     expect(
         (tester.firstWidget(find.byKey(const Key('plan-name')))
                 as TextFormField)
             .controller
             ?.text,
-        'Chronological y1');
+        getPlanName(buildContext, plan));
 
     await tester.tap(find
         .descendant(
@@ -740,13 +756,14 @@ void main() async {
                 as TextFormField)
             .controller
             ?.text,
-        'Chronological y4');
+        getPlanName(buildContext,
+            providerContainer.read(planEditProviderFamily(plan.id))));
 
     await tester.enterText(find.byKey(const Key('plan-name')), 'Test 😃');
     await tester.pumpAndSettle();
 
-    var plan = providerContainer.read(plansProvider).plans.first;
-    expect(plan.name, 'Chronological y1');
+    plan = providerContainer.read(plansProvider).plans.first;
+    expect(plan.name, null);
 
     await tester.tap(find.byIcon(Icons.done));
     await tester.pumpAndSettle();

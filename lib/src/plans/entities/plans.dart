@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
 import 'package:uuid/uuid.dart';
@@ -22,19 +21,14 @@ class PlansNotifier extends Notifier<Plans> {
 
   String getNewPlanId() => _uuid.v4();
 
-  String getDefaultName(ScheduleKey scheduleKey) =>
-      '${toBeginningOfSentenceCase(scheduleKey.type.name)} ${scheduleKey.duration.name}';
-
   Plan getNewPlan(String planId) {
     const scheduleKey = ScheduleKey(
         type: ScheduleType.chronological,
         duration: ScheduleDuration.y1,
         version: '1.0');
-    final name = getDefaultName(scheduleKey);
 
     return Plan(
         id: planId,
-        name: name,
         scheduleKey: scheduleKey,
         language: 'en',
         bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),

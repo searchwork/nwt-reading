@@ -25,7 +25,7 @@ class PlansDeserializer {
 
   Plan _convertMapToPlan(Map<String, dynamic> planMap) {
     final id = planMap['id'] as String;
-    final name = planMap['name'] as String;
+    final name = planMap['name'] == null ? null : planMap['name'] as String;
     final schedule =
         convertMapToScheduleKey(planMap['scheduleKey'] as Map<String, dynamic>);
     final language = planMap['language'] as String;

@@ -51,7 +51,7 @@ class PlanEditDialog extends ConsumerWidget {
                     }
                   })
             ]),
-            PlanNameTile(planId),
+            PlanNameTile(planId, key: const Key('plan-name-tile')),
             const SizedBox(height: 20),
             if (isNewPlan) PlanTypeSegmentedButton(planId),
             if (isNewPlan) const SizedBox(height: 20),

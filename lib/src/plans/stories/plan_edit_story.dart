@@ -24,16 +24,6 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
 
   void changeName(String name) => _name = name;
 
-  void updateDefaultName(ScheduleKey scheduleKey) {
-    final plansNotifier = ref.read(plansProvider.notifier);
-    final isDefaultName = _name == null ||
-        _name == plansNotifier.getDefaultName(state.scheduleKey);
-
-    if (isDefaultName) {
-      _name = plansNotifier.getDefaultName(scheduleKey);
-    }
-  }
-
   void updateLanguage(String language) {
     if (language != state.language) {
       state = state.copyWith(language: language);
@@ -54,7 +44,6 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
       final newDayIndex =
           (state.bookmark.dayIndex * newScheduleLength / oldScheduleLength)
               .round();
-      updateDefaultName(newScheduleKey);
 
       state = state.copyWith(
         name: _name,
@@ -70,7 +59,6 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
   void updateScheduleType(ScheduleType scheduleType) {
     if (scheduleType != state.scheduleKey.type) {
       final newScheduleKey = state.scheduleKey.copyWith(type: scheduleType);
-      updateDefaultName(newScheduleKey);
 
       state = state.copyWith(
         name: _name,

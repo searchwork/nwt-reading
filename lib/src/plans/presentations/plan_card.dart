@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/base/presentation/plan.dart';
 import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/schedules/entities/schedule.dart';
@@ -41,7 +42,7 @@ class PlanCard extends ConsumerWidget {
             ],
           ),
           Text(
-            plan.name,
+            getPlanName(context, plan),
             style: Theme.of(context)
                 .textTheme
                 .headlineMedium

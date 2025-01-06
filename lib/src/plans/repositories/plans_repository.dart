@@ -92,7 +92,6 @@ class PlansRepository {
           plans = Plans([
             Plan(
               id: _uuid.v4(),
-              name: plansNotifier.getDefaultName(scheduleKey),
               scheduleKey: scheduleKey,
               language: readingLanguage ?? language ?? 'en',
               bookmark: bookmark,

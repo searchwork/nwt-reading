@@ -133,7 +133,7 @@ class TogglingTooManyDaysException implements Exception {}
 class Plan extends Equatable {
   const Plan({
     required this.id,
-    required this.name,
+    this.name,
     required this.scheduleKey,
     required this.language,
     required this.bookmark,
@@ -146,7 +146,7 @@ class Plan extends Equatable {
   });
 
   final String id;
-  final String name;
+  final String? name;
   final ScheduleKey scheduleKey;
   final String language;
   final Bookmark bookmark;
