@@ -30,7 +30,6 @@ class PlansNotifier extends Notifier<Plans> {
     return Plan(
         id: planId,
         scheduleKey: scheduleKey,
-        language: 'en',
         bookmark: const Bookmark(dayIndex: 0, sectionIndex: -1),
         withTargetDate: true,
         showEvents: true,

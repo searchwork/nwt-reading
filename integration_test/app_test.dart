@@ -151,11 +151,12 @@ void main() async {
     await tester.pumpAndSettle();
 
     Plan plan = providerContainer.read(plansProvider).plans.first;
+    buildContext = tester.element(find.byKey(const Key('plans-grid')));
     expect(plan.name, null);
     expect(plan.scheduleKey.type, ScheduleType.chronological);
     expect(plan.scheduleKey.duration, ScheduleDuration.y1);
     expect(plan.scheduleKey.version, '1.0');
-    expect(plan.language, 'en');
+    expect(plan.language, Localizations.localeOf(buildContext).languageCode);
     expect(plan.withTargetDate, true);
     expect(plan.showEvents, true);
     expect(plan.showLocations, false);
