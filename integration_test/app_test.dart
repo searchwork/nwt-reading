@@ -172,6 +172,12 @@ void main() async {
             ?.text,
         'Canonical y4');
 
+    final firstBibleLanguageKey = providerContainer
+        .read(bibleLanguagesProvider)
+        .valueOrNull
+        ?.bibleLanguages
+        .keys
+        .first;
     await tester.pumpAndSettle();
     await tester.enterText(find.byKey(const Key('plan-name')), 'Test 😃');
     await tester.pumpAndSettle();
@@ -185,7 +191,10 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('language')));
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('language-es')).last);
+    await tester.scrollUntilVisible(
+        find.byKey(Key('language-$firstBibleLanguageKey')), -500.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.tap(find.byKey(Key('language-$firstBibleLanguageKey')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
@@ -197,7 +206,7 @@ void main() async {
     expect(plan.scheduleKey.type, ScheduleType.written);
     expect(plan.scheduleKey.duration, ScheduleDuration.m3);
     expect(plan.scheduleKey.version, '1.0');
-    expect(plan.language, 'es');
+    expect(plan.language, firstBibleLanguageKey);
     expect(plan.withTargetDate, false);
     expect(plan.showEvents, true);
     expect(plan.showLocations, false);
@@ -212,6 +221,12 @@ void main() async {
             sharedPreferences: await getWhatsNewSeenPreference())
         .providerContainer;
     final plans = providerContainer.read(plansProvider).plans;
+    final firstBibleLanguageKey = providerContainer
+        .read(bibleLanguagesProvider)
+        .valueOrNull
+        ?.bibleLanguages
+        .keys
+        .first;
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit_note));
@@ -226,7 +241,10 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('language')));
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('language-es')).last);
+    await tester.scrollUntilVisible(
+        find.byKey(Key('language-$firstBibleLanguageKey')), -500.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.tap(find.byKey(Key('language-$firstBibleLanguageKey')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
@@ -782,6 +800,12 @@ void main() async {
 
   testWidgets('Change plan language', (tester) async {
     final providerContainer = await getDefaultProviderContainer(tester);
+    final firstBibleLanguageKey = providerContainer
+        .read(bibleLanguagesProvider)
+        .valueOrNull
+        ?.bibleLanguages
+        .keys
+        .first;
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
@@ -789,7 +813,10 @@ void main() async {
     await takeScreenshot(tester: tester, binding: binding, filename: 'edit');
     await tester.tap(find.byKey(const Key('language')));
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('language-es')).last);
+    await tester.scrollUntilVisible(
+        find.byKey(Key('language-$firstBibleLanguageKey')), -500.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.tap(find.byKey(Key('language-$firstBibleLanguageKey')));
     await tester.pumpAndSettle();
 
     var plan = providerContainer.read(plansProvider).plans.first;
@@ -799,7 +826,7 @@ void main() async {
     await tester.pumpAndSettle();
 
     plan = providerContainer.read(plansProvider).plans.first;
-    expect(plan.language, 'es');
+    expect(plan.language, firstBibleLanguageKey);
   });
 
   testWidgets('Change plan with target date setting', (tester) async {
@@ -975,6 +1002,12 @@ void main() async {
 
   testWidgets('Cancel edit plan', (tester) async {
     final providerContainer = await getDefaultProviderContainer(tester);
+    final firstBibleLanguageKey = providerContainer
+        .read(bibleLanguagesProvider)
+        .valueOrNull
+        ?.bibleLanguages
+        .keys
+        .first;
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
@@ -987,7 +1020,10 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('language')));
     await tester.pumpAndSettle();
-    await tester.tap(find.byKey(const Key('language-es')).last);
+    await tester.scrollUntilVisible(
+        find.byKey(Key('language-$firstBibleLanguageKey')), -500.0,
+        scrollable: find.byType(Scrollable).last);
+    await tester.tap(find.byKey(Key('language-$firstBibleLanguageKey')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
