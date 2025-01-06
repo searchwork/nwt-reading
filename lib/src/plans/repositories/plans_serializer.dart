@@ -12,7 +12,7 @@ class PlansSerializer {
         'id': plan.id,
         if (plan.name != null) 'name': plan.name,
         'scheduleKey': _convertScheduleKeyToMap(plan.scheduleKey),
-        'language': plan.language,
+        if (plan.language != null) 'language': plan.language,
         'bookmark': _convertBookmarkToMap(plan.bookmark),
         if (plan.startDate != null)
           'startDate': plan.startDate!.toIso8601String(),

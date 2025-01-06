@@ -48,7 +48,9 @@ class PlansPageState extends ConsumerState<PlansPage> {
             ),
           ],
         ),
-        body: PlansGrid(),
+        body: PlansGrid(
+          key: const Key('plans-grid'),
+        ),
         floatingActionButton: FloatingActionButton(
           tooltip: context.loc.plansPageAddPlanTooltip,
           onPressed: () => showDialog<String>(

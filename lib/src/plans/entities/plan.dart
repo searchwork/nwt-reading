@@ -135,7 +135,7 @@ class Plan extends Equatable {
     required this.id,
     this.name,
     required this.scheduleKey,
-    required this.language,
+    this.language,
     required this.bookmark,
     this.startDate,
     this.lastDate,
@@ -148,7 +148,7 @@ class Plan extends Equatable {
   final String id;
   final String? name;
   final ScheduleKey scheduleKey;
-  final String language;
+  final String? language;
   final Bookmark bookmark;
   final DateTime? startDate;
   final DateTime? lastDate;
