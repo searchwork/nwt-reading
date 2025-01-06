@@ -283,7 +283,7 @@ void main() async {
 
     expect(find.byType(DayCard), findsWidgets);
 
-    await tester.pageBack();
+    await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
 
     expect(
@@ -306,7 +306,7 @@ void main() async {
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
     expect(find.byType(Scrollable), findsOneWidget);
 
-    await tester.pageBack();
+    await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
     await tester.tap(find.byType(PlanCard).at(1));
     await tester.pumpAndSettle();
@@ -316,7 +316,7 @@ void main() async {
     expect(find.byIcon(Icons.check_circle), findsNothing);
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
 
-    await tester.pageBack();
+    await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(lastPlanCardFinder, 500.0);
     await tester.pumpAndSettle();
@@ -565,7 +565,7 @@ void main() async {
     expect(find.byKey(const Key('current-day')), findsOneWidget);
     expect(find.byKey(const Key('target-day')), findsNothing);
 
-    await tester.pageBack();
+    await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
 
     expect(find.byType(Badge), findsOneWidget);
@@ -653,7 +653,7 @@ void main() async {
     expect(find.byIcon(Icons.check_circle), findsWidgets);
     expect(find.byIcon(Icons.check_circle_outline), findsNothing);
 
-    await tester.pageBack();
+    await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
 
     expect(find.byIcon(Icons.verified), findsExactly(2));
@@ -1082,7 +1082,7 @@ void main() async {
     expect(Theme.of(context).brightness,
         SchedulerBinding.instance.platformDispatcher.platformBrightness);
 
-    await tester.pageBack();
+    await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
 
     expect(
