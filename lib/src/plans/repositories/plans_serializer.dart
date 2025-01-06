@@ -10,7 +10,7 @@ class PlansSerializer {
 
   Map<String, dynamic> _convertPlanToMap(Plan plan) => {
         'id': plan.id,
-        'name': plan.name,
+        if (plan.name != null) 'name': plan.name,
         'scheduleKey': _convertScheduleKeyToMap(plan.scheduleKey),
         'language': plan.language,
         'bookmark': _convertBookmarkToMap(plan.bookmark),

@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nwt_reading/src/base/presentation/plan.dart';
 import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/plans/entities/plan.dart';
 import 'package:nwt_reading/src/plans/presentations/plan_edit_dialog.dart';
@@ -112,12 +113,12 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     return Scaffold(
         appBar: AppBar(
           title: deviationDays == 0
-              ? Text(plan.name)
+              ? Text(getPlanName(context, plan))
               : Badge(
                   label: Text('${deviationDays.abs()}'),
                   backgroundColor: badgeColor,
                   offset: Offset(23, -5),
-                  child: Text(plan.name),
+                  child: Text(getPlanName(context, plan)),
                 ),
           actions: [
             IconButton(
