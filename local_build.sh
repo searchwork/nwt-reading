@@ -1,7 +1,7 @@
 ./check.sh
 
 if [[ $(uname) == 'Darwin' ]]; then
-    flutter test integration_test -d macos
+    flutter test integration_test --device-id macos --coverage
 fi
 
 flutter build apk --release
