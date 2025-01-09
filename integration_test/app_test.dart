@@ -32,7 +32,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../test/test_data.dart';
 import 'settled_tester.dart';
-import 'take_screenshot.dart';
 
 Future<ProviderContainer> getDefaultProviderContainer(
         WidgetTester tester) async =>
@@ -130,7 +129,6 @@ void main() async {
 
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
-    await takeScreenshot(tester: tester, binding: binding, filename: 'new');
 
     BuildContext buildContext =
         tester.firstElement(find.byKey(const Key('plan-name')));
@@ -328,7 +326,6 @@ void main() async {
     final providerContainer = await getDefaultProviderContainer(tester);
     final lastPlanCardFinder = find.byKey(
         Key('plan-${providerContainer.read(plansProvider).plans.last.id}'));
-    await takeScreenshot(tester: tester, binding: binding, filename: 'plans');
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
 
@@ -723,8 +720,6 @@ void main() async {
     expect(find.byKey(const Key('day-33')), findsOneWidget);
     expect(find.byIcon(Icons.check_circle), findsAtLeastNWidgets(3));
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
-    await takeScreenshot(
-        tester: tester, binding: binding, filename: 'schedule');
   });
 
   testWidgets('Change plan name', (tester) async {
@@ -733,7 +728,6 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
-    await takeScreenshot(tester: tester, binding: binding, filename: 'edit');
 
     Plan plan = providerContainer.read(plansProvider).plans.first;
     BuildContext buildContext =
@@ -828,7 +822,6 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
-    await takeScreenshot(tester: tester, binding: binding, filename: 'edit');
     await tester.tap(find.byKey(const Key('language')));
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(

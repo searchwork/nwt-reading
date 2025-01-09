@@ -1,1 +1,11 @@
+---
+# See https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md.
+default: true # Enable all rules unless they are explicitly disabled or configured otherwise.
+MD003: # Set the header style.
+  style: atx
+MD004: # Set the unordered list style.
+  style: dash
+MD013: false # Disable enforcement of maximum line length.
+MD024: # Only check sibling headings for the same content.
+  siblings_only: true
 MD033: false
