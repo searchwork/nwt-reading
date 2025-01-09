@@ -37,5 +37,5 @@ jobs:
         with:
           channel: stable
 
-      - run: ./gen-i10n.sh
+      - run: ./gen_i10n.sh
       - run: flutter test integration_test --timeout 2x
