@@ -22,6 +22,7 @@ class SettingsPage extends ConsumerWidget {
         Padding(
           padding: const EdgeInsets.all(16),
           child: SegmentedButton<ThemeMode>(
+            showSelectedIcon: false,
             segments: <ButtonSegment<ThemeMode>>[
               ButtonSegment<ThemeMode>(
                   value: ThemeMode.system,
