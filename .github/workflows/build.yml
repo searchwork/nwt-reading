@@ -33,7 +33,7 @@ jobs:
 
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen-i10n.sh
+      - run: ./gen_i10n.sh
       - run: flutter build apk
       - run: flutter build appbundle
 
@@ -57,7 +57,7 @@ jobs:
 
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen-i10n.sh
+      - run: ./gen_i10n.sh
       - run: flutter build ios --release --no-codesign
 
       - uses: actions/upload-artifact@v4
@@ -76,7 +76,7 @@ jobs:
           channel: 'stable'
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen-i10n.sh
+      - run: ./gen_i10n.sh
       - run: flutter build web
 
       - uses: actions/upload-artifact@v4
@@ -95,7 +95,7 @@ jobs:
           channel: 'stable'
       - run: flutter --version
       - run: flutter pub get
-      - run: cmd /c win-gen-i10n.bat
+      - run: cmd /c win-gen_i10n.bat
       - run: flutter config --enable-windows-desktop
       - run: flutter build windows
 
@@ -119,7 +119,7 @@ jobs:
           sudo apt-get install -y ninja-build libgtk-3-dev
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen-i10n.sh
+      - run: ./gen_i10n.sh
       - run: flutter config --enable-linux-desktop
       - run: flutter build linux
 
@@ -141,7 +141,7 @@ jobs:
 
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen-i10n.sh
+      - run: ./gen_i10n.sh
       - run: flutter config --enable-macos-desktop
       - run: flutter build macos
 
