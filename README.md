@@ -2,8 +2,8 @@
 
 NWT Reading provides a Bible reading schedule for the New World Translation of the Holy Scriptures, specifically for Jehovah's Witnesses.
 
-<img src="assets/launcher/icon.png" alt="The NWT Reader icon" height="250">
-<img src="assets/store_presence/feature_graphic.png" alt="The NWT Reader feature graphic" height="250">
+<img src="assets/launcher/icon.png" alt="The NWT Reader icon" height="150">
+<img src="assets/store_presence/feature_graphic.png" alt="The NWT Reader feature graphic" height="150">
 
 ## Features
 
@@ -25,18 +25,18 @@ JW Library is a registered trademark of the Watch Tower Bible and Tract Society 
 
 ### Plans page
 
-<img src="assets/store_presence/screenshots/ios-1-plans-overlay.png" alt="The list of plans page screenshot" width="400">
+<img src="assets/store_presence/screenshots/ios-1-plans-overlay.png" alt="The list of plans page screenshot" width="300">
 
 ### Schedule page
 
-<img src="assets/store_presence/screenshots/ios-2-schedule-overlay.png" alt="The reading schedule page screenshot" width="400">
-<img src="assets/store_presence/screenshots/ios-3-schedule-dark-overlay.png" alt="The reading schedule page in dark mode screenshot" width="400">
+<img src="assets/store_presence/screenshots/ios-2-schedule-overlay.png" alt="The reading schedule page screenshot" width="300">
+<img src="assets/store_presence/screenshots/ios-3-schedule-dark-overlay.png" alt="The reading schedule page in dark mode screenshot" width="300">
 
 ### New and Edit Plan dialogs
 
-<img src="assets/store_presence/screenshots/ios-4-new-overlay.png" alt="The new plan dialog screenshot" width="400">
-<img src="assets/store_presence/screenshots/ios-5-edit-overlay.png" alt="The edit plan dialog screenshot" width="400">
+<img src="assets/store_presence/screenshots/ios-4-new-overlay.png" alt="The new plan dialog screenshot" width="300">
+<img src="assets/store_presence/screenshots/ios-5-edit-overlay.png" alt="The edit plan dialog screenshot" width="300">
 
 ### Settings page
 
-<img src="assets/store_presence/screenshots/ios-6-settings-overlay.png" alt="The settings page screenshot" width="400">
+<img src="assets/store_presence/screenshots/ios-6-settings-overlay.png" alt="The settings page screenshot" width="300">
