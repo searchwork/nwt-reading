@@ -23,11 +23,12 @@ Future<ProviderContainer> getDefaultProviderContainer(
 
 final os = Platform.operatingSystem;
 
-void takeScreenshot(
+Future<void> takeScreenshot(
     {required IntegrationTestWidgetsFlutterBinding binding,
     required String filename}) async {
-  await binding.takeScreenshot('assets/store_presence/screenshots/$os-$filename.png');
-  await Future<void>.delayed(const Duration(seconds: 5));
+  await binding
+      .takeScreenshot('assets/store_presence/screenshots/$os-$filename.png');
+  await Future<void>.delayed(const Duration(seconds: 3));
 }
 
 void main() async {
@@ -38,7 +39,7 @@ void main() async {
     await getDefaultProviderContainer(tester);
     await binding.convertFlutterSurfaceToImage();
     await tester.pumpAndSettle();
-    takeScreenshot(binding: binding, filename: '1-plans');
+    await takeScreenshot(binding: binding, filename: '1-plans');
   });
 
   testWidgets('Take the schedule screenshot', (tester) async {
@@ -67,7 +68,7 @@ void main() async {
     await tester.pumpAndSettle();
     await binding.convertFlutterSurfaceToImage();
     await tester.pumpAndSettle();
-    takeScreenshot(binding: binding, filename: '2-schedule');
+    await takeScreenshot(binding: binding, filename: '2-schedule');
     await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.settings));
@@ -78,7 +79,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
-    takeScreenshot(binding: binding, filename: '3-schedule-dark');
+    await takeScreenshot(binding: binding, filename: '3-schedule-dark');
   });
 
   testWidgets('Take the new plan screenshot', (tester) async {
@@ -92,7 +93,7 @@ void main() async {
     SystemChannels.textInput.invokeMethod('TextInput.hide');
     await binding.convertFlutterSurfaceToImage();
     await tester.pumpAndSettle();
-    takeScreenshot(binding: binding, filename: '4-new');
+    await takeScreenshot(binding: binding, filename: '4-new');
   });
 
   testWidgets('Take the plan edit screenshot', (tester) async {
@@ -106,7 +107,7 @@ void main() async {
     SystemChannels.textInput.invokeMethod('TextInput.hide');
     await binding.convertFlutterSurfaceToImage();
     await tester.pumpAndSettle();
-    takeScreenshot(binding: binding, filename: '5-edit');
+    await takeScreenshot(binding: binding, filename: '5-edit');
   });
 
   testWidgets('Take the settings screenshot', (tester) async {
@@ -117,6 +118,6 @@ void main() async {
     await tester.pumpAndSettle();
     await binding.convertFlutterSurfaceToImage();
     await tester.pumpAndSettle();
-    takeScreenshot(binding: binding, filename: '6-settings');
+    await takeScreenshot(binding: binding, filename: '6-settings');
   });
 }

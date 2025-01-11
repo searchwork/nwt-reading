@@ -53,13 +53,16 @@ class PlanEditDialog extends ConsumerWidget {
             ]),
             PlanNameTile(planId, key: const Key('plan-name-tile')),
             const SizedBox(height: 20),
-            if (isNewPlan) PlanTypeSegmentedButton(planId),
-            if (isNewPlan) const SizedBox(height: 20),
+            if (isNewPlan) ...[
+              PlanTypeSegmentedButton(planId),
+              const SizedBox(height: 20),
+            ],
             PlanDurationSegmentedButton(planId),
             const SizedBox(height: 20),
             PlanLanguageTile(planId),
             PlanWithTargetDateTile(planId),
-            if (plan.withTargetDate &&
+            if (!isNewPlan &&
+                plan.withTargetDate &&
                 adjustedTargetDate != null &&
                 plan.targetDate != adjustedTargetDate)
               PlanResetTargetDateTile(planId, adjustedTargetDate),
