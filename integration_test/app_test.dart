@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:integration_test/integration_test.dart';
 import 'package:nwt_reading/src/base/presentation/plan.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
@@ -42,7 +41,6 @@ Future<ProviderContainer> getDefaultProviderContainer(
 
 void main() async {
   final deepCollectionEquals = const DeepCollectionEquality().equals;
-  final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
   WidgetController.hitTestWarningShouldBeFatal = true;
 
   testWidgets('Entities are initialized', (tester) async {
