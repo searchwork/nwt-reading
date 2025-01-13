@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:nwt_reading/src/base/presentation/plan.dart';
@@ -163,6 +164,7 @@ void main() async {
 
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find.byIcon(Icons.menu_book));
     await tester.tap(find
         .descendant(
@@ -191,6 +193,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.enterText(find.byKey(const Key('plan-name')), 'Test 😃');
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find.byIcon(Icons.edit_note));
     await tester.pumpAndSettle();
     await tester.tap(find
@@ -204,6 +207,7 @@ void main() async {
     await tester.scrollUntilVisible(
         find.byKey(Key('language-$firstBibleLanguageKey')), -500.0,
         scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(Key('language-$firstBibleLanguageKey')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('with-target-date')));
@@ -239,6 +243,7 @@ void main() async {
         .first;
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find.byIcon(Icons.edit_note));
     await tester.pumpAndSettle();
     await tester.enterText(find.byKey(const Key('plan-name')), 'Test 😃');
@@ -254,6 +259,7 @@ void main() async {
     await tester.scrollUntilVisible(
         find.byKey(Key('language-$firstBibleLanguageKey')), -500.0,
         scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(Key('language-$firstBibleLanguageKey')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('with-target-date')));
@@ -606,6 +612,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
 
     expect(find.byKey(const Key('target-status')), findsOneWidget);
 
@@ -625,6 +632,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
 
@@ -647,6 +655,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
 
     expect(find.byKey(const Key('reset-target-date')), findsNothing);
     expect(find.byKey(const Key('target-status')), findsOneWidget);
@@ -726,6 +735,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
 
     Plan plan = providerContainer.read(plansProvider).plans.first;
     BuildContext buildContext =
@@ -788,6 +798,7 @@ void main() async {
 
       await tester.tap(find.byIcon(Icons.edit));
       await tester.pumpAndSettle();
+      await SystemChannels.textInput.invokeMethod('TextInput.hide');
       await tester.tap(find
           .descendant(
               of: find.byType(SegmentedButton<ScheduleDuration>),
@@ -820,11 +831,13 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find.byKey(const Key('language')));
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(
         find.byKey(Key('language-$firstBibleLanguageKey')), -500.0,
         scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(Key('language-$firstBibleLanguageKey')));
     await tester.pumpAndSettle();
 
@@ -878,6 +891,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
 
@@ -903,6 +917,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find.byKey(const Key('with-target-date')));
     await tester.pumpAndSettle();
 
@@ -922,6 +937,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.scrollUntilVisible(find.byKey(const Key('show-events')), 50.0,
         scrollable: find.byType(Scrollable).last);
     await tester.pumpAndSettle();
@@ -943,6 +959,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.scrollUntilVisible(find.byKey(const Key('show-events')), 50.0,
         scrollable: find.byType(Scrollable).last);
     await tester.pumpAndSettle();
@@ -969,6 +986,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.scrollUntilVisible(
         find.byKey(const Key('show-locations')), 50.0,
         scrollable: find.byType(Scrollable).last);
@@ -991,6 +1009,7 @@ void main() async {
 
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.scrollUntilVisible(
         find.byKey(const Key('show-locations')), 50.0,
         scrollable: find.byType(Scrollable).last);
@@ -1021,6 +1040,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find
         .descendant(
             of: find.byType(SegmentedButton<ScheduleDuration>),
@@ -1032,6 +1052,7 @@ void main() async {
     await tester.scrollUntilVisible(
         find.byKey(Key('language-$firstBibleLanguageKey')), -500.0,
         scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byKey(Key('language-$firstBibleLanguageKey')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('with-target-date')));
@@ -1065,6 +1086,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await tester.tap(find
         .descendant(
             of: find.byType(SegmentedButton<ScheduleDuration>),
@@ -1084,6 +1106,7 @@ void main() async {
 
     await tester.scrollUntilVisible(find.byIcon(Icons.delete).first, 50.0,
         scrollable: find.byType(Scrollable).last);
+    await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.delete));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('confirm-delete-plan')));

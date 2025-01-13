@@ -52,4 +52,3 @@ msix_config:
   logo_path: assets/launcher/icon.png
   trim_logo: false
   capabilities: internetClient
-  build_windows: false

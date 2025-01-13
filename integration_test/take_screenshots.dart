@@ -88,9 +88,7 @@ void main() async {
         .providerContainer;
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
-
-    // Hide the keyboard.
-    SystemChannels.textInput.invokeMethod('TextInput.hide');
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await binding.convertFlutterSurfaceToImage();
     await tester.pumpAndSettle();
     await takeScreenshot(binding: binding, filename: '4-new');
@@ -102,9 +100,7 @@ void main() async {
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
-
-    // Hide the keyboard.
-    SystemChannels.textInput.invokeMethod('TextInput.hide');
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
     await binding.convertFlutterSurfaceToImage();
     await tester.pumpAndSettle();
     await takeScreenshot(binding: binding, filename: '5-edit');
