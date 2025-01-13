@@ -33,6 +33,7 @@ dev_dependencies:
   integration_test:
     sdk: flutter
   mocktail: ^1.0.4
+  msix: ^3.16.8
   riverpod_lint: ^2.6.3
 
 flutter:
@@ -41,3 +42,14 @@ flutter:
   assets:
     - assets/images/whats_new/
     - assets/repositories/
+
+msix_config:
+  display_name: NWT Reading
+  identity_name: 25845SearchWork.org.NWTReading
+  publisher_display_name: Werner Fleischer
+  languages: en, cs, de, es, fr, hu, it, nl, pl, pt, ro, ru
+  output_name: NWT Reading
+  logo_path: assets/launcher/icon.png
+  trim_logo: false
+  capabilities: internetClient
+  build_windows: false
