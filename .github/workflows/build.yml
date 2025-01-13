@@ -97,12 +97,12 @@ jobs:
       - run: flutter pub get
       - run: cmd /c win_gen_i10n.bat
       - run: flutter config --enable-windows-desktop
-      - run: flutter build windows
+      - run: dart run msix:create --store true --build-windows true --publisher CN=029FFB74-EF52-42EA-B54A-817D45BA7838
 
       - uses: actions/upload-artifact@v4
         with:
           name: Windows
-          path: build\windows\x64\runner\Release\NWT_Reading.exe
+          path: build\windows\x64\runner\Release\NWT Reading.msix
 
   build-linux:
     name: Build Linux
