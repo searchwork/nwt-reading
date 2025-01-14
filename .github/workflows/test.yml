@@ -12,30 +12,173 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
-          channel: 'stable'
+          channel: stable
 
       - run: ./check.sh
+
+  test-android:
+    name: Test Android
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: android-actions/setup-android@v3
+      - run: avdmanager list
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - run: flutter --version
+      - run: flutter pub get
+      - run: ./gen_i10n.sh
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          profile: pixel_6_pro
+          api-level: 29
+          disable-animations: true
+          script: flutter test integration_test/app_test.dart
+
+      - env:
+          ANDROID_STORE_KEY_PROPERTIES: |
+            ${{ secrets.ANDROID_STORE_KEY_PROPERTIES }}
+        run: echo -ne "$ANDROID_STORE_KEY_PROPERTIES" > android/key.properties
+
+      - env:
+          GOOGLE_PLAYSTORE_JKS_BASE64: |
+            ${{ secrets.GOOGLE_PLAYSTORE_JKS_BASE64 }}
+        run: echo -ne "$GOOGLE_PLAYSTORE_JKS_BASE64" | base64 --decode > android/GooglePlaystore.jks
+
+      - run: flutter build apk
+      - run: flutter build appbundle
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Android
+          path: |
+            build/app/outputs/flutter-apk/app-release.apk
+            build/app/outputs/bundle/release/app-release.aab
 
   test-ios:
     name: Test iOS
     runs-on: macos-latest
-    needs: checks
 
     steps:
       - name: List all simulators
-        run: "xcrun xctrace list devices"
+        run: xcrun xctrace list devices
       - name: Start simulator
         run: |
           UDID=$(xcrun xctrace list devices | grep "^iPhone 15 Simulator (18.1)" | awk '{gsub(/[()]/,""); print $NF}')
           echo $UDID
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
-      - uses: actions/checkout@v3
+
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
 
+      - run: flutter --version
+      - run: flutter pub get
       - run: ./gen_i10n.sh
       - run: flutter test integration_test --timeout 2x
+      - run: flutter build ios --release --no-codesign
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: iOS
+          path: build/ios/iphoneos/Runner.app
+
+  build-web:
+    name: Build Web
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - run: flutter --version
+      - run: flutter pub get
+      - run: ./gen_i10n.sh
+      - run: flutter build web
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Web
+          path: build/web
+
+  build-windows:
+    name: Build Windows
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - run: flutter --version
+      - run: flutter pub get
+      - run: cmd /c win_gen_i10n.bat
+      - run: flutter config --enable-windows-desktop
+      - run: dart run msix:create --store true --publisher CN=029FFB74-EF52-42EA-B54A-817D45BA7838
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Windows
+          path: build\windows\x64\runner\Release\NWT Reading.msix
+
+  build-linux:
+    name: Build Linux
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ninja-build libgtk-3-dev
+      - run: flutter --version
+      - run: flutter pub get
+      - run: ./gen_i10n.sh
+      - run: flutter config --enable-linux-desktop
+      - run: flutter build linux
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Linux
+          path: build/linux/x64/release/bundle/nwt_reading
+
+  build-macos:
+    name: Build macOS
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          architecture: x64
+
+      - run: flutter --version
+      - run: flutter pub get
+      - run: ./gen_i10n.sh
+      - run: flutter config --enable-macos-desktop
+      - run: flutter build macos
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: macOS
+          path: build/macos/Build/Products/Release/NWT Reading.app
