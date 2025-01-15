@@ -26,9 +26,9 @@ final os = Platform.operatingSystem;
 Future<void> takeScreenshot(
     {required IntegrationTestWidgetsFlutterBinding binding,
     required String filename}) async {
-  await binding
-      .takeScreenshot('assets/store_presence/screenshots/$os-$filename.png');
-  await Future<void>.delayed(const Duration(seconds: 3));
+  // await binding
+  //     .takeScreenshot('assets/store_presence/screenshots/$os-$filename.png');
+  await Future<void>.delayed(Duration(seconds: isMacOS ? 5 : 3));
 }
 
 void main() async {
