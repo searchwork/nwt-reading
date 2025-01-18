@@ -2,27 +2,10 @@ import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/schedules/entities/locations.dart';
 import 'package:nwt_reading/src/schedules/repositories/locations_repository.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../notifier_tester.dart';
-
-Future<IncompleteNotifierTester<Locations>> getTester(
-    [Map<String, Object> preferences = const {}]) async {
-  SharedPreferences.setMockInitialValues(preferences);
-  final sharedPreferences = await SharedPreferences.getInstance();
-
-  final tester =
-      IncompleteNotifierTester<Locations>(locationsProvider, overrides: [
-    sharedPreferencesRepositoryProvider
-        .overrideWith((ref) => sharedPreferences),
-  ]);
-  addTearDown(tester.container.dispose);
-
-  return tester;
-}
 
 void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -33,7 +16,7 @@ void main() async {
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(locationsProvider);
 
     verify(
       () => tester.listener(null, asyncLoadingValue),
@@ -42,7 +25,7 @@ void main() async {
   });
 
   test('Resolves to the asset', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(locationsProvider);
     tester.container.read(locationsRepositoryProvider);
     final result = await tester.container.read(locationsProvider.future);
 

@@ -4,24 +4,9 @@ import 'package:mocktail/mocktail.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/plans/entities/plans.dart';
 import 'package:nwt_reading/src/plans/repositories/plans_repository.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../notifier_tester.dart';
 import '../../test_data.dart';
-
-Future<NotifierTester<Plans>> getTester(
-    [Map<String, Object> preferences = const {}]) async {
-  SharedPreferences.setMockInitialValues(preferences);
-  final sharedPreferences = await SharedPreferences.getInstance();
-
-  final tester = NotifierTester<Plans>(plansProvider, overrides: [
-    sharedPreferencesRepositoryProvider
-        .overrideWith((ref) => sharedPreferences),
-  ]);
-  addTearDown(tester.container.dispose);
-
-  return tester;
-}
 
 void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +17,7 @@ void main() async {
   });
 
   test('Defaults to the empty entity', () async {
-    final tester = await getTester();
+    final tester = await getNotifierTester(plansProvider);
     tester.container.read(plansRepositoryProvider);
     final result = tester.container.read(plansProvider);
 
@@ -45,7 +30,8 @@ void main() async {
 
   test('Imports legacy settings', () async {
     for (var testLegacyExport in [testLegacyExports[1]]) {
-      final tester = await getTester(testLegacyExport.preferences);
+      final tester =
+          await getNotifierTester(plansProvider, testLegacyExport.preferences);
       final initialPlans = tester.container.read(plansProvider);
       tester.container.read(plansRepositoryProvider).load();
       final result = tester.container.read(plansProvider);
@@ -61,7 +47,7 @@ void main() async {
   });
 
   test('Resolves to Shared Preferences', () async {
-    final tester = await getTester(testPlansPreferences);
+    final tester = await getNotifierTester(plansProvider, testPlansPreferences);
     tester.container.read(plansRepositoryProvider).load();
     final result = tester.container.read(plansProvider);
 
@@ -69,7 +55,7 @@ void main() async {
   });
 
   test('Resolves to updated value', () async {
-    final tester = await getTester();
+    final tester = await getNotifierTester(plansProvider);
     tester.container.read(plansRepositoryProvider);
     List<Plans> results = [await tester.container.read(plansProvider)];
     for (var plan in testPlans.plans) {
@@ -89,7 +75,7 @@ void main() async {
   });
 
   test('Shared Preferences are set to updated value', () async {
-    final tester = await getTester();
+    final tester = await getNotifierTester(plansProvider);
     tester.container.read(plansRepositoryProvider);
     for (var plan in testPlans.plans) {
       tester.container.read(plansProvider.notifier).addPlan(plan);
