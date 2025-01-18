@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/base/entities/incomplete_notifier.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 final settingsProvider = AsyncNotifierProvider<SettingsNotifier, Settings>(
     SettingsNotifier.new,
@@ -25,6 +26,26 @@ class SettingsNotifier extends IncompleteNotifier<Settings> {
 
   void updateSeenWhatsNewVersion(String seenWhatsNewVersion) =>
       updateSettings(seenWhatsNewVersion: seenWhatsNewVersion);
+
+  void markWhatsNewAsSeen() async {
+    final version = (await PackageInfo.fromPlatform()).version;
+
+    updateSeenWhatsNewVersion(version);
+  }
+
+  Future<bool> shouldShowWhatsNew() async {
+    final version = (await PackageInfo.fromPlatform()).version;
+    final majorVersion = version.split('.')[0];
+
+    while (state.isLoading) {
+      await Future<void>.delayed(Duration(milliseconds: 100));
+    }
+
+    return state.maybeWhen(
+      data: (state) => state.seenWhatsNewVersion?.split('.')[0] != majorVersion,
+      orElse: () => false,
+    );
+  }
 }
 
 @immutable
