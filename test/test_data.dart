@@ -8,10 +8,12 @@ const themeModePreferenceKey = 'themeModeSetting';
 const legacyExportPreferenceKey = 'legacyExport';
 const plansPreferenceKey = 'plans';
 
-Future<Map<String, String>> getWhatsNewSeenPreference() async => {
-      seenWhatsNewVersionPreferenceKey:
-          (await PackageInfo.fromPlatform()).version
-    };
+Future<Map<String, String>> getWhatsNewSeenPreference() async {
+  final version = (await PackageInfo.fromPlatform()).version;
+  final majorVersion = version.split('.')[0];
+
+  return {seenWhatsNewVersionPreferenceKey: '$majorVersion.ignored'};
+}
 
 final Plans testPlans = Plans([
   Plan(
