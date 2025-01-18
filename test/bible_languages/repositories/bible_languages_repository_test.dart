@@ -2,28 +2,10 @@ import 'package:collection/collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/bible_languages/entities/bible_languages.dart';
 import 'package:nwt_reading/src/bible_languages/repositories/bible_languages_repository.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../notifier_tester.dart';
-
-Future<IncompleteNotifierTester<BibleLanguages>> getTester(
-    [Map<String, Object> preferences = const {}]) async {
-  SharedPreferences.setMockInitialValues(preferences);
-  final sharedPreferences = await SharedPreferences.getInstance();
-
-  final tester = IncompleteNotifierTester<BibleLanguages>(
-      bibleLanguagesProvider,
-      overrides: [
-        sharedPreferencesRepositoryProvider
-            .overrideWith((ref) => sharedPreferences),
-      ]);
-  addTearDown(tester.container.dispose);
-
-  return tester;
-}
 
 void main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -103,7 +85,7 @@ void main() async {
   final deepCollectionEquals = const DeepCollectionEquality().equals;
 
   test('Stays on AsyncLoading before init', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(bibleLanguagesProvider);
 
     verify(
       () => tester.listener(null, asyncLoadingValue),
@@ -112,7 +94,7 @@ void main() async {
   });
 
   test('Resolves to the asset', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(bibleLanguagesProvider);
     tester.container.read(bibleLanguagesRepositoryProvider);
     final result = await tester.container.read(bibleLanguagesProvider.future);
 

@@ -5,24 +5,8 @@ import 'package:mocktail/mocktail.dart';
 import 'package:nwt_reading/src/base/repositories/shared_preferences_repository.dart';
 import 'package:nwt_reading/src/settings/repositories/settings_repository.dart';
 import 'package:nwt_reading/src/settings/stories/settings_story.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../notifier_tester.dart';
-
-Future<IncompleteNotifierTester<Settings>> getTester(
-    [Map<String, Object> preferences = const {}]) async {
-  SharedPreferences.setMockInitialValues(preferences);
-  final sharedPreferences = await SharedPreferences.getInstance();
-
-  final tester =
-      IncompleteNotifierTester<Settings>(settingsProvider, overrides: [
-    sharedPreferencesRepositoryProvider
-        .overrideWith((ref) => sharedPreferences),
-  ]);
-  addTearDown(tester.container.dispose);
-
-  return tester;
-}
 
 void main() async {
   const themeModePreferenceKey = 'themeModeSetting';
@@ -30,7 +14,7 @@ void main() async {
   const asyncLoadingValue = AsyncLoading<Settings>();
 
   test('Stays on AsyncLoading before init', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(settingsProvider);
 
     verify(
       () => tester.listener(null, asyncLoadingValue),
@@ -39,7 +23,7 @@ void main() async {
   });
 
   test('Defaults to ThemeMode.system', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(settingsProvider);
     tester.container.read(settingsRepositoryProvider);
     final result = await tester.container.read(settingsProvider.future);
 
@@ -52,7 +36,7 @@ void main() async {
   });
 
   test('Resolves to Shared Preferences', () async {
-    final tester = await getTester({
+    final tester = await getAsyncNotifierTester(settingsProvider, {
       themeModePreferenceKey: ThemeMode.dark.index,
       seenWhatsNewVersionPreferenceKey: '1.0'
     });
@@ -69,7 +53,7 @@ void main() async {
   });
 
   test('Resolves to setThemeMode value', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(settingsProvider);
     tester.container.read(settingsRepositoryProvider);
     List<Settings> results = [
       await tester.container.read(settingsProvider.future)
@@ -100,7 +84,7 @@ void main() async {
   });
 
   test('Resolves to updateSeenWhatsNewVersion value', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(settingsProvider);
     tester.container.read(settingsRepositoryProvider);
     List<Settings> results = [
       await tester.container.read(settingsProvider.future)
@@ -131,7 +115,7 @@ void main() async {
   });
 
   test('Resolves to updateSettings value', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(settingsProvider);
     tester.container.read(settingsRepositoryProvider);
     List<Settings> results = [
       await tester.container.read(settingsProvider.future)
@@ -161,7 +145,7 @@ void main() async {
   });
 
   test('Shared Preferences are set to updated value', () async {
-    final tester = await getTester();
+    final tester = await getAsyncNotifierTester(settingsProvider);
     tester.container.read(settingsRepositoryProvider);
 
     for (var themeMode in ThemeMode.values) {
