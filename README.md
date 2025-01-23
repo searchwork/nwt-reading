@@ -19,21 +19,3 @@ NWT Reading provides a Bible reading schedule for the New World Translation of t
 - User interface available in various languages, including Czech, English, French, German, Hungarian, Italian, Polish, Portuguese (Brazil), Romanian, Russian, and Spanish.
 
 JW Library is a registered trademark of the Watch Tower Bible and Tract Society of Pennsylvania.
-
-## Screenshots
-
-### Plans page
-
-<img src="assets/store_presence/screenshots/ios-1-plans-overlay.png" alt="The list of plans page screenshot" width="400">
-
-### Schedule page
-
-<img src="assets/store_presence/screenshots/ios-2-schedule-overlay.png" alt="The reading schedule page screenshot" width="400"> <img src="assets/store_presence/screenshots/ios-3-schedule-dark-overlay.png" alt="The reading schedule page in dark mode screenshot" width="400">
-
-### New and Edit Plan dialogs
-
-<img src="assets/store_presence/screenshots/ios-4-new-overlay.png" alt="The new plan dialog screenshot" width="400"> <img src="assets/store_presence/screenshots/ios-5-edit-overlay.png" alt="The edit plan dialog screenshot" width="400">
-
-### Settings page
-
-<img src="assets/store_presence/screenshots/ios-6-settings-overlay.png" alt="The settings page screenshot" width="400">
