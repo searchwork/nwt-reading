@@ -19,3 +19,23 @@ NWT Reading provides a Bible reading schedule for the New World Translation of t
 - User interface available in various languages, including Czech, English, French, German, Hungarian, Italian, Polish, Portuguese (Brazil), Romanian, Russian, and Spanish.
 
 JW Library is a registered trademark of the Watch Tower Bible and Tract Society of Pennsylvania.
+
+## Downloads
+
+<p align="center">
+<a href="https://play.google.com/store/apps/details?id=org.searchwork.nwtreading" target="_blank">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 60px; vertical-align: middle;">
+</a>
+<a href="https://apps.apple.com/us/app/nwt-reading/id1452909600" target="_blank">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&release=v1" alt="Download on the App Store" style="height: 40px; vertical-align: middle;">
+</a>&nbsp
+<a href="https://apps.apple.com/us/app/nwt-reading/id1452909600" target="_blank">
+    <img src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=250x83&release=v1" alt="Download on the Mac App Store" style="height: 40px; vertical-align: middle;">
+</a>&nbsp
+<a href="https://apps.microsoft.com/detail/9nck2v3sj69f?mode=direct">
+    <img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Download from the Microsoft Store" style="height: 60px; vertical-align: middle;"/>
+</a>&nbsp
+<a href="http://www.amazon.com/gp/product/B07WDYXD31/ref=nwt_reading" target="_blank">
+    <img src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-appstore-badge-english-black.png" alt="Available at Amazon Appstore" style="height: 40px; vertical-align: middle;">
+</a>
+</p>
