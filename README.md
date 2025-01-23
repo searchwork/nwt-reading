@@ -39,3 +39,19 @@ JW Library is a registered trademark of the Watch Tower Bible and Tract Society 
     <img src="https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-appstore-badge-english-black.png" alt="Available at Amazon Appstore" style="height: 40px; vertical-align: middle;">
 </a>
 </p>
+
+## Frequently Asked Questions
+
+### Does the NWT Reading app meet the Terms of Use of the jw.org site?
+
+Yes, the NWT Reading app complies with the [Terms of Use](https://www.jw.org/en/terms-of-use/) of [jw.org](https://jw.org). Here's a relevant excerpt:
+
+> What constitutes proper use? Subject to the restrictions set out below, you may:
+>
+> ...
+>
+> Share links to or electronic copies of downloadable publications, videos, or audio programs on this site.
+
+The NWT Reading app functions by linking to the New World Translation of the Holy Scriptures on the jw.org website, allowing users to conveniently access the scriptures within the JW Library app. It does not distribute copyrighted material itself.
+
+The Terms of Use do not restrict these functionalities.
