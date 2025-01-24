@@ -8,6 +8,7 @@
 .atom/
 .build/
 .buildlog/
+.firebase/
 .history
 .svn/
 .swiftpm/
