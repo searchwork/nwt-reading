@@ -1,8 +1,8 @@
 # NWT Reading
 
-NWT Reading provides a Bible reading schedule for the New World Translation of the Holy Scriptures, specifically for Jehovah's Witnesses.
-
 <img src="assets/launcher/icon.png" alt="The NWT Reader icon" height="200"> <img src="assets/store_presence/feature_graphic.png" alt="The NWT Reader feature graphic" height="200">
+
+NWT Reading provides a Bible reading schedule for the New World Translation of the Holy Scriptures, specifically for Jehovah's Witnesses.
 
 ## Features
 
