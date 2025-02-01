@@ -34,7 +34,7 @@ dev_dependencies:
     sdk: flutter
   mocktail: ^1.0.4
   msix: ^3.16.8
-  riverpod_lint: ^2.6.3
+  riverpod_lint: ^2.6.4
 
 flutter:
   uses-material-design: true
