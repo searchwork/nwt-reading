@@ -29,7 +29,7 @@ void main() async {
   });
 
   test('Imports legacy settings', () async {
-    for (var testLegacyExport in [testLegacyExports[1]]) {
+    for (var testLegacyExport in testLegacyExports) {
       final tester =
           await getNotifierTester(plansProvider, testLegacyExport.preferences);
       final initialPlans = tester.container.read(plansProvider);
@@ -40,7 +40,7 @@ void main() async {
           true);
       verifyInOrder([
         () => tester.listener(null, initialPlans),
-        () => tester.listener(initialPlans, result),
+        if (result.plans.isNotEmpty) (() => tester.listener(initialPlans, result)),
       ]);
       verifyNoMoreInteractions(tester.listener);
     }

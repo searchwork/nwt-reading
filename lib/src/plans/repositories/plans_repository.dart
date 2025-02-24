@@ -48,9 +48,6 @@ class PlansRepository {
         final legacyExport =
             jsonDecode(legacyExportSerialized) as Map<String, dynamic>;
         var currentSchedule = legacyExport['currentSchedule'] as String?;
-        if (currentSchedule == 'sequential') {
-          currentSchedule = 'canonical';
-        }
 
         if (currentSchedule != null) {
           final schedules = legacyExport['schedules'] as Map<String, dynamic>?;
@@ -62,6 +59,12 @@ class PlansRepository {
 
           final schedule =
               (schedules ?? {})[currentSchedule] as Map<String, dynamic>? ?? {};
+
+          // Fix renaming of sequential to canonical.
+          if (currentSchedule == 'sequential') {
+            currentSchedule = 'canonical';
+          }
+
           final scheduleKey = ScheduleKey(
               type: ScheduleType.values.byName(currentSchedule),
               duration: ScheduleDuration.values.byName(
@@ -105,6 +108,7 @@ class PlansRepository {
       }
     } catch (e) {
       debugPrint('Import from legacy failed with error $e');
+      plans = Plans(const []);
     }
     for (Plan plan in plans.plans) {
       plansNotifier.addPlan(plan);

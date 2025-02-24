@@ -149,4 +149,23 @@ final List<LegacyExport> testLegacyExports = [
             showEvents: true,
             showLocations: true),
       ])),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "sequential": { "duration": "1y", "readIndex": "26", "endDate": "2025-04-16T00:00:00.000Z" }, "written": {}, "chronological": {} }, "currentSchedule": "sequential", "language": "ro", "readingLanguage": "de", "withEndDate": true, "showEvents": true, "showLocations": true }'
+      },
+      plans: Plans([
+        Plan(
+            id: '3266e6fd-ce74-48f0-a491-da086a7704c7',
+            scheduleKey: const ScheduleKey(
+                type: ScheduleType.canonical,
+                duration: ScheduleDuration.y1,
+                version: '1.0'),
+            language: 'de',
+            bookmark: const Bookmark(dayIndex: 26, sectionIndex: -1),
+            targetDate: DateTime.utc(2025, 4, 16),
+            withTargetDate: true,
+            showEvents: true,
+            showLocations: true),
+      ])),
 ];
