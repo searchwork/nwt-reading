@@ -45,3 +45,15 @@ Yes, the NWT Reading app complies with the [Terms of Use](https://www.jw.org/en/
 The NWT Reading app functions by linking to the New World Translation of the Holy Scriptures on the jw.org website, allowing users to conveniently access the scriptures within the JW Library® app. It does not distribute copyrighted material itself.
 
 The Terms of Use do not restrict these functionalities.
+
+### How to make Android open the scriptures in the JW Library® App?
+
+If it doesn't, here's how you can enable it on Android:
+
+1. Open your device's "Settings" app.
+1. Find and tap on "Apps" or "Applications."
+1. Locate and select the "JW Library®" app from the list.
+1. Look for options like "Open by default" or "Set as default".
+1. Within those settings, you should be able to specify which types of actions or files the JW Library® app should handle.
+
+Note: The exact wording and menu locations can vary depending on your Android version and device manufacturer.
