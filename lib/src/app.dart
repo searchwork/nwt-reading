@@ -24,7 +24,10 @@ class App extends ConsumerWidget {
           ...AppLocalizations.localizationsDelegates,
           LocationsLocalizations.delegate
         ],
-        supportedLocales: AppLocalizations.supportedLocales,
+        supportedLocales: [
+          Locale('en'), // Default locale
+          ...AppLocalizations.supportedLocales,
+        ],
         onGenerateTitle: (BuildContext context) => context.loc.appTitle,
         theme: lightTheme,
         darkTheme: darkTheme,

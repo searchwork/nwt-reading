@@ -40,7 +40,8 @@ void main() async {
           true);
       verifyInOrder([
         () => tester.listener(null, initialPlans),
-        if (result.plans.isNotEmpty) (() => tester.listener(initialPlans, result)),
+        if (result.plans.isNotEmpty)
+          (() => tester.listener(initialPlans, result)),
       ]);
       verifyNoMoreInteractions(tester.listener);
     }
