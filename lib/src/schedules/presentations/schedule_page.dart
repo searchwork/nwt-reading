@@ -42,6 +42,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
     final controller = ScrollController();
     final deviationDays = planNotifier.getDeviationDays();
     final todayTargetIndex = planNotifier.todayTargetIndex();
+    final targetDate = planNotifier.getTargetDate();
     final badgeColor = deviationDays >= 0 ? Colors.green : Colors.red;
     if (scheduleKey != plan.scheduleKey) {
       scheduleKey = plan.scheduleKey;
@@ -57,7 +58,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
       final remainingDays = planNotifier
           .getRemainingDays(Bookmark(dayIndex: index, sectionIndex: 0));
       final date = plan.withTargetDate && remainingDays != null
-          ? plan.targetDate?.subtract(Duration(days: remainingDays))
+          ? targetDate?.subtract(Duration(days: remainingDays))
           : null;
       final isBeginningOfMonth = date?.day == 1;
       final dayCard = Padding(
