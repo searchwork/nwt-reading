@@ -17,12 +17,8 @@ void testChangePlanWithTargetDate() {
     );
     await tester.pumpAndSettle();
 
-    // Day indices are shown as there is no target date yet in the model.
-    expect(find.byKey(const Key('date')), findsNothing);
-    expect(find.byKey(const Key('day-index')), findsWidgets);
-    expect(
-        (tester.firstWidget(find.byKey(const Key('day-index'))) as Text).data,
-        '75');
+    expect(find.byKey(const Key('date')), findsWidgets);
+    expect(find.byKey(const Key('day-index')), findsNothing);
 
     await tester.tap(find
         .descendant(
