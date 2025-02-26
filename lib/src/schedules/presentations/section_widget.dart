@@ -86,7 +86,7 @@ class SectionWidget extends ConsumerWidget {
               onPressed: () {
                 final url = Uri.parse(
                     'https://www.jw.org/finder?srcid=jwlshare&wtlocale=${bibleLanguage?.wtCode}&prefer=lang&bible=${section.url}');
-                launchUrl(url);
+                launchUrl(url, mode: LaunchMode.externalNonBrowserApplication);
               },
               style: TextButton.styleFrom(
                   padding: EdgeInsets.zero,
