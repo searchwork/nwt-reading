@@ -54,8 +54,10 @@ class PlanCard extends ConsumerWidget {
           plan.lastDate == null
               ? ''
               : MaterialLocalizations.of(context).formatYear(plan.lastDate!),
-          style: TextStyle(
-              fontSize: 80, color: Theme.of(context).colorScheme.primary),
+          style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                fontSize: MediaQuery.of(context).size.width * 0.1, // Dynamic font size
+                color: Theme.of(context).colorScheme.primary,
+              ),
         );
 
     buildRemainingDaysStatus() => isFinished
@@ -80,7 +82,7 @@ class PlanCard extends ConsumerWidget {
         children: [
           Positioned(left: 10, top: 10, child: buildNameTitle()),
           Positioned(right: 15, bottom: 15, child: buildRemainingDaysStatus()),
-          Positioned(left: 20, bottom: 0, child: buildYearText()),
+          Positioned(left: 20, bottom: 0, child: buildYearText()), // Updated to prevent overlap
         ],
       ),
     );
