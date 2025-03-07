@@ -30,6 +30,14 @@ JW Library is a registered trademark of the Watch Tower Bible and Tract Society 
 [<img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Download from the Microsoft Store" height="40">](https://apps.microsoft.com/detail/9nck2v3sj69f?mode=direct)
 [<img src="docs/pwa.svg" alt="Launch as Web App" height="40">](https://nwtreading.searchwork.org)
 
+## Contributing
+
+We welcome and encourage contributions to NWT Reading! Whether you're fixing a bug, suggesting a new feature, or improving the documentation, your help is greatly appreciated.
+
+If you're interested in contributing, please take a moment to review our [Contribution Guidelines](CONTRIBUTING.md). They provide detailed instructions on how to get started, coding standards, and other important information. We've tried to make it as easy as possible for you to contribute, and we're always happy to answer any questions you may have.
+
+Your contributions help us make NWT Reading a better resource for everyone. We believe that by working together, we can create a powerful tool for accessing and studying the Bible.
+
 ## Frequently Asked Questions
 
 ### Does the NWT Reading app meet the Terms of Use of the jw.org site?
