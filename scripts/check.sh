@@ -1,7 +1,10 @@
+#!/bin/sh
+DIR=$(dirname "$(pwd)/$0")
+
 flutter --version
 flutter pub get
 
-./gen_i10n.sh
+$DIR/gen_i10n.sh
 
 dart format --version
 dart format --fix --set-exit-if-changed .
