@@ -60,7 +60,7 @@ class _SchedulePageState extends ConsumerState<SchedulePage> {
       final date = plan.withTargetDate && remainingDays != null
           ? targetDate?.subtract(Duration(days: remainingDays))
           : null;
-      final isBeginningOfMonth = date?.day == 1;
+      final isBeginningOfMonth = date?.day == 1 || index == 0;
       final dayCard = Padding(
         padding: const EdgeInsets.only(left: 15.0, right: 15.0),
         child: DayCard(
