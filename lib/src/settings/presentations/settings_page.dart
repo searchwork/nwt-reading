@@ -61,7 +61,7 @@ class SettingsPage extends ConsumerWidget {
               },
             ),
             Text(
-              '${context.loc.settingsPageCopyrightLabel} © 2024 searchwork.org',
+              '${context.loc.settingsPageCopyrightLabel} © 2025 SearchWork.org',
               style: TextStyle(height: 3),
               key: Key('copyright'),
             ),

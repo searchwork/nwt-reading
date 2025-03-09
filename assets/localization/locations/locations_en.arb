@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "@@comment": "(c) searchwork.org",
+  "@@comment": "(c) SearchWork.org",
   "location_Abdon": "Abdon",
   "@location_Abdon": {
     "description": "Location on the schedule page."
