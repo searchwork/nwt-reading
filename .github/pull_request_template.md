@@ -20,6 +20,7 @@
 
 - [ ] I have performed a self-review of my own code.
 - [ ] I have commented hard-to-understand areas of my code.
+- [ ] I have confirmed that my changes work across all supported platforms (Android, iOS, Linux, macOS, Web, and Windows). If platform-specific code was necessary, it is contained within the respective platform directory (e.g., `android/`, `ios/`, `linux/`, `macos/`, `web/`, `windows/`).
 - [ ] I have made corresponding changes to the documentation.
 - [ ] My changes generate no new warnings.
 - [ ] I have added tests that prove my fix is effective or that my feature works.
