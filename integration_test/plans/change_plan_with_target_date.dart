@@ -33,10 +33,8 @@ void testChangePlanWithTargetDate() {
     expect((tester.firstWidget(find.byKey(const Key('date'))) as Text).data,
         dayOfMonth.toString());
 
-    await tester.scrollUntilVisible(
-      find.byKey(Key('day-${(74 - dayOfMonth).toString()}')),
-      -500.0,
-    );
+    await tester.scrollUntilVisible(find.byKey(const Key('month')), -200.0,
+        maxScrolls: 200);
     await tester.pumpAndSettle();
 
     expect(find.byKey(const Key('month')), findsOneWidget);
