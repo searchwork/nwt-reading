@@ -1,4 +1,4 @@
-
+#!/bin/sh
 avdmanager list
 
 avdmanager create avd -n pixel_6_pro -k "system-images;android-31;google_apis_playstore;arm64-v8a" -d pixel_6_pro

@@ -1,4 +1,6 @@
-./check.sh
+#!/bin/sh
+DIR=$(dirname "$(pwd)/$0")
+$DIR/check.sh
 
 if [[ $(uname) == 'Darwin' ]]; then
     flutter test integration_test --device-id macos --coverage

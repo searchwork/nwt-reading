@@ -17,7 +17,7 @@ jobs:
         with:
           channel: stable
 
-      - run: ./check.sh
+      - run: ./scripts/check.sh
 
   test-android:
     name: Test Android
@@ -36,7 +36,7 @@ jobs:
           channel: stable
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen_i10n.sh
+      - run: ./scripts/gen_i10n.sh
       - name: Enable KVM
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
@@ -89,7 +89,7 @@ jobs:
 
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen_i10n.sh
+      - run: ./scripts/gen_i10n.sh
       - run: flutter test integration_test --timeout 2x
       - run: flutter build ios --release --no-codesign
 
@@ -109,7 +109,7 @@ jobs:
           channel: stable
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen_i10n.sh
+      - run: ./scripts/gen_i10n.sh
       - run: flutter build web
 
       - uses: actions/upload-artifact@v4
@@ -128,7 +128,7 @@ jobs:
           channel: stable
       - run: flutter --version
       - run: flutter pub get
-      - run: cmd /c win_gen_i10n.bat
+      - run: cmd /c scripts\win_gen_i10n.bat
       - run: flutter config --enable-windows-desktop
       - run: dart run msix:create --store true --publisher CN=029FFB74-EF52-42EA-B54A-817D45BA7838
 
@@ -152,7 +152,7 @@ jobs:
           sudo apt-get install -y ninja-build libgtk-3-dev
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen_i10n.sh
+      - run: ./scripts/gen_i10n.sh
       - run: flutter config --enable-linux-desktop
       - run: flutter build linux
 
@@ -174,7 +174,7 @@ jobs:
 
       - run: flutter --version
       - run: flutter pub get
-      - run: ./gen_i10n.sh
+      - run: ./scripts/gen_i10n.sh
       - run: flutter config --enable-macos-desktop
       - run: flutter build macos --debug
 

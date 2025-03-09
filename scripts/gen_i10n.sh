@@ -1,3 +1,4 @@
+#!/bin/sh
 flutter gen-l10n \
   --arb-dir assets/localization \
   --no-nullable-getter \
