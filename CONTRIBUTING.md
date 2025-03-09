@@ -18,7 +18,7 @@ This document outlines the guidelines for contributing to this project. Please t
 
 ## Code of Conduct
 
-As a project that aims to provide access to Bible-based content, we strive to maintain an environment that reflects Christian principles. By contributing to this project, you agree to uphold those principles.
+Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to uphold the principles outlined in that document.
 
 ## How to Contribute
 
