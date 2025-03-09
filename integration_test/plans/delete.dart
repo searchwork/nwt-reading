@@ -38,7 +38,8 @@ void testDelete() {
     var plans = providerContainer.read(plansProvider).plans;
     expect(plans.last.id, 'e37bf9df-077a-49db-adcb-d56384906103');
 
-    await tester.scrollUntilVisible(find.byIcon(Icons.delete).first, 50.0,
+    await SystemChannels.textInput.invokeMethod('TextInput.hide');
+    await tester.scrollUntilVisible(find.byIcon(Icons.delete).first, 200.0,
         scrollable: find.byType(Scrollable).last);
     await tester.pumpAndSettle();
     await tester.tap(find.byIcon(Icons.delete));

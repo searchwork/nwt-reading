@@ -10,10 +10,7 @@ void testUncheckDay() {
     final providerContainer = await getDefaultProviderContainer(tester);
     await tester.tap(find.byType(PlanCard).first);
     await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(
-      find.byKey(const Key('day-33')),
-      -500.0,
-    );
+    await tester.scrollUntilVisible(find.byKey(const Key('day-33')), -500.0);
     await tester.pumpAndSettle();
 
     expect(find.byIcon(Icons.check_circle), findsWidgets);
@@ -41,10 +38,11 @@ void testUncheckDay() {
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(find.byKey(const Key('day-32')), -500.0);
 
     expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
         33);
-    expect(find.byIcon(Icons.check_circle), findsNothing);
+    expect(find.byIcon(Icons.check_circle), findsOneWidget);
     expect(find.byIcon(Icons.check_circle_outline), findsWidgets);
   });
 }
