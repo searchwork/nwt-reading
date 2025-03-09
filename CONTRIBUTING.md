@@ -34,7 +34,7 @@ Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). By contri
     - Your operating system and version.
     - The version of NWT Reading you are using.
     - Any relevant error messages or screenshots.
-    - The device you are using, physical or emulator, and the android or ios version.
+    - The device or platform you are using (Android, iOS, Linux, macOS, Web, Windows).
 
 ### Suggesting Enhancements
 
@@ -50,13 +50,14 @@ Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). By contri
 1. **Fork the Repository:** Fork the repository to your own GitHub account.
 2. **Create a Branch:** Create a new branch for your changes. Use a descriptive branch name, such as `new-reading-mode` or `fix-plan-edit`.
 3. **Make Your Changes:** Make your changes and commit them to your branch.
-4. **Follow Coding Standards:** Ensure your code adheres to the project's Flutter coding standards.
-5. **Write Tests:** If you are adding new features or fixing bugs, please write Flutter widget and unit tests to ensure your changes are correct.
-6. **Update Documentation:** If you are adding new features or changing existing features, please update the documentation accordingly, including inline code comments.
-7. **Create a Pull Request:** Create a pull request from your branch to the `main` branch of the original repository.
-8. **Describe Your Changes:** In your pull request, please provide a clear and concise description of your changes.
-9. **License Declaration:** In your pull request description, please add the following statement: "I confirm that my contributions are licensed under the AGPL-3.0 License."
-10. **Address Review Comments:** Be prepared to address any review comments and make changes as needed.
+4. **Platform Compatibility:** Ensure your code changes work across all supported platforms (Android, iOS, Linux, macOS, Web, and Windows). Platform-specific code should generally be limited to the platform directory (e.g., `android/`, `ios/`, `linux/`, `macos/`, `web/`, `windows/`). Avoid adding platform-specific code to common code unless absolutely necessary.
+5. **Follow Coding Standards:** Ensure your code adheres to the project's Flutter coding standards.
+6. **Write Tests:** If you are adding new features or fixing bugs, please write Flutter widget and unit tests to ensure your changes are correct.
+7. **Update Documentation:** If you are adding new features or changing existing features, please update the documentation accordingly, including inline code comments.
+8. **Create a Pull Request:** Create a pull request from your branch to the `main` branch of the original repository.
+9. **Describe Your Changes:** In your pull request, please provide a clear and concise description of your changes.
+10. **License Declaration:** In your pull request description, please add the following statement: "I confirm that my contributions are licensed under the AGPL-3.0 License."
+11. **Address Review Comments:** Be prepared to address any review comments and make changes as needed.
 
 ## Development Setup
 
@@ -79,7 +80,7 @@ Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). By contri
     flutter test
     ```
 
-5. **Run the App:** Run the app on an emulator or physical device:
+5. **Run the App:** Run the app on an emulator or physical device/platform:
 
     ```bash
     flutter run
