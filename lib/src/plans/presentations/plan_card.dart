@@ -41,23 +41,37 @@ class PlanCard extends ConsumerWidget {
                   blurRadius: 2)
             ],
           ),
-          Text(
-            getPlanName(context, plan),
-            style: Theme.of(context)
-                .textTheme
-                .headlineMedium
-                ?.copyWith(color: Theme.of(context).colorScheme.secondary),
-          )
+          Expanded(
+            child: Text(
+              getPlanName(context, plan),
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineMedium
+                  ?.copyWith(color: Theme.of(context).colorScheme.secondary),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+            ),
+          ),
         ]);
 
-    buildYearText() => Text(
-          plan.lastDate == null
-              ? ''
-              : MaterialLocalizations.of(context).formatYear(plan.lastDate!),
-          style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                fontSize: MediaQuery.of(context).size.width * 0.1, // Dynamic font size
-                color: Theme.of(context).colorScheme.primary,
+    buildYearText() => LayoutBuilder(
+          builder: (context, constraints) {
+            return FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                plan.lastDate == null
+                    ? ''
+                    : MaterialLocalizations.of(context)
+                        .formatYear(plan.lastDate!),
+                style: TextStyle(
+                  fontSize: constraints.maxWidth * 0.12, // Dynamic font size
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
               ),
+            );
+          },
         );
 
     buildRemainingDaysStatus() => isFinished
@@ -82,7 +96,7 @@ class PlanCard extends ConsumerWidget {
         children: [
           Positioned(left: 10, top: 10, child: buildNameTitle()),
           Positioned(right: 15, bottom: 15, child: buildRemainingDaysStatus()),
-          Positioned(left: 20, bottom: 0, child: buildYearText()), // Updated to prevent overlap
+          Positioned(left: 20, right: 80, bottom: 0, child: buildYearText()), // Ensures better layout
         ],
       ),
     );
