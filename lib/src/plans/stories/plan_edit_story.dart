@@ -84,6 +84,11 @@ class PlanEdit extends AutoDisposeFamilyNotifier<Plan, String?> {
     notifier.resetTargetDate();
   }
 
+  /// **New Method: Set Target Date Manually**
+  void setTargetDate(DateTime newDate) {
+    state = state.copyWith(endDate: newDate);
+  }
+
   void updateShowEvents(bool showEvents) {
     if (showEvents != state.showEvents) {
       state = state.copyWith(showEvents: showEvents);
