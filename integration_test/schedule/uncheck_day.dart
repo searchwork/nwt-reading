@@ -39,6 +39,7 @@ void testUncheckDay() {
     await tester.tap(find.byKey(const Key('confirm-toggle-read')));
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(find.byKey(const Key('day-32')), -500.0);
+    await tester.pumpAndSettle();
 
     expect(providerContainer.read(plansProvider).plans.first.bookmark.dayIndex,
         33);
