@@ -9,3 +9,5 @@ MD013: false # Disable enforcement of maximum line length.
 MD024: # Only check sibling headings for the same content.
   siblings_only: true
 MD033: false
+MD041:
+  level: 2
