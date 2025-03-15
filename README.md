@@ -38,6 +38,21 @@ If you're interested in contributing, please take a moment to review our [Contri
 
 Your contributions help us make NWT Reading a better resource for everyone. We believe that by working together, we can create a powerful tool for accessing and studying the Bible.
 
+## Development Setup
+
+1. Install and configure Flutter ([https://flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install)).
+2. Install the dependencies:
+
+    ```bash
+    flutter pub get
+    ```
+
+3. Run the app:
+
+    ```bash
+    flutter run
+    ```
+
 ## Frequently Asked Questions
 
 ### Does the NWT Reading app meet the Terms of Use of the jw.org site?

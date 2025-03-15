@@ -14,7 +14,7 @@
 
 ### Licensing
 
-**By submitting this pull request, I confirm that my contributions are made under the terms of the AGPL-3.0 license.**
+**I confirm that my contributions are licensed under the AGPL-3.0 License and do not infringe on any third-party intellectual property rights.**
 
 ### Checklist
 
