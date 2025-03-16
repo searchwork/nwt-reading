@@ -12,6 +12,7 @@
 .history
 .svn/
 .swiftpm/
+devtools_options.yaml
 migrate_working_dir/
 i18n_untranslated*.json
 
