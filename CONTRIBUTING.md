@@ -53,18 +53,19 @@ Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). By contri
 
 ## Pull Requests
 
-1. **Fork the Repository:** Fork the repository to your own GitHub account.
-2. **Create a Branch:** Create a new branch for your changes. Use a descriptive branch name, such as `new-reading-mode` or `fix-plan-edit`.
-3. **Make Your Changes:** Make your changes and commit them to your branch.
-4. **Platform Compatibility:** Ensure your code changes work across all supported platforms (Android, iOS, Linux, macOS, Web, and Windows). Platform-specific code should generally be limited to the platform directory (e.g., `android/`, `ios/`, `linux/`, `macos/`, `web/`, `windows/`). Avoid adding platform-specific code to common code unless absolutely necessary.
-5. **Follow Coding Standards:** Write clean code. Ensure your code adheres to the project's Flutter coding standards.
-6. **Write Tests:** If you are adding new features or fixing bugs, please write Flutter widget and unit tests to ensure your changes are correct.
-7. **Update Documentation:** If you are adding new features or changing existing features, please update the documentation accordingly, including inline code comments.
-8. **Test Your Code:** Run `./scripts/test.sh` to test your code locally. This script does code linting and runs Flutter unit, and integration tests. Ensure all tests pass.
-9. **Create a Pull Request:** Create a pull request from your branch to the `main` branch of the original repository.
-10. **Describe Your Changes:** In your pull request, please provide a clear and concise description of your changes.
-11. **License Declaration:** In your pull request description, please add the following statement: "I confirm that my contributions are licensed under the AGPL-3.0 License and do not infringe on any third-party intellectual property rights."
-12. **Address Review Comments:** Be prepared to address any review comments and make changes as needed.
+1. **Single Bug or Feature per Pull Request:** Each pull request should address a single bug fix or implement a single feature. This makes it easier to review and merge changes.
+2. **Fork the Repository:** Fork the repository to your own GitHub account.
+3. **Create a Branch:** Create a new branch for your changes. Use a descriptive branch name, such as `new-reading-mode` or `fix-plan-edit`.
+4. **Make Your Changes:** Make your changes and commit them to your branch.
+5. **Platform Compatibility:** Ensure your code changes work across all supported platforms (Android, iOS, Linux, macOS, Web, and Windows). Platform-specific code should generally be limited to the platform directory (e.g., `android/`, `ios/`, `linux/`, `macos/`, `web/`, `windows/`). Avoid adding platform-specific code to common code unless absolutely necessary.
+6. **Follow Coding Standards:** Write clean code. Ensure your code adheres to the project's Flutter coding standards.
+7. **Write Tests:** If you are adding new features or fixing bugs, please write Flutter widget and unit tests to ensure your changes are correct.
+8. **Update Documentation:** If you are adding new features or changing existing features, please update the documentation accordingly, including inline code comments.
+9. **Test Your Code:** Run `./scripts/test.sh` to test your code locally. This script does code linting and runs Flutter unit, and integration tests. Ensure all tests pass.
+10. **Create a Pull Request:** Create a pull request from your branch to the `main` branch of the original repository.
+11. **Describe Your Changes:** In your pull request, please provide a clear and concise description of your changes.
+12. **License Declaration:** In your pull request description, please add the following statement: "I confirm that my contributions are licensed under the AGPL-3.0 License and do not infringe on any third-party intellectual property rights."
+13. **Address Review Comments:** Be prepared to address any review comments and make changes as needed.
 
 ## License and Contributor Agreement
 

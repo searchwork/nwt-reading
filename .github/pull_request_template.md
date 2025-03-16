@@ -2,7 +2,7 @@
 
 ### Description
 
-[Please provide a clear and concise description of the changes made in this pull request. Explain the *what* and the *why*.]
+[Please provide a clear and concise description of the changes made in this pull request. Explain the *what* and the *why*. Ensure this pull request addresses a single bug fix or feature implementation.]
 
 **Related Issue(s):**
 
@@ -21,13 +21,14 @@
 - [ ] I have performed a self-review of my own code.
 - [ ] I have commented hard-to-understand areas of my code.
 - [ ] I have confirmed that my changes work across all supported platforms (Android, iOS, Linux, macOS, Web, and Windows). If platform-specific code was necessary, it is contained within the respective platform directory (e.g., `android/`, `ios/`, `linux/`, `macos/`, `web/`, `windows/`).
-- [ ] I have made corresponding changes to the documentation.
+- [ ] I have made corresponding changes to the documentation, including inline code comments.
 - [ ] My changes generate no new warnings.
-- [ ] I have added tests that prove my fix is effective or that my feature works.
-- [ ] New and existing unit tests pass locally with my changes.
+- [ ] I have added Flutter widget and unit tests that prove my fix is effective or that my feature works.
+- [ ] New and existing unit and integration tests pass locally with my changes, by running `./scripts/test.sh`.
 - [ ] I have followed the repository's coding standards and style guidelines.
 - [ ] I have rebased my branch onto the latest `main` (or relevant branch).
 - [ ] I have squashed my commits into logical units of work.
+- [ ] This pull request addresses a single bug or implements a single feature.
 
 ### Type of Change
 
