@@ -44,11 +44,12 @@ flutter:
     - assets/repositories/
 
 msix_config:
+  msstore_appId: 9NCK2V3SJ69F
   display_name: NWT Reading
   identity_name: 25845SearchWork.org.NWTReading
+  publisher: CN=029FFB74-EF52-42EA-B54A-817D45BA7838
   publisher_display_name: Werner Fleischer
   languages: en, cs, de, es, fr, hu, it, nl, pl, pt, ro, ru
   output_name: NWT Reading
-  logo_path: assets/launcher/icon.png
   trim_logo: false
   capabilities: internetClient
