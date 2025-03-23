@@ -1,15 +1,16 @@
-name: Deploy
+name: CD
+
 on:
   push:
     tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
-    branches:
-      - main
+      - 'v[0-9]+\.[0-9]+\.[0-9]+'
 
 jobs:
   deploy-web:
     name: Deploy to Firebase Hosting
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -27,6 +28,8 @@ jobs:
   deploy-windows:
     name: Deploy to Microsoft Store
     runs-on: windows-latest
+    if: github.ref == 'refs/heads/main'
+
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
