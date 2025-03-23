@@ -9,7 +9,7 @@ jobs:
   deploy-web:
     name: Deploy to Firebase Hosting
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.event.base_ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
   deploy-windows:
     name: Deploy to Microsoft Store
     runs-on: windows-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.event.base_ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v4
