@@ -11,11 +11,7 @@
   },
   "whatsNewDialogPlans": "You can use multiple Bible reading plans in parallel.",
   "@whatsNewDialogPlans": {
-    "description": "Description of the what's new dialog"
-  },
-  "whatsNewDialogOpenSource": "NWT Reading is now open source. Find us on GitHub and contribute.",
-  "@whatsNewDialogOpenSource": {
-    "description": "Description of the what's new dialog. Must contain the word GitHub, which will be rendered as a link"
+    "description": "Description on the what's new dialog"
   },
   "whatsNewDialogLaterButtonText": "Later",
   "@whatsNewDialogLaterButtonText": {
@@ -225,6 +221,14 @@
   "settingsPageDarkLabel": "dark",
   "@settingsPageDarkLabel": {
     "description": "Dark theme segment label on the settings page"
+  },
+  "settingsPageContributeOnGitHubTitle": "Contribute on GitHub",
+  "@settingsPageContributeOnGitHubTitle": {
+    "description": "Contribute on GitHub title on the settings page"
+  },
+  "settingsPageContributeOnGitHubSubtitle": "NWT Reading is open source. Find us on GitHub and contribute.",
+  "@settingsPageContributeOnGitHubSubtitle": {
+    "description": "Contribute on GitHub subtitle on the settings page. Must contain the word GitHub, which will be rendered as a link on the Whtat's New dialog."
   },
   "settingsPageGettingSupportTitle": "Getting Support",
   "@settingsPageGettingSupportTitle": {

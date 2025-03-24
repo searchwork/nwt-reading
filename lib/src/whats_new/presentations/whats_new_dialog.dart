@@ -13,7 +13,8 @@ void showWhatsNewDialog(
   if (await settingsNotifier.shouldShowWhatsNew()) {
     // The mounted check guard must be on its own for linting purpose.
     if (context.mounted) {
-      final whatsNewDialogOpenSourceText = context.loc.whatsNewDialogOpenSource;
+      final whatsNewDialogOpenSourceText =
+          context.loc.settingsPageContributeOnGitHubSubtitle;
 
       showDialog<String>(
         context: context,
