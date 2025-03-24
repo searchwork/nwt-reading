@@ -11,6 +11,7 @@ void testSettings() {
     await tester.tap(find.byIcon(Icons.settings));
     await tester.pumpAndSettle();
 
+    expect(find.byKey(const Key('getting-support')), findsOneWidget);
     expect(find.byKey(const Key('privacy-policy')), findsOneWidget);
     expect(find.byKey(const Key('version')), findsOneWidget);
     expect(find.byKey(const Key('copyright')), findsOneWidget);
