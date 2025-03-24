@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/settings/stories/settings_story.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -43,6 +44,23 @@ class SettingsPage extends ConsumerWidget {
                 .read(settingsProvider.notifier)
                 .updateThemeMode(newSelection.single),
           ),
+        ),
+        ListTile(
+          leading: SvgPicture.asset(
+            Theme.of(context).brightness == Brightness.dark
+                ? 'assets/images/whats_new/github_mark_white.svg'
+                : 'assets/images/whats_new/github_mark.svg',
+            semanticsLabel: 'GitHub Logo',
+            width: 30,
+            height: 30,
+          ),
+          title: Text(context.loc.settingsPageContributeOnGitHubTitle),
+          subtitle: Text(context.loc.settingsPageContributeOnGitHubSubtitle),
+          onTap: () {
+            final url = Uri.parse('https://github.com/searchwork/nwt-reading');
+            launchUrl(url);
+          },
+          key: const Key('contribute-on-github'),
         ),
         ListTile(
           title: Text(context.loc.settingsPageGettingSupportTitle),
