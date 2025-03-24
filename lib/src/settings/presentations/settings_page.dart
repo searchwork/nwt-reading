@@ -45,6 +45,15 @@ class SettingsPage extends ConsumerWidget {
           ),
         ),
         ListTile(
+          title: Text(context.loc.settingsPageGettingSupportTitle),
+          onTap: () {
+            final url = Uri.parse(
+                'https://github.com/searchwork/nwt-reading/discussions');
+            launchUrl(url);
+          },
+          key: const Key('getting-support'),
+        ),
+        ListTile(
           title: Text(context.loc.settingsPagePrivacyPolicyTitle),
           onTap: () {
             final url =

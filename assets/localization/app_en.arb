@@ -226,6 +226,10 @@
   "@settingsPageDarkLabel": {
     "description": "Dark theme segment label on the settings page"
   },
+  "settingsPageGettingSupportTitle": "Getting Support",
+  "@settingsPageGettingSupportTitle": {
+    "description": "Getting support title on the settings page"
+  },
   "settingsPagePrivacyPolicyTitle": "Privacy Policy",
   "@settingsPagePrivacyPolicyTitle": {
     "description": "Privacy policy title on the settings page"
