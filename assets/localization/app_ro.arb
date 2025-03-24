@@ -45,6 +45,7 @@
   "settingsPageSystemLabel": "sistem",
   "settingsPageLightLabel": "luminos",
   "settingsPageDarkLabel": "întunecat",
+  "settingsPagePrivacyPolicyTitle": "Politica de Confidențialitate",
   "settingsPageVersionLabel": "Versiune",
   "settingsPageCopyrightLabel": "Drepturi de autor"
 }

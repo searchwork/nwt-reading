@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nwt_reading/src/localization/app_localizations_getter.dart';
 import 'package:nwt_reading/src/settings/stories/settings_story.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SettingsPage extends ConsumerWidget {
   const SettingsPage({super.key});
@@ -44,29 +45,33 @@ class SettingsPage extends ConsumerWidget {
           ),
         ),
         ListTile(
-            subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            FutureBuilder<PackageInfo>(
-              future: PackageInfo.fromPlatform(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return CircularProgressIndicator();
-                } else {
-                  return Text(
-                    '${context.loc.settingsPageVersionLabel}: ${snapshot.data?.version}',
-                    key: Key('version'),
-                  );
-                }
-              },
-            ),
-            Text(
-              '${context.loc.settingsPageCopyrightLabel} © 2025 SearchWork.org',
-              style: TextStyle(height: 3),
-              key: Key('copyright'),
-            ),
-          ],
-        )),
+          title: Text(context.loc.settingsPagePrivacyPolicyTitle),
+          onTap: () {
+            final url =
+                Uri.parse('https://searchwork.org/nwtreading-privacy.html');
+            launchUrl(url);
+          },
+          key: const Key('privacy-policy'),
+        ),
+        ListTile(
+          title: FutureBuilder<PackageInfo>(
+            future: PackageInfo.fromPlatform(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return CircularProgressIndicator();
+              } else {
+                return Text(
+                  '${context.loc.settingsPageVersionLabel}: ${snapshot.data?.version}',
+                  key: const Key('version'),
+                );
+              }
+            },
+          ),
+          subtitle: Text(
+            '${context.loc.settingsPageCopyrightLabel} © 2025 SearchWork.org',
+            key: const Key('copyright'),
+          ),
+        ),
       ]),
     );
   }

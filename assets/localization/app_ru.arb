@@ -45,6 +45,7 @@
   "settingsPageSystemLabel": "система",
   "settingsPageLightLabel": "светлая",
   "settingsPageDarkLabel": "темная",
+  "settingsPagePrivacyPolicyTitle": "Политика конфиденциальности",
   "settingsPageVersionLabel": "Версия",
   "settingsPageCopyrightLabel": "Авторские права"
 }

@@ -45,6 +45,7 @@
   "settingsPageSystemLabel": "rendszer",
   "settingsPageLightLabel": "világos",
   "settingsPageDarkLabel": "sötét",
+  "settingsPagePrivacyPolicyTitle": "Adatvédelmi irányelvek",
   "settingsPageVersionLabel": "Verzió",
   "settingsPageCopyrightLabel": "Szerzői jog"
 }
