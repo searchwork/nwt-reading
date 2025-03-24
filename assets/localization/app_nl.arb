@@ -45,6 +45,7 @@
   "settingsPageSystemLabel": "systeem",
   "settingsPageLightLabel": "licht",
   "settingsPageDarkLabel": "donker",
+  "settingsPagePrivacyPolicyTitle": "Privacybeleid",
   "settingsPageVersionLabel": "Versie",
   "settingsPageCopyrightLabel": "Copyright"
 }

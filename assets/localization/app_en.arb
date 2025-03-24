@@ -226,6 +226,10 @@
   "@settingsPageDarkLabel": {
     "description": "Dark theme segment label on the settings page"
   },
+  "settingsPagePrivacyPolicyTitle": "Privacy Policy",
+  "@settingsPagePrivacyPolicyTitle": {
+    "description": "Privacy policy title on the settings page"
+  },
   "settingsPageVersionLabel": "Version",
   "@settingsPageVersionLabel": {
     "description": "Version label on the settings page"

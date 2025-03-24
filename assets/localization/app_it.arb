@@ -45,6 +45,7 @@
   "settingsPageSystemLabel": "sistema",
   "settingsPageLightLabel": "chiaro",
   "settingsPageDarkLabel": "scuro",
+  "settingsPagePrivacyPolicyTitle": "Politica sulla riservatezza",
   "settingsPageVersionLabel": "Versione",
   "settingsPageCopyrightLabel": "Copyright"
 }

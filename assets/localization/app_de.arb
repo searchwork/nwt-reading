@@ -45,6 +45,7 @@
   "settingsPageSystemLabel": "System",
   "settingsPageLightLabel": "Hell",
   "settingsPageDarkLabel": "Dunkel",
+  "settingsPagePrivacyPolicyTitle": "Datenschutzerklärung",
   "settingsPageVersionLabel": "Version",
   "settingsPageCopyrightLabel": "Urheberrecht"
 }
