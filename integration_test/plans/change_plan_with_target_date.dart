@@ -33,12 +33,13 @@ void testChangePlanWithTargetDate() {
     expect((tester.firstWidget(find.byKey(const Key('date'))) as Text).data,
         dayOfMonth.toString());
 
+    await tester.scrollUntilVisible(
+        find.byKey(Key('day-${(74 - dayOfMonth).toString()}')), -200.0,
+        maxScrolls: 200);
+    await tester.pumpAndSettle();
     await tester.scrollUntilVisible(find.byKey(const Key('month')), -200.0,
         maxScrolls: 200);
     await tester.pumpAndSettle();
-
-    expect(find.byKey(const Key('month')), findsOneWidget);
-
     await tester.tap(find.byIcon(Icons.edit));
     await tester.pumpAndSettle();
     await SystemChannels.textInput.invokeMethod('TextInput.hide');

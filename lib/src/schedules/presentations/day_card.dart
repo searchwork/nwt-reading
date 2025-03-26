@@ -18,8 +18,9 @@ class DayCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) => Card(
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.only(left: 2.0, right: 10.0, bottom: 10.0),
+          constraints: const BoxConstraints(minHeight: 44),
           child: Stack(
             children: [
               Positioned(
