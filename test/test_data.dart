@@ -168,4 +168,70 @@ final List<LegacyExport> testLegacyExports = [
             showEvents: true,
             showLocations: true),
       ])),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "sequential": { "duration": "1y", "readIndex": 123, "endDate": "2025-05-01T00:00:00.000Z" }, "written": {}, "chronological": {} }, "currentSchedule": "sequential", "language": "fr", "readingLanguage": "fr", "withEndDate": true, "showEvents": true, "showLocations": false }'
+      },
+      plans: Plans([
+        Plan(
+            id: 'integer-readIndex-sequential-test', // Placeholder ID
+            scheduleKey: const ScheduleKey(
+                type: ScheduleType.canonical, // Sequential becomes canonical
+                duration: ScheduleDuration.y1,
+                version: '1.0'),
+            language: 'fr',
+            bookmark: const Bookmark(dayIndex: 123, sectionIndex: -1),
+            targetDate: DateTime.utc(2025, 5, 1),
+            withTargetDate: true,
+            showEvents: true,
+            showLocations: false),
+      ])),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "chronological": { "duration": "1y", "readIndex": 150, "endDate": "2024-08-15T00:00:00.000Z" }, "sequential": {}, "written": {} }, "currentSchedule": "chronological", "language": "es", "readingLanguage": "es", "withEndDate": true, "showEvents": false, "showLocations": true }'
+      },
+      plans: Plans([
+        Plan(
+            id: 'integer-readIndex-chronological-test', // Placeholder ID
+            scheduleKey: const ScheduleKey(
+                type: ScheduleType.chronological,
+                duration: ScheduleDuration.y1,
+                version: '1.0'),
+            language: 'es',
+            bookmark: const Bookmark(dayIndex: 150, sectionIndex: -1),
+            targetDate: DateTime.utc(2024, 8, 15),
+            withTargetDate: true,
+            showEvents: false,
+            showLocations: true),
+      ])),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": null }, "currentSchedule": "chronological", "language": "en", "readingLanguage": "en", "withEndDate": false, "showEvents": false, "showLocations": false }'
+      },
+      plans: Plans(const []) // Expecting it to default to empty plans
+  ),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "sequential": {}, "written": {} }, "currentSchedule": "chronological", "language": "en", "readingLanguage": "en", "withEndDate": false, "showEvents": false, "showLocations": false }'
+      },
+      plans: Plans(const []) // Expecting it to default to empty plans
+  ),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": null, "currentSchedule": "chronological", "language": "en", "readingLanguage": "en", "withEndDate": false, "showEvents": false, "showLocations": false }'
+      },
+      plans: Plans(const []) // Expecting it to default to empty plans
+  ),
+  LegacyExport(
+      preferences: {
+        legacyExportPreferenceKey:
+            '{ "version": 7, "schedules": { "sequential": {}, "written": {}, "chronological": {} }, "currentSchedule": "chronological", "language": "en", "readingLanguage": "en", "withEndDate": false, "showEvents": false, "showLocations": false }'
+      },
+      plans: Plans(const []) // Expecting it to default to empty plans
+  ),
 ];
