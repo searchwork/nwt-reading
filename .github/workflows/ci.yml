@@ -21,6 +21,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
 
       - run: ./scripts/check.sh
 
@@ -39,6 +40,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
       - run: flutter --version
       - run: flutter pub get
       - run: ./scripts/gen_i10n.sh
@@ -83,7 +85,7 @@ jobs:
         run: xcrun xctrace list devices
       - name: Start simulator
         run: |
-          UDID=$(xcrun xctrace list devices | grep "^iPhone 15 Simulator (18.1)" | awk '{gsub(/[()]/,""); print $NF}')
+          UDID=$(xcrun xctrace list devices | grep "^iPhone 16 Simulator (18.6)" | awk '{gsub(/[()]/,""); print $NF}')
           echo $UDID
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
 
@@ -91,6 +93,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
 
       - run: flutter --version
       - run: flutter pub get
@@ -112,6 +115,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
       - run: flutter --version
       - run: flutter pub get
       - run: ./scripts/gen_i10n.sh
@@ -131,6 +135,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
       - run: flutter --version
       - run: flutter pub get
       - run: cmd /c scripts\win_gen_i10n.bat
@@ -152,6 +157,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
 
       - run: |
           sudo apt-get update -y
@@ -181,6 +187,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
           architecture: x64
 
       - run: flutter --version

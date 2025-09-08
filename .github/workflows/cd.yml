@@ -16,6 +16,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
       - run: flutter --version
       - run: flutter pub get
       - run: ./scripts/gen_i10n.sh
@@ -35,6 +36,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version-file: pubspec.yaml
       - run: flutter --version
       - run: flutter pub get
       - run: cmd /c scripts\win_gen_i10n.bat
